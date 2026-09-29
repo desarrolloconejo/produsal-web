@@ -1,0 +1,422 @@
+{
+  "lang": "en",
+  "meta": {
+    "title": "Produsal | Largest Sea Salt Producer in Venezuela | Los Olivitos, Zulia",
+    "description": "Leading solar sea salt harvest and distribution with 99.8% NaCl purity and 650,000 MT/year output at Los Olivitos, Zulia. Wholesale supplier for food, petrochemical, water treatment, and animal feed sectors."
+  },
+  "topBar": {
+    "email": "contacto@produsal.com",
+    "phone": "+58 (212) 555-SAL1",
+    "location": "Los Olivitos, Zulia"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "quality": "Quality & Origin",
+    "contact": "Contact",
+    "intranet": "Intranet"
+  },
+  "hero": {
+    "badge": "Los Olivitos Industrial Complex • Zulia, Venezuela",
+    "headlineHighlight": "The Largest Salt Flats",
+    "headlineRest": "with sustainable solar harvest and purity in Venezuela",
+    "description": "We operate the country's foremost sea salt complex across 5,400 hectares, providing 65% of Venezuela's total sea salt production with 650,000 MT/year operational output. Certified global standards for food processing, petrochemical, and livestock feed industries.",
+    "ctaProducts": "View Product Catalog",
+    "ctaAbout": "Our Industrial Heritage",
+    "stats": [
+      {
+        "value": "650K",
+        "label": "MT / Year Output",
+        "detail": "Venezuela's largest sea salt facility with 800,000 MT installed capacity"
+      },
+      {
+        "value": "65%",
+        "label": "National Market Share",
+        "detail": "Produsal's contribution to total Venezuelan sea salt production"
+      },
+      {
+        "value": "5,400",
+        "label": "Proprietary Hectares",
+        "detail": "3,200 operating hectares and two 300 MT/hr industrial washing lines"
+      }
+    ],
+    "floatingBadge": {
+      "title": "Export Quality Standard",
+      "subtitle": "Venezuelan sea salt with complete batch traceability"
+    }
+  },
+  "about": {
+    "badge": "Heritage & Industrial Leadership",
+    "title": "Pioneering high-purity marine salt production in Venezuela",
+    "subtitle": "Founded in 1989 and in continuous commercial operation since 1999 at Los Olivitos Complex (Zulia), transforming seawater and sun into world-class salt.",
+    "historyTitle": "Our History",
+    "history": [
+      {
+        "year": "1989",
+        "title": "Foundation",
+        "desc": "Created in Maracaibo by Grupo Zuliano as a strategic pioneer project for regional salt development."
+      },
+      {
+        "year": "1995",
+        "title": "Strategic Joint Venture",
+        "desc": "Formal joint venture between PEQUIVEN and CARGILL / Suprema to integrate world-class quality standards."
+      },
+      {
+        "year": "1999",
+        "title": "Commercial Operation",
+        "desc": "Inauguration and commercial launch of the Los Olivitos Industrial Complex as an advanced 'Green Field' facility."
+      }
+    ],
+    "infrastructureTitle": "Capacity & Infrastructure",
+    "infrastructure": {
+      "totalLand": "5,400 Ha of proprietary land",
+      "operativeLand": "3,200 Ha dedicated to solar evaporation and crystallization basins",
+      "installedCapacity": "800,000 MT/Year total installed capacity",
+      "operativeCapacity": "650,000 MT/Year current high-efficiency operative output",
+      "millingCapacity": "60,000 MT/Year Milling and Packaging Plant capacity",
+      "storageYard": "450,000 MT continuous stockpiling storage capacity",
+      "washingLines": "Two industrial washing lines operating at 300 MT/hr each"
+    },
+    "segmentsTitle": "Market Segments We Supply",
+    "segments": [
+      {
+        "share": "37%",
+        "title": "Human Consumption & Food Manufacturing",
+        "desc": "Micronized table salt, essential ingredient for food processors, industrial bakeries, and specialized refineries."
+      },
+      {
+        "share": "35%",
+        "title": "Animal Nutrition & Livestock Feed",
+        "desc": "Formulated animal feed (ABA), mineralized livestock salts, and vital nutritional supplements for cattle and farming."
+      },
+      {
+        "share": "28%",
+        "title": "Chemical, Petrochemical & Oil Sector",
+        "desc": "Critical feedstock for Pequiven, PDVSA, chlorine gas, caustic soda, hydrochloric acid (HCl), PVC, and water treatment plants."
+      }
+    ],
+    "sustainabilityTitle": "Sustainability & Social Responsibility",
+    "sustainability": {
+      "abrae": "Located in an ABRAE area (Area Under Special Administrative Regime) under strict ecological stewardship.",
+      "rhrap": "First site in Venezuela proclaimed as of International Importance by WHSRN (Western Hemisphere Shorebird Reserve Network).",
+      "garden": "Natural xerophytic botanical garden 'Los Yabos', an active living coastal biodiversity reserve.",
+      "rse": "'Nutriendo La Prosperidad' CSR initiative in partnership with DVC: over 840,000 daily nutritional meals served to preschool children in Zulia."
+    }
+  },
+  "historySection": {
+    "badge": "Origin & Industrial Heritage",
+    "title": "From Coastal Tides to Venezuela's Foremost Sea Salt Complex",
+    "description": "Over three decades of solar engineering, ecological balance, and industrial excellence supplying the nation's key industries.",
+    "ctaExplore": "Read Full Company History",
+    "ctaContact": "Contact Sales",
+    "eras": [
+      {
+        "year": "1989",
+        "tag": "Regional Genesis",
+        "title": "Foundation in Maracaibo",
+        "milestone": "Grupo Zuliano Industrial Venture",
+        "description": "Established to harness the solar potential of Zulia's coastlines and secure reliable domestic salt supply.",
+        "highlight": "World-class industrial vision"
+      },
+      {
+        "year": "1995",
+        "tag": "Global Joint Venture",
+        "title": "Pequiven & Cargill / Suprema",
+        "milestone": "Strategic Partnership",
+        "description": "Landmark alliance between petrochemical leadership and global agro-industry, integrating international quality standards.",
+        "highlight": "ISO & COVENIN compliance"
+      },
+      {
+        "year": "1999",
+        "tag": "Green Field Engineering",
+        "title": "Los Olivitos Commercial Launch",
+        "milestone": "5,400 Proprietary Ha",
+        "description": "Commercial launch equipped with two continuous 300 MT/hr washing lines and a 450,000 MT stockpile yard.",
+        "highlight": "Two 300 MT/hr washing lines"
+      },
+      {
+        "year": "Now",
+        "tag": "National Pillar",
+        "title": "Venezuela's Foremost Producer",
+        "milestone": "65% National Market Share",
+        "description": "650,000 MT/year operational output supplying petrochemical, food, and animal nutrition sectors in environmental harmony.",
+        "highlight": "650,000 MT/yr operational output"
+      }
+    ],
+    "showcase": {
+      "imageAlt": "Los Olivitos Sea Salt Complex Produsal Zulia",
+      "badgeLand": "5,400 Proprietary Ha",
+      "badgeShare": "65% VE Production",
+      "territoryTitle": "Coexistence within Los Olivitos Natural Reserve",
+      "territoryDescription": "Our operations are integrated within an ABRAE protected reserve, designated of International Importance by WHSRN as a flamingo sanctuary and home to 'Los Yabos' coastal reserve.",
+      "features": [
+        {
+          "title": "Colossal Infrastructure",
+          "desc": "800,000 MT installed capacity, 450,000 MT stockpile yard, and 60,000 MT packaging facility."
+        },
+        {
+          "title": "ABRAE Ecological Sanctuary",
+          "desc": "Vital sanctuary for migratory shorebirds and living laboratory of coastal biodiversity."
+        },
+        {
+          "title": "Certified Purity & Traceability",
+          "desc": "Food grade and chemical grade certified quality with batch-by-batch laboratory control."
+        }
+      ],
+      "stats": {
+        "capacityValue": "650K MT",
+        "capacityLabel": "Operative / Year",
+        "shareValue": "65%",
+        "shareLabel": "National Production",
+        "landValue": "5,400 Ha",
+        "landLabel": "ABRAE Nature Reserve",
+        "tagSuffix": "ABRAE Reserve"
+      }
+    }
+  },
+  "processSection": {
+    "badge": "Solar Marine Production Process",
+    "title": "How is Salt Made at PRODUSAL?",
+    "description": "A harmonious blend of sun, wind, and sea: we sustainably transform Gulf seawater into world-class sea salt through solar evaporation and precision industrial washing.",
+    "phaseLabel": "Phase",
+    "ofLabel": "of",
+    "completedBadge": "Finished Product",
+    "completedDesc": "High-purity sea salt ready for industrial dispatch and distribution.",
+    "steps": [
+      {
+        "step": "01",
+        "name": "Seawater",
+        "shortDesc": "Intake & inflow",
+        "description": "Controlled intake of pristine seawater from the Gulf of Venezuela into the complex's primary concentration lagoons."
+      },
+      {
+        "step": "02",
+        "name": "Concentration",
+        "shortDesc": "Solar evaporation",
+        "description": "Intense solar radiation and steady trade winds evaporate water across 3,200 operating hectares, steadily raising brine concentration."
+      },
+      {
+        "step": "03",
+        "name": "Crystallization",
+        "shortDesc": "Chloride precipitation",
+        "description": "Saturated brine flows into crystallizer beds where high-purity sodium chloride crystals precipitate to meet strict industrial and food standards."
+      },
+      {
+        "step": "04",
+        "name": "Washing",
+        "shortDesc": "Dual lines 300 MT/h",
+        "description": "Harvested salt feeds two continuous industrial wash lines with saturated brine to wash away surface impurities while maintaining minimal moisture."
+      },
+      {
+        "step": "05",
+        "name": "Stockpiling",
+        "shortDesc": "450,000 MT yard",
+        "description": "Massive stockpiling in the storage yard for natural gravity drainage, crystal curing, and open-air drying."
+      },
+      {
+        "step": "06",
+        "name": "Dispatch",
+        "shortDesc": "Bulk, Big Bags & bags",
+        "description": "Direct bulk loading into hopper trucks for petrochemical chlor-alkali plants, or milling and packing in 20 Kg bags and 1 MT Big Bags."
+      }
+    ]
+  },
+  "products": {
+    "badge": "Industrial & Commercial Catalog",
+    "title": "High-Purity Sea Salt Solutions",
+    "subtitle": "Solar marine salt harvested at Los Olivitos with 99.8% NaCl purity, certified for petrochemical chlor-alkali, food manufacturing, and heavy industry.",
+    "ctaQuote": "Quote by Ton",
+    "ctaSpec": "Data Sheet",
+    "purityLabel": "Purity",
+    "humidityLabel": "Moisture",
+    "packagingLabel": "Packaging",
+    "applicationsLabel": "Key Applications",
+    "viewDetails": "View Specifications",
+    "qualityGuarantee": "Certified minimum purity of 99.8% NaCl with continuous batch-by-batch traceability.",
+    "carouselBadge": "Available Presentations & Packaging",
+    "carouselTitle": "Product Catalog by Presentation",
+    "carouselSubtitle": "Dispatch ready in bulk hopper trucks, 1 MT Big Bags, and 20 Kg bags for heavy and light industry.",
+    "categories": [
+      {
+        "id": "granel",
+        "slug": "bulk-sea-salt",
+        "name": "Bulk Sea Salt",
+        "tagline": "Petrochemical & High-Volume Industrial",
+        "desc": "Direct load from stockpiling yard into hopper trucks and bulk cargo vessels. Engineered for chlor-alkali electrolysis, chemical synthesis, and continuous manufacturing.",
+        "purity": "99.8% NaCl",
+        "humidity": "< 0.3%",
+        "packaging": "Hopper Trucks / Bulk Cargo",
+        "image": "/images/products/sal-granel.webp",
+        "items": [
+          {
+            "name": "Bulk Sea Salt Premium",
+            "slug": "bulk-sea-salt-premium",
+            "format": "Hopper / Bulk",
+            "use": "Petrochemical & Chlor-Alkali Industry"
+          },
+          {
+            "name": "Bulk Sea Salt Grade A",
+            "slug": "bulk-sea-salt-grade-a",
+            "format": "Hopper / Bulk",
+            "use": "Desalination & Heavy Industrial Processes"
+          }
+        ]
+      },
+      {
+        "id": "bruta",
+        "slug": "washed-crude-salt",
+        "name": "Washed Crude Salt",
+        "tagline": "Dual Continuous Saturated Brine Wash",
+        "desc": "Processed through two continuous industrial washing stages with saturated brine to eliminate surface impurities while preserving crystal integrity and density.",
+        "purity": "99.7% NaCl",
+        "humidity": "< 1.5%",
+        "packaging": "Big Bag (1 MT) / 20 Kg Bags",
+        "image": "/images/products/sal-bruta-lavada.webp",
+        "items": [
+          {
+            "name": "Washed Crude Salt in Big Bag (1 MT)",
+            "slug": "washed-crude-salt-big-bag",
+            "format": "1,000 Kg Big Bag",
+            "use": "Water Treatment & Softening"
+          },
+          {
+            "name": "Washed Crude Salt Grade A (20 Kg)",
+            "slug": "washed-crude-salt-20kg",
+            "format": "20 Kg Polywoven Bags",
+            "use": "Agribusiness & Animal Nutrition"
+          },
+          {
+            "name": "Washed Crude Salt Premium (20 Kg)",
+            "slug": "washed-crude-salt-premium-20kg",
+            "format": "20 Kg Polywoven Bags",
+            "use": "Salting & Industrial Food Preservation"
+          }
+        ]
+      },
+      {
+        "id": "molida",
+        "slug": "milled-sea-salt",
+        "name": "Milled Sea Salt",
+        "tagline": "Food Grade & Ultra-Fine Industrial Standards",
+        "desc": "Milled and classified in high-precision automated milling lines. Uniform crystal distribution and rapid solubility for food processing and pharmaceutical formulations.",
+        "purity": "99.8% NaCl",
+        "humidity": "< 0.2%",
+        "packaging": "20 Kg Bags / Big Bag (1 MT)",
+        "image": "/images/products/sal-molida.webp",
+        "items": [
+          {
+            "name": "Milled Sea Salt Premium (20 Kg)",
+            "slug": "milled-sea-salt-premium-20kg",
+            "format": "20 Kg Laminated Bags",
+            "use": "Food Manufacturing, Dairy & Retail"
+          },
+          {
+            "name": "Milled Sea Salt Grade A (20 Kg)",
+            "slug": "milled-sea-salt-grade-a-20kg",
+            "format": "20 Kg Laminated Bags",
+            "use": "Baking, Charcuterie & Meat Processing"
+          },
+          {
+            "name": "Milled Sea Salt in Big Bag (1 MT)",
+            "slug": "milled-sea-salt-big-bag",
+            "format": "1,000 Kg Big Bag",
+            "use": "Chemical & Pharmaceutical Formulations"
+          }
+        ]
+      }
+    ]
+  },
+  "marketSection": {
+    "badge": "Industrial Leadership & National Market",
+    "block1": {
+      "title": "Domestic Market Performance",
+      "consumption": {
+        "text": "Apparent salt consumption in the country, in 2025 stood at around",
+        "metric": "430,000 to 440,000 MT",
+        "subtext": "and was fully satisfied with national salt production."
+      },
+      "capacity": {
+        "text": "The largest salt facility in the country is PRODUSAL, in Los Olivitos, Zulia",
+        "subtext": "With current operational capacity for:",
+        "metric": "650,000 MT / YEAR"
+      },
+      "coastal": {
+        "metric": "100%",
+        "text": "of salt in Venezuela is harvested across coastal regions of:",
+        "regions": "Sucre, Anzoátegui, Nueva Esparta, Falcón and Zulia."
+      }
+    },
+    "block2": {
+      "title": "Installed Capacity & Market Share",
+      "zuliaDominance": {
+        "year": "In 2025, approximately",
+        "zuliaMetric": "88%",
+        "zuliaText": "of national salt originated from Zulia State",
+        "produsalMetric": "65%",
+        "produsalText": "of this volume was contributed by PRODUSAL"
+      },
+      "sales": {
+        "text": "In 2025, PRODUSAL total commercial volume was:",
+        "metric": "250,271 MT",
+        "source": "Source: PDS estimation."
+      }
+    }
+  },
+  "locationSection": {
+    "badge": "National Infrastructure",
+    "title": "The Country's Leading Salt Facility",
+    "subtitle": "Continuous operations and productive leadership from western Venezuela to domestic and international markets.",
+    "locationHighlight": "PRODUSAL - Zulia",
+    "plantName": "Los Olivitos Industrial Salt Complex",
+    "locationDetails": "Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State.",
+    "capacityLabel": "Installed capacity:",
+    "capacityValue": "650,000 MT / year",
+    "status": "Venezuela's largest solar sea salt producer"
+  },
+  "contact": {
+    "badge": "Commercial & Industrial Sales",
+    "title": "Ready to purchase wholesale sea salt?",
+    "description": "We fulfill bulk wholesale orders, long-term supply agreements, and custom technical specifications for chemical, food manufacturing, and animal nutrition industries.",
+    "phoneLabel": "Sales Office",
+    "phone": "+58 (212) 555-SAL1",
+    "emailLabel": "Inquiries & Quotes",
+    "email": "ventas@produsal.com",
+    "locationLabel": "Complex Location",
+    "location": "Los Olivitos Industrial Complex, Zulia, Venezuela",
+    "formTitle": "Request a Quote or Technical Data Sheet",
+    "formSubtitle": "Submit your requirements and our commercial engineering team will respond within 24 business hours."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been relocated.",
+    "button": "Return to Home"
+  },
+  "underConstruction": {
+    "badge": "In Progress",
+    "title": "We are building an enhanced experience",
+    "description": "Our interactive product catalog and client portal will be available shortly.",
+    "button": "Return to Home"
+  },
+  "footer": {
+    "companyDescription": "Produsal C.A. is Venezuela's premier sea salt producer. Founded in 1989 and in continuous commercial operation since 1999 at Los Olivitos (Zulia), supplying world-standard crystalline solar sea salt for petrochemical, food processing, and livestock sectors.",
+    "quickLinksTitle": "Quick Navigation",
+    "contactTitle": "Contact Information",
+    "plantLabel": "Plant & Salt Flats",
+    "plantAddress": "Los Olivitos Industrial Complex, Zulia State",
+    "officeLabel": "Corporate Offices",
+    "officeAddress": "Maracaibo, Zulia State, Venezuela",
+    "address": "Los Olivitos / Maracaibo, Zulia State",
+    "phone": "+58 (212) 555-SAL1",
+    "email": "contacto@produsal.com",
+    "scrollToTop": "Back to Top",
+    "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. All rights reserved.",
+    "developerCredit": "Developed by El Conejo Del Sombrero",
+    "social": {
+      "linkedin": "https://linkedin.com",
+      "instagram": "https://instagram.com",
+      "facebook": "https://facebook.com"
+    }
+  }
+}

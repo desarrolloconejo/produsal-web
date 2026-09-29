@@ -1,0 +1,60 @@
+import Link from "next/link";
+import { ArrowRight, Waves } from "lucide-react";
+import type { Locale } from "@/dictionaries/get-dictionary";
+
+interface HeroContentProps {
+  currentLang: Locale;
+  dict: {
+    badge: string;
+    headlineHighlight: string;
+    headlineRest: string;
+    description: string;
+    ctaProducts: string;
+    ctaAbout: string;
+  };
+}
+
+export function HeroContent({ currentLang, dict }: HeroContentProps) {
+  return (
+    <div className="max-w-4xl flex flex-col gap-6 text-left">
+      {/* Texto superior sin fondo, sin borde y sin icono */}
+      <p className="animate-slide-up text-sm sm:text-base font-bold text-[#02afab] tracking-normal">
+        {dict.badge}
+      </p>
+
+      {/* Gran Título Corporativo */}
+      <h1 className="animate-slide-up-delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+        <span className="text-[#02afab] drop-shadow-xs">
+          {dict.headlineHighlight}
+        </span>{" "}
+        <span className="text-white/95 block sm:inline">
+          {dict.headlineRest}
+        </span>
+      </h1>
+
+      {/* Párrafo Descriptivo con tamaño estándar de lectura */}
+      <p className="animate-slide-up-delay-2 text-sm sm:text-base text-white/75 max-w-2xl font-normal leading-relaxed">
+        {dict.description}
+      </p>
+
+      {/* Botones de Acción (CTAs) */}
+      <div className="animate-slide-up-delay-3 flex flex-wrap items-center gap-4 pt-2">
+        <Link
+          href={`/${currentLang}/construccion`}
+          className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#02afab] to-[#008784] hover:from-[#009b97] hover:to-[#007471] text-white font-bold text-sm shadow-lg shadow-[#02afab]/25 hover:shadow-xl hover:shadow-[#02afab]/35 hover:-translate-y-0.5 transition-all duration-200 group"
+        >
+          <span>{dict.ctaProducts}</span>
+          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+        </Link>
+
+        <Link
+          href={`/${currentLang}/nosotros`}
+          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-200"
+        >
+          <Waves className="w-4 h-4 text-[#02afab]" />
+          <span>{dict.ctaAbout}</span>
+        </Link>
+      </div>
+    </div>
+  );
+}

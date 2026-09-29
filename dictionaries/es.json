@@ -1,0 +1,422 @@
+{
+  "lang": "es",
+  "meta": {
+    "title": "Produsal | La Mayor Productora de Sal Marina de Venezuela | Los Olivitos, Zulia",
+    "description": "Líderes en extracción solar marina y distribución de sal de alta pureza (99.8%) con 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento mayorista para alimentos, petroquímica, tratamiento de agua y nutrición animal."
+  },
+  "topBar": {
+    "email": "contacto@produsal.com",
+    "phone": "+58 (212) 555-SAL1",
+    "location": "Los Olivitos, Zulia"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "products": "Productos",
+    "quality": "Calidad y Origen",
+    "contact": "Contacto",
+    "intranet": "Intranet"
+  },
+  "hero": {
+    "badge": "Complejo Industrial Los Olivitos • Zulia, Venezuela",
+    "headlineHighlight": "La Mayor Salina",
+    "headlineRest": "de alta pureza y producción solar en Venezuela",
+    "description": "Operamos el complejo salinero más importante del país en 5.400 Ha propias, aportando el 65% de la producción nacional de sal marina con capacidad operativa de 650.000 TM/año. Calidad certificada para el sector alimentario, petroquímico e industrial.",
+    "ctaProducts": "Ver Catálogo Industrial",
+    "ctaAbout": "Conoce Nuestra Historia",
+    "stats": [
+      {
+        "value": "650K",
+        "label": "TM / Año Operativas",
+        "detail": "La mayor salina de Venezuela con capacidad instalada de 800.000 TM"
+      },
+      {
+        "value": "65%",
+        "label": "Producción Nacional",
+        "detail": "Aporte directo de Produsal al suministro de sal en Venezuela"
+      },
+      {
+        "value": "5.400",
+        "label": "Hectáreas Propias",
+        "detail": "3.200 Ha operativas con dos líneas de lavado de 300 TM/hora"
+      }
+    ],
+    "floatingBadge": {
+      "title": "Calidad de Exportación",
+      "subtitle": "Sal marina venezolana con trazabilidad completa"
+    }
+  },
+  "about": {
+    "badge": "Trayectoria y Liderazgo Industrial",
+    "title": "Pioneros en la producción de sal marina de alta pureza en Venezuela",
+    "subtitle": "Desde 1989 y en operación continua desde 1999 en el Complejo Los Olivitos (Zulia), transformamos el agua de mar y el sol en sal de clase mundial.",
+    "historyTitle": "Nuestra Historia",
+    "history": [
+      {
+        "year": "1989",
+        "title": "Fundación",
+        "desc": "Creada en Maracaibo por el Grupo Zuliano como proyecto pionero de desarrollo salinero regional."
+      },
+      {
+        "year": "1995",
+        "title": "Alianza Estratégica",
+        "desc": "Formalización de alianza entre PEQUIVEN y CARGILL / Suprema para potenciar estándares globales."
+      },
+      {
+        "year": "1999",
+        "title": "Operación Comercial",
+        "desc": "Puesta en marcha del Complejo Industrial Los Olivitos como desarrollo 'Green Field' de vanguardia."
+      }
+    ],
+    "infrastructureTitle": "Capacidad e Infraestructura",
+    "infrastructure": {
+      "totalLand": "5.400 Ha de tierras propias",
+      "operativeLand": "3.200 Ha de áreas operativas de evaporación y cristalización",
+      "installedCapacity": "800.000 TM/Año de capacidad instalada total",
+      "operativeCapacity": "650.000 TM/Año de capacidad operativa actual",
+      "millingCapacity": "60.000 TM/Año en Planta de Molienda y Empacado",
+      "storageYard": "450.000 TM de capacidad de almacenaje continuo en patio",
+      "washingLines": "Dos líneas de lavado industrial de 300 TM/hr cada una"
+    },
+    "segmentsTitle": "Segmentos de Mercado que Abastecemos",
+    "segments": [
+      {
+        "share": "37%",
+        "title": "Consumo Humano e Industria Alimentaria",
+        "desc": "Sal de mesa micronizada, ingrediente esencial para refinerías, procesadoras de alimentos y moliendas especializadas."
+      },
+      {
+        "share": "35%",
+        "title": "Nutrición Animal y Agropecuaria",
+        "desc": "Alimento Balanceado para Animales (ABA), sales minerales y suplementos nutricionales para ganadería nacional."
+      },
+      {
+        "share": "28%",
+        "title": "Sector Químico, Petroquímica y Petróleo",
+        "desc": "Materia prima crítica para Pequiven, PDVSA, producción de cloro, soda cáustica, ácido clorhídrico (HCl), PVC y tratamiento de agua."
+      }
+    ],
+    "sustainabilityTitle": "Sustentabilidad y Responsabilidad Social",
+    "sustainability": {
+      "abrae": "Ubicada en zona ABRAE (Área Bajo Régimen de Administración Especial) con manejo ambiental estricto.",
+      "rhrap": "Primer sitio en Venezuela proclamado de Importancia Internacional por la RHRAP (Red Hemisférica de Reservas de Aves Playeras).",
+      "garden": "Jardín xerofítico natural 'Los Yabos', un laboratorio vivo de biodiversidad costera.",
+      "rse": "Programa 'Nutriendo La Prosperidad' junto al Dividendo Voluntario para la Comunidad (DVC): más de 840.000 raciones nutricionales entregadas a niños en edad preescolar en el Zulia."
+    }
+  },
+  "historySection": {
+    "badge": "Origen y Trayectoria Industrial",
+    "title": "De las mareas del Golfo a la mayor salina de Venezuela",
+    "description": "Más de tres décadas de ingeniería solar, equilibrio ecológico y soberanía productiva abasteciendo a los sectores estratégicos del país.",
+    "ctaExplore": "Explorar Historia Completa",
+    "ctaContact": "Cotizar con Ventas",
+    "eras": [
+      {
+        "year": "1989",
+        "tag": "Génesis Zuliana",
+        "title": "Fundación en Maracaibo",
+        "milestone": "Iniciativa del Grupo Zuliano",
+        "description": "Nace con la visión de aprovechar el potencial solar del Zulia para garantizar la soberanía salinera del país.",
+        "highlight": "Visión salinera de clase mundial"
+      },
+      {
+        "year": "1995",
+        "tag": "Alianza Global",
+        "title": "Pequiven & Cargill / Suprema",
+        "milestone": "Acuerdo Estratégico",
+        "description": "Alianza entre el sector petroquímico y el conglomerado global para incorporar estándares de pureza internacional.",
+        "highlight": "Protocolos ISO y COVENIN"
+      },
+      {
+        "year": "1999",
+        "tag": "Ingeniería Green Field",
+        "title": "Puesta en Marcha Los Olivitos",
+        "milestone": "5.400 Ha Propias",
+        "description": "Inauguración comercial con 2 líneas de lavado de 300 TM/h y un patio de acopio masivo de 450.000 TM.",
+        "highlight": "2 Líneas de lavado de 300 TM/hr"
+      },
+      {
+        "year": "Hoy",
+        "tag": "Liderazgo Nacional",
+        "title": "La Mayor Salina del País",
+        "milestone": "65% del Mercado Nacional",
+        "description": "650.000 TM/año operativas abasteciendo a la petroquímica, industria alimentaria y nutrición animal en armonía ambiental.",
+        "highlight": "650.000 TM/año operativas"
+      }
+    ],
+    "showcase": {
+      "imageAlt": "Complejo Salinero Los Olivitos Produsal Zulia",
+      "badgeLand": "5.400 Ha Propias",
+      "badgeShare": "65% Producción VE",
+      "territoryTitle": "Coexistencia en la Reserva Natural Los Olivitos",
+      "territoryDescription": "Nuestras operaciones se integran en un Área Bajo Régimen de Administración Especial (ABRAE), proclamada sitio de Importancia Internacional por la RHRAP como santuario de flamencos y hogar del jardín botánico 'Los Yabos'.",
+      "features": [
+        {
+          "title": "Infraestructura Colosal",
+          "desc": "800.000 TM instaladas, 450.000 TM en patio de acopio y 60.000 TM en molienda y empaque."
+        },
+        {
+          "title": "Santuario Ecológico ABRAE",
+          "desc": "Refugio vital de aves playeras migratorias y laboratorio vivo de biodiversidad costera."
+        },
+        {
+          "title": "Pureza y Trazabilidad Certificada",
+          "desc": "Calidad para la industria alimentaria, química y nutrición animal lote a lote."
+        }
+      ],
+      "stats": {
+        "capacityValue": "650K TM",
+        "capacityLabel": "Operativas / Año",
+        "shareValue": "65%",
+        "shareLabel": "Producción Nacional",
+        "landValue": "5.400 Ha",
+        "landLabel": "Reserva ABRAE",
+        "tagSuffix": "Reserva ABRAE"
+      }
+    }
+  },
+  "processSection": {
+    "badge": "Proceso de Producción Solar Marina",
+    "title": "¿Cómo se hace la sal en PRODUSAL?",
+    "description": "Una combinación armónica de sol, viento y mar: transformamos de forma sustentable el agua del Golfo en sal marina de clase mundial mediante evaporación solar y lavado industrial de alta precisión.",
+    "phaseLabel": "Fase",
+    "ofLabel": "de",
+    "completedBadge": "Producto Terminado",
+    "completedDesc": "Sal marina de alta pureza lista para despacho y distribución.",
+    "steps": [
+      {
+        "step": "01",
+        "name": "Agua de Mar",
+        "shortDesc": "Captación e ingreso",
+        "description": "Ingreso controlado del agua marina del Golfo de Venezuela hacia las primeras lagunas concentradoras del complejo salinero."
+      },
+      {
+        "step": "02",
+        "name": "Concentración",
+        "shortDesc": "Evaporación solar",
+        "description": "El sol radiante y los constantes vientos alisios del Zulia evaporan el agua a lo largo de 3.200 Ha operativas, aumentando la salinidad."
+      },
+      {
+        "step": "03",
+        "name": "Cristalización",
+        "shortDesc": "Precipitación de cloruro",
+        "description": "La salmuera saturada pasa a los cristalizadores donde precipita el cloruro de sodio en cristales puros de grado industrial y alimenticio."
+      },
+      {
+        "step": "04",
+        "name": "Lavado",
+        "shortDesc": "Dos líneas de 300 TM/h",
+        "description": "La sal cosechada ingresa a dos líneas industriales de lavado continuo con salmuera saturada para retirar impurezas con mínima humedad."
+      },
+      {
+        "step": "05",
+        "name": "Apilamiento",
+        "shortDesc": "Patio de 450.000 TM",
+        "description": "Apilamiento masivo en patio de acopio para drenaje natural, maduración del cristal y secado óptimo al aire libre."
+      },
+      {
+        "step": "06",
+        "name": "Despacho",
+        "shortDesc": "Granel, Big Bags y sacos",
+        "description": "Despacho directo en camiones tolva para petroquímica, o procesamiento en planta de molienda y empaque en sacos de 20 Kg y Big Bags de 1 TM."
+      }
+    ]
+  },
+  "products": {
+    "badge": "Catálogo Industrial y Comercial",
+    "title": "Soluciones Salinas de Alta Pureza",
+    "subtitle": "Sal marina solar cosechada en Los Olivitos con 99.8% de NaCl, certificada para petroquímica, industria de alimentos y manufactura.",
+    "ctaQuote": "Cotizar Tonelada",
+    "ctaSpec": "Ficha Técnica",
+    "purityLabel": "Pureza",
+    "humidityLabel": "Humedad",
+    "packagingLabel": "Presentación",
+    "applicationsLabel": "Aplicaciones clave",
+    "viewDetails": "Ver especificaciones",
+    "qualityGuarantee": "Garantía de pureza mínima certificada del 99.8% de NaCl y trazabilidad continua lote a lote.",
+    "carouselBadge": "Presentaciones y Formatos Disponibles",
+    "carouselTitle": "Catálogo de Productos por Presentación",
+    "carouselSubtitle": "Despachos en camiones tolva, Big Bags de 1 TM y sacos de 20 Kg listos para la industria.",
+    "categories": [
+      {
+        "id": "granel",
+        "slug": "sal-a-granel",
+        "name": "Sal a Granel",
+        "tagline": "Petroquímica y Gran Consumo Industrial",
+        "desc": "Despacho directo desde patio de acopio en camiones tolva y buques. Diseñada para electrólisis cloro-álcali, síntesis química y procesos de alta demanda continua.",
+        "purity": "99.8% NaCl",
+        "humidity": "< 0.3%",
+        "packaging": "Camiones Tolva / Granel",
+        "image": "/images/products/sal-granel.webp",
+        "items": [
+          {
+            "name": "Sal a Granel Premium",
+            "slug": "sal-granel-premium",
+            "format": "Tolva / Granel",
+            "use": "Industria Petroquímica y Cloro-Soda"
+          },
+          {
+            "name": "Sal a Granel Tipo A",
+            "slug": "sal-granel-tipo-a",
+            "format": "Tolva / Granel",
+            "use": "Desalinización y Procesos Industriales"
+          }
+        ]
+      },
+      {
+        "id": "bruta",
+        "slug": "sal-bruta-lavada",
+        "name": "Sal Bruta Lavada",
+        "tagline": "Doble Lavado con Salmuera Saturada",
+        "desc": "Sometida a dos etapas de lavado continuo para remover impurezas superficiales manteniendo la integridad del cristal y una óptima densidad aparente.",
+        "purity": "99.7% NaCl",
+        "humidity": "< 1.5%",
+        "packaging": "Big Bag (1 TM) / Sacos (20 Kg)",
+        "image": "/images/products/sal-bruta-lavada.webp",
+        "items": [
+          {
+            "name": "Sal Bruta Lavada en Big Bag (1 TM)",
+            "slug": "sal-bruta-lavada-big-bag",
+            "format": "Big Bag 1.000 Kg",
+            "use": "Tratamiento de Aguas y Suavización"
+          },
+          {
+            "name": "Sal Bruta Lavada Tipo A (20 Kg)",
+            "slug": "sal-bruta-lavada-20kg",
+            "format": "Sacos 20 Kg",
+            "use": "Agroindustria y Nutrición Animal"
+          },
+          {
+            "name": "Sal Bruta Lavada Premium (20 Kg)",
+            "slug": "sal-bruta-lavada-premium-20kg",
+            "format": "Sacos 20 Kg",
+            "use": "Salazón y Procesamiento Industrial"
+          }
+        ]
+      },
+      {
+        "id": "molida",
+        "slug": "sal-molida",
+        "name": "Sal Molida",
+        "tagline": "Grado Alimentario e Industrial de Alta Finura",
+        "desc": "Procesada en planta de molienda automatizada con distribución granulométrica homogénea. Máxima solubilidad para formulaciones alimentarias y farmacéuticas.",
+        "purity": "99.8% NaCl",
+        "humidity": "< 0.2%",
+        "packaging": "Sacos (20 Kg) / Big Bag (1 TM)",
+        "image": "/images/products/sal-molida.webp",
+        "items": [
+          {
+            "name": "Sal Molida Premium (20 Kg)",
+            "slug": "sal-molida-premium-20kg",
+            "format": "Sacos 20 Kg",
+            "use": "Alimentos, Lácteos y Consumo Humano"
+          },
+          {
+            "name": "Sal Molida Tipo A (20 Kg)",
+            "slug": "sal-molida-tipo-a-20kg",
+            "format": "Sacos 20 Kg",
+            "use": "Panificación, Cárnicos y Embutidos"
+          },
+          {
+            "name": "Sal Molida en Big Bag (1 TM)",
+            "slug": "sal-molida-big-bag",
+            "format": "Big Bag 1.000 Kg",
+            "use": "Formulaciones Químicas y Farmacéuticas"
+          }
+        ]
+      }
+    ]
+  },
+  "marketSection": {
+    "badge": "Liderazgo Industrial y Mercado Nacional",
+    "block1": {
+      "title": "Comportamiento del mercado local",
+      "consumption": {
+        "text": "El consumo aparente de sal en el país, en el 2025 se ubicó alrededor de las",
+        "metric": "430.000 a 440.000 TM",
+        "subtext": "y fue satisfecho con la producción nacional de sal."
+      },
+      "capacity": {
+        "text": "La mayor salina del país es la de PRODUSAL, en los Olivitos, en Zulia",
+        "subtext": "Con capacidad actual para:",
+        "metric": "650.000 TM / AÑO"
+      },
+      "coastal": {
+        "metric": "100%",
+        "text": "de la sal en Venezuela se produce en zonas litorales de:",
+        "regions": "Sucre, Anzoátegui, Nueva Esparta, Falcón y Zulia."
+      }
+    },
+    "block2": {
+      "title": "Capacidad instalada",
+      "zuliaDominance": {
+        "year": "En 2025, aproximadamente",
+        "zuliaMetric": "88%",
+        "zuliaText": "de la sal del país provino del estado Zulia",
+        "produsalMetric": "65%",
+        "produsalText": "de esta sal fue aporte de PRODUSAL"
+      },
+      "sales": {
+        "text": "En 2025, la venta de PRODUSAL fue de:",
+        "metric": "250.271 TM",
+        "source": "Fuente: estimación PDS."
+      }
+    }
+  },
+  "locationSection": {
+    "badge": "Infraestructura Nacional",
+    "title": "Principal salina del país",
+    "subtitle": "Operación continua y liderazgo productivo desde el occidente venezolano hacia toda la industria nacional e internacional.",
+    "locationHighlight": "PRODUSAL - Zulia",
+    "plantName": "Complejo Industrial Salinas Los Olivitos",
+    "locationDetails": "Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia.",
+    "capacityLabel": "Capacidad instalada:",
+    "capacityValue": "650.000 TM / año",
+    "status": "La mayor productora de sal marina de Venezuela"
+  },
+  "contact": {
+    "badge": "Atención Comercial e Industrial",
+    "title": "¿Listo para cotizar sal marina al mayor?",
+    "description": "Atendemos requerimientos de compra al mayor, despachos industriales, contratos a término y asesoría técnica para la industria química, alimentos y nutrición animal.",
+    "phoneLabel": "Teléfono Comercial",
+    "phone": "+58 (212) 555-SAL1",
+    "emailLabel": "Ventas y Cotizaciones",
+    "email": "ventas@produsal.com",
+    "locationLabel": "Ubicación del Complejo",
+    "location": "Complejo Industrial Los Olivitos, Zulia, Venezuela",
+    "formTitle": "Solicitar Cotización o Ficha Técnica",
+    "formSubtitle": "Ingresa tus datos y te responderemos en menos de 24 horas hábiles con disponibilidad y cotización."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Página no encontrada",
+    "description": "La página que estás buscando no existe o ha sido trasladada.",
+    "button": "Volver al inicio"
+  },
+  "underConstruction": {
+    "badge": "En Desarrollo",
+    "title": "Estamos construyendo un nuevo espacio",
+    "description": "Muy pronto tendrás acceso a nuestro catálogo interactivo de sales y portal de clientes.",
+    "button": "Volver al inicio"
+  },
+  "footer": {
+    "companyDescription": "Produsal C.A. es la mayor empresa productora de sal marina de Venezuela. Fundada en 1989 y en operación comercial continua desde 1999 en Los Olivitos (Zulia), provee sal cristalina de estándar mundial para la industria petroquímica, alimentaria y ganadera.",
+    "quickLinksTitle": "Navegación Rápida",
+    "contactTitle": "Información de Contacto",
+    "plantLabel": "Planta y Salinas",
+    "plantAddress": "Complejo Industrial Los Olivitos, Edo. Zulia",
+    "officeLabel": "Oficinas Administrativas",
+    "officeAddress": "Maracaibo, Edo. Zulia, Venezuela",
+    "address": "Los Olivitos / Maracaibo, Edo. Zulia",
+    "phone": "+58 (212) 555-SAL1",
+    "email": "contacto@produsal.com",
+    "scrollToTop": "Volver arriba",
+    "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. Todos los derechos reservados.",
+    "developerCredit": "Desarrollado by El Conejo Del Sombrero",
+    "social": {
+      "linkedin": "https://linkedin.com",
+      "instagram": "https://instagram.com",
+      "facebook": "https://facebook.com"
+    }
+  }
+}
