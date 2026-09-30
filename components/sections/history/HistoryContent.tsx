@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Leaf, CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
@@ -14,37 +14,58 @@ interface HistoryContentProps {
 export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
   if (!dict) return null;
 
-  const era1989 = dict.eras?.[0];
-  const era1995 = dict.eras?.[1];
-  const era1999 = dict.eras?.[2];
-  const eraHoy = dict.eras?.[3];
+  const era1989 = dict.eras?.find((e) => e.year === "1989") || dict.eras?.[0];
+  const era1999 = dict.eras?.find((e) => e.year === "1999") || dict.eras?.[1];
+  const eraHoy = dict.eras?.find((e) => e.year === "Hoy" || e.year === "Now") || dict.eras?.[dict.eras?.length ? dict.eras.length - 1 : 2];
 
   return (
     <div className="flex flex-col gap-10 sm:gap-14 lg:gap-16">
-      {/* 1. Cabecera Panorámica Editorial (Minimalista, sin fondo ni bordes) */}
+      {/* 1. Cabecera Panorámica Editorial con Imagen de Salinas en Borde Curvo/Diagonal */}
       <ScrollReveal animation="fade-up">
-        <div className="flex flex-col gap-3 max-w-3xl border-b border-slate-200/80 pb-8 sm:pb-10">
-          <span className="text-[#008784] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
-            {dict.badge}
-          </span>
+        <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-slate-200/80 pb-8 sm:pb-12">
+          {/* Lado Izquierdo: Texto Editorial */}
+          <div className="lg:col-span-7 flex flex-col gap-3">
+            <span className="text-[#008784] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+              {dict.badge}
+            </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#082846] tracking-tight leading-[1.15]">
-            {dict.title}
-          </h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#082846] tracking-tight leading-[1.15]">
+              {dict.title}
+            </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-            {dict.description}
-          </p>
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal max-w-2xl">
+              {dict.description}
+            </p>
+          </div>
+
+          {/* Lado Derecho: Fotografía Panorámica con Remate Curvo y Diagonal */}
+          <div className="lg:col-span-5 relative w-full h-52 sm:h-64 lg:h-72 overflow-hidden rounded-3xl lg:rounded-tl-[60px] lg:rounded-br-[60px] shadow-lg border border-slate-200/60 group">
+            <Image
+              src="/images/nosotros-salinas.jpg"
+              alt="Complejo Industrial Salinas Los Olivitos - Vista Panorámica"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+            />
+            {/* Máscara con gradiente sutil */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#082846]/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10 bg-[#082846]/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-white flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#02afab] animate-pulse" />
+              <span className="text-[11px] font-heading font-medium tracking-wide">
+                {currentLang === "es" ? "Salinas Los Olivitos • Producción Solar" : "Los Olivitos Salt Flats • Solar Harvesting"}
+              </span>
+            </div>
+          </div>
         </div>
       </ScrollReveal>
 
-      {/* 2. Fila Superior: Los 3 Hitos Fundacionales (1989 • 1995 • 1999) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* 2. Fila Superior: Los 2 Hitos Fundacionales (1989 • 1999) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* 1989 */}
         {era1989 && (
           <ScrollReveal delay={0} animation="fade-up">
-            <article className="relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white shadow-sm border border-slate-200/80 hover:border-[#02afab]/50 hover:shadow-xl transition-all duration-300 group overflow-hidden h-full">
-              <span className="absolute -top-3 -right-2 text-7xl font-black text-slate-200/40 font-heading select-none pointer-events-none tracking-tighter">
+            <article className="relative flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-sm border border-slate-200/80 hover:border-[#02afab]/50 hover:shadow-xl transition-all duration-300 group overflow-hidden h-full">
+              <span className="absolute -top-3 -right-2 text-7xl sm:text-8xl font-black text-slate-200/40 font-heading select-none pointer-events-none tracking-tighter">
                 {era1989.year}
               </span>
 
@@ -52,7 +73,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
                 <span className="text-xs font-bold text-[#02afab] uppercase tracking-wider font-heading">
                   {era1989.year} • {era1989.tag}
                 </span>
-                <h3 className="text-xl font-extrabold text-[#082846] tracking-tight leading-snug">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#082846] tracking-tight leading-snug">
                   {era1989.title}
                 </h3>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal pt-1">
@@ -63,34 +84,11 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           </ScrollReveal>
         )}
 
-        {/* 1995 */}
-        {era1995 && (
-          <ScrollReveal delay={120} animation="fade-up">
-            <article className="relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white shadow-sm border border-slate-200/80 hover:border-[#02afab]/50 hover:shadow-xl transition-all duration-300 group overflow-hidden h-full">
-              <span className="absolute -top-3 -right-2 text-7xl font-black text-slate-200/40 font-heading select-none pointer-events-none tracking-tighter">
-                {era1995.year}
-              </span>
-
-              <div className="relative z-10 flex flex-col gap-2.5">
-                <span className="text-xs font-bold text-[#02afab] uppercase tracking-wider font-heading">
-                  {era1995.year} • {era1995.tag}
-                </span>
-                <h3 className="text-xl font-extrabold text-[#082846] tracking-tight leading-snug">
-                  {era1995.title}
-                </h3>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal pt-1">
-                  {era1995.description}
-                </p>
-              </div>
-            </article>
-          </ScrollReveal>
-        )}
-
         {/* 1999 */}
         {era1999 && (
-          <ScrollReveal delay={240} animation="fade-up">
-            <article className="relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white shadow-sm border border-slate-200/80 hover:border-[#02afab]/50 hover:shadow-xl transition-all duration-300 group overflow-hidden h-full">
-              <span className="absolute -top-3 -right-2 text-7xl font-black text-slate-200/40 font-heading select-none pointer-events-none tracking-tighter">
+          <ScrollReveal delay={120} animation="fade-up">
+            <article className="relative flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-sm border border-slate-200/80 hover:border-[#02afab]/50 hover:shadow-xl transition-all duration-300 group overflow-hidden h-full">
+              <span className="absolute -top-3 -right-2 text-7xl sm:text-8xl font-black text-slate-200/40 font-heading select-none pointer-events-none tracking-tighter">
                 {era1999.year}
               </span>
 
@@ -98,7 +96,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
                 <span className="text-xs font-bold text-[#02afab] uppercase tracking-wider font-heading">
                   {era1999.year} • {era1999.tag}
                 </span>
-                <h3 className="text-xl font-extrabold text-[#082846] tracking-tight leading-snug">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#082846] tracking-tight leading-snug">
                   {era1999.title}
                 </h3>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal pt-1">
@@ -119,23 +117,31 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
             {eraHoy.year}
           </span>
 
-          {/* Lado Izquierdo: Fotografía que ocupa TODO el alto y lateral izquierdo, sin texto encima */}
-          <div className="lg:col-span-5 relative w-full min-h-[280px] sm:min-h-[340px] lg:min-h-full">
+          {/* Lado Izquierdo: Fotografía de Flamencos en la Reserva Natural Los Olivitos */}
+          <div className="lg:col-span-5 relative w-full min-h-[300px] sm:min-h-[360px] lg:min-h-full">
             <Image
-              src="/images/hero-bg.jpg"
-              alt={dict.showcase?.imageAlt || "Salinas Los Olivitos Produsal Zulia"}
+              src="/images/flamencos-los-olivitos.jpg"
+              alt={dict.showcase?.abraeTitle || "Santuario de Flamencos en la Reserva Natural Los Olivitos"}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 42vw"
             />
+            {/* Badge sutil sobre la foto de flamencos */}
+            <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-10 bg-[#082846]/85 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15 text-white flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#02afab] animate-pulse" />
+              <span className="text-[11px] sm:text-xs font-heading font-medium tracking-wide">
+                {currentLang === "es" ? "Flamencos Rosados en Los Olivitos" : "Pink Flamingos at Los Olivitos"}
+              </span>
+            </div>
           </div>
 
-          {/* Lado Derecho: Contenido Editorial */}
+          {/* Lado Derecho: Contenido Editorial sobre la Reserva ABRAE */}
           <div className="lg:col-span-7 relative z-10 flex flex-col justify-between gap-6 p-6 sm:p-8 lg:p-10">
-            {/* Cabecera con Tag */}
+            {/* Cabecera con Tag de Liderazgo y Reserva ABRAE */}
             <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold text-[#94c11e] uppercase tracking-wider font-heading">
-                {eraHoy.tag} • {dict.showcase?.stats?.tagSuffix || (currentLang === "es" ? "Reserva ABRAE" : "ABRAE Reserve")}
+              <span className="text-xs font-bold text-[#94c11e] uppercase tracking-wider font-heading flex items-center gap-1.5">
+                <Leaf className="w-3.5 h-3.5 text-[#94c11e]" />
+                {eraHoy.tag} &bull; {currentLang === "es" ? "Reserva Natural ABRAE" : "ABRAE Nature Reserve"}
               </span>
 
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug">
@@ -143,36 +149,24 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
               </h3>
 
               <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-normal pt-1">
-                {eraHoy.description} {dict.showcase?.territoryDescription}
+                {dict.showcase?.abraeDescription || (dict.showcase?.territoryDescription || eraHoy.description)}
               </p>
             </div>
 
-            {/* 3 Cifras Clave Minimalistas */}
-            <div className="grid grid-cols-3 gap-4 py-3 border-y border-white/10">
-              <div>
-                <span className="text-xl sm:text-2xl font-black text-white font-heading block">
-                  {dict.showcase?.stats?.capacityValue || (currentLang === "es" ? "650K TM" : "650K MT")}
-                </span>
-                <span className="text-[11px] text-white/60">
-                  {dict.showcase?.stats?.capacityLabel || (currentLang === "es" ? "Operativas / Año" : "Operative / Year")}
-                </span>
-              </div>
-              <div>
-                <span className="text-xl sm:text-2xl font-black text-[#94c11e] font-heading block">
-                  {dict.showcase?.stats?.shareValue || "65%"}
-                </span>
-                <span className="text-[11px] text-white/60">
-                  {dict.showcase?.stats?.shareLabel || (currentLang === "es" ? "Producción Nacional" : "National Production")}
-                </span>
-              </div>
-              <div>
-                <span className="text-xl sm:text-2xl font-black text-[#02afab] font-heading block">
-                  {dict.showcase?.stats?.landValue || (currentLang === "es" ? "5.400 Ha" : "5,400 Ha")}
-                </span>
-                <span className="text-[11px] text-white/60">
-                  {dict.showcase?.stats?.landLabel || (currentLang === "es" ? "Reserva ABRAE" : "ABRAE Nature Reserve")}
-                </span>
-              </div>
+            {/* Puntos Clave de la Reserva ABRAE (sin métricas numéricas) */}
+            <div className="flex flex-col gap-2.5 py-3 border-y border-white/10">
+              {(dict.showcase?.abraePoints || [
+                currentLang === "es" ? "Santuario reproductivo del Flamenco Rosado (Phoenicopterus ruber)" : "Breeding sanctuary for the Caribbean Pink Flamingo (Phoenicopterus ruber)",
+                currentLang === "es" ? "Humedal Ramsar de Importancia Internacional y Sitio RHRAP" : "Ramsar Wetland of International Importance & WHSRN Site",
+                currentLang === "es" ? "Equilibrio biológico entre salinidad controlada y fauna costera" : "Ecological balance between salt harvesting and coastal biodiversity",
+              ]).map((point, pIdx) => (
+                <div key={pIdx} className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#02afab] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm text-white/90 font-medium leading-relaxed">
+                    {point}
+                  </span>
+                </div>
+              ))}
             </div>
 
             {/* Botones de Acción */}

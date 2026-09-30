@@ -4,20 +4,13 @@ import { useActionState, useTransition } from "react";
 import { Send, CheckCircle2, AlertCircle, Phone, Mail, MapPin, Building2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { sendContactEmail, type ContactState } from "@/app/actions/send";
-import type { Locale } from "@/dictionaries/get-dictionary";
+import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
+
+export type ContactSectionDict = Partial<Dictionary["contact"]>;
 
 interface ContactContentProps {
   currentLang: Locale;
-  contactDict: {
-    title?: string;
-    subtitle?: string;
-    nameLabel?: string;
-    emailLabel?: string;
-    companyLabel?: string;
-    messageLabel?: string;
-    sendButton?: string;
-    sendingButton?: string;
-  };
+  contactDict?: ContactSectionDict;
 }
 
 const initialState: ContactState = {
@@ -25,10 +18,15 @@ const initialState: ContactState = {
   message: "",
 };
 
-export function ContactContent({ currentLang }: ContactContentProps) {
+export function ContactContent({ currentLang, contactDict }: ContactContentProps) {
   const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
 
   const isEs = currentLang === "es";
+  const title = contactDict?.title || (isEs ? "¡Cotiza Ahora!" : "Quote Now!");
+  const badge = contactDict?.badge || (isEs ? "Atención Comercial e Industrial" : "Commercial & Industrial Inquiries");
+  const description = contactDict?.description || (isEs
+    ? "Nuestro equipo de ventas técnicas y operaciones está disponible para atender requerimientos de la industria alimentaria, química, tratamiento de aguas y exportación."
+    : "Our technical sales and operations team is available to assist requirements for the food, chemical, water treatment, and export industries.");
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -36,17 +34,15 @@ export function ContactContent({ currentLang }: ContactContentProps) {
       <ScrollReveal animation="fade-right" delay={50} className="lg:col-span-5 flex flex-col gap-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#02afab]/10 text-[#02afab] text-xs font-bold uppercase tracking-wider w-fit">
           <Building2 className="w-3.5 h-3.5" />
-          <span>{isEs ? "Atención Comercial e Industrial" : "Commercial & Industrial Inquiries"}</span>
+          <span>{badge}</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#082846] tracking-tight">
-          {isEs ? "¿Listo para cotizar sal marina al mayor?" : "Ready to Order Wholesale Sea Salt?"}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#082846] tracking-tight font-heading">
+          {title}
         </h2>
 
         <p className="text-slate-600 text-base leading-relaxed">
-          {isEs
-            ? "Nuestro equipo de ventas técnicas y operaciones está disponible para atender requerimientos de la industria alimentaria, química, tratamiento de aguas y exportación."
-            : "Our technical sales and operations team is available to assist requirements for the food, chemical, water treatment, and export industries."}
+          {description}
         </p>
 
         <div className="flex flex-col gap-4 mt-2">
@@ -56,11 +52,17 @@ export function ContactContent({ currentLang }: ContactContentProps) {
             </div>
             <div>
               <span className="text-xs text-slate-500 font-medium block">
-                {isEs ? "Teléfono Comercial" : "Sales Office"}
+                {isEs ? "Teléfonos Comerciales" : "Sales Office"}
               </span>
-              <a href="tel:+582125557251" className="text-sm font-bold text-slate-800 hover:text-[#02afab] transition-colors">
-                +58 (212) 555-SAL1
-              </a>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-0.5">
+                <a href="tel:02122085111" className="text-sm font-bold text-slate-800 hover:text-[#02afab] transition-colors">
+                  0212 208 51 11
+                </a>
+                <span className="text-slate-300">&bull;</span>
+                <a href="tel:08002274455" className="text-sm font-bold text-[#008784] hover:text-[#02afab] transition-colors">
+                  0800 2274455
+                </a>
+              </div>
             </div>
           </div>
 
@@ -72,8 +74,8 @@ export function ContactContent({ currentLang }: ContactContentProps) {
               <span className="text-xs text-slate-500 font-medium block">
                 {isEs ? "Correo Electrónico" : "Email Inquiries"}
               </span>
-              <a href="mailto:ventas@produsal.com" className="text-sm font-bold text-slate-800 hover:text-[#02afab] transition-colors">
-                ventas@produsal.com
+              <a href="mailto:info@grupomimesa.com" className="text-sm font-bold text-slate-800 hover:text-[#02afab] transition-colors">
+                info@grupomimesa.com
               </a>
             </div>
           </div>

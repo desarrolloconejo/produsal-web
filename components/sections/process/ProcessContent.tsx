@@ -1,4 +1,4 @@
-import { Waves, Sun, Sparkles, Filter, Layers, Truck, ArrowRight, ArrowDown, CheckCircle2 } from "lucide-react";
+import { Waves, Sun, Sparkles, Filter, Layers, Truck, ArrowRight, ArrowLeft, ArrowDown, CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
@@ -201,11 +201,21 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                       )}
                     </svg>
 
-                    {/* Waypoint central secuencial */}
+                    {/* Waypoint central secuencial con flecha coherente con la dirección */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#02afab]/40 shadow-sm text-xs font-bold text-[#082846] font-heading">
-                      <span className="text-[#008784]">{item.step}</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#02afab]" />
-                      <span className="text-[#082846]">{nextStep.step}</span>
+                      {isLeftToRight ? (
+                        <>
+                          <span className="text-[#008784]">{item.step}</span>
+                          <ArrowRight className="w-3.5 h-3.5 text-[#02afab]" />
+                          <span className="text-[#082846]">{nextStep.step}</span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="text-[#082846]">{nextStep.step}</span>
+                          <ArrowLeft className="w-3.5 h-3.5 text-[#02afab]" />
+                          <span className="text-[#008784]">{item.step}</span>
+                        </>
+                      )}
                     </div>
                   </div>
 

@@ -42,9 +42,6 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
     };
   }, []);
 
-  const whatsappUrl =
-    "https://wa.me/582125557251?text=Hola%20Produsal,%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20sus%20productos";
-
   return (
     <header className="w-full relative z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
@@ -54,16 +51,14 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
           className="flex items-center gap-3 group focus:outline-hidden focus:ring-2 focus:ring-[#02afab] rounded-lg p-1"
           aria-label="Produsal - Inicio"
         >
-          <div className="relative w-44 h-12 flex items-center">
-            <Image
-              src="/images/PRODUSALCLIENTE-LOGO.webp"
-              alt="Produsal - Productora de Sal Marina"
-              width={180}
-              height={50}
-              priority
-              className="object-contain max-h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
-            />
-          </div>
+          <Image
+            src="/images/PRODUSAL-white.webp"
+            alt="Produsal - Productora de Sal Marina"
+            width={160}
+            height={35}
+            priority
+            className="object-contain max-h-6 sm:max-h-7 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
+          />
         </Link>
 
         {/* Navegación Desktop */}
@@ -146,35 +141,19 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
             )}
           </div>
 
-          <Link
-            href={`/${currentLang}/construccion`}
-            className="px-3.5 py-2 rounded-lg text-sm font-semibold text-white/85 hover:text-[#02afab] hover:bg-white/5 transition-all duration-200 relative group"
-          >
-            <span>{dict.quality}</span>
-            <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#02afab] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
-          </Link>
 
-          <Link
-            href={`/${currentLang}#contacto`}
-            className="px-3.5 py-2 rounded-lg text-sm font-semibold text-white/85 hover:text-[#02afab] hover:bg-white/5 transition-all duration-200 relative group"
-          >
-            <span>{dict.contact}</span>
-            <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#02afab] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
-          </Link>
         </nav>
 
-        {/* Botón WhatsApp Desktop */}
+        {/* Botón Contáctanos Desktop */}
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-white bg-[#25D366] hover:bg-[#20ba59] shadow-sm shadow-[#25D366]/20 hover:shadow-md hover:shadow-[#25D366]/30 transition-all duration-200 group"
+          <Link
+            href={`/${currentLang}/contacto`}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-white bg-[#02afab] hover:bg-[#008784] shadow-sm shadow-[#02afab]/20 hover:shadow-md hover:shadow-[#02afab]/30 transition-all duration-200 group font-heading"
             aria-label={currentLang === "es" ? "Contáctanos" : "Contact Us"}
           >
             <Phone className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
             <span>{currentLang === "es" ? "Contáctanos" : "Contact Us"}</span>
-          </a>
+          </Link>
         </div>
 
         {/* Botón Hamburger Mobile */}

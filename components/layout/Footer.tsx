@@ -40,8 +40,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
     { href: `/${currentLang}`, label: navDict.home },
     { href: `/${currentLang}/nosotros`, label: navDict.about },
     { href: `/${currentLang}#productos`, label: navDict.products },
-    { href: `/${currentLang}/construccion`, label: navDict.quality },
-    { href: `/${currentLang}#contacto`, label: navDict.contact },
+    { href: `/${currentLang}/contacto`, label: navDict.contact },
   ];
 
   return (
@@ -51,13 +50,13 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-white/10">
           {/* Columna 1: Logo, Descripción Corporativa y Redes (5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="relative w-44 h-12 flex items-center">
+            <div className="relative flex items-center w-fit">
               <Image
-                src="/images/PRODUSALCLIENTE-LOGO.webp"
+                src="/images/PRODUSAL-white.webp"
                 alt="Produsal - Productora de Sal Marina"
-                width={180}
-                height={50}
-                className="object-contain max-h-12 w-auto"
+                width={160}
+                height={35}
+                className="object-contain max-h-6 sm:max-h-7 w-auto"
               />
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-md font-normal">
@@ -156,25 +155,33 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
                 </div>
               </div>
 
-              {/* Teléfono */}
-              <div className="flex items-center gap-3 pt-1 border-t border-white/10">
-                <Phone className="w-4 h-4 text-[#02afab] flex-shrink-0" />
-                <a
-                  href={`tel:${dict.phone.replace(/[^0-9+]/g, "")}`}
-                  className="hover:text-white transition-colors font-medium text-xs text-white/90"
-                >
-                  {dict.phone}
-                </a>
+              {/* Teléfonos */}
+              <div className="flex items-start gap-3 pt-1 border-t border-white/10">
+                <Phone className="w-4 h-4 text-[#02afab] flex-shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1 text-xs text-white/90">
+                  <a
+                    href="tel:02122085111"
+                    className="hover:text-white transition-colors font-medium"
+                  >
+                    0212 208 51 11
+                  </a>
+                  <a
+                    href="tel:08002274455"
+                    className="hover:text-white transition-colors font-medium text-[#02afab]"
+                  >
+                    0800 2274455
+                  </a>
+                </div>
               </div>
 
               {/* Correo */}
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#02afab] flex-shrink-0" />
                 <a
-                  href={`mailto:${dict.email}`}
+                  href="mailto:info@grupomimesa.com"
                   className="hover:text-white transition-colors text-xs text-white/90"
                 >
-                  {dict.email}
+                  info@grupomimesa.com
                 </a>
               </div>
             </div>

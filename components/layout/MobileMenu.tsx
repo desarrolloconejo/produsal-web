@@ -22,36 +22,50 @@ interface MobileMenuProps {
 
 export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }: MobileMenuProps) {
   const [productsExpanded, setProductsExpanded] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
+  const [animateIn, setAnimateIn] = useState(false);
 
-  // Prevenir scroll cuando el menú está abierto
+  // Controlar animación fluida de entrada y salida (slide-in / slide-out)
   useEffect(() => {
     if (isOpen) {
+      setShouldRender(true);
       document.body.style.overflow = "hidden";
+      const raf = requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setAnimateIn(true);
+        });
+      });
+      return () => cancelAnimationFrame(raf);
     } else {
+      setAnimateIn(false);
       document.body.style.overflow = "unset";
-      setProductsExpanded(false);
+      const timer = setTimeout(() => {
+        setShouldRender(false);
+        setProductsExpanded(false);
+      }, 300);
+      return () => clearTimeout(timer);
     }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
   }, [isOpen]);
 
-  if (!isOpen) return null;
-
-  const whatsappUrl =
-    "https://wa.me/582125557251?text=Hola%20Produsal,%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20sus%20productos";
+  if (!shouldRender) return null;
 
   return (
-    <div className="fixed inset-0 z-50 md:hidden flex justify-end">
-      {/* Backdrop con blur y fade in */}
+    <div className="fixed inset-0 z-50 md:hidden flex justify-end overflow-hidden">
+      {/* Backdrop con blur y fade in/out */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-[#082846]/60 backdrop-blur-sm transition-opacity duration-300 animate-fade-in"
+        className={`fixed inset-0 bg-[#082846]/60 backdrop-blur-sm transition-opacity duration-300 ease-in-out ${
+          animateIn ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
         aria-hidden="true"
       />
 
-      {/* Drawer deslizante desde la derecha */}
-      <div className="relative w-full max-w-sm bg-white h-full shadow-2xl z-10 flex flex-col justify-between p-6 overflow-y-auto transition-transform duration-300 ease-out">
+      {/* Drawer deslizante desde la derecha (slide-in y slide-out) */}
+      <div
+        className={`relative w-full max-w-sm bg-white h-full shadow-2xl z-10 flex flex-col justify-between p-6 overflow-y-auto transition-transform duration-300 ease-in-out transform ${
+          animateIn ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         {/* Cabecera del Drawer */}
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-slate-100">
@@ -148,50 +162,29 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
               )}
             </div>
 
-            {/* Calidad y Origen */}
-            <Link
-              href={`/${currentLang}/construccion`}
-              onClick={onClose}
-              className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 hover:text-[#02afab] hover:bg-slate-50 font-bold text-base transition-colors"
-            >
-              <span>{dict.quality}</span>
-              <ArrowRight className="w-4 h-4 text-slate-400" />
-            </Link>
-
-            {/* Contacto */}
-            <Link
-              href={`/${currentLang}#contacto`}
-              onClick={onClose}
-              className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 hover:text-[#02afab] hover:bg-slate-50 font-bold text-base transition-colors"
-            >
-              <span>{dict.contact}</span>
-              <ArrowRight className="w-4 h-4 text-slate-400" />
-            </Link>
           </nav>
         </div>
 
-        {/* Acciones inferiores: Botón WhatsApp y datos de contacto */}
+        {/* Acciones inferiores: Botón Contáctanos y datos de contacto */}
         <div className="pt-6 border-t border-slate-100 flex flex-col gap-3 font-heading">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/${currentLang}/contacto`}
             onClick={onClose}
-            className="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold shadow-md shadow-[#25D366]/20 hover:shadow-lg transition-all"
+            className="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-[#02afab] hover:bg-[#008784] text-white font-bold shadow-md shadow-[#02afab]/20 hover:shadow-lg transition-all"
             aria-label={currentLang === "es" ? "Contáctanos" : "Contact Us"}
           >
             <Phone className="w-4 h-4" />
             <span>{currentLang === "es" ? "Contáctanos" : "Contact Us"}</span>
-          </a>
+          </Link>
 
           <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500 flex flex-col gap-1.5 font-sans">
             <div className="flex items-center gap-2">
               <Phone className="w-3.5 h-3.5 text-[#02afab]" />
-              <span>+58 (212) 555-SAL1</span>
+              <span>0212 208 51 11 / 0800 2274455</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-[#02afab]" />
-              <span>contacto@produsal.com</span>
+              <span>info@grupomimesa.com</span>
             </div>
           </div>
         </div>

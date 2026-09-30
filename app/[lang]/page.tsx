@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
 import { HeroWrapper, HeroContent } from "@/components/sections/hero";
-import { StatsWrapper, StatsContent } from "@/components/sections/stats";
+import { StatsWrapper } from "@/components/sections/stats";
 import { HistoryWrapper, HistoryContent } from "@/components/sections/history";
 import { ProcessWrapper, ProcessContent } from "@/components/sections/process";
 import { ProductsWrapper, ProductsContent } from "@/components/sections/products";
 import { MarketWrapper, MarketContent } from "@/components/sections/market";
-import { LocationWrapper, LocationContent } from "@/components/sections/location";
+import { LocationContent } from "@/components/sections/location";
 import { ContactWrapper, ContactContent } from "@/components/sections/contact";
 
 export async function generateStaticParams() {
@@ -50,9 +50,13 @@ export default async function HomePage({
         <HeroContent currentLang={currentLang} dict={dict.hero} />
       </HeroWrapper>
 
-      {/* Sección Métricas / Estadísticas: page > wrapper > content */}
-      <StatsWrapper>
-        <StatsContent stats={dict.hero.stats} />
+      {/* Sección Unificada: Métricas de Producción + Ubicación e Infraestructura Nacional */}
+      <StatsWrapper id="infraestructura">
+        <LocationContent
+          currentLang={currentLang}
+          dict={dict.locationSection}
+          stats={dict.hero.stats}
+        />
       </StatsWrapper>
 
       {/* Sección Nuestra Historia / Quiénes Somos: page > wrapper > content */}
@@ -74,11 +78,6 @@ export default async function HomePage({
       <MarketWrapper id="mercado">
         <MarketContent currentLang={currentLang} dict={dict.marketSection} />
       </MarketWrapper>
-
-      {/* Sección Ubicación Estratégica de la Planta en Venezuela: page > wrapper > content */}
-      <LocationWrapper id="ubicacion">
-        <LocationContent currentLang={currentLang} dict={dict.locationSection} />
-      </LocationWrapper>
 
       {/* Sección Contacto: page > wrapper > content */}
       <ContactWrapper id="contacto">

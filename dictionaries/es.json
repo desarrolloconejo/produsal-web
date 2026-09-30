@@ -5,8 +5,8 @@
     "description": "Líderes en extracción solar marina y distribución de sal de alta pureza (99.8%) con 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento mayorista para alimentos, petroquímica, tratamiento de agua y nutrición animal."
   },
   "topBar": {
-    "email": "contacto@produsal.com",
-    "phone": "+58 (212) 555-SAL1",
+    "email": "info@grupomimesa.com",
+    "phone": "0212 208 51 11",
     "location": "Los Olivitos, Zulia"
   },
   "nav": {
@@ -56,11 +56,6 @@
         "year": "1989",
         "title": "Fundación",
         "desc": "Creada en Maracaibo por el Grupo Zuliano como proyecto pionero de desarrollo salinero regional."
-      },
-      {
-        "year": "1995",
-        "title": "Alianza Estratégica",
-        "desc": "Formalización de alianza entre PEQUIVEN y CARGILL / Suprema para potenciar estándares globales."
       },
       {
         "year": "1999",
@@ -120,14 +115,6 @@
         "highlight": "Visión salinera de clase mundial"
       },
       {
-        "year": "1995",
-        "tag": "Alianza Global",
-        "title": "Pequiven & Cargill / Suprema",
-        "milestone": "Acuerdo Estratégico",
-        "description": "Alianza entre el sector petroquímico y el conglomerado global para incorporar estándares de pureza internacional.",
-        "highlight": "Protocolos ISO y COVENIN"
-      },
-      {
         "year": "1999",
         "tag": "Ingeniería Green Field",
         "title": "Puesta en Marcha Los Olivitos",
@@ -164,15 +151,14 @@
           "desc": "Calidad para la industria alimentaria, química y nutrición animal lote a lote."
         }
       ],
-      "stats": {
-        "capacityValue": "650K TM",
-        "capacityLabel": "Operativas / Año",
-        "shareValue": "65%",
-        "shareLabel": "Producción Nacional",
-        "landValue": "5.400 Ha",
-        "landLabel": "Reserva ABRAE",
-        "tagSuffix": "Reserva ABRAE"
-      }
+      "abraeBadge": "Reserva Natural y Santuario ABRAE",
+      "abraeTitle": "Santuario del Flamenco Rosado en Los Olivitos",
+      "abraeDescription": "Nuestras operaciones salineras coexisten en armonía ecológica dentro de un Área Bajo Régimen de Administración Especial (ABRAE), declarada humedal de importancia internacional (Sitio Ramsar y RHRAP) por albergar la mayor colonia reproductiva de flamencos del Caribe en Venezuela.",
+      "abraePoints": [
+        "Santuario reproductivo del Flamenco Rosado (Phoenicopterus ruber)",
+        "Humedal Ramsar de Importancia Internacional y Sitio RHRAP",
+        "Equilibrio biológico entre salinidad controlada y fauna costera"
+      ]
     }
   },
   "processSection": {
@@ -226,7 +212,7 @@
     "badge": "Catálogo Industrial y Comercial",
     "title": "Soluciones Salinas de Alta Pureza",
     "subtitle": "Sal marina solar cosechada en Los Olivitos con 99.8% de NaCl, certificada para petroquímica, industria de alimentos y manufactura.",
-    "ctaQuote": "Cotizar Tonelada",
+    "ctaQuote": "Contáctanos",
     "ctaSpec": "Ficha Técnica",
     "purityLabel": "Pureza",
     "humidityLabel": "Humedad",
@@ -338,8 +324,7 @@
       },
       "capacity": {
         "text": "La mayor salina del país es la de PRODUSAL, en los Olivitos, en Zulia",
-        "subtext": "Con capacidad actual para:",
-        "metric": "650.000 TM / AÑO"
+        "subtext": "Principal complejo de cosecha marina solar y abastecimiento estratégico para la industria venezolana."
       },
       "coastal": {
         "metric": "100%",
@@ -376,12 +361,12 @@
   },
   "contact": {
     "badge": "Atención Comercial e Industrial",
-    "title": "¿Listo para cotizar sal marina al mayor?",
+    "title": "¡Cotiza Ahora!",
     "description": "Atendemos requerimientos de compra al mayor, despachos industriales, contratos a término y asesoría técnica para la industria química, alimentos y nutrición animal.",
     "phoneLabel": "Teléfono Comercial",
-    "phone": "+58 (212) 555-SAL1",
+    "phone": "0212 208 51 11 / 0800 2274455",
     "emailLabel": "Ventas y Cotizaciones",
-    "email": "ventas@produsal.com",
+    "email": "info@grupomimesa.com",
     "locationLabel": "Ubicación del Complejo",
     "location": "Complejo Industrial Los Olivitos, Zulia, Venezuela",
     "formTitle": "Solicitar Cotización o Ficha Técnica",
@@ -408,8 +393,8 @@
     "officeLabel": "Oficinas Administrativas",
     "officeAddress": "Maracaibo, Edo. Zulia, Venezuela",
     "address": "Los Olivitos / Maracaibo, Edo. Zulia",
-    "phone": "+58 (212) 555-SAL1",
-    "email": "contacto@produsal.com",
+    "phone": "0212 208 51 11 / 0800 2274455",
+    "email": "info@grupomimesa.com",
     "scrollToTop": "Volver arriba",
     "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. Todos los derechos reservados.",
     "developerCredit": "Desarrollado by El Conejo Del Sombrero",

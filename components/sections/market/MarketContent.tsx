@@ -54,7 +54,7 @@ export function MarketContent({ currentLang, dict }: MarketContentProps) {
               </div>
             </div>
 
-            {/* Columna 2: Capacidad de PRODUSAL */}
+            {/* Columna 2: Liderazgo de PRODUSAL */}
             <div className="flex flex-col justify-between pl-0 md:pl-8 lg:pl-10 pr-0 md:pr-8 lg:pr-10 border-t md:border-t-0 md:border-l border-white/20 pt-6 md:pt-0">
               <div className="flex flex-col gap-3">
                 <p className="text-white font-medium text-sm sm:text-base leading-relaxed">
@@ -62,13 +62,10 @@ export function MarketContent({ currentLang, dict }: MarketContentProps) {
                     {block1.capacity.text}
                   </strong>
                 </p>
-                <span className="text-white/75 text-xs sm:text-sm font-normal">
-                  {block1.capacity.subtext}
-                </span>
-                <div className="my-2">
-                  <span className="text-xl sm:text-2xl lg:text-[1.75rem] xl:text-[2.1rem] font-black text-[#02afab] font-heading tracking-tight leading-none whitespace-nowrap block">
-                    {block1.capacity.metric}
-                  </span>
+                <div className="pt-2">
+                  <p className="text-white/80 text-xs sm:text-sm font-normal leading-relaxed">
+                    {block1.capacity.subtext}
+                  </p>
                 </div>
               </div>
             </div>

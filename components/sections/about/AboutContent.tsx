@@ -33,13 +33,6 @@ export function AboutContent({ currentLang }: AboutContentProps) {
         : "Founded by Grupo Zuliano as a strategic venture to pioneer industrial sea salt production in western Venezuela.",
     },
     {
-      year: "1995",
-      title: isEs ? "Alianza Estratégica Internacional" : "International Strategic Alliance",
-      desc: isEs
-        ? "Formalización de la alianza estratégica entre PEQUIVEN y CARGILL / Suprema, integrando tecnología y estándares globales."
-        : "Formalization of the strategic partnership between PEQUIVEN and CARGILL / Suprema, embedding global operational benchmarks.",
-    },
-    {
       year: "1999",
       title: isEs ? "Puesta en Marcha 'Green Field'" : "'Green Field' Commercial Launch",
       desc: isEs
@@ -133,22 +126,57 @@ export function AboutContent({ currentLang }: AboutContentProps) {
 
   return (
     <div className="flex flex-col gap-20 sm:gap-24">
-      {/* 1. Encabezado Principal y Visión General */}
-      <div className="max-w-4xl">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#02afab]/10 text-[#02afab] text-xs font-bold uppercase tracking-wider mb-4">
-          <Award className="w-3.5 h-3.5" />
-          <span>{isEs ? "Complejo Industrial Los Olivitos • Estado Zulia" : "Los Olivitos Industrial Complex • Zulia State"}</span>
-        </span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#082846] tracking-tight leading-[1.15] mb-6">
-          {isEs
-            ? "La mayor productora de sal marina de alta pureza en Venezuela"
-            : "Venezuela's premier producer of high-purity solar sea salt"}
-        </h1>
-        <p className="text-lg text-slate-600 leading-relaxed font-normal">
-          {isEs
-            ? "PRODUSAL (Productora de Sal C.A.) es el pilar de la industria salinera venezolana. Aportamos el 65% de la producción nacional de sal marina desde nuestro complejo en Los Olivitos, combinando energía solar limpia con estándares de calidad de clase mundial."
-            : "PRODUSAL (Productora de Sal C.A.) is the cornerstone of the Venezuelan salt industry, supplying 65% of the country's sea salt from Los Olivitos through clean solar evaporation and world-class manufacturing standards."}
-        </p>
+      {/* 1. Encabezado Principal y Visión General con Fotografía a la Derecha */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Columna Izquierda: Título y Visión Editorial */}
+        <div className="lg:col-span-7 flex flex-col justify-center">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#02afab]/10 text-[#02afab] text-xs font-bold uppercase tracking-wider mb-4 w-fit">
+            <Award className="w-3.5 h-3.5" />
+            <span>{isEs ? "Complejo Industrial Los Olivitos • Estado Zulia" : "Los Olivitos Industrial Complex • Zulia State"}</span>
+          </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#082846] tracking-tight leading-[1.15] mb-5">
+            {isEs
+              ? "La mayor productora de sal marina de alta pureza en Venezuela"
+              : "Venezuela's premier producer of high-purity solar sea salt"}
+          </h1>
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-6">
+            {isEs
+              ? "PRODUSAL (Productora de Sal C.A.) es el pilar de la industria salinera venezolana. Aportamos el 65% de la producción nacional de sal marina desde nuestro complejo en Los Olivitos, combinando energía solar limpia con estándares de calidad de clase mundial."
+              : "PRODUSAL (Productora de Sal C.A.) is the cornerstone of the Venezuelan salt industry, supplying 65% of the country's sea salt from Los Olivitos through clean solar evaporation and world-class manufacturing standards."}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 text-xs font-bold text-[#082846] shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-[#02afab]" />
+              {isEs ? "650.000 TM / año operativas" : "650,000 MT / year operative"}
+            </span>
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 text-xs font-bold text-[#082846] shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-[#94c11e]" />
+              {isEs ? "5.400 Ha Reserva ABRAE" : "5,400 Ha ABRAE Reserve"}
+            </span>
+          </div>
+        </div>
+
+        {/* Columna Derecha: Nueva Fotografía Industrial de las Salinas Los Olivitos */}
+        <div className="lg:col-span-5 relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 group">
+          <Image
+            src="/images/nosotros-salinas.jpg"
+            alt="Estanques de cristalización solar y acopio de sal marina en Los Olivitos Produsal"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 40vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#082846]/85 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute bottom-4 left-4 right-4 text-white">
+            <span className="text-[11px] font-bold text-[#94c11e] uppercase tracking-wider block font-heading">
+              {isEs ? "Cosecha Solar Marina" : "Solar Marine Harvest"}
+            </span>
+            <p className="text-xs sm:text-sm font-semibold text-white/95">
+              {isEs ? "Cristalización continua en Los Olivitos, Zulia" : "Continuous crystallization at Los Olivitos, Zulia"}
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* 2. Grid Panorámico e Historia Corporativa */}
@@ -310,7 +338,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           href={`/${currentLang}#contacto`}
           className="px-8 py-4 rounded-xl bg-white text-[#082846] hover:bg-slate-100 font-bold text-sm shadow-md transition-all shrink-0 inline-flex items-center gap-2 group"
         >
-          <span>{isEs ? "Cotizar Sal Industrial" : "Request Bulk Quote"}</span>
+          <span>{isEs ? "Contáctanos" : "Contact Us"}</span>
           <ArrowRight className="w-4 h-4 text-[#02afab] group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>

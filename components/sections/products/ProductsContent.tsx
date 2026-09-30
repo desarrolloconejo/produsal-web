@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sparkles, Droplets, Package, ArrowRight, FileText, ShieldCheck, Layers, Truck } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { ProductsCarousel } from "./ProductsCarousel";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 export type ProductsSectionDict = Dictionary["products"];
@@ -137,35 +138,23 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
                 </div>
               </div>
 
-              {/* Acciones Transaccionales por Categoría */}
-              <div className="pt-5 border-t border-slate-100 flex flex-col gap-2.5">
+              {/* Acciones por Categoría: Explorar y Ficha Técnica */}
+              <div className="pt-5 border-t border-slate-100 flex flex-col sm:flex-row gap-2.5">
                 <Link
                   href={`/${currentLang}/construccion?categoria=${category.id}`}
-                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl font-bold text-xs text-[#082846] hover:text-[#008784] bg-slate-100 hover:bg-[#02afab]/10 border border-slate-200/60 transition-all duration-200 font-heading"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl font-bold text-xs text-[#082846] hover:text-[#008784] bg-slate-100 hover:bg-[#02afab]/10 border border-slate-200/60 transition-all duration-200 font-heading text-center"
                 >
-                  <span>{currentLang === "es" ? "Explorar categoría y presentaciones" : "Explore category & formats"}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span className="truncate">{currentLang === "es" ? "Explorar categoría" : "Explore category"}</span>
+                  <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                 </Link>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <a
-                    href={`/${currentLang}#contacto`}
-                    className="inline-flex items-center justify-center gap-1.5 py-2.5 px-2.5 rounded-xl font-bold text-[11px] sm:text-xs text-white bg-[#02afab] hover:bg-[#008784] shadow-xs hover:shadow-md transition-all duration-200 font-heading whitespace-nowrap"
-                  >
-                    <span className="truncate">{dict.ctaQuote}</span>
-                    <ArrowRight className="w-3 h-3 shrink-0" />
-                  </a>
-
-                  <a
-                    href={`https://wa.me/582125557251?text=Hola%20Produsal,%20deseo%20solicitar%20la%20ficha%20t%C3%A9cnica%20de%20${encodeURIComponent(category.name)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 py-2.5 px-2.5 rounded-xl font-bold text-[11px] sm:text-xs text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors font-heading whitespace-nowrap"
-                  >
-                    <FileText className="w-3 h-3 text-slate-500 shrink-0" />
-                    <span className="truncate">{dict.ctaSpec}</span>
-                  </a>
-                </div>
+                <Link
+                  href={`/${currentLang}/contacto`}
+                  className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3.5 rounded-xl font-bold text-xs text-slate-700 hover:text-[#082846] bg-slate-100 hover:bg-slate-200 border border-slate-200/60 transition-colors font-heading whitespace-nowrap"
+                >
+                  <FileText className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                  <span>{dict.ctaSpec}</span>
+                </Link>
               </div>
             </div>
           </article>
@@ -189,67 +178,12 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
           </p>
         </div>
 
-        {/* Contenedor del Carrusel con Máscara de Difuminado en los Bordes */}
-        <div className="relative w-full overflow-hidden py-3">
-          {/* Difuminados de degradado en extremos */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-slate-50 to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10" />
-
-          {/* Track Animado Continuo con Pausa al Hover */}
-          <div className="animate-marquee flex gap-4 sm:gap-5">
-            {marqueeItems.map((product, idx) => {
-              const isGranel = product.categoryId === "granel";
-              const isBruta = product.categoryId === "bruta";
-
-              return (
-                <Link
-                  key={`${product.slug}-${idx}`}
-                  href={`/${currentLang}/construccion?producto=${product.slug}`}
-                  className="w-72 sm:w-80 shrink-0 p-5 rounded-2xl bg-white border border-slate-200/80 hover:border-[#02afab]/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-3.5 group cursor-pointer"
-                >
-                  {/* Fila Superior: Badges de Categoría y Formato */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span
-                      className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider font-heading ${
-                        isGranel
-                          ? "bg-[#082846]/10 text-[#082846]"
-                          : isBruta
-                          ? "bg-[#02afab]/15 text-[#008784]"
-                          : "bg-[#94c11e]/20 text-[#55780a]"
-                      }`}
-                    >
-                      {product.categoryName}
-                    </span>
-
-                    <span className="text-[11px] font-semibold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md font-heading">
-                      {product.format}
-                    </span>
-                  </div>
-
-                  {/* Cuerpo: Nombre de Producto y Aplicación */}
-                  <div className="flex flex-col gap-1 min-h-[52px]">
-                    <h4 className="text-sm sm:text-base font-extrabold text-[#082846] group-hover:text-[#02afab] transition-colors leading-snug font-heading">
-                      {product.name}
-                    </h4>
-                    <p className="text-xs text-slate-500 font-normal line-clamp-1">
-                      {product.use}
-                    </p>
-                  </div>
-
-                  {/* Pie: Enlace y Flecha Animada */}
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-heading">
-                    <span className="text-[11px] font-bold text-[#008784] group-hover:text-[#082846] transition-colors">
-                      {dict.viewDetails}
-                    </span>
-                    <div className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-[#02afab] group-hover:text-white text-slate-400 flex items-center justify-center transition-colors">
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+        {/* Contenedor del Carrusel Interactivo */}
+        <ProductsCarousel
+          items={allProducts}
+          currentLang={currentLang}
+          viewDetailsLabel={dict.viewDetails}
+        />
       </div>
       </ScrollReveal>
 

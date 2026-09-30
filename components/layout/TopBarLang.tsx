@@ -98,32 +98,26 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
 
   const handleLanguageSwitch = (target: Locale, e: React.MouseEvent) => {
     e.preventDefault();
-    // Si ya estamos en el idioma seleccionado, no hacer nada ni mover el scroll
     if (currentLang === target) return;
 
-    // 1. Guardar la posición exacta de scroll en el momento del cambio
     if (typeof window !== "undefined") {
       const currentScrollY = window.scrollY;
       try {
         sessionStorage.setItem("produsal_preserve_scroll", currentScrollY.toString());
       } catch {
-        // Fallback silencioso
+        // Fallback
       }
 
-      // 2. Marcar cambio de idioma para congelar navbar y scroll
       document.documentElement.dataset.langSwitching = "true";
       document.documentElement.style.scrollBehavior = "auto";
 
-      // 3. Mantener hash si existe
       const hash = window.location.hash || "";
       const targetUrl = getLanguageUrl(target) + hash;
 
-      // 4. Cambiar de ruta sin que Next.js mueva el scroll
       router.replace(targetUrl, { scroll: false });
     }
   };
 
-  // Restaurar de forma atómica y precisa la posición de scroll
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -133,15 +127,12 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
         sessionStorage.removeItem("produsal_preserve_scroll");
         const targetY = parseInt(savedScroll, 10);
         if (!isNaN(targetY)) {
-          // Aplicar de inmediato
           window.scrollTo({ top: targetY, behavior: "instant" });
 
-          // Y asegurar en el siguiente cuadro tras el renderizado de los textos del nuevo idioma
           requestAnimationFrame(() => {
             window.scrollTo({ top: targetY, behavior: "instant" });
             setTimeout(() => {
               window.scrollTo({ top: targetY, behavior: "instant" });
-              // Volver a activar scroll-behavior fluido para los enlaces del menú
               document.documentElement.style.scrollBehavior = "";
               delete document.documentElement.dataset.langSwitching;
             }, 100);
@@ -150,24 +141,23 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
         }
       }
     } catch {
-      // Fallback silencioso
+      // Fallback
     }
 
-    // Asegurar que el scrollBehavior y el tag queden limpios
     document.documentElement.style.scrollBehavior = "";
     delete document.documentElement.dataset.langSwitching;
   }, [currentLang]);
 
-  const contactEmail = dict.email || "contacto@produsal.com";
+  const contactEmail = dict.email || "info@grupomimesa.com";
 
   return (
     <aside
       aria-label="Información de contacto y selector de idioma"
       className="w-full text-white/80 text-xs py-2 px-4 sm:px-6 lg:px-8 transition-colors select-none"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        {/* Correo de contacto con icono turquesa */}
-        <div className="flex items-center gap-2">
+      <div className="max-w-7xl mx-auto flex items-center justify-end sm:justify-between gap-4">
+        {/* Correo de contacto visible solo en pantallas sm en adelante; oculto en móvil */}
+        <div className="hidden sm:flex items-center gap-2">
           <a
             href={`mailto:${contactEmail}`}
             className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group"
@@ -177,7 +167,7 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
           </a>
         </div>
 
-        {/* Selector de idioma con banderas y valor es / en */}
+        {/* Selector de idioma con banderas y valor es / en (único elemento visible en móvil) */}
         <div className="flex items-center gap-1.5 bg-white/10 p-1 rounded-lg border border-white/15">
           <Link
             href={getLanguageUrl("es")}

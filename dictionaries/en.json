@@ -5,8 +5,8 @@
     "description": "Leading solar sea salt harvest and distribution with 99.8% NaCl purity and 650,000 MT/year output at Los Olivitos, Zulia. Wholesale supplier for food, petrochemical, water treatment, and animal feed sectors."
   },
   "topBar": {
-    "email": "contacto@produsal.com",
-    "phone": "+58 (212) 555-SAL1",
+    "email": "info@grupomimesa.com",
+    "phone": "0212 208 51 11",
     "location": "Los Olivitos, Zulia"
   },
   "nav": {
@@ -56,11 +56,6 @@
         "year": "1989",
         "title": "Foundation",
         "desc": "Created in Maracaibo by Grupo Zuliano as a strategic pioneer project for regional salt development."
-      },
-      {
-        "year": "1995",
-        "title": "Strategic Joint Venture",
-        "desc": "Formal joint venture between PEQUIVEN and CARGILL / Suprema to integrate world-class quality standards."
       },
       {
         "year": "1999",
@@ -120,14 +115,6 @@
         "highlight": "World-class industrial vision"
       },
       {
-        "year": "1995",
-        "tag": "Global Joint Venture",
-        "title": "Pequiven & Cargill / Suprema",
-        "milestone": "Strategic Partnership",
-        "description": "Landmark alliance between petrochemical leadership and global agro-industry, integrating international quality standards.",
-        "highlight": "ISO & COVENIN compliance"
-      },
-      {
         "year": "1999",
         "tag": "Green Field Engineering",
         "title": "Los Olivitos Commercial Launch",
@@ -164,15 +151,14 @@
           "desc": "Food grade and chemical grade certified quality with batch-by-batch laboratory control."
         }
       ],
-      "stats": {
-        "capacityValue": "650K MT",
-        "capacityLabel": "Operative / Year",
-        "shareValue": "65%",
-        "shareLabel": "National Production",
-        "landValue": "5,400 Ha",
-        "landLabel": "ABRAE Nature Reserve",
-        "tagSuffix": "ABRAE Reserve"
-      }
+      "abraeBadge": "ABRAE Nature Reserve & Wildlife Sanctuary",
+      "abraeTitle": "Pink Flamingo Sanctuary at Los Olivitos",
+      "abraeDescription": "Our solar salt harvesting operations coexist in ecological harmony within a Special Administrative Area (ABRAE), declared a Ramsar Wetland of International Importance and WHSRN site for hosting Venezuela's largest breeding colony of Caribbean flamingos.",
+      "abraePoints": [
+        "Breeding sanctuary for the Caribbean Pink Flamingo (Phoenicopterus ruber)",
+        "Ramsar Wetland of International Importance & WHSRN Site",
+        "Ecological balance between salt harvesting and coastal biodiversity"
+      ]
     }
   },
   "processSection": {
@@ -226,7 +212,7 @@
     "badge": "Industrial & Commercial Catalog",
     "title": "High-Purity Sea Salt Solutions",
     "subtitle": "Solar marine salt harvested at Los Olivitos with 99.8% NaCl purity, certified for petrochemical chlor-alkali, food manufacturing, and heavy industry.",
-    "ctaQuote": "Quote by Ton",
+    "ctaQuote": "Contact Us",
     "ctaSpec": "Data Sheet",
     "purityLabel": "Purity",
     "humidityLabel": "Moisture",
@@ -338,8 +324,7 @@
       },
       "capacity": {
         "text": "The largest salt facility in the country is PRODUSAL, in Los Olivitos, Zulia",
-        "subtext": "With current operational capacity for:",
-        "metric": "650,000 MT / YEAR"
+        "subtext": "Primary solar sea salt complex providing strategic supply for nationwide industries."
       },
       "coastal": {
         "metric": "100%",
@@ -376,12 +361,12 @@
   },
   "contact": {
     "badge": "Commercial & Industrial Sales",
-    "title": "Ready to purchase wholesale sea salt?",
+    "title": "Quote Now!",
     "description": "We fulfill bulk wholesale orders, long-term supply agreements, and custom technical specifications for chemical, food manufacturing, and animal nutrition industries.",
     "phoneLabel": "Sales Office",
-    "phone": "+58 (212) 555-SAL1",
+    "phone": "0212 208 51 11 / 0800 2274455",
     "emailLabel": "Inquiries & Quotes",
-    "email": "ventas@produsal.com",
+    "email": "info@grupomimesa.com",
     "locationLabel": "Complex Location",
     "location": "Los Olivitos Industrial Complex, Zulia, Venezuela",
     "formTitle": "Request a Quote or Technical Data Sheet",
@@ -408,8 +393,8 @@
     "officeLabel": "Corporate Offices",
     "officeAddress": "Maracaibo, Zulia State, Venezuela",
     "address": "Los Olivitos / Maracaibo, Zulia State",
-    "phone": "+58 (212) 555-SAL1",
-    "email": "contacto@produsal.com",
+    "phone": "0212 208 51 11 / 0800 2274455",
+    "email": "info@grupomimesa.com",
     "scrollToTop": "Back to Top",
     "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. All rights reserved.",
     "developerCredit": "Developed by El Conejo Del Sombrero",
