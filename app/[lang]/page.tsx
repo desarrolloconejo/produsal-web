@@ -46,7 +46,7 @@ export default async function HomePage({
   return (
     <>
       {/* Sección Hero: page > wrapper > content */}
-      <HeroWrapper backgroundImageSrc="/images/hero-bg.jpg">
+      <HeroWrapper backgroundImageSrc="/images/produsal-apilador-salina.webp">
         <HeroContent currentLang={currentLang} dict={dict.hero} />
       </HeroWrapper>
 

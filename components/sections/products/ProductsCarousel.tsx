@@ -140,7 +140,7 @@ export function ProductsCarousel({ items, currentLang, viewDetailsLabel }: Produ
             return (
               <Link
                 key={`${product.slug}-${idx}`}
-                href={`/${currentLang}/construccion?producto=${product.slug}`}
+                href={`/${currentLang}/productos/${product.categoryId}`}
                 onClick={(e) => {
                   if (hasMoved) {
                     e.preventDefault();

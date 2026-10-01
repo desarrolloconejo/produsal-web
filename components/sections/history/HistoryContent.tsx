@@ -41,7 +41,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           {/* Lado Derecho: Fotografía Panorámica con Remate Curvo y Diagonal */}
           <div className="lg:col-span-5 relative w-full h-52 sm:h-64 lg:h-72 overflow-hidden rounded-3xl lg:rounded-tl-[60px] lg:rounded-br-[60px] shadow-lg border border-slate-200/60 group">
             <Image
-              src="/images/nosotros-salinas.jpg"
+              src="/images/produsal-salina-horizonte.webp"
               alt="Complejo Industrial Salinas Los Olivitos - Vista Panorámica"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -120,7 +120,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           {/* Lado Izquierdo: Fotografía de Flamencos en la Reserva Natural Los Olivitos */}
           <div className="lg:col-span-5 relative w-full min-h-[300px] sm:min-h-[360px] lg:min-h-full">
             <Image
-              src="/images/flamencos-los-olivitos.jpg"
+              src="/images/produsal-flamencos-laguna.webp"
               alt={dict.showcase?.abraeTitle || "Santuario de Flamencos en la Reserva Natural Los Olivitos"}
               fill
               className="object-cover"

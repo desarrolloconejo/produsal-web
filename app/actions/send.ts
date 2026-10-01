@@ -15,6 +15,7 @@ export async function sendContactEmail(
   const name = formData.get("name")?.toString().trim();
   const email = formData.get("email")?.toString().trim();
   const company = formData.get("company")?.toString().trim() || "No especificada";
+  const product = formData.get("product")?.toString().trim();
   const message = formData.get("message")?.toString().trim();
 
   // Validación básica
@@ -66,16 +67,19 @@ export async function sendContactEmail(
     await transporter.sendMail({
       from: contactFrom,
       to: contactTo,
-      subject: `Nuevo mensaje de contacto web: ${name} (${company})`,
-      text: `Nombre: ${name}\nEmpresa: ${company}\nEmail: ${email}\n\nMensaje:\n${message}`,
+      subject: product
+        ? `Cotización [${product}]: ${name} (${company})`
+        : `Nuevo mensaje de contacto web: ${name} (${company})`,
+      text: `Nombre: ${name}\nEmpresa: ${company}\nEmail: ${email}\nProducto / Formato: ${product || "General"}\n\nMensaje:\n${message}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; color: #082846;">
-          <h2 style="color: #02afab;">Nuevo Contacto desde Sitio Web Produsal</h2>
+          <h2 style="color: #02afab;">Nuevo Requerimiento desde Sitio Web Produsal</h2>
           <p><strong>Nombre:</strong> ${name}</p>
           <p><strong>Empresa:</strong> ${company}</p>
           <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+          ${product ? `<p><strong>Producto / Presentación de Interés:</strong> <span style="color: #02afab; font-weight: bold;">${product}</span></p>` : ""}
           <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 4px solid #02afab; border-radius: 4px;">
-            <strong>Mensaje:</strong>
+            <strong>Mensaje o Requerimiento:</strong>
             <p style="white-space: pre-line;">${message}</p>
           </div>
           <hr style="margin-top: 25px; border: none; border-top: 1px solid #e2e8f0;" />

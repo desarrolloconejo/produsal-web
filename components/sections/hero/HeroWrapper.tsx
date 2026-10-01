@@ -1,17 +1,30 @@
+"use client";
+
 import Image from "next/image";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 interface HeroWrapperProps {
   children: ReactNode;
   backgroundImageSrc?: string;
+  id?: string;
 }
 
 export function HeroWrapper({
   children,
-  backgroundImageSrc = "/images/hero-bg.jpg",
+  backgroundImageSrc = "/images/produsal-apilador-salina.webp",
+  id = "inicio",
 }: HeroWrapperProps) {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  }, []);
+
   return (
-    <section className="relative w-full min-h-[calc(100vh+8rem)] min-h-[720px] lg:min-h-[800px] flex items-center justify-center overflow-hidden bg-[#082846] -mt-32 pt-44 sm:pt-48 pb-20 sm:pb-24">
+    <section
+      id={id}
+      className="relative w-full min-h-[calc(100vh+8rem)] min-h-[720px] lg:min-h-[800px] flex items-center justify-center overflow-hidden bg-[#082846] -mt-32 pt-44 sm:pt-48 pb-20 sm:pb-24"
+    >
       {/* Fondo de alta resolución generado (Salinas de Venezuela) */}
       <div className="absolute inset-0 z-0">
         <Image

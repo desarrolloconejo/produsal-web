@@ -211,103 +211,207 @@
   "products": {
     "badge": "Industrial & Commercial Catalog",
     "title": "High-Purity Sea Salt Solutions",
-    "subtitle": "Solar marine salt harvested at Los Olivitos with 99.8% NaCl purity, certified for petrochemical chlor-alkali, food manufacturing, and heavy industry.",
+    "subtitle": "Solar marine salt harvested at Los Olivitos under rigorous physicochemical purity standards, certified for petrochemical chlor-alkali, food processing, water treatment, and animal nutrition.",
     "ctaQuote": "Contact Us",
     "ctaSpec": "Data Sheet",
+    "ctaDownload": "Download PDF",
+    "ctaPreview": "Preview Sheet",
     "purityLabel": "Purity",
     "humidityLabel": "Moisture",
+    "densityLabel": "Density",
     "packagingLabel": "Packaging",
     "applicationsLabel": "Key Applications",
     "viewDetails": "View Specifications",
-    "qualityGuarantee": "Certified minimum purity of 99.8% NaCl with continuous batch-by-batch traceability.",
+    "qualityGuarantee": "Certified minimum purity per ASTM E534-98 standard with continuous batch-by-batch traceability.",
     "carouselBadge": "Available Presentations & Packaging",
     "carouselTitle": "Product Catalog by Presentation",
-    "carouselSubtitle": "Dispatch ready in bulk hopper trucks, 1 MT Big Bags, and 20 Kg bags for heavy and light industry.",
+    "carouselSubtitle": "Industrial dispatch available in bulk hopper trucks, 1 MT Big Bags, and 20 Kg bags ready for production lines.",
     "categories": [
       {
-        "id": "granel",
-        "slug": "bulk-sea-salt",
-        "name": "Bulk Sea Salt",
-        "tagline": "Petrochemical & High-Volume Industrial",
-        "desc": "Direct load from stockpiling yard into hopper trucks and bulk cargo vessels. Engineered for chlor-alkali electrolysis, chemical synthesis, and continuous manufacturing.",
-        "purity": "99.8% NaCl",
-        "humidity": "< 0.3%",
-        "packaging": "Hopper Trucks / Bulk Cargo",
-        "image": "/images/products/sal-granel.webp",
+        "id": "sal-bruta-premium",
+        "slug": "sal-bruta-premium",
+        "code": "REG-SAL-CM-001",
+        "name": "Sal Bruta Premium",
+        "tagline": "Continuous Dual Washing • Maximum Chemical Purity",
+        "desc": "Coarse crystal solar sea salt subjected to two continuous saturated brine washing cycles. Minimum 99.3% NaCl purity with exceptionally low levels of sulfates, calcium, and magnesium.",
+        "purity": "≥ 99.3% NaCl",
+        "humidity": "≤ 0.2%",
+        "density": "1,120 - 1,130 g/L",
+        "calcium": "≤ 0.08%",
+        "magnesium": "≤ 0.06%",
+        "sulfates": "≤ 0.20%",
+        "insolubles": "≤ 0.06%",
+        "additives": "No added additives",
+        "cpe": "CPE 0317416481",
+        "packaging": "Bulk / 1 MT Big Bag / 20 Kg Bags",
+        "image": "/images/products/sal-bruta-premium.webp",
+        "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
+        "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
+        "applications": [
+          "Petrochemical industry and chlor-alkali electrolysis",
+          "Chemical synthesis and heavy manufacturing",
+          "Industrial water treatment, softening, and demineralization",
+          "Salting and bulk food preservation"
+        ],
         "items": [
           {
-            "name": "Bulk Sea Salt Premium",
-            "slug": "bulk-sea-salt-premium",
+            "name": "Sal Bruta Premium in Bulk",
+            "slug": "sal-bruta-premium-bulk",
             "format": "Hopper / Bulk",
             "use": "Petrochemical & Chlor-Alkali Industry"
           },
           {
-            "name": "Bulk Sea Salt Grade A",
-            "slug": "bulk-sea-salt-grade-a",
+            "name": "Sal Bruta Premium in Big Bag (1 MT)",
+            "slug": "sal-bruta-premium-big-bag",
+            "format": "1,000 Kg Big Bag",
+            "use": "Water Treatment & Industrial Processing"
+          },
+          {
+            "name": "Sal Bruta Premium in 20 Kg Bags",
+            "slug": "sal-bruta-premium-20kg-bags",
+            "format": "20 Kg Polyethylene Bags (CPE 0317416481)",
+            "use": "Food Manufacturing & Commercial Processing"
+          }
+        ]
+      },
+      {
+        "id": "sal-bruta-tipo-a",
+        "slug": "sal-bruta-tipo-a",
+        "code": "REG-SAL-CM-003",
+        "name": "Sal Bruta Tipo A",
+        "tagline": "Efficient Solar Wash • Agroindustrial Grade",
+        "desc": "Natural coarse solar marine salt with high solubility and uniform crystal distribution. Specially formulated for agricultural feed, livestock mineral supplements, and general chemical applications.",
+        "purity": "≥ 98.5% NaCl",
+        "humidity": "≤ 0.6%",
+        "density": "1,110 - 1,120 g/L",
+        "calcium": "≤ 0.10%",
+        "magnesium": "≤ 0.20%",
+        "sulfates": "≤ 0.50%",
+        "insolubles": "≤ 0.10%",
+        "additives": "No added additives",
+        "cpe": "CPE 0317416482",
+        "packaging": "Bulk / 1 MT Big Bag / 20 Kg Bags",
+        "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp",
+        "pdfEs": "/docs/fichas/sal-bruta-tipo-a-es.pdf",
+        "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
+        "applications": [
+          "Animal nutrition and mineral salt production",
+          "Balanced feeds for livestock (ABA)",
+          "Wastewater treatment and industrial desalination",
+          "High-volume raw industrial applications"
+        ],
+        "items": [
+          {
+            "name": "Sal Bruta Tipo A in Bulk",
+            "slug": "sal-bruta-tipo-a-bulk",
             "format": "Hopper / Bulk",
-            "use": "Desalination & Heavy Industrial Processes"
+            "use": "Agribusiness & High-Volume Processing"
+          },
+          {
+            "name": "Sal Bruta Tipo A in Big Bag (1 MT)",
+            "slug": "sal-bruta-tipo-a-big-bag",
+            "format": "1,000 Kg Big Bag",
+            "use": "Water Softening & Industrial Treatment"
+          },
+          {
+            "name": "Sal Bruta Tipo A in 20 Kg Bags",
+            "slug": "sal-bruta-tipo-a-20kg-bags",
+            "format": "20 Kg Polyethylene Bags (CPE 0317416482)",
+            "use": "Livestock Nutrition & Agriculture"
           }
         ]
       },
       {
-        "id": "bruta",
-        "slug": "washed-crude-salt",
-        "name": "Washed Crude Salt",
-        "tagline": "Dual Continuous Saturated Brine Wash",
-        "desc": "Processed through two continuous industrial washing stages with saturated brine to eliminate surface impurities while preserving crystal integrity and density.",
-        "purity": "99.7% NaCl",
-        "humidity": "< 1.5%",
-        "packaging": "Big Bag (1 MT) / 20 Kg Bags",
-        "image": "/images/products/sal-bruta-lavada.webp",
+        "id": "sal-molida-premium",
+        "slug": "sal-molida-premium",
+        "code": "REG-SAL-CM-002",
+        "name": "Sal Molida Premium",
+        "tagline": "Homogeneous Milling • Food Grade Standard",
+        "desc": "Ultra-fine solar sea salt refined in automated crushing and milling lines. Uniform grain size distribution, immediate solubility, conditioned with food-grade anticaking agent.",
+        "purity": "≥ 99.3% NaCl",
+        "humidity": "≤ 0.2%",
+        "density": "1,220 - 1,230 g/L",
+        "calcium": "≤ 0.08%",
+        "magnesium": "≤ 0.06%",
+        "sulfates": "≤ 0.20%",
+        "insolubles": "≤ 0.06%",
+        "additives": "Sodium Ferrocyanide (YPS) ≤ 10 ppm",
+        "cpe": "CPE 0308115248",
+        "packaging": "Bulk / 1 MT Big Bag / 20 Kg Bags",
+        "image": "/images/products/sal-molida-premium.webp",
+        "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
+        "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
+        "applications": [
+          "Food manufacturing, baking, and dairy industries",
+          "Charcuterie, meat processing, and canning",
+          "Human consumption and retail table salt packaging",
+          "Pharmaceutical and cosmetic formulations"
+        ],
         "items": [
           {
-            "name": "Washed Crude Salt in Big Bag (1 MT)",
-            "slug": "washed-crude-salt-big-bag",
+            "name": "Sal Molida Premium in Bulk",
+            "slug": "sal-molida-premium-bulk",
+            "format": "Hopper / Bulk",
+            "use": "Food Processing Manufacturing Plants"
+          },
+          {
+            "name": "Sal Molida Premium in Big Bag (1 MT)",
+            "slug": "sal-molida-premium-big-bag",
             "format": "1,000 Kg Big Bag",
-            "use": "Water Treatment & Softening"
+            "use": "Food Formulations & Chemical Compounding"
           },
           {
-            "name": "Washed Crude Salt Grade A (20 Kg)",
-            "slug": "washed-crude-salt-20kg",
-            "format": "20 Kg Polywoven Bags",
-            "use": "Agribusiness & Animal Nutrition"
-          },
-          {
-            "name": "Washed Crude Salt Premium (20 Kg)",
-            "slug": "washed-crude-salt-premium-20kg",
-            "format": "20 Kg Polywoven Bags",
-            "use": "Salting & Industrial Food Preservation"
+            "name": "Sal Molida Premium in 20 Kg Bags",
+            "slug": "sal-molida-premium-20kg-bags",
+            "format": "20 Kg Polyethylene Bags (CPE 0308115248)",
+            "use": "Baking, Dairy & Processed Meats"
           }
         ]
       },
       {
-        "id": "molida",
-        "slug": "milled-sea-salt",
-        "name": "Milled Sea Salt",
-        "tagline": "Food Grade & Ultra-Fine Industrial Standards",
-        "desc": "Milled and classified in high-precision automated milling lines. Uniform crystal distribution and rapid solubility for food processing and pharmaceutical formulations.",
-        "purity": "99.8% NaCl",
-        "humidity": "< 0.2%",
-        "packaging": "20 Kg Bags / Big Bag (1 MT)",
-        "image": "/images/products/sal-molida.webp",
+        "id": "sal-molida-tipo-a",
+        "slug": "sal-molida-tipo-a",
+        "code": "REG-SAL-CM-004",
+        "name": "Sal Molida Tipo A",
+        "tagline": "Industrial Milling • Versatile Performance",
+        "desc": "Ground crystalline salt engineered for general manufacturing and compounded formulations. Balanced with anticaking agent for excellent free-flowing properties and stability.",
+        "purity": "≥ 98.5% NaCl",
+        "humidity": "≤ 0.6%",
+        "density": "1,220 - 1,230 g/L",
+        "calcium": "≤ 0.10%",
+        "magnesium": "≤ 0.18%",
+        "sulfates": "≤ 0.50%",
+        "insolubles": "≤ 0.10%",
+        "additives": "Sodium Ferrocyanide (YPS) ≤ 10 ppm",
+        "cpe": "CPE 0813313838",
+        "packaging": "Bulk / 1 MT Big Bag / 20 Kg Bags",
+        "image": "/images/products/sal-molida-tipo-a.webp",
+        "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
+        "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
+        "applications": [
+          "Animal feed blends and livestock nutrition mixes",
+          "Textile dyeing and leather tanning industry",
+          "Industrial chemical blends and processing",
+          "General commercial manufacturing"
+        ],
         "items": [
           {
-            "name": "Milled Sea Salt Premium (20 Kg)",
-            "slug": "milled-sea-salt-premium-20kg",
-            "format": "20 Kg Laminated Bags",
-            "use": "Food Manufacturing, Dairy & Retail"
+            "name": "Sal Molida Tipo A in Bulk",
+            "slug": "sal-molida-tipo-a-bulk",
+            "format": "Hopper / Bulk",
+            "use": "Industrial Processing & Compounding"
           },
           {
-            "name": "Milled Sea Salt Grade A (20 Kg)",
-            "slug": "milled-sea-salt-grade-a-20kg",
-            "format": "20 Kg Laminated Bags",
-            "use": "Baking, Charcuterie & Meat Processing"
-          },
-          {
-            "name": "Milled Sea Salt in Big Bag (1 MT)",
-            "slug": "milled-sea-salt-big-bag",
+            "name": "Sal Molida Tipo A in Big Bag (1 MT)",
+            "slug": "sal-molida-tipo-a-big-bag",
             "format": "1,000 Kg Big Bag",
-            "use": "Chemical & Pharmaceutical Formulations"
+            "use": "Balanced Animal Nutrition"
+          },
+          {
+            "name": "Sal Molida Tipo A in 20 Kg Bags",
+            "slug": "sal-molida-tipo-a-20kg-bags",
+            "format": "20 Kg Polyethylene Bags (CPE 0813313838)",
+            "use": "Balanced Feed & Manufacturing"
           }
         ]
       }

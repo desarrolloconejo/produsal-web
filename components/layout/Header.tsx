@@ -42,12 +42,19 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
     };
   }, []);
 
+  const handleHomeClick = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="w-full relative z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
         {/* Logo Produsal */}
         <Link
           href={`/${currentLang}`}
+          onClick={handleHomeClick}
           className="flex items-center gap-3 group focus:outline-hidden focus:ring-2 focus:ring-[#02afab] rounded-lg p-1"
           aria-label="Produsal - Inicio"
         >
@@ -65,6 +72,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
         <nav className="hidden md:flex items-center gap-1 lg:gap-2">
           <Link
             href={`/${currentLang}`}
+            onClick={handleHomeClick}
             className="px-3.5 py-2 rounded-lg text-sm font-semibold text-white/85 hover:text-[#02afab] hover:bg-white/5 transition-all duration-200 relative group"
           >
             <span>{dict.home}</span>
@@ -87,7 +95,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
             className="relative"
           >
             <Link
-              href={`/${currentLang}#productos`}
+              href={`/${currentLang}/productos`}
               onClick={() => setProductsDropdownOpen(false)}
               className="px-3.5 py-2 rounded-lg text-sm font-semibold text-white/85 hover:text-[#02afab] hover:bg-white/5 transition-all duration-200 relative flex items-center gap-1.5 group"
             >
@@ -109,7 +117,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
                     {productsDict.categories.map((category) => (
                       <Link
                         key={category.id}
-                        href={`/${currentLang}/construccion?categoria=${category.id}`}
+                        href={`/${currentLang}/productos/${category.slug}`}
                         onClick={() => setProductsDropdownOpen(false)}
                         className="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                       >
@@ -129,7 +137,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
                   {/* Separador y Enlace General */}
                   <div className="my-1 border-t border-slate-100" />
                   <Link
-                    href={`/${currentLang}#productos`}
+                    href={`/${currentLang}/productos`}
                     onClick={() => setProductsDropdownOpen(false)}
                     className="flex items-center justify-between px-3.5 py-2 rounded-xl text-xs font-bold text-[#008784] hover:bg-[#02afab]/10 font-heading transition-colors"
                   >

@@ -160,7 +160,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
         {/* Columna Derecha: Nueva Fotografía Industrial de las Salinas Los Olivitos */}
         <div className="lg:col-span-5 relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 group">
           <Image
-            src="/images/nosotros-salinas.jpg"
+            src="/images/produsal-piramides-cielo.webp"
             alt="Estanques de cristalización solar y acopio de sal marina en Los Olivitos Produsal"
             fill
             priority
@@ -183,7 +183,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 aspect-16/10">
           <Image
-            src="/images/hero-bg.jpg"
+            src="/images/produsal-salina-horizonte.webp"
             alt="Salinas Los Olivitos Produsal Zulia Venezuela"
             fill
             className="object-cover"
@@ -321,7 +321,130 @@ export function AboutContent({ currentLang }: AboutContentProps) {
         </div>
       </div>
 
-      {/* 6. Llamado a la Acción Transaccional */}
+      {/* 6. Nuestro Equipo Humano y Operación en Campo */}
+      <div className="flex flex-col gap-8">
+        <div>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#02afab] block mb-2 font-heading">
+            {isEs ? "Nuestro Talento y Gente" : "Our People & Workforce"}
+          </span>
+          <h2 className="text-3xl font-extrabold text-[#082846] tracking-tight font-heading">
+            {isEs ? "El Equipo que Impulsa la Industria Salinera" : "The Team Driving the Venezuelan Salt Industry"}
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl mt-2">
+            {isEs
+              ? "Más de 35 años de experiencia técnica respaldada por un equipo multidisciplinario de ingenieros químicos, mecánicos, supervisores de campo y operadores certificados que trabajan día a día en Los Olivitos."
+              : "Over 35 years of industrial salt expertise delivered by a multidisciplinary team of chemical engineers, plant technicians, field supervisors, and certified operators working daily at Los Olivitos."}
+          </p>
+        </div>
+
+        {/* Fotografía Panorámica del Equipo Completo PRODUSAL */}
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 aspect-16/9 sm:aspect-21/9 bg-slate-900 group">
+          <Image
+            src="/images/produsal-equipo-humano.webp"
+            alt="Equipo de trabajo y profesionales de PRODUSAL en el monumento Los Olivitos"
+            fill
+            sizes="100vw"
+            className="object-cover group-hover:scale-102 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#082846]/90 via-[#082846]/30 to-transparent pointer-events-none" />
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
+            <div>
+              <span className="text-xs uppercase font-bold tracking-wider text-[#94c11e] block mb-1 font-heading">
+                {isEs ? "Familia PRODUSAL • Los Olivitos, Zulia" : "PRODUSAL Family • Los Olivitos, Zulia"}
+              </span>
+              <p className="text-base sm:text-lg font-bold">
+                {isEs
+                  ? "Compromiso humano, seguridad industrial y vocación de excelencia"
+                  : "Human commitment, workplace safety, and pursuit of operational excellence"}
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/20 backdrop-blur-md border border-white/20 text-xs font-bold font-heading shrink-0 self-start sm:self-auto">
+              <span className="w-2 h-2 rounded-full bg-[#02afab] animate-pulse" />
+              {isEs ? "100% Talento Venezolano" : "100% Venezuelan Talent"}
+            </span>
+          </div>
+        </div>
+
+        {/* 3 Bloques Operativos con Fotos Reales */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm flex flex-col group hover:shadow-md transition-all">
+            <div className="relative aspect-16/10 bg-slate-100 overflow-hidden">
+              <Image
+                src="/images/produsal-envasado-operadores.webp"
+                alt="Operadores en planta envasando sal marina Produsal"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-5 flex flex-col gap-2">
+              <span className="text-[11px] font-bold text-[#02afab] uppercase font-heading">
+                {isEs ? "Envasado & Empaque" : "Packaging & Bagging"}
+              </span>
+              <h4 className="text-base font-bold text-[#082846] leading-snug">
+                {isEs ? "Control Riguroso en Cada Saco" : "Rigorous Quality on Every Bag"}
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {isEs
+                  ? "Operadores equipados con protección integral asegurando llenado y sellado de alta resistencia en sacos de 20 kg."
+                  : "Fully equipped operators ensuring precise filling and heavy-duty sealing of 20 kg bags."}
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm flex flex-col group hover:shadow-md transition-all">
+            <div className="relative aspect-16/10 bg-slate-100 overflow-hidden">
+              <Image
+                src="/images/produsal-despacho-granel.webp"
+                alt="Carga de gandola tolva a granel con cargador pesado"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-5 flex flex-col gap-2">
+              <span className="text-[11px] font-bold text-[#02afab] uppercase font-heading">
+                {isEs ? "Despacho a Granel" : "Bulk Freight Dispatch"}
+              </span>
+              <h4 className="text-base font-bold text-[#082846] leading-snug">
+                {isEs ? "Carga Rápida de Tolvas y Gandolas" : "Rapid Loading of Bulk Trailers"}
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {isEs
+                  ? "Capacidad de movilización de hasta 650.000 TM/año con maquinaria pesada dedicada en patio de acopio."
+                  : "Handling capacity up to 650,000 MT/year with dedicated heavy machinery on stockpiling yards."}
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm flex flex-col group hover:shadow-md transition-all">
+            <div className="relative aspect-16/10 bg-slate-100 overflow-hidden">
+              <Image
+                src="/images/produsal-atardecer-reflejo.webp"
+                alt="Reflejo del atardecer en los canales de la salina"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-5 flex flex-col gap-2">
+              <span className="text-[11px] font-bold text-[#02afab] uppercase font-heading">
+                {isEs ? "Entorno Los Olivitos" : "Los Olivitos Environment"}
+              </span>
+              <h4 className="text-base font-bold text-[#082846] leading-snug">
+                {isEs ? "Sustentabilidad y Energía Solar" : "Sustainability & Solar Energy"}
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {isEs
+                  ? "Operación limpia en coexistencia armónica con la biodiversidad y el refugio de fauna silvestre."
+                  : "Clean solar operation coexisting harmoniously with coastal biodiversity and wildlife reserve."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 7. Llamado a la Acción Transaccional */}
       <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#02afab] to-[#008784] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="max-w-2xl text-left">
           <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">

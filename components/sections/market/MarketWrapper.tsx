@@ -15,7 +15,7 @@ export function MarketWrapper({ children, id = "mercado" }: MarketWrapperProps) 
       {/* Fondo de alta resolución con la montaña de sal en el lateral derecho */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 pointer-events-none select-none opacity-40 lg:opacity-50">
         <Image
-          src="/images/market-salt-bg.webp"
+          src="/images/produsal-atardecer-piramide.webp"
           alt="Montaña de sal marina PRODUSAL"
           fill
           className="object-cover object-right"

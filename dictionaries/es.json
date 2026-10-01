@@ -211,103 +211,207 @@
   "products": {
     "badge": "Catálogo Industrial y Comercial",
     "title": "Soluciones Salinas de Alta Pureza",
-    "subtitle": "Sal marina solar cosechada en Los Olivitos con 99.8% de NaCl, certificada para petroquímica, industria de alimentos y manufactura.",
+    "subtitle": "Sal marina solar cosechada en Los Olivitos con altos estándares de pureza físico-química, certificada para petroquímica, industria de alimentos, tratamiento de agua y nutrición animal.",
     "ctaQuote": "Contáctanos",
     "ctaSpec": "Ficha Técnica",
+    "ctaDownload": "Descargar PDF",
+    "ctaPreview": "Vista Previa",
     "purityLabel": "Pureza",
     "humidityLabel": "Humedad",
+    "densityLabel": "Densidad",
     "packagingLabel": "Presentación",
     "applicationsLabel": "Aplicaciones clave",
     "viewDetails": "Ver especificaciones",
-    "qualityGuarantee": "Garantía de pureza mínima certificada del 99.8% de NaCl y trazabilidad continua lote a lote.",
+    "qualityGuarantee": "Garantía de pureza mínima certificada según norma ASTM E534-98 con trazabilidad continua por lote.",
     "carouselBadge": "Presentaciones y Formatos Disponibles",
     "carouselTitle": "Catálogo de Productos por Presentación",
-    "carouselSubtitle": "Despachos en camiones tolva, Big Bags de 1 TM y sacos de 20 Kg listos para la industria.",
+    "carouselSubtitle": "Despachos industriales en camiones tolva a granel, Big Bags de 1 TM y sacos de 20 Kg listos para la cadena productiva.",
     "categories": [
       {
-        "id": "granel",
-        "slug": "sal-a-granel",
-        "name": "Sal a Granel",
-        "tagline": "Petroquímica y Gran Consumo Industrial",
-        "desc": "Despacho directo desde patio de acopio en camiones tolva y buques. Diseñada para electrólisis cloro-álcali, síntesis química y procesos de alta demanda continua.",
-        "purity": "99.8% NaCl",
-        "humidity": "< 0.3%",
-        "packaging": "Camiones Tolva / Granel",
-        "image": "/images/products/sal-granel.webp",
+        "id": "sal-bruta-premium",
+        "slug": "sal-bruta-premium",
+        "code": "REG-SAL-CM-001",
+        "name": "Sal Bruta Premium",
+        "tagline": "Doble Lavado Continuo • Máxima Pureza Química",
+        "desc": "Sal marina solar de cristalización gruesa sometida a doble lavado continuo con salmuera saturada. Pureza superior al 99.3% de NaCl con mínimos niveles de sulfatos, calcio y magnesio.",
+        "purity": "≥ 99,3% NaCl",
+        "humidity": "≤ 0,2%",
+        "density": "1.120 - 1.130 g/L",
+        "calcium": "≤ 0,08%",
+        "magnesium": "≤ 0,06%",
+        "sulfates": "≤ 0,20%",
+        "insolubles": "≤ 0,06%",
+        "additives": "Sin aditivos añadidos",
+        "cpe": "CPE 0317416481",
+        "packaging": "Granel / Big Bag 1 TM / Sacos 20 kg",
+        "image": "/images/products/sal-bruta-premium.webp",
+        "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
+        "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
+        "applications": [
+          "Industria petroquímica y plantas cloro-soda",
+          "Electrólisis industrial y síntesis química",
+          "Tratamiento, desmineralización y suavización de aguas",
+          "Salazón y conservación de productos alimentarios"
+        ],
         "items": [
           {
-            "name": "Sal a Granel Premium",
-            "slug": "sal-granel-premium",
+            "name": "Sal Bruta Premium a Granel",
+            "slug": "sal-bruta-premium-granel",
             "format": "Tolva / Granel",
             "use": "Industria Petroquímica y Cloro-Soda"
           },
           {
-            "name": "Sal a Granel Tipo A",
-            "slug": "sal-granel-tipo-a",
+            "name": "Sal Bruta Premium en Big Bag (1 TM)",
+            "slug": "sal-bruta-premium-big-bag",
+            "format": "Big Bag 1.000 Kg",
+            "use": "Tratamiento de Aguas y Procesos Industriales"
+          },
+          {
+            "name": "Sal Bruta Premium en Sacos (20 Kg)",
+            "slug": "sal-bruta-premium-sacos-20kg",
+            "format": "Sacos 20 Kg (CPE 0317416481)",
+            "use": "Alimentos y Procesamiento Mayorista"
+          }
+        ]
+      },
+      {
+        "id": "sal-bruta-tipo-a",
+        "slug": "sal-bruta-tipo-a",
+        "code": "REG-SAL-CM-003",
+        "name": "Sal Bruta Tipo A",
+        "tagline": "Lavado Solar Eficiente • Grado Agroindustrial",
+        "desc": "Sal marina de excelente solubilidad y consistencia granular natural. Especialmente formulada para el sector agropecuario, suplementación ganadera y procesos químicos generales.",
+        "purity": "≥ 98,5% NaCl",
+        "humidity": "≤ 0,6%",
+        "density": "1.110 - 1.120 g/L",
+        "calcium": "≤ 0,10%",
+        "magnesium": "≤ 0,20%",
+        "sulfates": "≤ 0,50%",
+        "insolubles": "≤ 0,10%",
+        "additives": "Sin aditivos añadidos",
+        "cpe": "CPE 0317416482",
+        "packaging": "Granel / Big Bag 1 TM / Sacos 20 kg",
+        "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp",
+        "pdfEs": "/docs/fichas/sal-bruta-tipo-a-es.pdf",
+        "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
+        "applications": [
+          "Nutrición animal y elaboración de sales minerales",
+          "Alimentos Balanceados para Animales (ABA)",
+          "Tratamiento de aguas residuales y desalinización",
+          "Procesos industriales masivos"
+        ],
+        "items": [
+          {
+            "name": "Sal Bruta Tipo A a Granel",
+            "slug": "sal-bruta-tipo-a-granel",
             "format": "Tolva / Granel",
-            "use": "Desalinización y Procesos Industriales"
+            "use": "Agroindustria y Procesos Masivos"
+          },
+          {
+            "name": "Sal Bruta Tipo A en Big Bag (1 TM)",
+            "slug": "sal-bruta-tipo-a-big-bag",
+            "format": "Big Bag 1.000 Kg",
+            "use": "Suavización y Desalinización de Aguas"
+          },
+          {
+            "name": "Sal Bruta Tipo A en Sacos (20 Kg)",
+            "slug": "sal-bruta-tipo-a-sacos-20kg",
+            "format": "Sacos 20 Kg (CPE 0317416482)",
+            "use": "Nutrición Animal y Ganadería Nacional"
           }
         ]
       },
       {
-        "id": "bruta",
-        "slug": "sal-bruta-lavada",
-        "name": "Sal Bruta Lavada",
-        "tagline": "Doble Lavado con Salmuera Saturada",
-        "desc": "Sometida a dos etapas de lavado continuo para remover impurezas superficiales manteniendo la integridad del cristal y una óptima densidad aparente.",
-        "purity": "99.7% NaCl",
-        "humidity": "< 1.5%",
-        "packaging": "Big Bag (1 TM) / Sacos (20 Kg)",
-        "image": "/images/products/sal-bruta-lavada.webp",
+        "id": "sal-molida-premium",
+        "slug": "sal-molida-premium",
+        "code": "REG-SAL-CM-002",
+        "name": "Sal Molida Premium",
+        "tagline": "Molienda Homogénea • Grado Alimentario",
+        "desc": "Sal marina fina procesada en planta de molienda y clasificación automatizada. Granulometría uniforme, disolución instantánea y acondicionada con antiaglomerante para máxima fluidez.",
+        "purity": "≥ 99,3% NaCl",
+        "humidity": "≤ 0,2%",
+        "density": "1.220 - 1.230 g/L",
+        "calcium": "≤ 0,08%",
+        "magnesium": "≤ 0,06%",
+        "sulfates": "≤ 0,20%",
+        "insolubles": "≤ 0,06%",
+        "additives": "Ferrocianuro de Sodio (YPS) ≤ 10 ppm",
+        "cpe": "CPE 0308115248",
+        "packaging": "Granel / Big Bag 1 TM / Sacos 20 kg",
+        "image": "/images/products/sal-molida-premium.webp",
+        "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
+        "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
+        "applications": [
+          "Industria alimentaria, panificación y lácteos",
+          "Embutidos, conservas y procesamiento cárnico",
+          "Consumo humano y envasado de sal de mesa",
+          "Formulaciones farmacéuticas y cosméticas"
+        ],
         "items": [
           {
-            "name": "Sal Bruta Lavada en Big Bag (1 TM)",
-            "slug": "sal-bruta-lavada-big-bag",
+            "name": "Sal Molida Premium a Granel",
+            "slug": "sal-molida-premium-granel",
+            "format": "Tolva / Granel",
+            "use": "Plantas de Procesamiento de Alimentos"
+          },
+          {
+            "name": "Sal Molida Premium en Big Bag (1 TM)",
+            "slug": "sal-molida-premium-big-bag",
             "format": "Big Bag 1.000 Kg",
-            "use": "Tratamiento de Aguas y Suavización"
+            "use": "Formulaciones Alimenticias y Químicas"
           },
           {
-            "name": "Sal Bruta Lavada Tipo A (20 Kg)",
-            "slug": "sal-bruta-lavada-20kg",
-            "format": "Sacos 20 Kg",
-            "use": "Agroindustria y Nutrición Animal"
-          },
-          {
-            "name": "Sal Bruta Lavada Premium (20 Kg)",
-            "slug": "sal-bruta-lavada-premium-20kg",
-            "format": "Sacos 20 Kg",
-            "use": "Salazón y Procesamiento Industrial"
+            "name": "Sal Molida Premium en Sacos (20 Kg)",
+            "slug": "sal-molida-premium-sacos-20kg",
+            "format": "Sacos 20 Kg (CPE 0308115248)",
+            "use": "Panificación, Lácteos y Embutidos"
           }
         ]
       },
       {
-        "id": "molida",
-        "slug": "sal-molida",
-        "name": "Sal Molida",
-        "tagline": "Grado Alimentario e Industrial de Alta Finura",
-        "desc": "Procesada en planta de molienda automatizada con distribución granulométrica homogénea. Máxima solubilidad para formulaciones alimentarias y farmacéuticas.",
-        "purity": "99.8% NaCl",
-        "humidity": "< 0.2%",
-        "packaging": "Sacos (20 Kg) / Big Bag (1 TM)",
-        "image": "/images/products/sal-molida.webp",
+        "id": "sal-molida-tipo-a",
+        "slug": "sal-molida-tipo-a",
+        "code": "REG-SAL-CM-004",
+        "name": "Sal Molida Tipo A",
+        "tagline": "Molienda Industrial • Estándar Versátil",
+        "desc": "Sólido cristalino obtenido por molienda con granulometría controlada y agente antiaglomerante. Diseñada para formulaciones industriales, mezclas balanceadas y aplicaciones de rápida integración.",
+        "purity": "≥ 98,5% NaCl",
+        "humidity": "≤ 0,6%",
+        "density": "1.220 - 1.230 g/L",
+        "calcium": "≤ 0,10%",
+        "magnesium": "≤ 0,18%",
+        "sulfates": "≤ 0,50%",
+        "insolubles": "≤ 0,10%",
+        "additives": "Ferrocianuro de Sodio (YPS) ≤ 10 ppm",
+        "cpe": "CPE 0813313838",
+        "packaging": "Granel / Big Bag 1 TM / Sacos 20 kg",
+        "image": "/images/products/sal-molida-tipo-a.webp",
+        "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
+        "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
+        "applications": [
+          "Alimentos balanceados y mezclas nutritivas animales",
+          "Industria de teñido textil y curtido de pieles",
+          "Formulaciones químicas y mezclas industriales",
+          "Manufactura general de productos salinos"
+        ],
         "items": [
           {
-            "name": "Sal Molida Premium (20 Kg)",
-            "slug": "sal-molida-premium-20kg",
-            "format": "Sacos 20 Kg",
-            "use": "Alimentos, Lácteos y Consumo Humano"
+            "name": "Sal Molida Tipo A a Granel",
+            "slug": "sal-molida-tipo-a-granel",
+            "format": "Tolva / Granel",
+            "use": "Procesos Industriales y Formulación"
           },
           {
-            "name": "Sal Molida Tipo A (20 Kg)",
-            "slug": "sal-molida-tipo-a-20kg",
-            "format": "Sacos 20 Kg",
-            "use": "Panificación, Cárnicos y Embutidos"
-          },
-          {
-            "name": "Sal Molida en Big Bag (1 TM)",
-            "slug": "sal-molida-big-bag",
+            "name": "Sal Molida Tipo A en Big Bag (1 TM)",
+            "slug": "sal-molida-tipo-a-big-bag",
             "format": "Big Bag 1.000 Kg",
-            "use": "Formulaciones Químicas y Farmacéuticas"
+            "use": "Nutrición Animal Balanceada"
+          },
+          {
+            "name": "Sal Molida Tipo A en Sacos (20 Kg)",
+            "slug": "sal-molida-tipo-a-sacos-20kg",
+            "format": "Sacos 20 Kg (CPE 0813313838)",
+            "use": "Alimentos Balanceados e Industria"
           }
         ]
       }
