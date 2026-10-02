@@ -218,16 +218,16 @@ export function CategoryDetailView({
             {/* Lado Derecho: Tarjeta Visual con Foto y Métricas Clave */}
             <div className="lg:col-span-5">
               <ScrollReveal animation="fade-left" delay={100}>
-                <div className="relative rounded-3xl bg-white/5 border border-white/15 p-3.5 shadow-2xl backdrop-blur-sm">
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-[#082846]/40">
+                <div className="relative rounded-3xl bg-white/5 border border-white/15 p-3.5 shadow-2xl backdrop-blur-sm group">
+                  <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-slate-900/40 shadow-inner">
                     <Image
                       src={category.image}
                       alt={category.name}
                       fill
-                      className="object-cover object-center"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#082846]/50 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#082846]/60 via-transparent to-transparent pointer-events-none" />
                   </div>
 
                   {/* 3 Métricas flotantes al pie de la foto */}
