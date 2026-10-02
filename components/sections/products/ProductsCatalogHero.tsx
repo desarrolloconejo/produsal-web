@@ -15,7 +15,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
   const isEs = currentLang === "es";
 
   return (
-    <section className="relative w-full text-white min-h-[460px] sm:min-h-[500px] lg:min-h-[540px] flex items-center overflow-hidden bg-[#082846] py-20 sm:py-24 lg:py-28 border-b border-[#02afab]/20">
+    <section className="relative w-full text-white min-h-[380px] sm:min-h-[500px] lg:min-h-[540px] flex items-center overflow-hidden bg-[#082846] py-14 sm:py-24 lg:py-28 border-b border-[#02afab]/20">
       {/* 1. Fondo Fotográfico con Gradientes Multicapa (Estilo Home) */}
       <div className="absolute inset-0 z-0">
         <Image

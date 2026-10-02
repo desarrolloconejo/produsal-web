@@ -50,7 +50,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
 
   return (
     <header className="w-full relative z-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-6">
         {/* Logo Produsal */}
         <Link
           href={`/${currentLang}`}

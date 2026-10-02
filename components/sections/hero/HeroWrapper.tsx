@@ -23,7 +23,7 @@ export function HeroWrapper({
   return (
     <section
       id={id}
-      className="relative w-full min-h-[calc(100vh+8rem)] min-h-[720px] lg:min-h-[800px] flex items-center justify-center overflow-hidden bg-[#082846] -mt-32 pt-44 sm:pt-48 pb-20 sm:pb-24"
+      className="relative w-full min-h-[560px] sm:min-h-[720px] lg:min-h-[800px] flex items-center justify-center overflow-hidden bg-[#082846] -mt-24 sm:-mt-32 pt-32 sm:pt-48 pb-16 sm:pb-24"
     >
       {/* Fondo de alta resolución generado (Salinas de Venezuela) */}
       <div className="absolute inset-0 z-0">

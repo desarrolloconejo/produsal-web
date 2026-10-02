@@ -20,6 +20,7 @@ interface FooterProps {
     email: string;
     scrollToTop: string;
     copyright: string;
+    privacyPolicy?: string;
     developerCredit: string;
   };
   navDict: {
@@ -36,11 +37,17 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const isEs = currentLang === "es";
+
   const quickLinks = [
     { href: `/${currentLang}`, label: navDict.home },
     { href: `/${currentLang}/nosotros`, label: navDict.about },
     { href: `/${currentLang}#productos`, label: navDict.products },
     { href: `/${currentLang}/contacto`, label: navDict.contact },
+    {
+      href: `/${currentLang}/privacidad`,
+      label: dict.privacyPolicy || (isEs ? "Políticas de Privacidad" : "Privacy Policy"),
+    },
   ];
 
   return (
@@ -199,9 +206,17 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
           </div>
         </div>
 
-        {/* Barra Inferior: Copyright & Desarrollado by El Conejo Del Sombrero */}
+        {/* Barra Inferior: Copyright, Políticas de Privacidad & Desarrollado by El Conejo Del Sombrero */}
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
-          <p className="text-center sm:text-left">{dict.copyright}</p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
+            <p>{dict.copyright}</p>
+            <Link
+              href={`/${currentLang}/privacidad`}
+              className="text-[#02afab] hover:text-white underline underline-offset-2 transition-colors font-medium"
+            >
+              {dict.privacyPolicy || (isEs ? "Políticas de Privacidad" : "Privacy Policy")}
+            </Link>
+          </div>
           <div className="flex items-center gap-1.5 font-medium text-white/80">
             <span>{dict.developerCredit}</span>
           </div>

@@ -220,23 +220,24 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
                     </div>
                   </div>
 
-                  {/* Botones de Acción */}
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                  {/* Botones de Acción con Hover Optimizado para Ficha Técnica */}
+                  <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between gap-2">
                     <button
                       type="button"
                       onClick={() => openPdfModal(category)}
-                      className="inline-flex items-center gap-1 text-[11px] font-bold text-[#082846] hover:text-[#02afab] font-heading transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#082846] hover:text-white bg-slate-100 hover:bg-[#082846] border border-slate-200/80 hover:border-[#082846] transition-all duration-200 font-heading cursor-pointer group/pdf shadow-2xs hover:shadow-xs active:scale-95"
+                      title={isEs ? "Abrir visor de Ficha Técnica" : "Open Technical Sheet Preview"}
                     >
-                      <FileText className="w-3.5 h-3.5 text-[#02afab]" />
+                      <FileText className="w-3.5 h-3.5 text-[#008784] group-hover/pdf:text-cyan-300 transition-colors" />
                       <span>{dict.ctaSpec}</span>
                     </button>
 
                     <Link
                       href={`/${currentLang}/productos/${category.slug}`}
-                      className="inline-flex items-center gap-1 text-[11px] font-bold text-[#008784] hover:text-[#082846] font-heading transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#008784] hover:bg-[#02afab] transition-all duration-200 font-heading cursor-pointer shadow-xs group/link active:scale-95"
                     >
                       <span>{isEs ? "Ver más" : "Details"}</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
                     </Link>
                   </div>
                 </div>

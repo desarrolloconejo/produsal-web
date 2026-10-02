@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useActionState } from "react";
+import Link from "next/link";
 import {
   Send,
   CheckCircle2,
@@ -321,6 +322,31 @@ export function CategoryContactSection({
                     }
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-white resize-none"
                   />
+                </div>
+
+                {/* Checkbox de Políticas de Privacidad Obligatorio */}
+                <div className="flex items-start gap-2.5 pt-1">
+                  <input
+                    type="checkbox"
+                    id="privacy-category"
+                    name="privacy"
+                    required
+                    className="mt-1 w-4 h-4 rounded text-[#008784] border-slate-300 focus:ring-[#02afab] focus:ring-offset-0 cursor-pointer accent-[#008784] shrink-0"
+                  />
+                  <label htmlFor="privacy-category" className="text-xs text-slate-600 leading-snug cursor-pointer select-none">
+                    {isEs ? "He leído y acepto las" : "I have read and agree to the"}{" "}
+                    <Link
+                      href={`/${currentLang}/privacidad`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-[#008784] hover:text-[#082846] underline underline-offset-2 transition-colors"
+                    >
+                      {isEs ? "Políticas de Privacidad" : "Privacy Policy"}
+                    </Link>{" "}
+                    {isEs
+                      ? "y el tratamiento de mis datos de contacto para fines comerciales."
+                      : "and the processing of my contact information for commercial purposes."}
+                  </label>
                 </div>
 
                 {/* Botón de Envío */}

@@ -16,14 +16,14 @@ interface HeroContentProps {
 
 export function HeroContent({ currentLang, dict }: HeroContentProps) {
   return (
-    <div className="max-w-4xl flex flex-col gap-6 text-left">
+    <div className="max-w-4xl flex flex-col gap-4 sm:gap-6 text-left">
       {/* Texto superior sin fondo, sin borde y sin icono */}
-      <p className="animate-slide-up text-sm sm:text-base font-bold text-[#02afab] tracking-normal">
+      <p className="animate-slide-up text-xs sm:text-base font-bold text-[#02afab] tracking-normal font-heading">
         {dict.badge}
       </p>
 
       {/* Gran Título Corporativo */}
-      <h1 className="animate-slide-up-delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+      <h1 className="animate-slide-up-delay-1 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-heading">
         <span className="text-[#02afab] drop-shadow-xs">
           {dict.headlineHighlight}
         </span>{" "}
@@ -33,25 +33,25 @@ export function HeroContent({ currentLang, dict }: HeroContentProps) {
       </h1>
 
       {/* Párrafo Descriptivo con tamaño estándar de lectura */}
-      <p className="animate-slide-up-delay-2 text-sm sm:text-base text-white/75 max-w-2xl font-normal leading-relaxed">
+      <p className="animate-slide-up-delay-2 text-xs sm:text-base text-white/80 max-w-2xl font-normal leading-relaxed">
         {dict.description}
       </p>
 
       {/* Botones de Acción (CTAs) */}
-      <div className="animate-slide-up-delay-3 flex flex-wrap items-center gap-4 pt-2">
+      <div className="animate-slide-up-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
         <Link
           href={`/${currentLang}/construccion`}
-          className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#02afab] to-[#008784] hover:from-[#009b97] hover:to-[#007471] text-white font-bold text-sm shadow-lg shadow-[#02afab]/25 hover:shadow-xl hover:shadow-[#02afab]/35 hover:-translate-y-0.5 transition-all duration-200 group"
+          className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#02afab] to-[#008784] hover:from-[#009b97] hover:to-[#007471] text-white font-bold text-sm shadow-lg shadow-[#02afab]/25 hover:shadow-xl hover:shadow-[#02afab]/35 hover:-translate-y-0.5 transition-all duration-200 group font-heading text-center"
         >
           <span>{dict.ctaProducts}</span>
-          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 shrink-0" />
         </Link>
 
         <Link
           href={`/${currentLang}/nosotros`}
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-200"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-200 font-heading text-center"
         >
-          <Waves className="w-4 h-4 text-[#02afab]" />
+          <Waves className="w-4 h-4 text-[#02afab] shrink-0" />
           <span>{dict.ctaAbout}</span>
         </Link>
       </div>

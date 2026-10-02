@@ -474,7 +474,57 @@
     "locationLabel": "Complex Location",
     "location": "Los Olivitos Industrial Complex, Zulia, Venezuela",
     "formTitle": "Request a Quote or Technical Data Sheet",
-    "formSubtitle": "Submit your requirements and our commercial engineering team will respond within 24 business hours."
+    "formSubtitle": "Submit your requirements and our commercial engineering team will respond within 24 business hours.",
+    "privacyAcceptLabel": "I have read and agree to the",
+    "privacyLinkLabel": "Privacy Policy",
+    "privacyAcceptSuffix": "and the processing of my contact information for commercial purposes."
+  },
+  "privacy": {
+    "badge": "Legal Notice & Confidentiality",
+    "title": "Privacy Policy",
+    "subtitle": "Transparent, confidential, and secure management of commercial data for our clients, suppliers, and industrial partners.",
+    "lastUpdated": "Last updated: October 2026",
+    "backHome": "Back to Home",
+    "responsible": {
+      "title": "1. Data Controller Identification",
+      "company": "Productora de Sal, C.A. (PRODUSAL)",
+      "rif": "Tax ID (RIF): J-31298456-0",
+      "address": "Los Olivitos Saltworks Industrial Complex, Miranda Municipality, Eastern Shore of Lake Maracaibo, Zulia State, Venezuela.",
+      "email": "info@grupomimesa.com",
+      "phone": "+58 212 208 51 11 / 0800 2274455"
+    },
+    "sections": [
+      {
+        "id": "collection",
+        "title": "2. Personal & Commercial Data We Collect",
+        "content": "Through our web forms and official quote channels, PRODUSAL C.A. only requests and stores data strictly necessary for B2B commercial interactions: full name, corporate email, company name, phone number, and salt requirement specifications (estimated tonnage, salt grade, delivery destination)."
+      },
+      {
+        "id": "purpose",
+        "title": "3. Purpose of Data Processing",
+        "content": "The provided data is used exclusively to: process quotations and purchase orders, provide official technical datasheets and laboratory certificates of analysis, coordinate industrial dispatch logistics (bulk hopper, Big Bags, 20 kg bags), and respond to technical or commercial inquiries."
+      },
+      {
+        "id": "confidentiality",
+        "title": "4. Confidentiality & Non-Disclosure to Third Parties",
+        "content": "PRODUSAL C.A. does not sell, rent, lease, or transfer customer or prospective client data to third parties under any circumstances. All commercial information is held under strict industrial confidentiality in compliance with Venezuelan legal framework and international best practices."
+      },
+      {
+        "id": "security",
+        "title": "5. Data Security & Storage",
+        "content": "We implement technical and organizational security measures (TLS/HTTPS in-transit encryption, access controls restricted to authorized commercial personnel) to protect data against unauthorized access, loss, or alteration."
+      },
+      {
+        "id": "rights",
+        "title": "6. Data Subject Rights (Access, Correction & Deletion)",
+        "content": "At any time, users or corporate representatives may exercise their rights to access, rectify, update, or delete their data by sending an email to info@grupomimesa.com with the subject line 'Data Protection'."
+      },
+      {
+        "id": "cookies",
+        "title": "7. Use of Cookies & Web Technologies",
+        "content": "This website uses only essential technical cookies to ensure smooth browsing, remember language preferences (Spanish/English), and optimize loading performance without invasive tracking or third-party behavioral advertising."
+      }
+    ]
   },
   "notFound": {
     "code": "404",
@@ -501,6 +551,7 @@
     "email": "info@grupomimesa.com",
     "scrollToTop": "Back to Top",
     "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
     "developerCredit": "Developed by El Conejo Del Sombrero",
     "social": {
       "linkedin": "https://linkedin.com",

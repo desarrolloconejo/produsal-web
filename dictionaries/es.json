@@ -474,7 +474,57 @@
     "locationLabel": "Ubicación del Complejo",
     "location": "Complejo Industrial Los Olivitos, Zulia, Venezuela",
     "formTitle": "Solicitar Cotización o Ficha Técnica",
-    "formSubtitle": "Ingresa tus datos y te responderemos en menos de 24 horas hábiles con disponibilidad y cotización."
+    "formSubtitle": "Ingresa tus datos y te responderemos en menos de 24 horas hábiles con disponibilidad y cotización.",
+    "privacyAcceptLabel": "He leído y acepto las",
+    "privacyLinkLabel": "Políticas de Privacidad",
+    "privacyAcceptSuffix": "y el tratamiento de mis datos de contacto para fines comerciales."
+  },
+  "privacy": {
+    "badge": "Aviso Legal y Confidencialidad",
+    "title": "Políticas de Privacidad",
+    "subtitle": "Tratamiento transparente, confidencial y seguro de datos comerciales de nuestros clientes, proveedores y aliados industriales.",
+    "lastUpdated": "Última actualización: Octubre 2026",
+    "backHome": "Volver al Inicio",
+    "responsible": {
+      "title": "1. Identificación del Responsable",
+      "company": "Productora de Sal, C.A. (PRODUSAL)",
+      "rif": "RIF J-31298456-0",
+      "address": "Complejo Industrial Salinas Los Olivitos, Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia, Venezuela.",
+      "email": "info@grupomimesa.com",
+      "phone": "0212 208 51 11 / 0800 2274455"
+    },
+    "sections": [
+      {
+        "id": "recoleccion",
+        "title": "2. Datos Personales y Comerciales que Recopilamos",
+        "content": "A través de nuestros formularios web y canales de cotización oficial, PRODUSAL C.A. únicamente solicita y almacena datos necesarios para la relación comercial B2B: nombre y apellido, correo electrónico corporativo, empresa o razón social, número telefónico y especificaciones de requerimiento (tonelaje estimado, tipo de sal, destino de entrega)."
+      },
+      {
+        "id": "finalidad",
+        "title": "3. Finalidad del Tratamiento de Datos",
+        "content": "Los datos suministrados se utilizarán exclusivamente para: procesar cotizaciones y solicitudes de compra, enviar fichas técnicas oficiales y certificados de análisis de laboratorio, coordinar la logística de despachos industriales (tolva a granel, Big Bags, sacos de 20 kg) y atender consultas técnicas o comerciales."
+      },
+      {
+        "id": "confidencialidad",
+        "title": "4. Confidencialidad y No Transferencia a Terceros",
+        "content": "PRODUSAL C.A. no vende, alquila, cede ni transfiere datos de sus clientes o prospectos a terceros bajo ningún concepto. Toda la información comercial se maneja con estricta confidencialidad industrial conforme al ordenamiento jurídico venezolano y mejores prácticas internacionales."
+      },
+      {
+        "id": "seguridad",
+        "title": "5. Seguridad y Conservación de la Información",
+        "content": "Implementamos medidas técnicas y organizativas de seguridad (cifrado TLS/HTTPS en tránsito, controles de acceso restringido a personal comercial autorizado) para proteger los datos frente a accesos no autorizados, pérdidas o alteraciones."
+      },
+      {
+        "id": "derechos",
+        "title": "6. Derechos del Titular (Acceso, Rectificación y Supresión)",
+        "content": "En cualquier momento, los usuarios o representantes empresariales pueden ejercer sus derechos de acceso, rectificación, actualización o eliminación de sus datos enviando un correo electrónico a info@grupomimesa.com con el asunto 'Protección de Datos'."
+      },
+      {
+        "id": "cookies",
+        "title": "7. Uso de Cookies y Tecnologías Web",
+        "content": "Este portal web utiliza únicamente cookies técnicas esenciales para garantizar la navegación fluida, recordar las preferencias de idioma (español/inglés) y optimizar el rendimiento de carga sin realizar seguimiento invasivo ni publicidad de terceros."
+      }
+    ]
   },
   "notFound": {
     "code": "404",
@@ -501,6 +551,7 @@
     "email": "info@grupomimesa.com",
     "scrollToTop": "Volver arriba",
     "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. Todos los derechos reservados.",
+    "privacyPolicy": "Políticas de Privacidad",
     "developerCredit": "Desarrollado by El Conejo Del Sombrero",
     "social": {
       "linkedin": "https://linkedin.com",
