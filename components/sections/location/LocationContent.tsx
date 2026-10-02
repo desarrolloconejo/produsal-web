@@ -95,10 +95,10 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
                         />
                       </div>
                       <div className="flex flex-col min-w-0">
-                        <span className="text-sm font-bold text-white group-hover:text-[#02afab] transition-colors leading-tight font-heading truncate">
+                        <span className="text-sm font-bold text-white group-hover:text-[#02afab] transition-colors leading-tight font-heading">
                           {stat.label}
                         </span>
-                        <span className="text-[11px] text-white/65 leading-tight pt-1 truncate">
+                        <span className="text-xs text-white/75 leading-relaxed pt-1">
                           {stat.detail}
                         </span>
                       </div>

@@ -49,9 +49,9 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
             />
             {/* Máscara con gradiente sutil */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#082846]/40 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10 bg-[#082846]/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#02afab] animate-pulse" />
-              <span className="text-[11px] font-heading font-medium tracking-wide">
+            <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10 bg-[#082846]/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-white flex items-center gap-2 max-w-[calc(100%-1.5rem)]">
+              <span className="w-2 h-2 rounded-full bg-[#02afab] animate-pulse shrink-0" />
+              <span className="text-[11px] font-heading font-medium tracking-wide truncate">
                 {currentLang === "es" ? "Salinas Los Olivitos • Producción Solar" : "Los Olivitos Salt Flats • Solar Harvesting"}
               </span>
             </div>

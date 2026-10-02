@@ -75,22 +75,23 @@ export function ProductsCatalogGrid({ currentLang, dict }: ProductsCatalogGridPr
             return (
               <ScrollReveal key={category.id} delay={idx * 100} animation="fade-up">
                 <article className="relative flex flex-col justify-between rounded-3xl bg-white border border-slate-200/90 hover:border-[#02afab]/60 hover:shadow-xl transition-all duration-300 overflow-hidden group h-full">
-                  {/* Cabecera Visual con Imagen Industrial */}
+                  {/* Cabecera Visual con Imagen Industrial (Proporción apaisada equilibrada 4:3) */}
                   <Link
                     href={`/${currentLang}/productos/${category.slug}`}
-                    className="relative w-full h-56 sm:h-64 overflow-hidden block group/img cursor-pointer"
+                    className="relative w-full aspect-[4/3] overflow-hidden block group/img cursor-pointer bg-slate-100"
                   >
                     <Image
                       src={category.image}
                       alt={category.name}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover group-hover/img:scale-105 transition-transform duration-700"
+                      className="object-cover object-center group-hover/img:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#082846]/95 via-[#082846]/35 to-transparent" />
+                    {/* Degradado mínimo en la base para máxima visibilidad del saco y legibilidad del texto */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#082846]/80 via-[#082846]/10 to-transparent" />
 
                     {/* Badges de Código Oficial y Grado sobre la imagen */}
-                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 z-10">
                       <span className="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-[#082846]/90 text-cyan-300 border border-cyan-400/30 backdrop-blur-xs">
                         {category.code}
                       </span>
@@ -108,15 +109,15 @@ export function ProductsCatalogGrid({ currentLang, dict }: ProductsCatalogGridPr
                     </div>
 
                     {/* Tagline y Título de Categoría */}
-                    <div className="absolute bottom-4 left-5 right-5 flex flex-col gap-1 text-white">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#02afab] font-heading">
+                    <div className="absolute bottom-4 left-5 right-5 flex flex-col gap-1 text-white z-10">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#02afab] font-heading drop-shadow-xs">
                         {category.tagline}
                       </span>
                       <div className="flex items-center justify-between gap-2">
-                        <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-heading group-hover/img:text-[#02afab] transition-colors">
+                        <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight font-heading group-hover/img:text-[#02afab] transition-colors drop-shadow-xs">
                           {category.name}
                         </h3>
-                        <ArrowRight className="w-5 h-5 text-white/70 group-hover/img:text-[#02afab] group-hover/img:translate-x-1 transition-all shrink-0" />
+                        <ArrowRight className="w-5 h-5 text-white/80 group-hover/img:text-[#02afab] group-hover/img:translate-x-1 transition-all shrink-0" />
                       </div>
                     </div>
                   </Link>
