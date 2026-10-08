@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
-import { AboutWrapper, AboutContent } from "@/components/sections/about";
+import { AboutHero, AboutWrapper, AboutContent } from "@/components/sections/about";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -34,8 +34,11 @@ export default async function NosotrosPage({
   const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
 
   return (
-    <AboutWrapper>
-      <AboutContent currentLang={currentLang} />
-    </AboutWrapper>
+    <div className="w-full">
+      <AboutHero currentLang={currentLang} />
+      <AboutWrapper>
+        <AboutContent currentLang={currentLang} />
+      </AboutWrapper>
+    </div>
   );
 }

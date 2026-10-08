@@ -5,7 +5,7 @@
     "description": "Leading solar sea salt harvest and distribution with 99.8% NaCl purity and 650,000 MT/year output at Los Olivitos, Zulia. Wholesale supplier for food, petrochemical, water treatment, and animal feed sectors."
   },
   "topBar": {
-    "email": "info@grupomimesa.com",
+    "email": "infoprodusal@grupomimesa.com",
     "phone": "0212 208 51 11",
     "location": "Los Olivitos, Zulia"
   },
@@ -13,6 +13,7 @@
     "home": "Home",
     "about": "About Us",
     "products": "Products",
+    "gallery": "Gallery",
     "quality": "Quality & Origin",
     "contact": "Contact",
     "intranet": "Intranet"
@@ -231,7 +232,8 @@
         "id": "sal-bruta-premium",
         "slug": "sal-bruta-premium",
         "code": "REG-SAL-CM-001",
-        "name": "Sal Bruta Premium",
+        "name": "Premium Coarse Salt",
+        "pdfTitle": "Sal Bruta Premium",
         "tagline": "Continuous Dual Washing • Maximum Chemical Purity",
         "desc": "Coarse crystal solar sea salt subjected to two continuous saturated brine washing cycles. Minimum 99.3% NaCl purity with exceptionally low levels of sulfates, calcium, and magnesium.",
         "purity": "≥ 99.3% NaCl",
@@ -255,19 +257,19 @@
         ],
         "items": [
           {
-            "name": "Sal Bruta Premium in Bulk",
+            "name": "Premium Coarse Salt in Bulk",
             "slug": "sal-bruta-premium-bulk",
             "format": "Hopper / Bulk",
             "use": "Petrochemical & Chlor-Alkali Industry"
           },
           {
-            "name": "Sal Bruta Premium in Big Bag (1 MT)",
+            "name": "Premium Coarse Salt in Big Bag (1 MT)",
             "slug": "sal-bruta-premium-big-bag",
             "format": "1,000 Kg Big Bag",
             "use": "Water Treatment & Industrial Processing"
           },
           {
-            "name": "Sal Bruta Premium in 20 Kg Bags",
+            "name": "Premium Coarse Salt in 20 Kg Bags",
             "slug": "sal-bruta-premium-20kg-bags",
             "format": "20 Kg Polyethylene Bags (CPE 0317416481)",
             "use": "Food Manufacturing & Commercial Processing"
@@ -278,7 +280,8 @@
         "id": "sal-bruta-tipo-a",
         "slug": "sal-bruta-tipo-a",
         "code": "REG-SAL-CM-003",
-        "name": "Sal Bruta Tipo A",
+        "name": "Type A Coarse Salt",
+        "pdfTitle": "Sal Bruta Tipo A",
         "tagline": "Efficient Solar Wash • Agroindustrial Grade",
         "desc": "Natural coarse solar marine salt with high solubility and uniform crystal distribution. Specially formulated for agricultural feed, livestock mineral supplements, and general chemical applications.",
         "purity": "≥ 98.5% NaCl",
@@ -302,19 +305,19 @@
         ],
         "items": [
           {
-            "name": "Sal Bruta Tipo A in Bulk",
+            "name": "Type A Coarse Salt in Bulk",
             "slug": "sal-bruta-tipo-a-bulk",
             "format": "Hopper / Bulk",
             "use": "Agribusiness & High-Volume Processing"
           },
           {
-            "name": "Sal Bruta Tipo A in Big Bag (1 MT)",
+            "name": "Type A Coarse Salt in Big Bag (1 MT)",
             "slug": "sal-bruta-tipo-a-big-bag",
             "format": "1,000 Kg Big Bag",
             "use": "Water Softening & Industrial Treatment"
           },
           {
-            "name": "Sal Bruta Tipo A in 20 Kg Bags",
+            "name": "Type A Coarse Salt in 20 Kg Bags",
             "slug": "sal-bruta-tipo-a-20kg-bags",
             "format": "20 Kg Polyethylene Bags (CPE 0317416482)",
             "use": "Livestock Nutrition & Agriculture"
@@ -325,7 +328,8 @@
         "id": "sal-molida-premium",
         "slug": "sal-molida-premium",
         "code": "REG-SAL-CM-002",
-        "name": "Sal Molida Premium",
+        "name": "Premium Ground Salt",
+        "pdfTitle": "Sal Molida Premium",
         "tagline": "Homogeneous Milling • Food Grade Standard",
         "desc": "Ultra-fine solar sea salt refined in automated crushing and milling lines. Uniform grain size distribution, immediate solubility, conditioned with food-grade anticaking agent.",
         "purity": "≥ 99.3% NaCl",
@@ -349,19 +353,19 @@
         ],
         "items": [
           {
-            "name": "Sal Molida Premium in Bulk",
+            "name": "Premium Ground Salt in Bulk",
             "slug": "sal-molida-premium-bulk",
             "format": "Hopper / Bulk",
             "use": "Food Processing Manufacturing Plants"
           },
           {
-            "name": "Sal Molida Premium in Big Bag (1 MT)",
+            "name": "Premium Ground Salt in Big Bag (1 MT)",
             "slug": "sal-molida-premium-big-bag",
             "format": "1,000 Kg Big Bag",
             "use": "Food Formulations & Chemical Compounding"
           },
           {
-            "name": "Sal Molida Premium in 20 Kg Bags",
+            "name": "Premium Ground Salt in 20 Kg Bags",
             "slug": "sal-molida-premium-20kg-bags",
             "format": "20 Kg Polyethylene Bags (CPE 0308115248)",
             "use": "Baking, Dairy & Processed Meats"
@@ -372,7 +376,8 @@
         "id": "sal-molida-tipo-a",
         "slug": "sal-molida-tipo-a",
         "code": "REG-SAL-CM-004",
-        "name": "Sal Molida Tipo A",
+        "name": "Type A Ground Salt",
+        "pdfTitle": "Sal Molida Tipo A",
         "tagline": "Industrial Milling • Versatile Performance",
         "desc": "Ground crystalline salt engineered for general manufacturing and compounded formulations. Balanced with anticaking agent for excellent free-flowing properties and stability.",
         "purity": "≥ 98.5% NaCl",
@@ -396,19 +401,19 @@
         ],
         "items": [
           {
-            "name": "Sal Molida Tipo A in Bulk",
+            "name": "Type A Ground Salt in Bulk",
             "slug": "sal-molida-tipo-a-bulk",
             "format": "Hopper / Bulk",
             "use": "Industrial Processing & Compounding"
           },
           {
-            "name": "Sal Molida Tipo A in Big Bag (1 MT)",
+            "name": "Type A Ground Salt in Big Bag (1 MT)",
             "slug": "sal-molida-tipo-a-big-bag",
             "format": "1,000 Kg Big Bag",
             "use": "Balanced Animal Nutrition"
           },
           {
-            "name": "Sal Molida Tipo A in 20 Kg Bags",
+            "name": "Type A Ground Salt in 20 Kg Bags",
             "slug": "sal-molida-tipo-a-20kg-bags",
             "format": "20 Kg Polyethylene Bags (CPE 0813313838)",
             "use": "Balanced Feed & Manufacturing"
@@ -416,6 +421,19 @@
         ]
       }
     ]
+  },
+  "gallery": {
+    "metaTitle": "Gallery | Produsal C.A. - Los Olivitos Salt Flats, Zulia",
+    "metaDescription": "A photo tour of the Los Olivitos Industrial Complex: salt flats, harvesting, washing, packaging and the Produsal team.",
+    "badge": "Los Olivitos Industrial Complex",
+    "titleHighlight": "Produsal",
+    "titleRest": "Gallery",
+    "subtitle": "A visual tour of our salt flats, the harvest, the packaging lines and the people behind Produsal sea salt.",
+    "gridBadge": "Our Operation",
+    "gridTitle": "Our salt flats, our people",
+    "gridSubtitle": "Photographs taken at the Los Olivitos Industrial Complex, Zulia State.",
+    "heroAlt": "View of the Produsal Los Olivitos Industrial Complex",
+    "imageAlt": "Produsal, Los Olivitos Industrial Complex - photograph"
   },
   "marketSection": {
     "badge": "Industrial Leadership & National Market",
@@ -470,7 +488,7 @@
     "phoneLabel": "Sales Office",
     "phone": "0212 208 51 11 / 0800 2274455",
     "emailLabel": "Inquiries & Quotes",
-    "email": "info@grupomimesa.com",
+    "email": "infoprodusal@grupomimesa.com",
     "locationLabel": "Complex Location",
     "location": "Los Olivitos Industrial Complex, Zulia, Venezuela",
     "formTitle": "Request a Quote or Technical Data Sheet",
@@ -490,7 +508,7 @@
       "company": "Productora de Sal, C.A. (PRODUSAL)",
       "rif": "Tax ID (RIF): J-31298456-0",
       "address": "Los Olivitos Saltworks Industrial Complex, Miranda Municipality, Eastern Shore of Lake Maracaibo, Zulia State, Venezuela.",
-      "email": "info@grupomimesa.com",
+      "email": "infoprodusal@grupomimesa.com",
       "phone": "+58 212 208 51 11 / 0800 2274455"
     },
     "sections": [
@@ -517,7 +535,7 @@
       {
         "id": "rights",
         "title": "6. Data Subject Rights (Access, Correction & Deletion)",
-        "content": "At any time, users or corporate representatives may exercise their rights to access, rectify, update, or delete their data by sending an email to info@grupomimesa.com with the subject line 'Data Protection'."
+        "content": "At any time, users or corporate representatives may exercise their rights to access, rectify, update, or delete their data by sending an email to infoprodusal@grupomimesa.com with the subject line 'Data Protection'."
       },
       {
         "id": "cookies",
@@ -548,7 +566,7 @@
     "officeAddress": "Maracaibo, Zulia State, Venezuela",
     "address": "Los Olivitos / Maracaibo, Zulia State",
     "phone": "0212 208 51 11 / 0800 2274455",
-    "email": "info@grupomimesa.com",
+    "email": "infoprodusal@grupomimesa.com",
     "scrollToTop": "Back to Top",
     "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. All rights reserved.",
     "privacyPolicy": "Privacy Policy",

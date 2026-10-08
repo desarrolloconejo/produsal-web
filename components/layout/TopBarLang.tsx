@@ -121,6 +121,9 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    // El <html> vive en el layout raíz (sin acceso al idioma), así que se sincroniza aquí
+    document.documentElement.lang = currentLang;
+
     try {
       const savedScroll = sessionStorage.getItem("produsal_preserve_scroll");
       if (savedScroll !== null) {
@@ -148,27 +151,27 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
     delete document.documentElement.dataset.langSwitching;
   }, [currentLang]);
 
-  const contactEmail = dict.email || "info@grupomimesa.com";
+  const contactEmail = dict.email || "infoprodusal@grupomimesa.com";
 
   return (
     <aside
-      aria-label="Información de contacto y selector de idioma"
-      className="w-full text-white/80 text-xs py-2 px-4 sm:px-6 lg:px-8 transition-colors select-none"
+      aria-label={currentLang === "es" ? "Información de contacto y selector de idioma" : "Contact information and language selector"}
+      className="w-full bg-white text-[#183c6b]/80 text-xs py-2 px-4 sm:px-6 lg:px-8 transition-colors select-none"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-end sm:justify-between gap-4">
         {/* Correo de contacto visible solo en pantallas sm en adelante; oculto en móvil */}
         <div className="hidden sm:flex items-center gap-2">
           <a
             href={`mailto:${contactEmail}`}
-            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group"
+            className="flex items-center gap-2 text-[#183c6b]/80 hover:text-[#02aeaa] transition-colors group"
           >
-            <Mail className="w-3.5 h-3.5 text-[#02afab] group-hover:scale-110 transition-transform" />
+            <Mail className="w-3.5 h-3.5 text-[#02aeaa] group-hover:scale-110 transition-transform" />
             <span className="text-xs font-medium">{contactEmail}</span>
           </a>
         </div>
 
         {/* Selector de idioma con banderas y valor es / en (único elemento visible en móvil) */}
-        <div className="flex items-center gap-1.5 bg-white/10 p-1 rounded-lg border border-white/15">
+        <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-lg border border-slate-200">
           <Link
             href={getLanguageUrl("es")}
             scroll={false}
@@ -177,15 +180,15 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
             aria-label="Español - Venezuela (es)"
             className={`flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-bold transition-all duration-200 ${
               currentLang === "es"
-                ? "bg-[#02afab] text-white shadow-xs cursor-default"
-                : "text-white/70 hover:text-white hover:bg-white/10 cursor-pointer"
+                ? "bg-[#02aeaa] text-white shadow-xs cursor-default"
+                : "text-[#183c6b]/70 hover:text-[#183c6b] hover:bg-white cursor-pointer"
             }`}
           >
             <VenezuelaFlag className="w-4 h-3" />
             <span className="uppercase text-[11px] font-bold tracking-wider">es</span>
           </Link>
 
-          <span className="text-white/25 text-[10px]">|</span>
+          <span className="text-slate-300 text-[10px]">|</span>
 
           <Link
             href={getLanguageUrl("en")}
@@ -195,8 +198,8 @@ export function TopBarLang({ currentLang, dict }: TopBarLangProps) {
             aria-label="English (en)"
             className={`flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-bold transition-all duration-200 ${
               currentLang === "en"
-                ? "bg-[#02afab] text-white shadow-xs cursor-default"
-                : "text-white/70 hover:text-white hover:bg-white/10 cursor-pointer"
+                ? "bg-[#02aeaa] text-white shadow-xs cursor-default"
+                : "text-[#183c6b]/70 hover:text-[#183c6b] hover:bg-white cursor-pointer"
             }`}
           >
             <USAFlag className="w-4 h-3" />

@@ -70,13 +70,19 @@ middleware lo manda instantáneamente a [tusitio.com/es](https://tusitio.com/es)
 
 Blanco es el que tiene mas presencia, fondo blanco letras azules para titulos,
 si es fondo azul es letras blancas, los demas colores permiten resaltar o para
-elementos dentro de los fondos, verdes y amarillos para simular hojas en la web,
-turquesa hace presencia.
+elementos dentro de los fondos.
 
+Colores Primarios Oficiales:
+- #183c6b (Azul Oscuro Oficial) Fondos corporativos, encabezados, títulos.
+- #02aeaa (Azul Claro / Turquesa Oficial) Acentos primarios, interactividad, enlaces.
+
+Colores Secundarios Oficiales:
+- #85b2cf (Azul Secundario / Celeste Costero) Sal marina estándar, acentos marítimos, bordes secundarios.
+- #e5c798 (Arena / Dorado Solar) Cristalización solar, hitos históricos, calidad y calidez.
+
+Neutros:
 - #ffffff (Blanco) Fondos
-- #000000 (Negro) Principalmente para textos
-- #02afab (Turquesa) Predominante.
-- #94c11e (Amarillo Lima) Pequeño y resaltar.
+- #000000 / #0f172a (Negro / Carbón) Textos principales
 
 ### Tipografias
 

@@ -18,13 +18,13 @@ export function HeroContent({ currentLang, dict }: HeroContentProps) {
   return (
     <div className="max-w-4xl flex flex-col gap-4 sm:gap-6 text-left">
       {/* Texto superior sin fondo, sin borde y sin icono */}
-      <p className="animate-slide-up text-xs sm:text-base font-bold text-[#02afab] tracking-normal font-heading">
+      <p className="animate-slide-up text-xs sm:text-base font-bold text-[#02aeaa] tracking-normal font-heading">
         {dict.badge}
       </p>
 
       {/* Gran Título Corporativo */}
       <h1 className="animate-slide-up-delay-1 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-heading">
-        <span className="text-[#02afab] drop-shadow-xs">
+        <span className="text-[#02aeaa] drop-shadow-xs">
           {dict.headlineHighlight}
         </span>{" "}
         <span className="text-white/95 block sm:inline">
@@ -40,8 +40,8 @@ export function HeroContent({ currentLang, dict }: HeroContentProps) {
       {/* Botones de Acción (CTAs) */}
       <div className="animate-slide-up-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
         <Link
-          href={`/${currentLang}/construccion`}
-          className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#02afab] to-[#008784] hover:from-[#009b97] hover:to-[#007471] text-white font-bold text-sm shadow-lg shadow-[#02afab]/25 hover:shadow-xl hover:shadow-[#02afab]/35 hover:-translate-y-0.5 transition-all duration-200 group font-heading text-center"
+          href={`/${currentLang}/productos`}
+          className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#02aeaa] hover:bg-[#029693] text-white font-bold text-sm shadow-md shadow-[#02aeaa]/25 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group font-heading text-center"
         >
           <span>{dict.ctaProducts}</span>
           <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 shrink-0" />
@@ -49,9 +49,9 @@ export function HeroContent({ currentLang, dict }: HeroContentProps) {
 
         <Link
           href={`/${currentLang}/nosotros`}
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-200 font-heading text-center"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#85b2cf]/15 text-white font-semibold text-sm border border-[#85b2cf]/40 hover:border-[#85b2cf] backdrop-blur-sm transition-all duration-200 font-heading text-center"
         >
-          <Waves className="w-4 h-4 text-[#02afab] shrink-0" />
+          <Waves className="w-4 h-4 text-[#85b2cf] shrink-0" />
           <span>{dict.ctaAbout}</span>
         </Link>
       </div>

@@ -20,8 +20,8 @@ export default async function LangLayout({
   const dict = await getDictionary(currentLang);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#082846]">
-      {/* Barra superior y Header completos con auto-hide al bajar y auto-show al subir */}
+    <div className="flex flex-col min-h-screen bg-[#183c6b]">
+      {/* Barra superior y Header blancos, siempre fijos (sticky) */}
       <NavbarWrapper>
         <TopBarLang currentLang={currentLang} dict={dict.topBar} />
         <Header currentLang={currentLang} dict={dict.nav} productsDict={dict.products} />

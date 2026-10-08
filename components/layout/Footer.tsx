@@ -27,6 +27,7 @@ interface FooterProps {
     home: string;
     about: string;
     products: string;
+    gallery: string;
     quality: string;
     contact: string;
   };
@@ -43,6 +44,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
     { href: `/${currentLang}`, label: navDict.home },
     { href: `/${currentLang}/nosotros`, label: navDict.about },
     { href: `/${currentLang}#productos`, label: navDict.products },
+    { href: `/${currentLang}/galeria`, label: navDict.gallery },
     { href: `/${currentLang}/contacto`, label: navDict.contact },
     {
       href: `/${currentLang}/privacidad`,
@@ -51,7 +53,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
   ];
 
   return (
-    <footer className="w-full bg-[#082846] text-white pt-16 border-t border-[#02afab]/20">
+    <footer className="w-full bg-[#183c6b] text-white pt-16 border-t border-[#02aeaa]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Grilla principal del Footer */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-white/10">
@@ -76,7 +78,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#02afab] text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 border border-white/10 hover:border-[#02afab]"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#02aeaa] text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 border border-white/10 hover:border-[#02aeaa]"
                 aria-label="LinkedIn Produsal"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -87,7 +89,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#02afab] text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 border border-white/10 hover:border-[#02afab]"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#02aeaa] text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 border border-white/10 hover:border-[#02aeaa]"
                 aria-label="Instagram Produsal"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -98,7 +100,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#02afab] text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 border border-white/10 hover:border-[#02afab]"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#02aeaa] text-white/80 hover:text-white flex items-center justify-center transition-all duration-200 border border-white/10 hover:border-[#02aeaa]"
                 aria-label="Facebook Produsal"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -111,7 +113,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
           {/* Columna 2: Navegación Rápida (3 cols) */}
           <div className="lg:col-span-3 flex flex-col gap-4">
             <h3 className="text-sm font-bold tracking-wider uppercase text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#02afab]" />
+              <span className="w-2 h-2 rounded-full bg-[#02aeaa]" />
               {dict.quickLinksTitle}
             </h3>
             <ul className="flex flex-col gap-2.5 text-sm text-white/75">
@@ -119,7 +121,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="hover:text-[#02afab] hover:translate-x-1 inline-block transition-all duration-200"
+                    className="hover:text-[#02aeaa] hover:translate-x-1 inline-block transition-all duration-200"
                   >
                     {item.label}
                   </Link>
@@ -131,16 +133,16 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
           {/* Columna 3: Información de Contacto & Botón Subir (4 cols) */}
           <div className="lg:col-span-4 flex flex-col gap-4">
             <h3 className="text-sm font-bold tracking-wider uppercase text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#94c11e]" />
+              <span className="w-2 h-2 rounded-full bg-[#e5c798]" />
               {dict.contactTitle}
             </h3>
 
             <div className="flex flex-col gap-3.5 text-sm text-white/75">
               {/* Planta Industrial y Salinas */}
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#02afab] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#e5c798] flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col text-xs leading-relaxed">
-                  <span className="font-bold text-[#94c11e] uppercase tracking-wider text-[10px]">
+                  <span className="font-bold text-[#e5c798] uppercase tracking-wider text-[10px]">
                     {dict.plantLabel || (currentLang === "es" ? "Planta y Salinas" : "Plant & Salt Flats")}
                   </span>
                   <span className="text-white/90">
@@ -151,9 +153,9 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
 
               {/* Oficinas Administrativas */}
               <div className="flex items-start gap-3">
-                <Building2 className="w-4 h-4 text-[#02afab] flex-shrink-0 mt-0.5" />
+                <Building2 className="w-4 h-4 text-[#85b2cf] flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col text-xs leading-relaxed">
-                  <span className="font-bold text-[#02afab] uppercase tracking-wider text-[10px]">
+                  <span className="font-bold text-[#85b2cf] uppercase tracking-wider text-[10px]">
                     {dict.officeLabel || (currentLang === "es" ? "Oficinas Administrativas" : "Corporate Offices")}
                   </span>
                   <span className="text-white/90">
@@ -164,7 +166,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
 
               {/* Teléfonos */}
               <div className="flex items-start gap-3 pt-1 border-t border-white/10">
-                <Phone className="w-4 h-4 text-[#02afab] flex-shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#02aeaa] flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1 text-xs text-white/90">
                   <a
                     href="tel:02122085111"
@@ -174,7 +176,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
                   </a>
                   <a
                     href="tel:08002274455"
-                    className="hover:text-white transition-colors font-medium text-[#02afab]"
+                    className="hover:text-[#02aeaa] transition-colors font-medium text-[#85b2cf]"
                   >
                     0800 2274455
                   </a>
@@ -183,12 +185,12 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
 
               {/* Correo */}
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#02afab] flex-shrink-0" />
+                <Mail className="w-4 h-4 text-[#85b2cf] flex-shrink-0" />
                 <a
-                  href="mailto:info@grupomimesa.com"
+                  href="mailto:infoprodusal@grupomimesa.com"
                   className="hover:text-white transition-colors text-xs text-white/90"
                 >
-                  info@grupomimesa.com
+                  infoprodusal@grupomimesa.com
                 </a>
               </div>
             </div>
@@ -197,7 +199,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
             <div className="mt-4 pt-4 border-t border-white/10">
               <button
                 onClick={scrollToTop}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-[#02afab] text-white text-xs font-semibold tracking-wide transition-all duration-200 border border-white/10 hover:border-[#02afab] group"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-[#02aeaa] text-white text-xs font-semibold tracking-wide transition-all duration-200 border border-white/10 hover:border-[#02aeaa] group cursor-pointer"
               >
                 <span>{dict.scrollToTop}</span>
                 <ArrowUp className="w-3.5 h-3.5 transition-transform duration-200 group-hover:-translate-y-0.5" />
@@ -212,7 +214,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
             <p>{dict.copyright}</p>
             <Link
               href={`/${currentLang}/privacidad`}
-              className="text-[#02afab] hover:text-white underline underline-offset-2 transition-colors font-medium"
+              className="text-[#85b2cf] hover:text-[#02aeaa] underline underline-offset-2 transition-colors font-medium"
             >
               {dict.privacyPolicy || (isEs ? "Políticas de Privacidad" : "Privacy Policy")}
             </Link>

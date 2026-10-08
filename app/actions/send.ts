@@ -39,7 +39,7 @@ export async function sendContactEmail(
   const smtpPort = parseInt(process.env.SMTP_PORT || "587", 10);
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS;
-  const contactTo = process.env.CONTACT_TO_EMAIL || "contacto@produsal.com";
+  const contactTo = process.env.CONTACT_TO_EMAIL || "infoprodusal@grupomimesa.com";
   const contactFrom = process.env.CONTACT_FROM_EMAIL || `"Produsal Web" <${smtpUser || "no-reply@produsal.com"}>`;
 
   // Modo desarrollo / simulación si no se han provisto credenciales reales
@@ -72,13 +72,13 @@ export async function sendContactEmail(
         : `Nuevo mensaje de contacto web: ${name} (${company})`,
       text: `Nombre: ${name}\nEmpresa: ${company}\nEmail: ${email}\nProducto / Formato: ${product || "General"}\n\nMensaje:\n${message}`,
       html: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; color: #082846;">
-          <h2 style="color: #02afab;">Nuevo Requerimiento desde Sitio Web Produsal</h2>
+        <div style="font-family: Arial, sans-serif; padding: 20px; color: #183c6b;">
+          <h2 style="color: #02aeaa;">Nuevo Requerimiento desde Sitio Web Produsal</h2>
           <p><strong>Nombre:</strong> ${name}</p>
           <p><strong>Empresa:</strong> ${company}</p>
           <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-          ${product ? `<p><strong>Producto / Presentación de Interés:</strong> <span style="color: #02afab; font-weight: bold;">${product}</span></p>` : ""}
-          <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 4px solid #02afab; border-radius: 4px;">
+          ${product ? `<p><strong>Producto / Presentación de Interés:</strong> <span style="color: #02aeaa; font-weight: bold;">${product}</span></p>` : ""}
+          <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 4px solid #02aeaa; border-radius: 4px;">
             <strong>Mensaje o Requerimiento:</strong>
             <p style="white-space: pre-line;">${message}</p>
           </div>

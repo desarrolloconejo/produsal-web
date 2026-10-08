@@ -53,11 +53,13 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
       {/* 1. Cabecera Editorial (Minimalista, sin fondo ni bordes) */}
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-3 max-w-3xl border-b border-slate-200/80 pb-8 sm:pb-10">
-          <span className="text-[#008784] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
-            {dict.badge}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+              {dict.badge}
+            </span>
+          </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#082846] tracking-tight leading-[1.15] font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight leading-[1.15] font-heading">
             {dict.title}
           </h2>
 
@@ -77,6 +79,47 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
           const isLeftToRight = index % 2 === 0;
           const progressPercent = Math.round(((index + 1) / dict.steps.length) * 100);
 
+          const stepThemes = [
+            {
+              // Paso 1: Alimentación de agua de mar (Celeste Costero)
+              badgeColor: "text-[#85b2cf]",
+              giantIcon: "text-[#85b2cf]/50 drop-shadow-[0_0_24px_rgba(133,178,207,0.3)]",
+              watermark: "text-[#85b2cf]/20 group-hover:text-[#85b2cf]/35",
+              hoverBorder: "hover:border-[#85b2cf]/60",
+              iconBox: "group-hover:bg-[#85b2cf]/20 text-[#183c6b] group-hover:text-[#85b2cf]",
+              titleHover: "group-hover:text-[#85b2cf]",
+            },
+            {
+              // Paso 2: Evaporación y concentración solar (Arena / Dorado Solar)
+              badgeColor: "text-[#e5c798]",
+              giantIcon: "text-[#e5c798]/50 drop-shadow-[0_0_24px_rgba(229,199,152,0.3)]",
+              watermark: "text-[#e5c798]/20 group-hover:text-[#e5c798]/35",
+              hoverBorder: "hover:border-[#e5c798]/60",
+              iconBox: "group-hover:bg-[#e5c798]/20 text-[#183c6b] group-hover:text-[#e5c798]",
+              titleHover: "group-hover:text-[#e5c798]",
+            },
+            {
+              // Paso 3: Cristalización marina (Turquesa Salinas)
+              badgeColor: "text-[#02aeaa]",
+              giantIcon: "text-[#02aeaa]/55 drop-shadow-[0_0_24px_rgba(2,174,170,0.25)]",
+              watermark: "text-[#02aeaa]/20 group-hover:text-[#02aeaa]/35",
+              hoverBorder: "hover:border-[#02aeaa]/60",
+              iconBox: "group-hover:bg-[#02aeaa]/20 text-[#183c6b] group-hover:text-[#02aeaa]",
+              titleHover: "group-hover:text-[#02aeaa]",
+            },
+            {
+              // Paso 4: Cosecha y despacho (Turquesa Salinas)
+              badgeColor: "text-[#02aeaa]",
+              giantIcon: "text-[#02aeaa]/55 drop-shadow-[0_0_24px_rgba(2,174,170,0.25)]",
+              watermark: "text-[#02aeaa]/20 group-hover:text-[#02aeaa]/35",
+              hoverBorder: "hover:border-[#02aeaa]/60",
+              iconBox: "group-hover:bg-[#02aeaa]/20 text-[#183c6b] group-hover:text-[#02aeaa]",
+              titleHover: "group-hover:text-[#02aeaa]",
+            },
+          ];
+
+          const currentTheme = stepThemes[index % stepThemes.length];
+
           return (
             <div key={item.step} className="flex flex-col w-full">
               {/* Contenedor relativo de la tarjeta y su icono flotante de fondo */}
@@ -84,22 +127,22 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                 animation="fade-up"
                 className={`relative flex flex-col group ${layout.align} ${layout.widthClass} ${layout.offsetClass}`}
               >
-                {/* Icono gigante turquesa DETRÁS de la tarjeta en el lado derecho (altamente visible, 75%+ expuesto) */}
+                {/* Icono gigante DETRÁS de la tarjeta en el lado derecho (oculto en móvil: solo asomaba un borde) */}
                 <div
                   aria-hidden="true"
-                  className="absolute -right-24 sm:-right-36 lg:-right-48 top-1/2 -translate-y-1/2 w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 pointer-events-none select-none z-0 flex items-center justify-center"
+                  className="absolute -right-24 sm:-right-36 lg:-right-48 top-1/2 -translate-y-1/2 w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 pointer-events-none select-none z-0 hidden md:flex items-center justify-center"
                 >
                   <Icon
-                    className="w-full h-full text-[#02afab]/55 stroke-[1.75] drop-shadow-[0_0_24px_rgba(2,175,171,0.25)]"
+                    className={`w-full h-full ${currentTheme.giantIcon} stroke-[1.75]`}
                   />
                 </div>
 
                 {/* Tarjeta de Etapa (Sólida con fondo blanco por encima) */}
                 <article
-                  className="relative z-10 flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-sm border border-slate-200/80 hover:border-[#02afab]/60 hover:shadow-xl transition-all duration-300 overflow-hidden w-full"
+                  className={`relative z-10 flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-sm border border-slate-200/80 ${currentTheme.hoverBorder} hover:shadow-xl transition-all duration-300 overflow-hidden w-full`}
                 >
                   {/* Número de agua de fondo */}
-                  <span className="absolute top-2 right-4 text-4xl sm:text-5xl font-black text-slate-200/50 font-heading select-none pointer-events-none tracking-tighter z-0">
+                  <span className={`absolute top-2 right-4 text-4xl sm:text-5xl font-black ${currentTheme.watermark} font-heading select-none pointer-events-none tracking-tighter z-0 transition-colors`}>
                     {item.step}
                   </span>
 
@@ -107,16 +150,16 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                   <div className="relative z-10 flex flex-col gap-4">
                     {/* Encabezado de la tarjeta: Badge de etapa e icono */}
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-[#008784] uppercase tracking-wider font-heading">
+                      <span className={`text-xs font-bold ${currentTheme.badgeColor} uppercase tracking-wider font-heading`}>
                         {item.step} • {item.shortDesc}
                       </span>
-                      <div className="w-11 h-11 rounded-2xl bg-slate-100 group-hover:bg-[#02afab]/15 flex items-center justify-center text-[#082846] group-hover:text-[#02afab] transition-colors duration-300">
+                      <div className={`w-11 h-11 rounded-2xl bg-slate-100 ${currentTheme.iconBox} flex items-center justify-center transition-colors duration-300`}>
                         <Icon className="w-5 h-5" strokeWidth={2} />
                       </div>
                     </div>
 
                     {/* Título */}
-                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#082846] tracking-tight leading-snug font-heading group-hover:text-[#02afab] transition-colors duration-200">
+                    <h3 className={`text-xl sm:text-2xl font-extrabold text-[#183c6b] tracking-tight leading-snug font-heading ${currentTheme.titleHover} transition-colors duration-200`}>
                       {item.name}
                     </h3>
 
@@ -131,7 +174,7 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                     <div className="flex items-center gap-2.5">
                       <div className="w-20 h-1.5 rounded-full bg-slate-100 overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-[#02afab] to-[#94c11e] rounded-full transition-all duration-500"
+                          className="h-full bg-gradient-to-r from-[#02aeaa] via-[#85b2cf] to-[#e5c798] rounded-full transition-all duration-500"
                           style={{ width: `${progressPercent}%` }}
                         />
                       </div>
@@ -142,12 +185,12 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
 
                     <div className="flex items-center gap-1.5 text-slate-400">
                       {isLast ? (
-                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#008784]">
+                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#02aeaa]">
                           <CheckCircle2 className="w-4 h-4" />
                           <span>{dict.completedBadge}</span>
                         </span>
                       ) : (
-                        <span className="text-[11px] font-semibold text-slate-400 group-hover:text-[#02afab] transition-colors">
+                        <span className="text-[11px] font-semibold text-slate-400 group-hover:text-[#02aeaa] transition-colors">
                           {progressPercent}%
                         </span>
                       )}
@@ -175,8 +218,9 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                           x2="100%"
                           y2="100%"
                         >
-                          <stop offset="0%" stopColor="#02afab" />
-                          <stop offset="100%" stopColor="#94c11e" />
+                          <stop offset="0%" stopColor="#02aeaa" />
+                          <stop offset="50%" stopColor="#85b2cf" />
+                          <stop offset="100%" stopColor="#e5c798" />
                         </linearGradient>
                       </defs>
 
@@ -202,18 +246,20 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                     </svg>
 
                     {/* Waypoint central secuencial con flecha coherente con la dirección */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#02afab]/40 shadow-sm text-xs font-bold text-[#082846] font-heading">
+                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border ${
+                      index === 0 ? "border-[#85b2cf]/60" : index === 1 ? "border-[#e5c798]/60" : "border-[#02aeaa]/40"
+                    } shadow-sm text-xs font-bold text-[#183c6b] font-heading`}>
                       {isLeftToRight ? (
                         <>
-                          <span className="text-[#008784]">{item.step}</span>
-                          <ArrowRight className="w-3.5 h-3.5 text-[#02afab]" />
-                          <span className="text-[#082846]">{nextStep.step}</span>
+                          <span className={currentTheme.badgeColor}>{item.step}</span>
+                          <ArrowRight className={`w-3.5 h-3.5 ${currentTheme.badgeColor}`} />
+                          <span className="text-[#183c6b]">{nextStep.step}</span>
                         </>
                       ) : (
                         <>
-                          <span className="text-[#082846]">{nextStep.step}</span>
-                          <ArrowLeft className="w-3.5 h-3.5 text-[#02afab]" />
-                          <span className="text-[#008784]">{item.step}</span>
+                          <span className="text-[#183c6b]">{nextStep.step}</span>
+                          <ArrowLeft className={`w-3.5 h-3.5 ${currentTheme.badgeColor}`} />
+                          <span className={currentTheme.badgeColor}>{item.step}</span>
                         </>
                       )}
                     </div>
@@ -221,13 +267,15 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
 
                   {/* Conector para pantallas móviles (Línea vertical con flecha) */}
                   <div className="flex md:hidden flex-col items-center justify-center py-2">
-                    <div className="w-0.5 h-8 bg-gradient-to-b from-[#02afab] to-[#94c11e]" />
-                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#02afab]/40 shadow-sm text-xs font-bold text-[#082846] font-heading -my-1 z-10">
-                      <span className="text-[#008784]">{item.step}</span>
-                      <ArrowDown className="w-3.5 h-3.5 text-[#02afab]" />
-                      <span className="text-[#082846]">{nextStep.step}</span>
+                    <div className="w-0.5 h-8 bg-gradient-to-b from-[#02aeaa] via-[#85b2cf] to-[#e5c798]" />
+                    <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border ${
+                      index === 0 ? "border-[#85b2cf]/60" : index === 1 ? "border-[#e5c798]/60" : "border-[#02aeaa]/40"
+                    } shadow-sm text-xs font-bold text-[#183c6b] font-heading -my-1 z-10`}>
+                      <span className={currentTheme.badgeColor}>{item.step}</span>
+                      <ArrowDown className={`w-3.5 h-3.5 ${currentTheme.badgeColor}`} />
+                      <span className="text-[#183c6b]">{nextStep.step}</span>
                     </div>
-                    <div className="w-0.5 h-8 bg-gradient-to-b from-[#94c11e] to-[#02afab]" />
+                    <div className="w-0.5 h-8 bg-gradient-to-b from-[#e5c798] via-[#85b2cf] to-[#02aeaa]" />
                   </div>
                 </div>
               )}

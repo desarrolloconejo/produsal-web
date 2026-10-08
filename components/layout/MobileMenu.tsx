@@ -14,6 +14,7 @@ interface MobileMenuProps {
     home: string;
     about: string;
     products: string;
+    gallery: string;
     quality: string;
     contact: string;
     intranet?: string;
@@ -60,7 +61,7 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
       {/* Backdrop con blur y fade in/out */}
       <div
         onClick={onClose}
-        className={`fixed inset-0 bg-[#082846]/70 backdrop-blur-md transition-opacity duration-300 ease-in-out ${
+        className={`fixed inset-0 bg-[#183c6b]/75 backdrop-blur-md transition-opacity duration-300 ease-in-out ${
           animateIn ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         aria-hidden="true"
@@ -74,13 +75,13 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
       >
         {/* 1. Cabecera Fija del Drawer */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-slate-100 shrink-0 bg-white">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#02afab] font-heading">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] font-heading">
             {currentLang === "es" ? "Menú Produsal" : "Produsal Menu"}
           </span>
           <button
             onClick={onClose}
             className="p-2 text-slate-500 hover:text-slate-900 rounded-xl hover:bg-slate-100 transition-colors"
-            aria-label="Cerrar menú"
+            aria-label={currentLang === "es" ? "Cerrar menú" : "Close menu"}
           >
             <X className="w-6 h-6" />
           </button>
@@ -98,7 +99,7 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
                   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                 }
               }}
-              className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 hover:text-[#02afab] hover:bg-slate-50 font-bold text-base transition-colors"
+              className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 hover:text-[#02aeaa] hover:bg-slate-50 font-bold text-base transition-colors"
             >
               <span>{dict.home}</span>
               <ArrowRight className="w-4 h-4 text-slate-400" />
@@ -108,7 +109,7 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
             <Link
               href={`/${currentLang}/nosotros`}
               onClick={onClose}
-              className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 hover:text-[#02afab] hover:bg-slate-50 font-bold text-base transition-colors"
+              className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 hover:text-[#02aeaa] hover:bg-slate-50 font-bold text-base transition-colors"
             >
               <span>{dict.about}</span>
               <ArrowRight className="w-4 h-4 text-slate-400" />
@@ -120,19 +121,19 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
                 <Link
                   href={`/${currentLang}/productos`}
                   onClick={onClose}
-                  className="flex items-center gap-2 text-slate-800 hover:text-[#02afab] font-bold text-base transition-colors flex-1"
+                  className="flex items-center gap-2 text-slate-800 hover:text-[#02aeaa] font-bold text-base transition-colors flex-1"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#02afab]" />
+                  <span className="w-2 h-2 rounded-full bg-[#02aeaa]" />
                   <span>{dict.products}</span>
                 </Link>
                 <button
                   onClick={() => setProductsExpanded((prev) => !prev)}
-                  className="p-1.5 rounded-lg text-slate-500 hover:text-[#02afab] hover:bg-slate-200/50 transition-colors cursor-pointer"
-                  aria-label="Desplegar categorías de productos"
+                  className="p-1.5 rounded-lg text-slate-500 hover:text-[#02aeaa] hover:bg-slate-200/50 transition-colors cursor-pointer"
+                  aria-label={currentLang === "es" ? "Desplegar categorías de productos" : "Expand product categories"}
                 >
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-300 ${
-                      productsExpanded ? "rotate-180 text-[#02afab]" : ""
+                      productsExpanded ? "rotate-180 text-[#02aeaa]" : ""
                     }`}
                   />
                 </button>
@@ -149,14 +150,14 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
                       className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                     >
                       <div className="flex flex-col min-w-0">
-                        <span className="text-sm font-bold text-[#082846] group-hover:text-[#008784] font-heading transition-colors truncate">
+                        <span className="text-sm font-bold text-[#183c6b] group-hover:text-[#02aeaa] font-heading transition-colors truncate">
                           {category.name}
                         </span>
                         <span className="text-[11px] text-slate-400 font-normal truncate">
                           {category.tagline}
                         </span>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#008784] group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#02aeaa] group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
                     </Link>
                   ))}
 
@@ -164,7 +165,7 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
                   <Link
                     href={`/${currentLang}/productos`}
                     onClick={onClose}
-                    className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold text-[#008784] hover:bg-[#02afab]/10 font-heading transition-colors"
+                    className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold text-[#183c6b] hover:text-[#02aeaa] hover:bg-[#85b2cf]/10 font-heading transition-colors"
                   >
                     <span>{currentLang === "es" ? "Ver todos los productos" : "View all products"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -172,6 +173,16 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
                 </div>
               )}
             </div>
+
+            {/* Galería */}
+            <Link
+              href={`/${currentLang}/galeria`}
+              onClick={onClose}
+              className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 hover:text-[#02aeaa] hover:bg-slate-50 font-bold text-base transition-colors"
+            >
+              <span>{dict.gallery}</span>
+              <ArrowRight className="w-4 h-4 text-slate-400" />
+            </Link>
           </nav>
         </div>
 
@@ -180,7 +191,7 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
           <Link
             href={`/${currentLang}/contacto`}
             onClick={onClose}
-            className="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-[#02afab] hover:bg-[#008784] text-white font-bold shadow-md shadow-[#02afab]/20 hover:shadow-lg transition-all"
+            className="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-[#02aeaa] hover:bg-[#183c6b] text-white font-bold shadow-md shadow-[#02aeaa]/20 hover:shadow-lg transition-all"
             aria-label={currentLang === "es" ? "Contáctanos" : "Contact Us"}
           >
             <Phone className="w-4 h-4" />
@@ -189,12 +200,12 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
 
           <div className="pt-2 text-xs text-slate-500 flex flex-col gap-1.5 font-sans">
             <div className="flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#02afab]" />
+              <Phone className="w-3.5 h-3.5 text-[#02aeaa]" />
               <span>0212 208 51 11 / 0800 2274455</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="w-3.5 h-3.5 text-[#02afab]" />
-              <span>info@grupomimesa.com</span>
+              <Mail className="w-3.5 h-3.5 text-[#02aeaa]" />
+              <span>infoprodusal@grupomimesa.com</span>
             </div>
           </div>
         </div>

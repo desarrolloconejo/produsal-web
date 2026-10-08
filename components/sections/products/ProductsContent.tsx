@@ -45,7 +45,7 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
 
   const openPdfModal = (category: (typeof dict.categories)[number]) => {
     setModalData({
-      title: `${isEs ? "Ficha Técnica" : "Data Sheet"} — ${category.name}`,
+      title: `${isEs ? "Ficha Técnica" : "Data Sheet"} — ${category.pdfTitle}`,
       code: category.code,
       pdfEs: category.pdfEs,
       pdfEn: category.pdfEn,
@@ -59,11 +59,13 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200/80 pb-8 sm:pb-10">
           <div className="flex flex-col gap-3 max-w-3xl">
-            <span className="text-[#008784] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
-              {dict.badge}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+                {dict.badge}
+              </span>
+            </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#082846] tracking-tight leading-[1.15] font-heading">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight leading-[1.15] font-heading">
               {dict.title}
             </h2>
 
@@ -73,10 +75,10 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
           </div>
 
           {/* Botón CTA Global de Cotización */}
-          <div className="shrink-0 flex items-center gap-3">
+          <div className="shrink-0 flex flex-col sm:flex-row sm:items-center gap-3 w-full md:w-auto">
             <Link
               href={`/${currentLang}/productos`}
-              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-[#082846] bg-slate-100 hover:bg-slate-200 transition-all font-heading"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-bold text-sm text-[#183c6b] bg-slate-100 hover:bg-[#85b2cf]/20 transition-all font-heading"
             >
               <span>{isEs ? "Ver Catálogo Completo" : "View Full Catalog"}</span>
               <ArrowRight className="w-4 h-4" />
@@ -84,7 +86,7 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
 
             <Link
               href={`/${currentLang}/contacto`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-[#082846] hover:bg-[#008784] shadow-xs hover:shadow-md transition-all duration-300 font-heading group"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-[#183c6b] hover:bg-[#02aeaa] shadow-xs hover:shadow-md transition-all duration-300 font-heading group"
             >
               <span>{dict.ctaQuote}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -100,12 +102,12 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
 
           return (
             <ScrollReveal key={category.id} delay={idx * 100} animation="fade-up">
-              <article className="relative flex flex-col justify-between rounded-3xl bg-white shadow-xs border border-slate-200/80 hover:border-[#02afab]/60 hover:shadow-xl transition-all duration-300 overflow-hidden group h-full">
+              <article className="relative flex flex-col justify-between rounded-3xl bg-white shadow-xs border border-slate-200/80 hover:border-[#02aeaa]/60 hover:shadow-xl transition-all duration-300 overflow-hidden group h-full">
                 {/* Cabecera Visual a Sangre (Aspect 4/5 para llenar todo el ancho sin bordes grises) */}
                 <Link
                   href={`/${currentLang}/productos/${category.slug}`}
                   className="relative w-full aspect-[4/5] overflow-hidden group/img block cursor-pointer bg-slate-100"
-                  title={`Ver página de ${category.name}`}
+                  title={isEs ? `Ver página de ${category.name}` : `View ${category.name} page`}
                 >
                   <Image
                     src={category.image}
@@ -117,14 +119,14 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
 
                   {/* Badges superiores sobre la fotografía */}
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-1.5 z-10">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-[#082846]/90 text-cyan-300 border border-cyan-400/30 backdrop-blur-xs shadow-xs">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-[#183c6b]/90 text-cyan-300 border border-cyan-400/30 backdrop-blur-xs shadow-xs">
                       {category.code}
                     </span>
                     <span
                       className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider font-heading backdrop-blur-xs shadow-xs ${
                         isPremium
-                          ? "bg-[#02afab] text-white"
-                          : "bg-[#94c11e] text-[#082846]"
+                          ? "bg-[#02aeaa] text-white"
+                          : "bg-[#85b2cf] text-[#183c6b]"
                       }`}
                     >
                       {isPremium
@@ -139,17 +141,17 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
                   <div className="flex flex-col gap-3.5">
                     {/* Tagline y Título de Categoría limpio debajo de la foto */}
                     <div className="flex flex-col gap-1">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#008784] font-heading">
-                        {category.tagline}
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#02aeaa] font-heading flex items-center gap-1.5">
+                        <span>{category.tagline}</span>
                       </span>
                       <Link
                         href={`/${currentLang}/productos/${category.slug}`}
                         className="flex items-center justify-between gap-2 group/title"
                       >
-                        <h3 className="text-lg sm:text-xl font-extrabold text-[#082846] tracking-tight font-heading group-hover/title:text-[#02afab] transition-colors leading-snug">
+                        <h3 className="text-lg sm:text-xl font-extrabold text-[#183c6b] tracking-tight font-heading group-hover/title:text-[#02aeaa] transition-colors leading-snug">
                           {category.name}
                         </h3>
-                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover/title:text-[#02afab] group-hover/title:translate-x-0.5 transition-all shrink-0" />
+                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover/title:text-[#02aeaa] group-hover/title:translate-x-0.5 transition-all shrink-0" />
                       </Link>
                     </div>
 
@@ -161,31 +163,31 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
                     {/* Especificaciones Técnicas (Pureza, Humedad, Densidad) */}
                     <div className="grid grid-cols-3 gap-1.5 p-3 rounded-2xl bg-slate-50 border border-slate-100 text-center">
                       <div className="flex flex-col">
-                        <span className="text-[9px] font-bold text-slate-400 uppercase font-heading flex items-center justify-center gap-0.5">
-                          <Sparkles className="w-2.5 h-2.5 text-[#02afab]" />
+                        <span className="text-[10px] lg:text-[9px] font-bold text-slate-400 uppercase font-heading flex items-center justify-center gap-0.5">
+                          <Sparkles className="w-2.5 h-2.5 text-[#02aeaa]" />
                           {dict.purityLabel}
                         </span>
-                        <span className="text-[11px] font-extrabold text-[#082846] font-heading mt-0.5">
+                        <span className="text-[11px] font-extrabold text-[#183c6b] font-heading mt-0.5">
                           {category.purity}
                         </span>
                       </div>
 
                       <div className="flex flex-col border-x border-slate-200/60 px-1">
-                        <span className="text-[9px] font-bold text-slate-400 uppercase font-heading flex items-center justify-center gap-0.5">
-                          <Droplets className="w-2.5 h-2.5 text-[#02afab]" />
+                        <span className="text-[10px] lg:text-[9px] font-bold text-slate-400 uppercase font-heading flex items-center justify-center gap-0.5">
+                          <Droplets className="w-2.5 h-2.5 text-[#85b2cf]" />
                           {dict.humidityLabel}
                         </span>
-                        <span className="text-[11px] font-extrabold text-[#082846] font-heading mt-0.5">
+                        <span className="text-[11px] font-extrabold text-[#183c6b] font-heading mt-0.5">
                           {category.humidity}
                         </span>
                       </div>
 
                       <div className="flex flex-col">
-                        <span className="text-[9px] font-bold text-slate-400 uppercase font-heading flex items-center justify-center gap-0.5">
-                          <Layers className="w-2.5 h-2.5 text-[#02afab]" />
+                        <span className="text-[10px] lg:text-[9px] font-bold text-slate-400 uppercase font-heading flex items-center justify-center gap-0.5">
+                          <Layers className="w-2.5 h-2.5 text-[#e5c798]" />
                           {dict.densityLabel || (isEs ? "Dens." : "Dens.")}
                         </span>
-                        <span className="text-[9px] sm:text-[10px] font-extrabold text-[#082846] font-heading mt-0.5 whitespace-nowrap">
+                        <span className="text-[10px] font-extrabold text-[#183c6b] font-heading mt-0.5 whitespace-nowrap">
                           {category.density}
                         </span>
                       </div>
@@ -201,17 +203,33 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
                           const isGranel =
                             item.format.toLowerCase().includes("granel") ||
                             item.format.toLowerCase().includes("bulk");
+                          const isSaco =
+                            item.format.toLowerCase().includes("saco") ||
+                            item.format.toLowerCase().includes("bag") ||
+                            item.format.toLowerCase().includes("20 kg") ||
+                            item.format.toLowerCase().includes("50 kg");
+                          const isBigBag =
+                            item.format.toLowerCase().includes("big bag") ||
+                            item.format.toLowerCase().includes("1.000") ||
+                            item.format.toLowerCase().includes("1,000") ||
+                            item.format.toLowerCase().includes("1 tm");
 
                           return (
                             <span
                               key={item.slug}
                               className={`text-[10px] px-2 py-0.5 rounded-md font-heading font-medium flex items-center gap-1 ${
                                 isGranel
-                                  ? "bg-[#02afab]/15 text-[#008784] font-bold border border-[#02afab]/30"
+                                  ? "bg-[#02aeaa]/15 text-[#183c6b] font-bold border border-[#02aeaa]/30"
+                                  : isBigBag
+                                  ? "bg-[#e5c798]/25 text-[#183c6b] font-bold border border-[#e5c798]/40"
+                                  : isSaco
+                                  ? "bg-[#85b2cf]/20 text-[#183c6b] font-bold border border-[#85b2cf]/40"
                                   : "bg-slate-100 text-slate-600"
                               }`}
                             >
-                              {isGranel && <Truck className="w-2.5 h-2.5" />}
+                              {isGranel && <Truck className="w-2.5 h-2.5 text-[#02aeaa]" />}
+                              {isSaco && <Package className="w-2.5 h-2.5 text-[#85b2cf]" />}
+                              {isBigBag && <Layers className="w-2.5 h-2.5 text-[#e5c798]" />}
                               {item.name}
                             </span>
                           );
@@ -225,16 +243,16 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
                     <button
                       type="button"
                       onClick={() => openPdfModal(category)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#082846] hover:text-white bg-slate-100 hover:bg-[#082846] border border-slate-200/80 hover:border-[#082846] transition-all duration-200 font-heading cursor-pointer group/pdf shadow-2xs hover:shadow-xs active:scale-95"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#183c6b] hover:text-white bg-slate-100 hover:bg-[#183c6b] border border-slate-200/80 hover:border-[#183c6b] transition-all duration-200 font-heading cursor-pointer group/pdf shadow-2xs hover:shadow-xs active:scale-95"
                       title={isEs ? "Abrir visor de Ficha Técnica" : "Open Technical Sheet Preview"}
                     >
-                      <FileText className="w-3.5 h-3.5 text-[#008784] group-hover/pdf:text-cyan-300 transition-colors" />
+                      <FileText className="w-3.5 h-3.5 text-[#02aeaa] group-hover/pdf:text-cyan-300 transition-colors" />
                       <span>{dict.ctaSpec}</span>
                     </button>
 
                     <Link
                       href={`/${currentLang}/productos/${category.slug}`}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#008784] hover:bg-[#02afab] transition-all duration-200 font-heading cursor-pointer shadow-xs group/link active:scale-95"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#02aeaa] hover:bg-[#183c6b] transition-all duration-200 font-heading cursor-pointer shadow-xs group/link active:scale-95"
                     >
                       <span>{isEs ? "Ver más" : "Details"}</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
@@ -251,10 +269,10 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-6 pt-4">
           <div className="flex flex-col gap-1.5 text-center items-center">
-            <span className="text-[#008784] text-xs font-bold uppercase tracking-wider font-heading">
+            <span className="text-[#02aeaa] text-xs font-bold uppercase tracking-wider font-heading">
               {dict.carouselBadge}
             </span>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#082846] tracking-tight font-heading">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#183c6b] tracking-tight font-heading">
               {dict.carouselTitle}
             </h3>
             <p className="text-slate-500 text-xs sm:text-sm font-normal max-w-2xl">
@@ -273,8 +291,8 @@ export function ProductsContent({ currentLang, dict }: ProductsContentProps) {
       {/* 4. Banner Inferior de Garantía */}
       {dict.qualityGuarantee && (
         <ScrollReveal animation="fade-up" delay={100}>
-          <div className="flex items-center justify-center gap-2.5 p-4 rounded-2xl bg-white border border-slate-200/80 text-xs sm:text-sm font-semibold text-[#008784] font-heading text-center shadow-xs">
-            <ShieldCheck className="w-5 h-5 text-[#02afab] shrink-0" />
+          <div className="flex items-center justify-center gap-2.5 p-4 rounded-2xl bg-amber-50/40 border border-[#e5c798]/60 text-xs sm:text-sm font-bold text-[#183c6b] font-heading text-center shadow-xs">
+            <ShieldCheck className="w-5 h-5 text-[#e5c798] shrink-0" />
             <span>{dict.qualityGuarantee}</span>
           </div>
         </ScrollReveal>

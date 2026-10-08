@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
+import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 interface HeaderProps {
@@ -13,6 +14,7 @@ interface HeaderProps {
     home: string;
     about: string;
     products: string;
+    gallery: string;
     quality: string;
     contact: string;
   };
@@ -50,17 +52,22 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
 
   return (
     <header className="w-full relative z-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-6">
-        {/* Logo Produsal */}
+      {/* Textura de montañas de sal punteadas a lo ancho del header */}
+      <div aria-hidden="true" className="absolute inset-0 texture-stipple opacity-[0.22] pointer-events-none select-none" />
+      {/* Triángulos 2D corporativos separados en los extremos del header (más tenues en móvil, donde quedan tras el logo y el menú) */}
+      <BrandTrianglesBackground layout="separated" size="xs" opacityClass="opacity-35" className="max-md:opacity-50" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-6 relative z-10">
+        {/* Logo Produsal (versión oscura para fondo blanco) */}
         <Link
           href={`/${currentLang}`}
           onClick={handleHomeClick}
-          className="flex items-center gap-3 group focus:outline-hidden focus:ring-2 focus:ring-[#02afab] rounded-lg p-1"
-          aria-label="Produsal - Inicio"
+          className="flex items-center gap-3 group focus:outline-hidden focus:ring-2 focus:ring-[#02aeaa] rounded-lg p-1"
+          aria-label={`Produsal - ${dict.home}`}
         >
           <Image
-            src="/images/PRODUSAL-white.webp"
-            alt="Produsal - Productora de Sal Marina"
+            src="/images/PRODUSAL.webp"
+            alt={currentLang === "es" ? "Produsal - Productora de Sal Marina" : "Produsal - Sea Salt Producer"}
             width={160}
             height={35}
             priority
@@ -73,21 +80,21 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
           <Link
             href={`/${currentLang}`}
             onClick={handleHomeClick}
-            className="px-3.5 py-2 rounded-lg text-sm font-semibold text-white/85 hover:text-[#02afab] hover:bg-white/5 transition-all duration-200 relative group"
+            className="px-4 py-2 rounded-full text-sm font-semibold text-[#183c6b]/80 hover:text-[#183c6b] hover:bg-[#02aeaa]/10 transition-colors duration-200 relative group"
           >
             <span>{dict.home}</span>
-            <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#02afab] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
+            <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 h-[3px] w-0 group-hover:w-5 rounded-full bg-[#02aeaa] transition-all duration-300" />
           </Link>
 
           <Link
             href={`/${currentLang}/nosotros`}
-            className="px-3.5 py-2 rounded-lg text-sm font-semibold text-white/85 hover:text-[#02afab] hover:bg-white/5 transition-all duration-200 relative group"
+            className="px-4 py-2 rounded-full text-sm font-semibold text-[#183c6b]/80 hover:text-[#183c6b] hover:bg-[#02aeaa]/10 transition-colors duration-200 relative group"
           >
             <span>{dict.about}</span>
-            <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#02afab] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
+            <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 h-[3px] w-0 group-hover:w-5 rounded-full bg-[#02aeaa] transition-all duration-300" />
           </Link>
 
-          {/* Menú Desplegable de Productos Rediseñado */}
+          {/* Menú Desplegable de Productos */}
           <div
             ref={dropdownRef}
             onMouseEnter={handleMouseEnter}
@@ -97,21 +104,21 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
             <Link
               href={`/${currentLang}/productos`}
               onClick={() => setProductsDropdownOpen(false)}
-              className="px-3.5 py-2 rounded-lg text-sm font-semibold text-white/85 hover:text-[#02afab] hover:bg-white/5 transition-all duration-200 relative flex items-center gap-1.5 group"
+              className="px-4 py-2 rounded-full text-sm font-semibold text-[#183c6b]/80 hover:text-[#183c6b] hover:bg-[#02aeaa]/10 transition-colors duration-200 relative flex items-center gap-1.5 group"
             >
               <span>{dict.products}</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 transition-transform duration-200 text-white/60 group-hover:text-[#02afab] ${
-                  productsDropdownOpen ? "rotate-180 text-[#02afab]" : ""
+                className={`w-3.5 h-3.5 transition-transform duration-200 text-[#183c6b]/50 group-hover:text-[#02aeaa] ${
+                  productsDropdownOpen ? "rotate-180 text-[#02aeaa]" : ""
                 }`}
               />
-              <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#02afab] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
+              <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 h-[3px] w-0 group-hover:w-5 rounded-full bg-[#02aeaa] transition-all duration-300" />
             </Link>
 
-            {/* Dropdown Minimalista y Seguro */}
-            {productsDropdownOpen && productsDict?.categories && (
+            {/* Dropdown */}
+            {productsDict?.categories && productsDropdownOpen && (
               <div className="absolute top-full left-0 pt-2 w-72 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
-                <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-1.5 text-[#082846]">
+                <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-1.5 text-[#183c6b]">
                   {/* Lista de Categorías */}
                   <div className="flex flex-col">
                     {productsDict.categories.map((category) => (
@@ -122,14 +129,14 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
                         className="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                       >
                         <div className="flex flex-col min-w-0">
-                          <span className="text-sm font-bold text-[#082846] group-hover:text-[#008784] font-heading transition-colors truncate">
+                          <span className="text-sm font-bold text-[#183c6b] group-hover:text-[#02aeaa] font-heading transition-colors truncate">
                             {category.name}
                           </span>
                           <span className="text-[11px] text-slate-400 font-normal truncate">
                             {category.tagline}
                           </span>
                         </div>
-                        <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#008784] group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#02aeaa] group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
                       </Link>
                     ))}
                   </div>
@@ -139,7 +146,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
                   <Link
                     href={`/${currentLang}/productos`}
                     onClick={() => setProductsDropdownOpen(false)}
-                    className="flex items-center justify-between px-3.5 py-2 rounded-xl text-xs font-bold text-[#008784] hover:bg-[#02afab]/10 font-heading transition-colors"
+                    className="flex items-center justify-between px-3.5 py-2 rounded-xl text-xs font-bold text-[#183c6b] hover:text-[#02aeaa] hover:bg-[#85b2cf]/10 font-heading transition-colors"
                   >
                     <span>{currentLang === "es" ? "Ver todos los productos" : "View all products"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -149,6 +156,15 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
             )}
           </div>
 
+          {/* Galería */}
+          <Link
+            href={`/${currentLang}/galeria`}
+            className="px-4 py-2 rounded-full text-sm font-semibold text-[#183c6b]/80 hover:text-[#183c6b] hover:bg-[#02aeaa]/10 transition-colors duration-200 relative group"
+          >
+            <span>{dict.gallery}</span>
+            <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 h-[3px] w-0 group-hover:w-5 rounded-full bg-[#02aeaa] transition-all duration-300" />
+          </Link>
+
 
         </nav>
 
@@ -156,7 +172,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href={`/${currentLang}/contacto`}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-white bg-[#02afab] hover:bg-[#008784] shadow-sm shadow-[#02afab]/20 hover:shadow-md hover:shadow-[#02afab]/30 transition-all duration-200 group font-heading"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-white bg-[#02aeaa] hover:bg-[#183c6b] shadow-sm shadow-[#02aeaa]/20 hover:shadow-md transition-all duration-200 group font-heading"
             aria-label={currentLang === "es" ? "Contáctanos" : "Contact Us"}
           >
             <Phone className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
@@ -168,8 +184,8 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="p-2.5 rounded-xl text-white/90 hover:text-[#02afab] hover:bg-white/10 transition-colors focus:outline-hidden focus:ring-2 focus:ring-[#02afab]"
-            aria-label="Abrir menú de navegación"
+            className="p-2.5 rounded-xl text-[#183c6b]/80 hover:text-[#02aeaa] hover:bg-slate-50 transition-colors focus:outline-hidden focus:ring-2 focus:ring-[#02aeaa]"
+            aria-label={currentLang === "es" ? "Abrir menú de navegación" : "Open navigation menu"}
           >
             <Menu className="w-6 h-6" />
           </button>

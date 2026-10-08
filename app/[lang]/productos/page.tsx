@@ -23,7 +23,7 @@ export async function generateMetadata({
       : "Industrial Product Catalog | Produsal C.A.",
     description: isEs
       ? "Catálogo oficial de sal marina solar de alta pureza (ASTM E534-98): Sal Bruta Premium, Sal Bruta Tipo A, Sal Molida Premium y Sal Molida Tipo A. Despachos a granel, Big Bags y sacos de 20 kg."
-      : "Official catalog of high-purity solar marine salt (ASTM E534-98): Sal Bruta Premium, Sal Bruta Tipo A, Sal Molida Premium, and Sal Molida Tipo A. Bulk hopper, Big Bags, and 20 kg bags.",
+      : "Official catalog of high-purity solar marine salt (ASTM E534-98): Premium Coarse Salt, Type A Coarse Salt, Premium Ground Salt, and Type A Ground Salt. Bulk hopper, Big Bags, and 20 kg bags.",
   };
 }
 

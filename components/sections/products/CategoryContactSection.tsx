@@ -17,6 +17,7 @@ import {
   Check,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import { sendContactEmail, type ContactState } from "@/app/actions/send";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
@@ -74,19 +75,22 @@ export function CategoryContactSection({
   );
 
   return (
-    <section id="contacto" className="w-full bg-white py-16 sm:py-20 border-t border-slate-200/90 scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contacto" className="w-full bg-brand-offwhite relative py-16 sm:py-20 border-t border-slate-200/90 scroll-mt-20 overflow-hidden">
+      {/* Triángulos 2D corporativos en el fondo */}
+      <BrandTrianglesBackground layout="separated" size="lg" opacityClass="opacity-30" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal animation="fade-up">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             
             {/* Columna Izquierda: Información de Despacho y Ficha del Producto (4 cols) */}
             <div className="lg:col-span-4 flex flex-col gap-6">
               <div className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#008784] font-heading flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#02afab]" />
-                  {isEs ? "Atención y Suministro Mayorista" : "Wholesale Commercial Supply"}
+                <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] font-heading flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-[#02aeaa]" />
+                  <span>{isEs ? "Atención y Suministro Mayorista" : "Wholesale Commercial Supply"}</span>
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#082846] font-heading tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] font-heading tracking-tight">
                   {isEs ? `Cotizar ${category.name}` : `Quote ${category.name}`}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -102,26 +106,26 @@ export function CategoryContactSection({
                   <span className="text-xs font-mono font-bold text-slate-500">
                     {category.code}
                   </span>
-                  <span className="text-xs font-bold text-[#008784] font-heading">
+                  <span className="text-xs font-bold text-[#02aeaa] font-heading">
                     {category.purity}
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-2.5 text-xs">
                   <div className="flex items-center gap-2 text-slate-700">
-                    <Clock className="w-4 h-4 text-[#02afab] shrink-0" />
+                    <Clock className="w-4 h-4 text-[#e5c798] shrink-0" />
                     <span>
                       {isEs ? "Respuesta en menos de 24 horas" : "Response in under 24 business hours"}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-slate-700">
-                    <Building2 className="w-4 h-4 text-[#02afab] shrink-0" />
+                    <Building2 className="w-4 h-4 text-[#85b2cf] shrink-0" />
                     <span>
                       {isEs ? "Despacho directo EXW Los Olivitos" : "Direct dispatch EXW Los Olivitos Saltworks"}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-slate-700">
-                    <Phone className="w-4 h-4 text-[#02afab] shrink-0" />
+                    <Phone className="w-4 h-4 text-[#02aeaa] shrink-0" />
                     <span>
                       {isEs ? "Atención: 0212 208 51 11" : "Sales line: 0212 208 51 11"}
                     </span>
@@ -186,7 +190,7 @@ export function CategoryContactSection({
                           }}
                           className={`relative flex items-center justify-between p-3.5 rounded-2xl border transition-all cursor-pointer select-none group ${
                             isSelected
-                              ? "bg-white border-[#02afab] shadow-md ring-2 ring-[#02afab]/30"
+                              ? "bg-white border-[#02aeaa] shadow-md ring-2 ring-[#02aeaa]/30"
                               : "bg-white/70 border-slate-200 hover:border-slate-300 hover:bg-white shadow-2xs"
                           }`}
                         >
@@ -195,7 +199,7 @@ export function CategoryContactSection({
                             <div
                               className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                                 isSelected
-                                  ? "bg-[#02afab] text-white"
+                                  ? "bg-[#02aeaa] text-white"
                                   : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"
                               }`}
                             >
@@ -213,7 +217,7 @@ export function CategoryContactSection({
                             <div className="flex flex-col min-w-0">
                               <span
                                 className={`text-xs sm:text-sm font-extrabold font-heading truncate transition-colors ${
-                                  isSelected ? "text-[#082846]" : "text-slate-700"
+                                  isSelected ? "text-[#183c6b]" : "text-slate-700"
                                 }`}
                               >
                                 {opt.name}
@@ -228,7 +232,7 @@ export function CategoryContactSection({
                           <div
                             className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ml-2 border transition-all ${
                               isSelected
-                                ? "bg-[#02afab] border-[#02afab] text-white"
+                                ? "bg-[#02aeaa] border-[#02aeaa] text-white"
                                 : "border-slate-300 bg-white"
                             }`}
                           >
@@ -255,7 +259,7 @@ export function CategoryContactSection({
                       type="text"
                       required
                       placeholder={isEs ? "Ej. Carlos Mendoza" : "e.g. John Doe"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white"
                     />
                   </div>
 
@@ -272,7 +276,7 @@ export function CategoryContactSection({
                       type="email"
                       required
                       placeholder={isEs ? "carlos@empresa.com" : "john@company.com"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white"
                     />
                   </div>
                 </div>
@@ -293,7 +297,7 @@ export function CategoryContactSection({
                         ? "Ej. Industria de Alimentos C.A. / Empresa Química"
                         : "e.g. Chemical Manufacturing Corp"
                     }
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-white"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white"
                   />
                 </div>
 
@@ -320,7 +324,7 @@ export function CategoryContactSection({
                         ? "Indícanos volumen estimado en toneladas, destino de despacho y requerimientos particulares..."
                         : "Indicate estimated tonnage, delivery destination, and specific requirements..."
                     }
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-white resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white resize-none"
                   />
                 </div>
 
@@ -331,7 +335,7 @@ export function CategoryContactSection({
                     id="privacy-category"
                     name="privacy"
                     required
-                    className="mt-1 w-4 h-4 rounded text-[#008784] border-slate-300 focus:ring-[#02afab] focus:ring-offset-0 cursor-pointer accent-[#008784] shrink-0"
+                    className="mt-1 w-4 h-4 rounded text-[#02aeaa] border-slate-300 focus:ring-[#02aeaa] focus:ring-offset-0 cursor-pointer accent-[#02aeaa] shrink-0"
                   />
                   <label htmlFor="privacy-category" className="text-xs text-slate-600 leading-snug cursor-pointer select-none">
                     {isEs ? "He leído y acepto las" : "I have read and agree to the"}{" "}
@@ -339,7 +343,7 @@ export function CategoryContactSection({
                       href={`/${currentLang}/privacidad`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-[#008784] hover:text-[#082846] underline underline-offset-2 transition-colors"
+                      className="font-bold text-[#02aeaa] hover:text-[#183c6b] underline underline-offset-2 transition-colors"
                     >
                       {isEs ? "Políticas de Privacidad" : "Privacy Policy"}
                     </Link>{" "}
@@ -360,7 +364,7 @@ export function CategoryContactSection({
                   <button
                     type="submit"
                     disabled={isPending}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-[#082846] hover:bg-[#008784] shadow-md hover:shadow-lg transition-all font-heading cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-[#183c6b] hover:bg-[#02aeaa] shadow-md hover:shadow-lg transition-all font-heading cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send className={`w-4 h-4 ${isPending ? "animate-pulse" : ""}`} />
                     <span>

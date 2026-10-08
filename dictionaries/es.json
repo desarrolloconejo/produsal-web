@@ -5,7 +5,7 @@
     "description": "Líderes en extracción solar marina y distribución de sal de alta pureza (99.8%) con 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento mayorista para alimentos, petroquímica, tratamiento de agua y nutrición animal."
   },
   "topBar": {
-    "email": "info@grupomimesa.com",
+    "email": "infoprodusal@grupomimesa.com",
     "phone": "0212 208 51 11",
     "location": "Los Olivitos, Zulia"
   },
@@ -13,6 +13,7 @@
     "home": "Inicio",
     "about": "Nosotros",
     "products": "Productos",
+    "gallery": "Galería",
     "quality": "Calidad y Origen",
     "contact": "Contacto",
     "intranet": "Intranet"
@@ -232,6 +233,7 @@
         "slug": "sal-bruta-premium",
         "code": "REG-SAL-CM-001",
         "name": "Sal Bruta Premium",
+        "pdfTitle": "Sal Bruta Premium",
         "tagline": "Doble Lavado Continuo • Máxima Pureza Química",
         "desc": "Sal marina solar de cristalización gruesa sometida a doble lavado continuo con salmuera saturada. Pureza superior al 99.3% de NaCl con mínimos niveles de sulfatos, calcio y magnesio.",
         "purity": "≥ 99,3% NaCl",
@@ -279,6 +281,7 @@
         "slug": "sal-bruta-tipo-a",
         "code": "REG-SAL-CM-003",
         "name": "Sal Bruta Tipo A",
+        "pdfTitle": "Sal Bruta Tipo A",
         "tagline": "Lavado Solar Eficiente • Grado Agroindustrial",
         "desc": "Sal marina de excelente solubilidad y consistencia granular natural. Especialmente formulada para el sector agropecuario, suplementación ganadera y procesos químicos generales.",
         "purity": "≥ 98,5% NaCl",
@@ -326,6 +329,7 @@
         "slug": "sal-molida-premium",
         "code": "REG-SAL-CM-002",
         "name": "Sal Molida Premium",
+        "pdfTitle": "Sal Molida Premium",
         "tagline": "Molienda Homogénea • Grado Alimentario",
         "desc": "Sal marina fina procesada en planta de molienda y clasificación automatizada. Granulometría uniforme, disolución instantánea y acondicionada con antiaglomerante para máxima fluidez.",
         "purity": "≥ 99,3% NaCl",
@@ -373,6 +377,7 @@
         "slug": "sal-molida-tipo-a",
         "code": "REG-SAL-CM-004",
         "name": "Sal Molida Tipo A",
+        "pdfTitle": "Sal Molida Tipo A",
         "tagline": "Molienda Industrial • Estándar Versátil",
         "desc": "Sólido cristalino obtenido por molienda con granulometría controlada y agente antiaglomerante. Diseñada para formulaciones industriales, mezclas balanceadas y aplicaciones de rápida integración.",
         "purity": "≥ 98,5% NaCl",
@@ -416,6 +421,19 @@
         ]
       }
     ]
+  },
+  "gallery": {
+    "metaTitle": "Galería | Produsal C.A. - Salinas Los Olivitos, Zulia",
+    "metaDescription": "Recorrido fotográfico por el Complejo Industrial Los Olivitos: salinas, cosecha, lavado, envasado y el equipo humano de Produsal.",
+    "badge": "Complejo Industrial Los Olivitos",
+    "titleHighlight": "Galería",
+    "titleRest": "Produsal",
+    "subtitle": "Un recorrido visual por nuestras salinas, la cosecha, las líneas de envasado y la gente que hace posible la sal marina de Produsal.",
+    "gridBadge": "Nuestra Operación",
+    "gridTitle": "Nuestras salinas, nuestra gente",
+    "gridSubtitle": "Fotografías tomadas en el Complejo Industrial Los Olivitos, estado Zulia.",
+    "heroAlt": "Vista del Complejo Industrial Los Olivitos de Produsal",
+    "imageAlt": "Produsal, Complejo Industrial Los Olivitos - fotografía"
   },
   "marketSection": {
     "badge": "Liderazgo Industrial y Mercado Nacional",
@@ -470,7 +488,7 @@
     "phoneLabel": "Teléfono Comercial",
     "phone": "0212 208 51 11 / 0800 2274455",
     "emailLabel": "Ventas y Cotizaciones",
-    "email": "info@grupomimesa.com",
+    "email": "infoprodusal@grupomimesa.com",
     "locationLabel": "Ubicación del Complejo",
     "location": "Complejo Industrial Los Olivitos, Zulia, Venezuela",
     "formTitle": "Solicitar Cotización o Ficha Técnica",
@@ -490,7 +508,7 @@
       "company": "Productora de Sal, C.A. (PRODUSAL)",
       "rif": "RIF J-31298456-0",
       "address": "Complejo Industrial Salinas Los Olivitos, Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia, Venezuela.",
-      "email": "info@grupomimesa.com",
+      "email": "infoprodusal@grupomimesa.com",
       "phone": "0212 208 51 11 / 0800 2274455"
     },
     "sections": [
@@ -517,7 +535,7 @@
       {
         "id": "derechos",
         "title": "6. Derechos del Titular (Acceso, Rectificación y Supresión)",
-        "content": "En cualquier momento, los usuarios o representantes empresariales pueden ejercer sus derechos de acceso, rectificación, actualización o eliminación de sus datos enviando un correo electrónico a info@grupomimesa.com con el asunto 'Protección de Datos'."
+        "content": "En cualquier momento, los usuarios o representantes empresariales pueden ejercer sus derechos de acceso, rectificación, actualización o eliminación de sus datos enviando un correo electrónico a infoprodusal@grupomimesa.com con el asunto 'Protección de Datos'."
       },
       {
         "id": "cookies",
@@ -548,7 +566,7 @@
     "officeAddress": "Maracaibo, Edo. Zulia, Venezuela",
     "address": "Los Olivitos / Maracaibo, Edo. Zulia",
     "phone": "0212 208 51 11 / 0800 2274455",
-    "email": "info@grupomimesa.com",
+    "email": "infoprodusal@grupomimesa.com",
     "scrollToTop": "Volver arriba",
     "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. Todos los derechos reservados.",
     "privacyPolicy": "Políticas de Privacidad",

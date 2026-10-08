@@ -1,75 +1,33 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Extrabold.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Heavy.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
-  --font-sans: 'Montserrat', sans-serif;
-  --font-heading: 'Gilroy', sans-serif;
+  /* Las fuentes las carga next/font en app/layout.tsx (--font-work-sans y --font-avenir) */
+  --font-sans: var(--font-work-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-avenir), 'Avenir Next', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-navy: #183c6b;
+  --color-brand-turq: #02aeaa;
+  --color-brand-sky: #85b2cf;
+  --color-brand-sand: #e5c798;
+  --color-brand-offwhite: #f3f5f6;
+  --color-brand-green: #8fae5c;
+  --color-brand-slate: #8ba5c4;
 }
 
 @layer base {
   :root {
-    --color-brand-turq: #02afab;
-    --color-brand-turq-dark: #008784;
+    --color-brand-navy: #183c6b;
+    --color-brand-navy-deep: #0f2747;
+    --color-brand-turq: #02aeaa;
+    --color-brand-turq-dark: #029693;
     --color-brand-turq-light: #48cfcc;
-    --color-brand-lime: #94c11e;
-    --color-brand-lime-light: #b3df38;
-    --color-brand-navy: #082846;
-    --color-brand-navy-light: #0d3b66;
+    --color-brand-sky: #85b2cf;
+    --color-brand-sky-light: #b4d1e4;
+    --color-brand-sand: #e5c798;
+    --color-brand-sand-light: #f3dfbf;
+    --color-brand-offwhite: #f3f5f6;
+    --color-brand-green: #8fae5c;
+    --color-brand-slate: #8ba5c4;
     --color-brand-dark: #0f172a;
     --color-brand-gray-light: #f8fafc;
   }
@@ -84,12 +42,8 @@
     scroll-behavior: auto !important;
   }
 
-  html[data-lang-switching="true"] [data-navbar-wrapper] {
-    transition: none !important;
-  }
-
   html, body, p {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-sans);
   }
 
   body {
@@ -99,16 +53,16 @@
   }
 
   p {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-sans);
   }
 
   h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-heading);
     letter-spacing: -0.02em;
   }
 
   nav, button {
-    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-heading);
   }
 }
 
@@ -117,21 +71,56 @@
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(2, 175, 171, 0.18);
-  box-shadow: 0 20px 40px -15px rgba(2, 175, 171, 0.12), 0 0 2px rgba(2, 175, 171, 0.2);
+  border: 1px solid rgba(2, 174, 170, 0.18);
+  box-shadow: 0 20px 40px -15px rgba(2, 174, 170, 0.12), 0 0 2px rgba(2, 174, 170, 0.2);
 }
 
 .glass-card-dark {
-  background: rgba(8, 40, 70, 0.82);
+  background: rgba(24, 60, 107, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(2, 175, 171, 0.3);
+  border: 1px solid rgba(2, 174, 170, 0.3);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
 }
 
 .crystal-pattern {
-  background-image: radial-gradient(rgba(2, 175, 171, 0.12) 1px, transparent 0);
+  background-image: radial-gradient(rgba(2, 174, 170, 0.12) 1px, transparent 0);
   background-size: 24px 24px;
+}
+
+/* Nuevo fondo blanco opaco (mate salino) */
+.bg-brand-offwhite {
+  background-color: var(--color-brand-offwhite);
+}
+
+/* Texturas de marca (sin fondo / transparentes). Se usan vía <SectionTexture /> */
+.texture-crystals {
+  background-image: url('/images/textures/salt-crystals-pattern.png');
+  background-repeat: repeat;
+  background-size: 272px 500px;
+  background-position: center top;
+}
+
+/* Tile vectorial sin costuras generado con scripts/build-textures.mjs */
+.texture-waves {
+  background-image: url('/images/textures/salt-waves-seamless.svg');
+  background-repeat: repeat;
+  background-size: 1600px 800px;
+  background-position: center top;
+}
+
+/* Montañas de sal punteadas (header): franja horizontal continua anclada abajo */
+.texture-stipple {
+  background-image: url('/images/textures/salt-stipple-mountains-seamless.webp');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center bottom;
+}
+
+/* Funde la textura con la sección en los bordes superior e inferior */
+.texture-fade {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
 }
 
 /* Animaciones corporativas reutilizables */

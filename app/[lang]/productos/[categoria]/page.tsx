@@ -69,12 +69,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
+  // Las texturas se intercalan entre categorías: ondas, cubos, ondas, cubos
+  const texture = dict.products.categories.indexOf(category) % 2 === 0 ? "waves" : "cubes";
+
   return (
     <CategoryDetailView
       currentLang={currentLang}
       category={category}
       allCategories={dict.products.categories}
       dict={dict.products}
+      texture={texture}
     />
   );
 }

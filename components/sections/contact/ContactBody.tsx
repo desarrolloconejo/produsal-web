@@ -18,14 +18,21 @@ const initialState: ContactState = {
   message: "",
 };
 
+import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
+import { SectionTexture } from "@/components/ui/SectionTexture";
+
 export function ContactBody({ currentLang, dict }: ContactBodyProps) {
   const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
 
   const isEs = currentLang === "es";
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white border-t border-slate-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-brand-offwhite border-t border-slate-200/80 overflow-hidden">
+      <SectionTexture variant="cubes" />
+      {/* Triángulos 2D corporativos en el fondo */}
+      <BrandTrianglesBackground layout="separated" size="lg" opacityClass="opacity-30" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           
           {/* Columna Izquierda: Mapa Oficial de Venezuela con Pin Pulsante y Ficha del Complejo (5 cols) */}
@@ -34,13 +41,13 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               
               {/* Cabecera del Mapa */}
               <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-4">
-                <span className="text-xs uppercase font-bold tracking-wider text-[#008784] font-heading flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#02afab] animate-pulse" />
-                  {isEs ? "Ubicación Geográfica" : "Geographic Location"}
+                <span className="text-xs uppercase font-bold tracking-wider text-[#02aeaa] font-heading flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse" />
+                  <span>{isEs ? "Ubicación Geográfica" : "Geographic Location"}</span>
                 </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#082846] text-white text-[11px] font-mono font-semibold">
-                  <MapPin className="w-3 h-3 text-[#02afab]" />
-                  <span>10°51&apos;N &bull; 71°20&apos;W</span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#183c6b] text-white text-[11px] font-mono font-semibold border border-[#85b2cf]/30">
+                  <MapPin className="w-3 h-3 text-[#e5c798]" />
+                  <span className="whitespace-nowrap">10°51&apos;N &bull; 71°20&apos;W</span>
                 </span>
               </div>
 
@@ -48,7 +55,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <div className="relative w-full aspect-[1144/768] select-none rounded-2xl overflow-hidden bg-white p-2 border border-slate-100 my-auto">
                 <Image
                   src="/images/mapa-venezuela-final.png"
-                  alt="Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (10°51'N, 71°20'W)"
+                  alt={isEs ? "Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (10°51'N, 71°20'W)" : "Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (10°51'N, 71°20'W)"}
                   fill
                   priority
                   className="object-contain mix-blend-multiply"
@@ -59,20 +66,20 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                 <div
                   className="absolute z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
                   style={{ left: "17.0%", top: "17.6%" }}
-                  aria-label="Ubicación de PRODUSAL en Los Olivitos, Zulia"
+                  aria-label={isEs ? "Ubicación de PRODUSAL en Los Olivitos, Zulia" : "PRODUSAL location at Los Olivitos, Zulia"}
                 >
                   {/* Ondas de Radar Pulsantes */}
-                  <span className="absolute -inset-3 rounded-full bg-[#02afab] opacity-75 animate-ping pointer-events-none" />
-                  <span className="absolute -inset-6 rounded-full bg-[#02afab]/25 animate-pulse pointer-events-none" />
+                  <span className="absolute -inset-3 rounded-full bg-[#02aeaa] opacity-75 animate-ping pointer-events-none" />
+                  <span className="absolute -inset-6 rounded-full bg-[#02aeaa]/25 animate-pulse pointer-events-none" />
 
                   {/* Núcleo del Marcador */}
-                  <div className="relative w-7 h-7 rounded-full bg-[#082846] border-2 border-white shadow-md flex items-center justify-center text-[#02afab]">
+                  <div className="relative w-7 h-7 rounded-full bg-[#183c6b] border-2 border-white shadow-md flex items-center justify-center text-[#02aeaa]">
                     <MapPin className="w-4 h-4 text-white" />
                   </div>
 
                   {/* Badge de Coordenadas */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 whitespace-nowrap bg-[#082846] text-white px-2 py-0.5 rounded-md text-[10px] font-mono font-medium shadow-md flex items-center gap-1 border border-[#02afab]/40">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#02afab] animate-pulse" />
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 whitespace-nowrap bg-[#183c6b] text-white px-2 py-0.5 rounded-md text-[10px] font-mono font-medium shadow-md flex items-center gap-1 border border-[#02aeaa]/40">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#02aeaa] animate-pulse" />
                     <span>Los Olivitos</span>
                   </div>
                 </div>
@@ -81,8 +88,8 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               {/* Ficha Descriptiva del Complejo */}
               <div className="flex flex-col gap-3 pt-4 border-t border-slate-100">
                 <div className="flex items-center gap-2">
-                  <Factory className="w-4.5 h-4.5 text-[#008784]" />
-                  <h4 className="text-base font-bold text-[#082846] font-heading">
+                  <Factory className="w-4.5 h-4.5 text-[#85b2cf]" />
+                  <h4 className="text-base font-bold text-[#183c6b] font-heading">
                     {isEs ? "Complejo Industrial Salinas Los Olivitos" : "Los Olivitos Industrial Salt Complex"}
                   </h4>
                 </div>
@@ -98,8 +105,8 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-heading">
                       {isEs ? "Capacidad Operativa" : "Operational Capacity"}
                     </span>
-                    <span className="text-sm font-extrabold text-[#008784] font-heading">
-                      650.000 TM / año
+                    <span className="text-sm font-extrabold text-[#02aeaa] font-heading">
+                      {isEs ? "650.000 TM / año" : "650,000 MT / year"}
                     </span>
                   </div>
 
@@ -107,8 +114,8 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-heading">
                       {isEs ? "Participación Nacional" : "National Market Share"}
                     </span>
-                    <span className="text-sm font-extrabold text-[#082846] font-heading">
-                      65% del mercado
+                    <span className="text-sm font-extrabold text-[#183c6b] font-heading">
+                      {isEs ? "65% del mercado" : "65% of the market"}
                     </span>
                   </div>
                 </div>
@@ -124,11 +131,11 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
           >
             <div>
               <div className="flex flex-col gap-1.5 mb-6 pb-4 border-b border-slate-100">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#02afab] font-heading flex items-center gap-1.5">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] font-heading flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4" />
                   {isEs ? "Atención Comercial Directa" : "Direct Commercial Inquiry"}
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#082846] font-heading tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] font-heading tracking-tight">
                   {isEs ? "Solicitar Cotización o Ficha Técnica" : "Request Quote or Technical Sheet"}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500">
@@ -168,7 +175,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                       type="text"
                       required
                       placeholder={isEs ? "Ej. Carlos Mendoza" : "e.g. John Doe"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
                     />
                   </div>
 
@@ -182,7 +189,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                       type="email"
                       required
                       placeholder={isEs ? "carlos@empresa.com" : "john@company.com"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
                     />
                   </div>
                 </div>
@@ -196,7 +203,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                     name="company"
                     type="text"
                     placeholder={isEs ? "Ej. Industria de Alimentos C.A. / Pequiven" : "e.g. Food Processing Corp"}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
                   />
                 </div>
 
@@ -214,7 +221,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                         ? "Indícanos tipo de sal requerida (grano grueso, fino, sal industrial), volumen estimado en TM y destino de despacho..."
                         : "Specify required salt grade (coarse, fine, industrial), estimated tonnage volume, and delivery destination..."
                     }
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02afab] focus:ring-2 focus:ring-[#02afab]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white resize-none"
                   />
                 </div>
 
@@ -225,7 +232,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                     id="privacy-contact"
                     name="privacy"
                     required
-                    className="mt-1 w-4 h-4 rounded text-[#008784] border-slate-300 focus:ring-[#02afab] focus:ring-offset-0 cursor-pointer accent-[#008784] shrink-0"
+                    className="mt-1 w-4 h-4 rounded text-[#02aeaa] border-slate-300 focus:ring-[#02aeaa] focus:ring-offset-0 cursor-pointer accent-[#02aeaa] shrink-0"
                   />
                   <label htmlFor="privacy-contact" className="text-xs text-slate-600 leading-snug cursor-pointer select-none">
                     {dict?.privacyAcceptLabel || (isEs ? "He leído y acepto las" : "I have read and agree to the")}{" "}
@@ -233,7 +240,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                       href={`/${currentLang}/privacidad`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-[#008784] hover:text-[#082846] underline underline-offset-2 transition-colors"
+                      className="font-bold text-[#02aeaa] hover:text-[#183c6b] underline underline-offset-2 transition-colors"
                     >
                       {dict?.privacyLinkLabel || (isEs ? "Políticas de Privacidad" : "Privacy Policy")}
                     </Link>{" "}
@@ -247,7 +254,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                 <button
                   type="submit"
                   disabled={isPending}
-                  className="w-full mt-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#02afab] to-[#008784] hover:from-[#009b97] hover:to-[#007471] text-white font-bold text-sm shadow-md shadow-[#02afab]/20 hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer font-heading"
+                  className="w-full mt-2 py-3.5 px-6 rounded-xl bg-[#02aeaa] hover:bg-[#183c6b] text-white font-bold text-sm shadow-md shadow-[#02aeaa]/20 hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer font-heading"
                 >
                   {isPending ? (
                     <span>{isEs ? "Enviando mensaje..." : "Sending message..."}</span>
@@ -263,7 +270,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
 
             {/* Garantía de respuesta rápida */}
             <div className="flex items-center justify-center gap-2 pt-4 border-t border-slate-100 text-xs text-slate-400 mt-4">
-              <Clock className="w-3.5 h-3.5 text-[#02afab]" />
+              <Clock className="w-3.5 h-3.5 text-[#e5c798]" />
               <span>
                 {isEs
                   ? "Atención técnica y comercial de Lunes a Viernes 8:00 AM - 5:00 PM"

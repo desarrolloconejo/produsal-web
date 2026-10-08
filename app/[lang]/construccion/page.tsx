@@ -1,5 +1,17 @@
+import { Metadata } from "next";
 import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
 import { StatusCard } from "@/components/sections/status/StatusCard";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
+  return { title: dict.underConstruction.title };
+}
 
 export default async function ConstructionPage({
   params,

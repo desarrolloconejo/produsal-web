@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="260" viewBox="0 0 160 260" fill="none">
+  <!-- Isometric 3D Salt Crystal 1 (Center Top) -->
+  <g transform="translate(80, 40)" stroke="#183c6b" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+    <!-- Outer hexagon silhouette of isometric cube/dodecahedron -->
+    <polygon points="0,-18 16,-9 16,9 0,18 -16,9 -16,-9" fill="none"/>
+    <!-- Inner Y axes -->
+    <line x1="0" y1="0" x2="0" y2="18"/>
+    <line x1="0" y1="0" x2="16" y2="-9"/>
+    <line x1="0" y1="0" x2="-16" y2="-9"/>
+    <!-- Wireframe facets -->
+    <line x1="0" y1="-18" x2="8" y2="-4"/>
+    <line x1="16" y1="9" x2="4" y2="11"/>
+    <line x1="-16" y1="-9" x2="-6" y2="2"/>
+    <circle cx="0" cy="0" r="1" fill="#183c6b"/>
+  </g>
+
+  <!-- Isometric 3D Salt Crystal 2 (Left Middle) -->
+  <g transform="translate(26, 120)" stroke="#183c6b" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+    <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="none"/>
+    <line x1="0" y1="0" x2="0" y2="16"/>
+    <line x1="0" y1="0" x2="14" y2="-8"/>
+    <line x1="0" y1="0" x2="-14" y2="-8"/>
+    <line x1="0" y1="-16" x2="7" y2="-4"/>
+    <line x1="14" y1="8" x2="3" y2="10"/>
+    <line x1="-14" y1="-8" x2="-5" y2="2"/>
+  </g>
+
+  <!-- Isometric 3D Salt Crystal 3 (Right Middle) -->
+  <g transform="translate(134, 120)" stroke="#183c6b" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+    <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="none"/>
+    <line x1="0" y1="0" x2="0" y2="16"/>
+    <line x1="0" y1="0" x2="14" y2="-8"/>
+    <line x1="0" y1="0" x2="-14" y2="-8"/>
+    <line x1="0" y1="-16" x2="7" y2="-4"/>
+    <line x1="14" y1="8" x2="3" y2="10"/>
+    <line x1="-14" y1="-8" x2="-5" y2="2"/>
+  </g>
+
+  <!-- Isometric 3D Salt Crystal 4 (Center Bottom) -->
+  <g transform="translate(80, 200)" stroke="#183c6b" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+    <polygon points="0,-18 16,-9 16,9 0,18 -16,9 -16,-9" fill="none"/>
+    <line x1="0" y1="0" x2="0" y2="18"/>
+    <line x1="0" y1="0" x2="16" y2="-9"/>
+    <line x1="0" y1="0" x2="-16" y2="-9"/>
+    <line x1="0" y1="-18" x2="8" y2="-4"/>
+    <line x1="16" y1="9" x2="4" y2="11"/>
+    <line x1="-16" y1="-9" x2="-6" y2="2"/>
+    <circle cx="0" cy="0" r="1" fill="#183c6b"/>
+  </g>
+
+  <!-- Interspersed Salt Grain Micro-dots (matching Foto 1) -->
+  <circle cx="56" cy="62" r="2.2" fill="#183c6b" opacity="0.45"/>
+  <circle cx="104" cy="62" r="1" fill="#183c6b" opacity="0.3"/>
+  <circle cx="42" cy="30" r="0.8" fill="#183c6b" opacity="0.25"/>
+  <circle cx="120" cy="30" r="0.8" fill="#183c6b" opacity="0.25"/>
+
+  <circle cx="56" cy="142" r="2.2" fill="#183c6b" opacity="0.45"/>
+  <circle cx="108" cy="142" r="2.2" fill="#183c6b" opacity="0.45"/>
+  <circle cx="40" cy="170" r="0.8" fill="#183c6b" opacity="0.25"/>
+  <circle cx="122" cy="170" r="0.8" fill="#183c6b" opacity="0.25"/>
+
+  <circle cx="56" cy="222" r="2.2" fill="#183c6b" opacity="0.45"/>
+  <circle cx="108" cy="222" r="2.2" fill="#183c6b" opacity="0.45"/>
+  <circle cx="80" cy="120" r="1.2" fill="#183c6b" opacity="0.3"/>
+</svg>

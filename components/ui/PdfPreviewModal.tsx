@@ -77,7 +77,7 @@ export function PdfPreviewModal({
         <div className="flex flex-wrap items-center justify-between gap-3 px-4 sm:px-6 py-3.5 bg-slate-900 text-white border-b border-slate-800">
           {/* Título e Info del Documento */}
           <div className="flex items-center gap-2.5 min-w-0">
-            <div className="w-8 h-8 rounded-lg bg-[#02afab]/20 flex items-center justify-center text-[#02afab] shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-[#02aeaa]/20 flex items-center justify-center text-[#02aeaa] shrink-0">
               <FileText className="w-4 h-4" />
             </div>
             <div className="flex flex-col min-w-0">
@@ -111,10 +111,10 @@ export function PdfPreviewModal({
                 onClick={() => setActiveLang("es")}
                 className={`px-2.5 py-1 rounded-md transition-all ${
                   activeLang === "es"
-                    ? "bg-[#02afab] text-white shadow-xs"
+                    ? "bg-[#02aeaa] text-white shadow-xs"
                     : "text-slate-400 hover:text-white"
                 }`}
-                title="Ver versión en Español"
+                title={currentLang === "es" ? "Ver versión en Español" : "View Spanish version"}
               >
                 ES
               </button>
@@ -123,10 +123,10 @@ export function PdfPreviewModal({
                 onClick={() => setActiveLang("en")}
                 className={`px-2.5 py-1 rounded-md transition-all ${
                   activeLang === "en"
-                    ? "bg-[#02afab] text-white shadow-xs"
+                    ? "bg-[#02aeaa] text-white shadow-xs"
                     : "text-slate-400 hover:text-white"
                 }`}
-                title="View English Version"
+                title={currentLang === "es" ? "Ver versión en Inglés" : "View English version"}
               >
                 EN
               </button>
@@ -136,7 +136,7 @@ export function PdfPreviewModal({
             <a
               href={currentPdfUrl}
               download={downloadFileName}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#082846] bg-[#02afab] hover:bg-[#008784] hover:text-white transition-colors font-heading shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#183c6b] bg-[#02aeaa] hover:bg-white hover:text-[#183c6b] transition-colors font-heading shadow-xs"
               title={currentLang === "es" ? "Descargar documento PDF" : "Download PDF file"}
             >
               <Download className="w-3.5 h-3.5" />
@@ -163,8 +163,8 @@ export function PdfPreviewModal({
             <button
               type="button"
               onClick={onClose}
-              className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-              aria-label="Cerrar vista previa"
+              className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+              aria-label={currentLang === "es" ? "Cerrar vista previa" : "Close preview"}
             >
               <X className="w-5 h-5" />
             </button>
@@ -190,7 +190,7 @@ export function PdfPreviewModal({
               href={currentPdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2.5 py-1 text-xs font-bold text-white bg-[#082846] rounded-lg shrink-0"
+              className="px-2.5 py-1 text-xs font-bold text-white bg-[#183c6b] rounded-lg shrink-0"
             >
               {currentLang === "es" ? "Abrir directo" : "Open directly"}
             </a>

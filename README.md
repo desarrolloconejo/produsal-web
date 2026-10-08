@@ -56,16 +56,26 @@ Desarrollada con arquitectura moderna basada en **Next.js 16 (App Router)**, **T
 ---
 
 ## 🎨 Identidad Visual y Paleta de Marca
+ 
+La paleta cromática traduce la pureza de la sal marina, las aguas costeras y el ecosistema solar de Venezuela según el manual de marca oficial:
+ 
+### Colores Primarios
+| Color | Código Hex | Uso Primario |
+| :--- | :--- | :--- |
+| **Azul Oscuro Oficial** | `#183C6B` | Fondos de alto contraste (Hero, Footer, TopBar), encabezados y tipografía de títulos. |
+| **Azul Claro / Turquesa** | `#02AEAA` | Color de marca activo: botones de acción primarios, insignias principales, enlaces. |
 
-La paleta cromática traduce la pureza de la sal marina, las aguas costeras y el ecosistema solar de Venezuela:
+### Colores Secundarios
+| Color | Código Hex | Uso Primario |
+| :--- | :--- | :--- |
+| **Azul Secundario / Celeste Costero** | `#85B2CF` | Acento marítimo, insignias de Sal Bruta Tipo A, tarjetas operativas, bordes secundarios. |
+| **Arena / Dorado Solar** | `#E5C798` | Cristalización solar, cosecha, hitos históricos de excelencia y acentos de calidez. |
 
+### Neutros
 | Color | Código Hex | Uso Primario |
 | :--- | :--- | :--- |
 | **Blanco Nieve** | `#FFFFFF` | Fondos principales limpios, contraste de pureza mineral. |
-| **Turquesa Salinas** | `#02AFAB` | Color de marca predominante: botones de acción, destellos, bordes activos. |
-| **Amarillo Lima** | `#94C11E` | Acentos complementarios, indicadores de estado sustentable y toques sutiles de naturaleza. |
-| **Azul Océano Profundo**| `#082846` | Fondos de alto contraste (Hero, Footer, TopBar) y tipografía de títulos en fondos claros. |
-| **Gris Carbón** | `#0F172A` / `#334155` | Textos de cuerpo, etiquetas técnicas y lectura prolongada. |
+| **Gris Carbón** | `#0F172A` / `#334155` | Textos de cuerpo, especificaciones técnicas y lectura prolongada. |
 
 ### Tipografías
 - **Gilroy / Plus Jakarta Sans (`--font-heading`):** Títulos, subtítulos y navegación principal.

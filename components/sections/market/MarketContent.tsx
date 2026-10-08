@@ -18,7 +18,7 @@ export function MarketContent({ currentLang, dict }: MarketContentProps) {
       {/* Eyebrow de la sección */}
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-2">
-          <span className="text-[#02afab] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+          <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
             {badge}
           </span>
         </div>
@@ -71,10 +71,10 @@ export function MarketContent({ currentLang, dict }: MarketContentProps) {
             </div>
 
             {/* Columna 3: 100% Zonas litorales */}
-            <div className="flex flex-col justify-between pl-0 md:pl-8 lg:pl-10 border-t md:border-t-0 md:border-l border-white/20 pt-6 md:pt-0">
+            <div className="flex flex-col justify-between pl-0 md:pl-8 lg:pr-10 border-t md:border-t-0 md:border-l border-white/20 pt-6 md:pt-0">
               <div className="flex flex-col gap-3">
                 <div className="mb-1">
-                  <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-heading tracking-tight leading-none block">
+                  <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#85b2cf] font-heading tracking-tight leading-none block">
                     {block1.coastal.metric}
                   </span>
                 </div>
@@ -109,7 +109,7 @@ export function MarketContent({ currentLang, dict }: MarketContentProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
             {/* Columna 1: Dominio del Zulia y Aporte PRODUSAL */}
             <div className="flex flex-col justify-between pr-0 md:pr-10 lg:pr-12 gap-6">
-              <span className="text-white/75 text-xs sm:text-sm font-semibold uppercase tracking-wider font-heading">
+              <span className="text-[#e5c798] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
                 {block2.zuliaDominance.year}
               </span>
 
@@ -126,7 +126,7 @@ export function MarketContent({ currentLang, dict }: MarketContentProps) {
 
                 {/* Ítem 65% PRODUSAL */}
                 <div className="flex items-baseline gap-3 pt-3 border-t border-white/10">
-                  <span className="text-4xl sm:text-5xl font-black font-heading text-[#02afab] tracking-tight leading-none">
+                  <span className="text-4xl sm:text-5xl font-black font-heading text-[#02aeaa] tracking-tight leading-none">
                     {block2.zuliaDominance.produsalMetric}
                   </span>
                   <span className="text-base sm:text-lg lg:text-xl text-white/90 font-medium leading-snug">
