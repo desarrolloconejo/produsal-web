@@ -212,15 +212,17 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
             <p>{dict.copyright}</p>
-            <Link
-              href={`/${currentLang}/privacidad`}
-              className="text-[#85b2cf] hover:text-[#02aeaa] underline underline-offset-2 transition-colors font-medium"
-            >
-              {dict.privacyPolicy || (isEs ? "Políticas de Privacidad" : "Privacy Policy")}
-            </Link>
           </div>
           <div className="flex items-center gap-1.5 font-medium text-white/80">
             <span>{dict.developerCredit}</span>
+            <a
+              href="https://elconejodelsombrero.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#02aeaa] underline underline-offset-2 transition-colors"
+            >
+              El Conejo Del Sombrero
+            </a>
           </div>
         </div>
       </div>

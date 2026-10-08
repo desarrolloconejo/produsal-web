@@ -86,7 +86,6 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
               giantIcon: "text-[#85b2cf]/50 drop-shadow-[0_0_24px_rgba(133,178,207,0.3)]",
               watermark: "text-[#85b2cf]/20 group-hover:text-[#85b2cf]/35",
               hoverBorder: "hover:border-[#85b2cf]/60",
-              iconBox: "group-hover:bg-[#85b2cf]/20 text-[#183c6b] group-hover:text-[#85b2cf]",
               titleHover: "group-hover:text-[#85b2cf]",
             },
             {
@@ -95,7 +94,6 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
               giantIcon: "text-[#e5c798]/50 drop-shadow-[0_0_24px_rgba(229,199,152,0.3)]",
               watermark: "text-[#e5c798]/20 group-hover:text-[#e5c798]/35",
               hoverBorder: "hover:border-[#e5c798]/60",
-              iconBox: "group-hover:bg-[#e5c798]/20 text-[#183c6b] group-hover:text-[#e5c798]",
               titleHover: "group-hover:text-[#e5c798]",
             },
             {
@@ -104,7 +102,6 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
               giantIcon: "text-[#02aeaa]/55 drop-shadow-[0_0_24px_rgba(2,174,170,0.25)]",
               watermark: "text-[#02aeaa]/20 group-hover:text-[#02aeaa]/35",
               hoverBorder: "hover:border-[#02aeaa]/60",
-              iconBox: "group-hover:bg-[#02aeaa]/20 text-[#183c6b] group-hover:text-[#02aeaa]",
               titleHover: "group-hover:text-[#02aeaa]",
             },
             {
@@ -113,7 +110,6 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
               giantIcon: "text-[#02aeaa]/55 drop-shadow-[0_0_24px_rgba(2,174,170,0.25)]",
               watermark: "text-[#02aeaa]/20 group-hover:text-[#02aeaa]/35",
               hoverBorder: "hover:border-[#02aeaa]/60",
-              iconBox: "group-hover:bg-[#02aeaa]/20 text-[#183c6b] group-hover:text-[#02aeaa]",
               titleHover: "group-hover:text-[#02aeaa]",
             },
           ];
@@ -148,15 +144,10 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
 
                   {/* Contenido Principal */}
                   <div className="relative z-10 flex flex-col gap-4">
-                    {/* Encabezado de la tarjeta: Badge de etapa e icono */}
-                    <div className="flex items-center justify-between">
-                      <span className={`text-xs font-bold ${currentTheme.badgeColor} uppercase tracking-wider font-heading`}>
-                        {item.step} • {item.shortDesc}
-                      </span>
-                      <div className={`w-11 h-11 rounded-2xl bg-slate-100 ${currentTheme.iconBox} flex items-center justify-center transition-colors duration-300`}>
-                        <Icon className="w-5 h-5" strokeWidth={2} />
-                      </div>
-                    </div>
+                    {/* Encabezado de la tarjeta: Badge de etapa (deja libre la esquina del número de fondo) */}
+                    <span className={`pr-16 sm:pr-20 text-xs font-bold ${currentTheme.badgeColor} uppercase tracking-wider font-heading`}>
+                      {item.step} • {item.shortDesc}
+                    </span>
 
                     {/* Título */}
                     <h3 className={`text-xl sm:text-2xl font-extrabold text-[#183c6b] tracking-tight leading-snug font-heading ${currentTheme.titleHover} transition-colors duration-200`}>

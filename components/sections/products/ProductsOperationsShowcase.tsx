@@ -70,17 +70,14 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
   ];
 
   return (
-    <section className="relative w-full py-20 sm:py-24 bg-brand-offwhite border-t border-slate-200/80 text-slate-800 overflow-hidden">
+    <section className="relative w-full py-16 sm:py-24 lg:py-28 bg-brand-offwhite border-t border-slate-200/80 text-slate-800 overflow-hidden">
       {/* Triángulos 2D corporativos en el fondo */}
       <BrandTrianglesBackground layout="separated" size="lg" opacityClass="opacity-30" />
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#02aeaa]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#e5c798]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#85b2cf]/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 sm:gap-14 lg:gap-16">
         
         {/* Encabezado de la Sección */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-10">
           <div className="max-w-2xl flex flex-col gap-3">
             <ScrollReveal animation="fade-down">
               <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#02aeaa] font-heading flex items-center gap-2.5">
@@ -115,7 +112,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
         </div>
 
         {/* Grid de 4 Bloques Fotográficos Reales */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-7">
           {cards.map((c, idx) => (
             <ScrollReveal key={idx} animation="fade-up" delay={idx * 80}>
               <div className={`group relative rounded-3xl bg-white border border-slate-200/90 ${c.hoverBorder} transition-all duration-300 overflow-hidden flex flex-col h-full shadow-xs hover:shadow-xl hover:-translate-y-1`}>
@@ -166,7 +163,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
 
         {/* Banner Informativo Inferior con Foto de Atardecer */}
         <ScrollReveal animation="fade-up" delay={200}>
-          <div className="relative rounded-3xl overflow-hidden border border-[#02aeaa]/30 shadow-xl p-8 sm:p-12 bg-[#183c6b] text-white">
+          <div className="relative rounded-3xl overflow-hidden border border-[#02aeaa]/30 shadow-xl p-7 sm:p-10 lg:px-14 lg:py-12 bg-[#183c6b] text-white">
             <div className="absolute inset-0 z-0 opacity-25">
               <Image
                 src="/images/produsal-atardecer-reflejo.webp"
@@ -177,8 +174,8 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
               <div className="absolute inset-0 bg-gradient-to-r from-[#183c6b] via-[#183c6b]/90 to-transparent" />
             </div>
 
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 max-w-4xl">
-              <div className="flex flex-col gap-2">
+            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-7 lg:gap-12">
+              <div className="flex flex-col gap-3 max-w-2xl">
                 <span className="text-xs font-bold text-[#e5c798] uppercase tracking-wider font-heading">
                   {isEs ? "Cosecha Sustentable en el Estado Zulia" : "Sustainable Harvesting in Zulia State"}
                 </span>
