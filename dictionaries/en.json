@@ -118,7 +118,7 @@
         "step": "04",
         "name": "Washing",
         "shortDesc": "Two washing lines",
-        "description": "Harvested salt feeds two continuous industrial washing lines with saturated brine to remove impurities."
+        "description": "Harvested salt feeds two continuous industrial washing lines with fresh brines that remove impurities."
       },
       {
         "step": "05",
@@ -158,8 +158,8 @@
         "code": "REG-SAL-CM-001",
         "name": "Premium Coarse Salt",
         "pdfTitle": "Sal Bruta Premium",
-        "tagline": "Continuous Washing • Maximum Chemical Purity",
-        "desc": "Coarse crystal solar salt subjected to continuous washing with saturated brine. Minimum 99.3% NaCl purity with low levels of sulfates, calcium, and magnesium.",
+        "tagline": "Continuous Washing • Maximum Purity",
+        "desc": "Industrial-use salt obtained through solar evaporation of water from the Los Olivitos marsh, under strict physicochemical controls. It is harvested and continuously washed with fresh brines that remove as much insoluble matter as possible.",
         "purity": "99.3% NaCl min",
         "humidity": "3.5% max",
         "calcium": "0.06% max",
@@ -173,29 +173,30 @@
         "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
         "applications": [
-          "Petrochemical industry and chlor-alkali electrolysis",
-          "Chemical synthesis and heavy manufacturing",
-          "Industrial water treatment, softening, and demineralization",
-          "General industry"
+          "Petrochemical sector",
+          "Chemical sector",
+          "Water treatment",
+          "General industry",
+          "Raw material for salt processing"
         ],
         "items": [
           {
             "name": "Premium Coarse Salt in Bulk",
             "slug": "sal-bruta-premium-bulk",
             "format": "Hopper / Bulk",
-            "use": "Petrochemical & Chlor-Alkali Industry"
+            "use": "Petrochemical & Chemical Sector"
           },
           {
             "name": "Premium Coarse Salt in Big Bag",
             "slug": "sal-bruta-premium-big-bag",
             "format": "Big Bag",
-            "use": "Water Treatment & Industrial Processing"
+            "use": "Water Treatment & Industry"
           },
           {
             "name": "Premium Coarse Salt in Bags",
             "slug": "sal-bruta-premium-bags",
             "format": "Polyethylene Bags (CPE 0317416481)",
-            "use": "Wholesale Distribution & Processing"
+            "use": "General Industry"
           }
         ]
       },
@@ -205,8 +206,8 @@
         "code": "REG-SAL-CM-003",
         "name": "Type A Coarse Salt",
         "pdfTitle": "Sal Bruta Tipo A",
-        "tagline": "Efficient Solar Wash • Agroindustrial Grade",
-        "desc": "Salt with high solubility and natural granular consistency, obtained through the recovery of brines from the Premium Salt production process.",
+        "tagline": "Brine Recovery • Industrial Use",
+        "desc": "Industrial-use salt obtained through the recovery of brines from the Premium Salt production process. It is harvested and washed with fresh brines that remove as much insoluble matter as possible.",
         "purity": "98.5% NaCl min",
         "humidity": "3.5% max",
         "calcium": "0.2% max",
@@ -220,23 +221,22 @@
         "pdfEs": "/docs/fichas/sal-bruta-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
         "applications": [
-          "Animal nutrition and mineral salt production",
-          "Mineral supplementation for livestock",
-          "Wastewater treatment and industrial desalination",
-          "High-volume raw industrial applications"
+          "Raw material for salt processing",
+          "Animal nutrition",
+          "General industry"
         ],
         "items": [
           {
             "name": "Type A Coarse Salt in Bulk",
             "slug": "sal-bruta-tipo-a-bulk",
             "format": "Hopper / Bulk",
-            "use": "Agribusiness & High-Volume Processing"
+            "use": "Salt Processing & Industry"
           },
           {
             "name": "Type A Coarse Salt in Big Bag",
             "slug": "sal-bruta-tipo-a-big-bag",
             "format": "Big Bag",
-            "use": "Water Softening & Industrial Treatment"
+            "use": "Animal Nutrition & Industry"
           }
         ]
       },
@@ -246,8 +246,8 @@
         "code": "REG-SAL-CM-002",
         "name": "Premium Ground Salt",
         "pdfTitle": "Sal Molida Premium",
-        "tagline": "Homogeneous Milling • High Flowability",
-        "desc": "Fine solar salt refined in automated milling and screening lines. Uniform grain size, immediate solubility, conditioned with anticaking agent for maximum flowability.",
+        "tagline": "Crushing & Milling • With Anticaking Agent",
+        "desc": "Industrial-use salt obtained through solar evaporation of water from the Los Olivitos marsh, washed with fresh brines and processed in our crushing and milling plant. Contains Sodium Ferrocyanide (YPS) as anticaking agent.",
         "purity": "99.3% NaCl min",
         "humidity": "2.5% max",
         "calcium": "0.06% max",
@@ -257,33 +257,34 @@
         "additives": "Sodium Ferrocyanide (YPS) 10 ppm max",
         "cpe": "CPE 0308115248",
         "packaging": "Bulk / Big Bag / Bags",
-        "image": "/images/products/sal-molida-premium.webp",
+        "image": "/images/products/sal-molida-premium-sacos.webp",
         "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
-          "Chemical and petrochemical industry",
-          "Water treatment and softening equipment",
-          "Pharmaceutical and cosmetic formulations",
-          "Fast-dissolving industrial processes"
+          "Petrochemical sector",
+          "Chemical sector",
+          "Water treatment",
+          "General industry",
+          "Raw material for salt processing"
         ],
         "items": [
           {
             "name": "Premium Ground Salt in Bulk",
             "slug": "sal-molida-premium-bulk",
             "format": "Hopper / Bulk",
-            "use": "Chemical Industry & Dissolving Processes"
+            "use": "Petrochemical & Chemical Sector"
           },
           {
             "name": "Premium Ground Salt in Big Bag",
             "slug": "sal-molida-premium-big-bag",
             "format": "Big Bag",
-            "use": "Chemical & Industrial Formulations"
+            "use": "Water Treatment & Industry"
           },
           {
             "name": "Premium Ground Salt in Bags",
             "slug": "sal-molida-premium-bags",
             "format": "Polyethylene Bags (CPE 0308115248)",
-            "use": "Distribution & General Industry"
+            "use": "General Industry"
           }
         ]
       },
@@ -293,8 +294,8 @@
         "code": "REG-SAL-CM-004",
         "name": "Type A Ground Salt",
         "pdfTitle": "Sal Molida Tipo A",
-        "tagline": "Industrial Milling • Versatile Performance",
-        "desc": "Ground crystalline salt engineered for general manufacturing and compounded formulations. Balanced with anticaking agent for excellent free-flowing properties and stability.",
+        "tagline": "Crushing & Milling • Industrial Use",
+        "desc": "Industrial-use salt obtained through the recovery of brines from the Premium Salt production process, washed with fresh brines and processed in our crushing and milling plant. Contains Sodium Ferrocyanide (YPS) as anticaking agent.",
         "purity": "98.5% NaCl min",
         "humidity": "2.0% max",
         "calcium": "0.2% max",
@@ -304,21 +305,20 @@
         "additives": "Sodium Ferrocyanide (YPS) 10 ppm max",
         "cpe": "CPE 0813313838",
         "packaging": "Bulk / Big Bag / Bags",
-        "image": "/images/products/sal-molida-tipo-a.webp",
+        "image": "/images/products/sal-molida-tipo-a-saco.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "Animal nutrition and mineral blends",
-          "Textile dyeing and leather tanning industry",
-          "Industrial chemical blends and processing",
-          "General commercial manufacturing"
+          "Raw material for salt processing",
+          "Animal nutrition",
+          "General industry"
         ],
         "items": [
           {
             "name": "Type A Ground Salt in Bulk",
             "slug": "sal-molida-tipo-a-bulk",
             "format": "Hopper / Bulk",
-            "use": "Industrial Processing & Compounding"
+            "use": "Salt Processing & Industry"
           },
           {
             "name": "Type A Ground Salt in Big Bag",
@@ -330,7 +330,7 @@
             "name": "Type A Ground Salt in Bags",
             "slug": "sal-molida-tipo-a-bags",
             "format": "Polyethylene Bags (CPE 0813313838)",
-            "use": "Animal Nutrition & Manufacturing"
+            "use": "General Industry"
           }
         ]
       }

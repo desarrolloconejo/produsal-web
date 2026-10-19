@@ -17,10 +17,10 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
   const cards = [
     {
       title: isEs ? "Pureza Solar Natural" : "Natural Solar Purity",
-      subtitle: isEs ? "Cristalización Solar sin Aditivos" : "Additive-Free Solar Crystallization",
+      subtitle: isEs ? "Evaporación Solar y Lavado Continuo" : "Solar Evaporation & Continuous Washing",
       desc: isEs
-        ? "Sal 100% pura cosechada bajo evaporación solar y régimen de vientos alisios en Los Olivitos. Cristales limpios con 99,3% de NaCl mínimo garantizado."
-        : "100% pure solar salt harvested under continuous sun and trade winds at Los Olivitos. Clean crystals with a guaranteed minimum of 99.3% NaCl.",
+        ? "Sal de alta pureza obtenida por evaporación solar en Los Olivitos y lavada con salmueras frescas. La Sal Premium garantiza un mínimo de 99,3% de NaCl."
+        : "High-purity salt obtained through solar evaporation at Los Olivitos and washed with fresh brines. Premium Salt guarantees a minimum of 99.3% NaCl.",
       image: "/images/produsal-sal-manos-pureza.webp",
       alt: "Manos sosteniendo sal pura PRODUSAL",
       tag: isEs ? "Materia Prima Pura" : "Pure Raw Material",

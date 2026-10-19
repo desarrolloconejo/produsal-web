@@ -118,7 +118,7 @@
         "step": "04",
         "name": "Lavado",
         "shortDesc": "Dos líneas de lavado",
-        "description": "La sal cosechada ingresa a dos líneas industriales de lavado continuo con salmuera saturada para retirar impurezas."
+        "description": "La sal cosechada ingresa a dos líneas industriales de lavado continuo con salmueras frescas que retiran impurezas."
       },
       {
         "step": "05",
@@ -158,8 +158,8 @@
         "code": "REG-SAL-CM-001",
         "name": "Sal Bruta Premium",
         "pdfTitle": "Sal Bruta Premium",
-        "tagline": "Lavado Continuo • Máxima Pureza Química",
-        "desc": "Sal solar de cristalización gruesa sometida a lavado continuo con salmuera saturada. Pureza mínima de 99,3% de NaCl con bajos niveles de sulfatos, calcio y magnesio.",
+        "tagline": "Lavado Continuo • Máxima Pureza",
+        "desc": "Sal de uso industrial obtenida por evaporación solar del agua de la ciénaga de Los Olivitos, bajo estrictos controles físico-químicos. Se cosecha y somete a lavado continuo con salmueras frescas que remueven la mayor cantidad posible de insolubles.",
         "purity": "99,3% NaCl mín",
         "humidity": "3,5% máx",
         "calcium": "0,06% máx",
@@ -173,29 +173,30 @@
         "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
         "applications": [
-          "Industria petroquímica y plantas cloro-soda",
-          "Electrólisis industrial y síntesis química",
-          "Tratamiento, desmineralización y suavización de aguas",
-          "Industria en general"
+          "Sector petroquímico",
+          "Sector químico",
+          "Tratamiento de aguas",
+          "Industria en general",
+          "Materia prima para el procesamiento de sal"
         ],
         "items": [
           {
             "name": "Sal Bruta Premium a Granel",
             "slug": "sal-bruta-premium-granel",
             "format": "Tolva / Granel",
-            "use": "Industria Petroquímica y Cloro-Soda"
+            "use": "Sector Petroquímico y Químico"
           },
           {
             "name": "Sal Bruta Premium en Big Bag",
             "slug": "sal-bruta-premium-big-bag",
             "format": "Big Bag",
-            "use": "Tratamiento de Aguas y Procesos Industriales"
+            "use": "Tratamiento de Aguas e Industria"
           },
           {
             "name": "Sal Bruta Premium en Sacos",
             "slug": "sal-bruta-premium-sacos",
             "format": "Sacos (CPE 0317416481)",
-            "use": "Distribución y Procesamiento Mayorista"
+            "use": "Industria en General"
           }
         ]
       },
@@ -205,8 +206,8 @@
         "code": "REG-SAL-CM-003",
         "name": "Sal Bruta Tipo A",
         "pdfTitle": "Sal Bruta Tipo A",
-        "tagline": "Lavado Solar Eficiente • Grado Agroindustrial",
-        "desc": "Sal de excelente solubilidad y consistencia granular natural, obtenida a través de la recuperación de salmueras provenientes del proceso de producción de Sal Premium.",
+        "tagline": "Recuperación de Salmueras • Uso Industrial",
+        "desc": "Sal de uso industrial obtenida a través de la recuperación de salmueras provenientes del proceso de producción de Sal Premium. Se cosecha y lava con salmueras frescas que remueven la mayor cantidad posible de insolubles.",
         "purity": "98,5% NaCl mín",
         "humidity": "3,5% máx",
         "calcium": "0,2% máx",
@@ -220,23 +221,22 @@
         "pdfEs": "/docs/fichas/sal-bruta-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
         "applications": [
-          "Nutrición animal y elaboración de sales minerales",
-          "Suplementación mineral para ganadería",
-          "Tratamiento de aguas residuales y desalinización",
-          "Procesos industriales masivos"
+          "Materia prima para el procesamiento de sal",
+          "Nutrición animal",
+          "Industria en general"
         ],
         "items": [
           {
             "name": "Sal Bruta Tipo A a Granel",
             "slug": "sal-bruta-tipo-a-granel",
             "format": "Tolva / Granel",
-            "use": "Agroindustria y Procesos Masivos"
+            "use": "Procesamiento de Sal e Industria"
           },
           {
             "name": "Sal Bruta Tipo A en Big Bag",
             "slug": "sal-bruta-tipo-a-big-bag",
             "format": "Big Bag",
-            "use": "Suavización y Desalinización de Aguas"
+            "use": "Nutrición Animal e Industria"
           }
         ]
       },
@@ -246,8 +246,8 @@
         "code": "REG-SAL-CM-002",
         "name": "Sal Molida Premium",
         "pdfTitle": "Sal Molida Premium",
-        "tagline": "Molienda Homogénea • Alta Fluidez",
-        "desc": "Sal solar fina procesada en planta de molienda y clasificación automatizada. Granulometría uniforme, disolución instantánea y acondicionada con antiaglomerante para máxima fluidez.",
+        "tagline": "Trituración y Molienda • Con Antiaglomerante",
+        "desc": "Sal de uso industrial obtenida por evaporación solar del agua de la ciénaga de Los Olivitos, lavada con salmueras frescas y procesada en nuestra planta de trituración y molienda. Contiene Ferrocianuro de Sodio (YPS) como antiaglomerante.",
         "purity": "99,3% NaCl mín",
         "humidity": "2,5% máx",
         "calcium": "0,06% máx",
@@ -257,33 +257,34 @@
         "additives": "Ferrocianuro de Sodio (YPS) 10 ppm máx",
         "cpe": "CPE 0308115248",
         "packaging": "Granel / Big Bag / Sacos",
-        "image": "/images/products/sal-molida-premium.webp",
+        "image": "/images/products/sal-molida-premium-sacos.webp",
         "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
-          "Industria química y petroquímica",
-          "Tratamiento de aguas y equipos suavizadores",
-          "Formulaciones farmacéuticas y cosméticas",
-          "Procesos industriales de disolución rápida"
+          "Sector petroquímico",
+          "Sector químico",
+          "Tratamiento de aguas",
+          "Industria en general",
+          "Materia prima para el procesamiento de sal"
         ],
         "items": [
           {
             "name": "Sal Molida Premium a Granel",
             "slug": "sal-molida-premium-granel",
             "format": "Tolva / Granel",
-            "use": "Industria Química y Procesos de Disolución"
+            "use": "Sector Petroquímico y Químico"
           },
           {
             "name": "Sal Molida Premium en Big Bag",
             "slug": "sal-molida-premium-big-bag",
             "format": "Big Bag",
-            "use": "Formulaciones Químicas e Industriales"
+            "use": "Tratamiento de Aguas e Industria"
           },
           {
             "name": "Sal Molida Premium en Sacos",
             "slug": "sal-molida-premium-sacos",
             "format": "Sacos (CPE 0308115248)",
-            "use": "Distribución e Industria en General"
+            "use": "Industria en General"
           }
         ]
       },
@@ -293,8 +294,8 @@
         "code": "REG-SAL-CM-004",
         "name": "Sal Molida Tipo A",
         "pdfTitle": "Sal Molida Tipo A",
-        "tagline": "Molienda Industrial • Estándar Versátil",
-        "desc": "Sólido cristalino obtenido por molienda con granulometría controlada y agente antiaglomerante. Diseñada para formulaciones industriales, mezclas balanceadas y aplicaciones de rápida integración.",
+        "tagline": "Trituración y Molienda • Uso Industrial",
+        "desc": "Sal de uso industrial obtenida a través de la recuperación de salmueras del proceso de producción de Sal Premium, lavada con salmueras frescas y procesada en nuestra planta de trituración y molienda. Contiene Ferrocianuro de Sodio (YPS) como antiaglomerante.",
         "purity": "98,5% NaCl mín",
         "humidity": "2,0% máx",
         "calcium": "0,2% máx",
@@ -304,21 +305,20 @@
         "additives": "Ferrocianuro de Sodio (YPS) 10 ppm máx",
         "cpe": "CPE 0813313838",
         "packaging": "Granel / Big Bag / Sacos",
-        "image": "/images/products/sal-molida-tipo-a.webp",
+        "image": "/images/products/sal-molida-tipo-a-saco.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "Nutrición animal y mezclas minerales",
-          "Industria de teñido textil y curtido de pieles",
-          "Formulaciones químicas y mezclas industriales",
-          "Manufactura general de productos salinos"
+          "Materia prima para el procesamiento de sal",
+          "Nutrición animal",
+          "Industria en general"
         ],
         "items": [
           {
             "name": "Sal Molida Tipo A a Granel",
             "slug": "sal-molida-tipo-a-granel",
             "format": "Tolva / Granel",
-            "use": "Procesos Industriales y Formulación"
+            "use": "Procesamiento de Sal e Industria"
           },
           {
             "name": "Sal Molida Tipo A en Big Bag",
@@ -330,7 +330,7 @@
             "name": "Sal Molida Tipo A en Sacos",
             "slug": "sal-molida-tipo-a-sacos",
             "format": "Sacos (CPE 0813313838)",
-            "use": "Nutrición Animal e Industria"
+            "use": "Industria en General"
           }
         ]
       }

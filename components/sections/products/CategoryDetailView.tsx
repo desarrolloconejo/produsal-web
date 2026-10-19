@@ -57,6 +57,7 @@ export function CategoryDetailView({
   const currentPdfUrl = isEs ? category.pdfEs : category.pdfEn;
 
   // Parámetros de la tabla físico-química extraídos de las fichas de laboratorio
+  const hasAdditives = category.additives.includes("YPS");
   const techTableRows = [
     {
       param: isEs ? "Cloruro de Sodio (Base Seca % p/p)" : "Sodium Chloride (Dry Base % w/w)",
@@ -97,8 +98,8 @@ export function CategoryDetailView({
     {
       param: isEs ? "Aditivos / Antiaglomerante" : "Additives / Anticaking",
       value: category.additives,
-      method: isEs ? "Interno Produsal" : "Produsal Internal",
-      frequency: isEs ? "Por lote" : "Per lot",
+      method: hasAdditives ? (isEs ? "Método interno Produsal" : "Produsal internal method") : "—",
+      frequency: hasAdditives ? (isEs ? "Por lote" : "Per lot") : "—",
     },
     {
       param: isEs ? "Empaque en Sacos (Control CPE)" : "Bag Packaging (CPE Control)",
