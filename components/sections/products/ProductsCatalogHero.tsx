@@ -48,14 +48,14 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
           
           {/* Badge / Texto Superior */}
           <ScrollReveal animation="fade-down">
-            <span className="text-sm sm:text-base font-bold text-[#02aeaa] tracking-normal font-heading flex items-center gap-2.5">
+            <span className="type-eyebrow text-[#02aeaa] flex items-center gap-2.5">
               <span>{dict.badge}</span>
             </span>
           </ScrollReveal>
 
           {/* Gran Título Corporativo Amplio con Resalte Turquesa (Estilo Home) */}
           <ScrollReveal animation="fade-up" delay={50}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-heading text-left">
+            <h1 className="type-h1 text-white text-left">
               <span className="text-[#02aeaa] drop-shadow-xs">
                 {isEs ? "Productos" : "High-Purity"}
               </span>{" "}
@@ -67,7 +67,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
 
           {/* Párrafo Descriptivo Amplio */}
           <ScrollReveal animation="fade-up" delay={100}>
-            <p className="text-base sm:text-lg text-white/80 max-w-3xl font-normal leading-relaxed text-left">
+            <p className="type-lead text-white/80 max-w-3xl text-left">
               {dict.subtitle}
             </p>
           </ScrollReveal>

@@ -80,8 +80,7 @@ export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridPr
                       {category.code}
                     </span>
                     <span
-                      className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider font-heading backdrop-blur-xs shadow-xs ${
-                        isPremium ? "bg-[#02aeaa] text-white" : "bg-[#85b2cf] text-[#183c6b]"
+                      className={`type-caption px-2.5 py-1 rounded-full backdrop-blur-xs shadow-xs ${isPremium ? "bg-[#02aeaa] text-white" : "bg-[#85b2cf] text-[#183c6b]"
                       }`}
                     >
                       {isPremium
@@ -95,7 +94,7 @@ export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridPr
                 <div className="p-5 flex flex-col justify-between flex-1 gap-5">
                   <div className="flex flex-col gap-3.5">
                     <Link href={detailHref} className="flex items-center justify-between gap-2 group/title">
-                      <h3 className="text-lg sm:text-xl font-extrabold text-[#183c6b] tracking-tight font-heading group-hover/title:text-[#02aeaa] transition-colors leading-snug">
+                      <h3 className="type-h4 text-[#183c6b] group-hover/title:text-[#02aeaa] transition-colors">
                         {category.name}
                       </h3>
                       <ArrowRight className="w-4 h-4 text-slate-400 group-hover/title:text-[#02aeaa] group-hover/title:translate-x-0.5 transition-all shrink-0" />
@@ -122,7 +121,7 @@ export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridPr
 
                     {/* Presentaciones resumidas */}
                     <div className="flex flex-col gap-1">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-heading">
+                      <span className="type-caption text-slate-400">
                         {dict.packagingLabel}
                       </span>
                       <div className="flex flex-wrap gap-1">

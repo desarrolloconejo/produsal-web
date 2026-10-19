@@ -41,13 +41,13 @@ export function GalleryContent({ dict, images }: GalleryContentProps) {
     <div className="flex flex-col gap-10 sm:gap-12">
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-3 max-w-3xl">
-          <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+          <span className="type-eyebrow text-[#02aeaa]">
             {dict.gridBadge}
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight leading-[1.15] font-heading">
+          <h2 className="type-h2 text-[#183c6b]">
             {dict.gridTitle}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+          <p className="type-body text-slate-600">
             {dict.gridSubtitle}
           </p>
         </div>

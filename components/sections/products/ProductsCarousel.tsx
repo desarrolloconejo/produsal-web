@@ -157,9 +157,7 @@ export function ProductsCarousel({ items, currentLang, viewDetailsLabel }: Produ
                 {/* Fila Superior: Badges de Categoría y Formato apilados (el formato nunca parte la tarjeta) */}
                 <div className="flex flex-col items-start gap-2 min-w-0">
                   <span
-                    className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider font-heading ${
-                      isGranel
-                        ? "bg-[#e5c798]/25 text-[#183c6b] border border-[#e5c798]/40"
+                    className={`type-caption px-2.5 py-1 rounded-lg ${isGranel ? "bg-[#e5c798]/25 text-[#183c6b] border border-[#e5c798]/40"
                         : isBruta
                         ? "bg-[#85b2cf]/25 text-[#183c6b] border border-[#85b2cf]/40"
                         : "bg-[#02aeaa]/15 text-[#183c6b] border border-[#02aeaa]/30"
@@ -178,7 +176,7 @@ export function ProductsCarousel({ items, currentLang, viewDetailsLabel }: Produ
 
                 {/* Cuerpo: Nombre de Producto y Aplicación (altos fijos para tarjetas uniformes) */}
                 <div className="flex flex-col gap-1.5">
-                  <h4 className="text-base sm:text-lg font-extrabold text-[#183c6b] group-hover:text-[#02aeaa] transition-colors leading-snug font-heading line-clamp-2 min-h-[2.75em]">
+                  <h4 className="type-h5 text-[#183c6b] group-hover:text-[#02aeaa] transition-colors line-clamp-2 min-h-[2.75em]">
                     {product.name}
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-500 font-normal leading-relaxed line-clamp-2">

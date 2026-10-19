@@ -22,16 +22,16 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
       {/* Columna Izquierda: Información de Contacto Corporativo (5 cols) */}
       <ScrollReveal animation="fade-right" delay={50} className="lg:col-span-5 flex flex-col gap-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#02aeaa]/10 text-[#02aeaa] text-xs font-bold uppercase tracking-wider w-fit">
+        <div className="type-eyebrow inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#02aeaa]/10 text-[#02aeaa] w-fit">
           <Building2 className="w-3.5 h-3.5" />
           <span>{badge}</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight font-heading">
+        <h2 className="type-h2 text-[#183c6b]">
           {title}
         </h2>
 
-        <p className="text-slate-600 text-base leading-relaxed">
+        <p className="type-body text-slate-600">
           {description}
         </p>
 
@@ -88,7 +88,7 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
 
       {/* Columna Derecha: Formulario Nodemailer (7 cols) */}
       <ScrollReveal animation="fade-left" delay={150} className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl shadow-slate-200/50">
-        <h3 className="text-xl font-bold text-[#183c6b] mb-1">
+        <h3 className="type-h4 text-[#183c6b] mb-1">
           {isEs ? "Envíanos un Mensaje" : "Send Us a Message"}
         </h3>
         <p className="text-xs text-slate-500 mb-6">

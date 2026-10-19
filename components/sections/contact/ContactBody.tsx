@@ -33,7 +33,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               
               {/* Cabecera del Mapa */}
               <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-4">
-                <span className="text-xs uppercase font-bold tracking-wider text-[#02aeaa] font-heading flex items-center gap-2">
+                <span className="type-label text-[#02aeaa] flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse" />
                   <span>{isEs ? "Ubicación Geográfica" : "Geographic Location"}</span>
                 </span>
@@ -81,7 +81,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <div className="flex flex-col gap-3 pt-4 border-t border-slate-100">
                 <div className="flex items-center gap-2">
                   <Factory className="w-4.5 h-4.5 text-[#85b2cf]" />
-                  <h4 className="text-base font-bold text-[#183c6b] font-heading">
+                  <h4 className="type-h5 text-[#183c6b]">
                     {isEs ? "Complejo Industrial Salinas Los Olivitos" : "Los Olivitos Industrial Salt Complex"}
                   </h4>
                 </div>
@@ -94,7 +94,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
 
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-heading">
+                    <span className="type-caption text-slate-400">
                       {isEs ? "Capacidad Operativa" : "Operational Capacity"}
                     </span>
                     <span className="text-sm font-extrabold text-[#02aeaa] font-heading">
@@ -103,7 +103,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                   </div>
 
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-heading">
+                    <span className="type-caption text-slate-400">
                       {isEs ? "Distribución Nacional" : "National Distribution"}
                     </span>
                     <span className="text-sm font-extrabold text-[#183c6b] font-heading">
@@ -123,11 +123,11 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
           >
             <div>
               <div className="flex flex-col gap-1.5 mb-6 pb-4 border-b border-slate-100">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] font-heading flex items-center gap-1.5">
+                <span className="type-label text-[#02aeaa] flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4" />
                   {isEs ? "Atención Comercial Directa" : "Direct Commercial Inquiry"}
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] font-heading tracking-tight">
+                <h3 className="type-h3 text-[#183c6b]">
                   {isEs ? "Solicitar Cotización o Ficha Técnica" : "Request Quote or Technical Sheet"}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500">

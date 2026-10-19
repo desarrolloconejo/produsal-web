@@ -94,6 +94,42 @@ Reemplazan a Montserrat y Gilroy del brief original por decision del cliente.
 para los spans dependen de su importancia si es menu avenir si son listas o
 resaltar colores dependen de que tipografia esten envueltos
 
+### Tipografia y jerarquia (escala unica)
+
+Definida como utilidades en app/globals.css. No usar tamaños sueltos
+(text-2xl, text-[11px], etc.) para titulos, etiquetas ni introducciones; el
+color se pone aparte en cada componente.
+
+| Clase | Uso | Tamaño (movil → escritorio) |
+| --- | --- | --- |
+| type-eyebrow | Etiqueta de seccion, sobre un h1/h2 | 12 → 14 px, mayusculas |
+| type-label | Etiqueta de tarjeta o bloque, sobre un h3/h4 o cifra | 12 px, mayusculas |
+| type-caption | Insignias, nombres de especificacion, pies de foto | 11 px, mayusculas |
+| type-h1 | Titulo principal, uno por pagina | 30 → 60 px |
+| type-h2 | Titulo de seccion | 30 → 48 px |
+| type-h3 | Subtitulo de bloque o tarjeta destacada | 20 → 30 px |
+| type-h4 | Titulo de tarjeta | 18 → 20 px |
+| type-h5 | Titulo de item pequeño | 16 px |
+| type-lead | Parrafo bajo el h1 | 16 → 18 px |
+| type-body | Parrafo bajo un h2 | 14 → 16 px |
+
+- Cada seccion sigue el mismo orden: type-eyebrow → type-h2 → type-body.
+- Los heros de todas las paginas: type-eyebrow → type-h1 → type-lead.
+
+### Animaciones
+
+- Toda seccion entra con ScrollReveal (fade-up por defecto; fade-left /
+  fade-right en columnas enfrentadas; las tarjetas en grilla con delay
+  escalonado de 100 ms).
+- El hero del inicio usa las clases animate-slide-up-delay-*.
+- Solo usar animaciones definidas en app/globals.css (animate-fade-in,
+  animate-fade-in-fast, animate-slide-up*, animate-slide-down,
+  animate-zoom-in, animate-float-slow, animate-pulse-subtle,
+  animate-spin-slow, animate-marquee) o las nativas de Tailwind
+  (animate-pulse, animate-ping). No hay plugin tailwindcss-animate: clases
+  como animate-in o fade-in no funcionan.
+- Todas respetan prefers-reduced-motion.
+
 ### Reglas de contenido (revision del cliente)
 
 Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.

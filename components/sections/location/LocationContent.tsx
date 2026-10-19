@@ -50,16 +50,16 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
       {/* Cabecera Editorial Unificada */}
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-3 max-w-5xl">
-          <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading flex items-center gap-2">
+          <span className="type-eyebrow text-[#02aeaa] flex items-center gap-2">
             <Compass className="w-4 h-4 text-[#02aeaa]" />
             <span>{badge}</span>
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight leading-[1.15] font-heading">
+          <h2 className="type-h2 text-[#183c6b]">
             {title}
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+          <p className="type-body text-slate-600">
             {subtitle}
           </p>
         </div>
@@ -110,7 +110,7 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
           {/* Ficha descriptiva del Complejo Los Olivitos */}
           <div className="rounded-2xl p-4 sm:p-5 bg-white border border-[#85b2cf]/30 shadow-sm flex flex-col gap-2.5">
             <div className="flex items-center justify-between gap-2">
-              <span className="text-xs uppercase font-bold tracking-wider text-[#02aeaa] font-heading flex items-center gap-1.5">
+              <span className="type-label text-[#02aeaa] flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse" />
                 {locationHighlight}
               </span>

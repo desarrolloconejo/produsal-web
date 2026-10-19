@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Award } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale } from "@/dictionaries/get-dictionary";
 
@@ -21,17 +22,17 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Columna Izquierda: Título y Visión Editorial */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#02aeaa]/20 border border-[#02aeaa]/40 text-[#02aeaa] text-xs font-bold uppercase tracking-wider mb-4 w-fit">
+          <ScrollReveal animation="fade-right" className="lg:col-span-7 flex flex-col justify-center">
+            <span className="type-eyebrow inline-flex items-center gap-2 text-[#02aeaa] mb-4 w-fit">
               <Award className="w-3.5 h-3.5" />
               <span>{isEs ? "Complejo Industrial Los Olivitos • Estado Zulia" : "Los Olivitos Industrial Complex • Zulia State"}</span>
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-5">
+            <h1 className="type-h1 text-white mb-5">
               {isEs
                 ? "La principal productora de sal industrial de alta pureza en Venezuela"
                 : "Venezuela's leading producer of high-purity industrial salt"}
             </h1>
-            <p className="text-base sm:text-lg text-white/80 leading-relaxed font-normal mb-6">
+            <p className="type-lead text-white/80 mb-6">
               {isEs
                 ? "PRODUSAL (Productora de Sal C.A.) es el pilar de la industria salinera venezolana. Aportamos a la producción nacional de sal industrial desde nuestro complejo en Los Olivitos, combinando energía solar limpia con estándares de calidad de clase mundial."
                 : "PRODUSAL (Productora de Sal C.A.) is the cornerstone of the Venezuelan salt industry, contributing to national industrial salt production from Los Olivitos through clean solar evaporation and world-class manufacturing standards."}
@@ -51,10 +52,10 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
                 {isEs ? "100% Cosecha Solar" : "100% Solar Harvesting"}
               </span>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Columna Derecha: Nueva Fotografía Industrial de las Salinas Los Olivitos */}
-          <div className="lg:col-span-5 relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
+          <ScrollReveal animation="fade-left" className="lg:col-span-5 relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
             <Image
               src="/images/produsal-piramides-cielo.webp"
               alt={isEs ? "Estanques de cristalización solar y acopio de sal en Los Olivitos Produsal" : "Solar crystallization ponds and salt stockpiles at Produsal Los Olivitos"}
@@ -65,14 +66,14 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/85 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-4 left-4 right-4 text-white">
-              <span className="text-[11px] font-bold text-[#e5c798] uppercase tracking-wider block font-heading">
+              <span className="type-caption text-[#e5c798] block">
                 {isEs ? "Cosecha Solar" : "Solar Harvest"}
               </span>
               <p className="text-xs sm:text-sm font-semibold text-white/95">
                 {isEs ? "Cristalización continua en Los Olivitos, Zulia" : "Continuous crystallization at Los Olivitos, Zulia"}
               </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

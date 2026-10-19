@@ -151,10 +151,8 @@ export function CategoryDetailView({
                     {category.code}
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider font-heading ${
-                      isPremium
-                        ? "bg-[#02aeaa] text-[#183c6b]"
-                        : "bg-[#85b2cf] text-[#183c6b]"
+                    className={`type-label px-3 py-1 rounded-full ${
+                      isPremium ? "bg-[#02aeaa] text-[#183c6b]" : "bg-[#85b2cf] text-[#183c6b]"
                     }`}
                   >
                     {isPremium
@@ -165,7 +163,7 @@ export function CategoryDetailView({
               </ScrollReveal>
 
               <ScrollReveal animation="fade-up" delay={50}>
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-heading">
+                <h1 className="type-h1 text-white">
                   {category.name}
                 </h1>
                 <p className="text-[#02aeaa] text-sm sm:text-base font-bold font-heading mt-2">
@@ -174,7 +172,7 @@ export function CategoryDetailView({
               </ScrollReveal>
 
               <ScrollReveal animation="fade-up" delay={100}>
-                <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
+                <p className="type-lead text-white/85">
                   {category.desc}
                 </p>
               </ScrollReveal>
@@ -263,14 +261,14 @@ export function CategoryDetailView({
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+                  <span className="type-eyebrow text-[#02aeaa]">
                     {isEs ? "Especificación Técnica Oficial" : "Official Technical Specification"}
                   </span>
                 </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] font-heading tracking-tight">
+              <h2 className="type-h2 text-[#183c6b]">
                 {isEs ? "Requisitos Físico-Químicos de Laboratorio" : "Physicochemical Laboratory Requirements"}
               </h2>
-              <p className="text-slate-600 text-sm max-w-3xl">
+              <p className="type-body text-slate-600 max-w-3xl">
                 {isEs
                   ? "Parámetros basados en la metodología normalizada ASTM E534-98, con control de calidad lote a lote."
                   : "Parameters based on ASTM E534-98 standard test methodology, with batch-by-batch quality control."}
@@ -285,7 +283,7 @@ export function CategoryDetailView({
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[620px] text-left text-xs sm:text-sm border-collapse">
                   <thead>
-                    <tr className="bg-[#183c6b] text-white font-heading text-xs uppercase tracking-wider">
+                    <tr className="type-label bg-[#183c6b] text-white">
                       <th className="py-3.5 px-4 sm:px-6 font-bold">
                         {isEs ? "Parámetro" : "Parameter"}
                       </th>
@@ -343,13 +341,13 @@ export function CategoryDetailView({
         <ScrollReveal animation="fade-up">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-1.5">
-              <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+              <span className="type-eyebrow text-[#02aeaa]">
                 {isEs ? "Logística y Formatos" : "Logistics & Formats"}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] font-heading tracking-tight">
+              <h2 className="type-h2 text-[#183c6b]">
                 {isEs ? "Presentaciones de Despacho" : "Packaging & Dispatch Formats"}
               </h2>
-              <p className="text-slate-600 text-sm max-w-2xl">
+              <p className="type-body text-slate-600 max-w-2xl">
                 {isEs
                   ? "Capacidad de despacho directo desde el Complejo Salinero Los Olivitos bajo modalidad EXW planta."
                   : "Direct dispatch capacity from Los Olivitos Saltworks complex under EXW plant terms."}
@@ -372,7 +370,7 @@ export function CategoryDetailView({
                     }`}
                   >
                     {isGranelItem && (
-                      <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#02aeaa] text-[#183c6b] font-heading">
+                      <span className="type-caption absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#02aeaa] text-[#183c6b]">
                         {isEs ? "Despacho Mayorista Masivo" : "Bulk High-Volume Dispatch"}
                       </span>
                     )}
@@ -395,10 +393,10 @@ export function CategoryDetailView({
                       </div>
 
                       <div className="flex flex-col">
-                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider font-heading">
+                        <span className="type-caption text-slate-400">
                           {item.format}
                         </span>
-                        <h3 className="text-lg font-extrabold text-[#183c6b] font-heading mt-1">
+                        <h3 className="type-h4 text-[#183c6b] mt-1">
                           {item.name}
                         </h3>
                       </div>
@@ -426,12 +424,12 @@ export function CategoryDetailView({
 
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
               <div className="flex flex-col gap-3 max-w-2xl">
-                <span className="text-[#02aeaa] text-xs font-bold uppercase tracking-wider font-heading flex items-center gap-1.5">
+                <span className="type-label text-[#02aeaa] flex items-center gap-1.5">
                   <FileText className="w-4 h-4 text-[#02aeaa]" />
                   {isEs ? "Documento Oficial de Calidad" : "Official Quality Document"}
                 </span>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                <h3 className="type-h3 text-white">
                   {isEs
                     ? `Ficha Técnica Comercial — ${category.name}`
                     : `Commercial Technical Sheet — ${category.name}`}
@@ -491,10 +489,10 @@ export function CategoryDetailView({
         <ScrollReveal animation="fade-up">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-1.5">
-              <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+              <span className="type-eyebrow text-[#02aeaa]">
                 {dict.applicationsLabel}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] font-heading tracking-tight">
+              <h2 className="type-h2 text-[#183c6b]">
                 {isEs ? "Sectores e Industrias que Abastecemos" : "Key Industries & Applications"}
               </h2>
             </div>
@@ -524,7 +522,7 @@ export function CategoryDetailView({
         <ScrollReveal animation="fade-up">
           <div className="flex flex-col gap-6 pt-6 border-t border-slate-200">
             <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-              <h3 className="text-xl font-extrabold text-[#183c6b] font-heading">
+              <h3 className="type-h4 text-[#183c6b]">
                 {isEs ? "Explorar las Otras Categorías" : "Explore Other Categories"}
               </h3>
               <Link
@@ -547,7 +545,7 @@ export function CategoryDetailView({
                     <span className="text-[10px] font-mono font-bold text-slate-400">
                       {other.code}
                     </span>
-                    <h4 className="text-base font-extrabold text-[#183c6b] group-hover:text-[#02aeaa] transition-colors font-heading">
+                    <h4 className="type-h5 text-[#183c6b] group-hover:text-[#02aeaa] transition-colors">
                       {other.name}
                     </h4>
                     <span className="text-xs text-slate-500 font-normal line-clamp-1">

@@ -18,10 +18,10 @@ export function MarketContent({ dict }: MarketContentProps) {
     <div className="flex flex-col gap-10 sm:gap-12">
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-3">
-          <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+          <span className="type-eyebrow text-[#02aeaa]">
             {badge}
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] font-heading">
+          <h2 className="type-h2 text-white">
             {title}
           </h2>
         </div>
@@ -31,10 +31,10 @@ export function MarketContent({ dict }: MarketContentProps) {
         {items.map((item, index) => (
           <ScrollReveal key={item.label} animation="fade-up" delay={index * 100}>
             <div className="h-full flex flex-col gap-3 pt-5 border-t-2 border-[#02aeaa]/70">
-              <span className="text-[#85b2cf] text-xs font-bold uppercase tracking-wider font-heading">
+              <span className="type-label text-[#85b2cf]">
                 {item.label}
               </span>
-              <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight font-heading">
+              <span className="type-h3 text-white">
                 {item.value}
               </span>
               <p className="text-white/80 text-sm leading-relaxed font-normal">

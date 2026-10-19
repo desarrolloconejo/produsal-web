@@ -63,14 +63,14 @@ export function PdfPreviewModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/75 backdrop-blur-sm animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/75 backdrop-blur-sm animate-fade-in-fast"
       role="dialog"
       aria-modal="true"
       aria-labelledby="pdf-modal-title"
       onClick={onClose}
     >
       <div
-        className="relative flex flex-col w-full max-w-5xl h-[92vh] sm:h-[88vh] bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200/80 overflow-hidden animate-in zoom-in-95 duration-200"
+        className="relative flex flex-col w-full max-w-5xl h-[92vh] sm:h-[88vh] bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200/80 overflow-hidden animate-zoom-in"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Barra Superior / Header del Visor */}

@@ -65,20 +65,20 @@ export function PrivacyContent({ currentLang, dict }: PrivacyContentProps) {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal animation="fade-down">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#02aeaa]/20 border border-[#02aeaa]/40 text-[#02aeaa] text-xs font-mono font-bold mb-4">
+            <div className="type-eyebrow inline-flex items-center gap-2 text-[#02aeaa] mb-4">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>{dict.badge}</span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-up" delay={50}>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] font-heading">
+            <h1 className="type-h1 text-white">
               {dict.title}
             </h1>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-up" delay={100}>
-            <p className="mt-4 text-slate-300 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
+            <p className="type-lead mt-4 text-slate-300 max-w-3xl">
               {dict.subtitle}
             </p>
           </ScrollReveal>
@@ -102,7 +102,7 @@ export function PrivacyContent({ currentLang, dict }: PrivacyContentProps) {
                   <Building2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h2 className="text-lg sm:text-xl font-extrabold text-[#183c6b] font-heading">
+                  <h2 className="type-h4 text-[#183c6b]">
                     {dict.responsible.title}
                   </h2>
                   <p className="text-xs text-slate-500 font-mono">
@@ -149,7 +149,7 @@ export function PrivacyContent({ currentLang, dict }: PrivacyContentProps) {
                       <div className="w-9 h-9 rounded-xl bg-slate-100 text-[#183c6b] flex items-center justify-center shrink-0">
                         <Icon className="w-4.5 h-4.5 text-[#02aeaa]" />
                       </div>
-                      <h3 className="text-base sm:text-lg font-extrabold text-[#183c6b] font-heading">
+                      <h3 className="type-h5 text-[#183c6b]">
                         {section.title}
                       </h3>
                     </div>

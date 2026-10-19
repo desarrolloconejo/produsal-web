@@ -30,14 +30,14 @@ export function ProductsCatalogGrid({ currentLang, dict }: ProductsCatalogGridPr
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200/80 pb-8 sm:pb-10 mb-10 sm:mb-12">
             <div className="flex flex-col gap-2 max-w-2xl">
               <div className="flex items-center gap-2.5">
-                <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+                <span className="type-eyebrow text-[#02aeaa]">
                   {isEs ? "Clasificación Oficial" : "Official Classification"}
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#183c6b] font-heading tracking-tight">
+              <h2 className="type-h2 text-[#183c6b]">
                 {isEs ? "Las 4 Categorías Industriales" : "The 4 Industrial Categories"}
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base font-normal">
+              <p className="type-body text-slate-600">
                 {dict.qualityGuarantee}
               </p>
             </div>

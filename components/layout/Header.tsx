@@ -117,7 +117,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
 
             {/* Dropdown */}
             {productsDict?.categories && productsDropdownOpen && (
-              <div className="absolute top-full left-0 pt-2 w-72 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+              <div className="absolute top-full left-0 pt-2 w-72 z-50 animate-slide-down">
                 <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-1.5 text-[#183c6b]">
                   {/* Lista de Categorías */}
                   <div className="flex flex-col">

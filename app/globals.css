@@ -123,6 +123,61 @@
   mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
 }
 
+/* ==========================================================================
+   Escala tipográfica única de la web (ver CLAUDE.md > Tipografía y jerarquía)
+   El color va aparte en cada componente; aquí solo tamaño, peso y ritmo.
+   ========================================================================== */
+
+/* Etiqueta de sección: va sobre un h1/h2 */
+@utility type-eyebrow {
+  @apply text-xs sm:text-sm font-bold uppercase tracking-wider font-heading;
+}
+
+/* Etiqueta de tarjeta o bloque: va sobre un h3/h4 o una cifra */
+@utility type-label {
+  @apply text-xs font-bold uppercase tracking-wider font-heading;
+}
+
+/* Micro etiqueta: insignias, nombres de especificación, pies de foto */
+@utility type-caption {
+  @apply text-[11px] font-bold uppercase tracking-wider font-heading;
+}
+
+/* Título principal de cada página (uno por página) */
+@utility type-h1 {
+  @apply text-3xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold tracking-tight leading-[1.12] font-heading;
+}
+
+/* Título de sección */
+@utility type-h2 {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] font-heading;
+}
+
+/* Subtítulo de bloque o tarjeta destacada */
+@utility type-h3 {
+  @apply text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight leading-snug font-heading;
+}
+
+/* Título de tarjeta */
+@utility type-h4 {
+  @apply text-lg sm:text-xl font-extrabold tracking-tight leading-snug font-heading;
+}
+
+/* Título de ítem pequeño dentro de una tarjeta o lista */
+@utility type-h5 {
+  @apply text-base font-bold leading-snug font-heading;
+}
+
+/* Párrafo bajo el h1 */
+@utility type-lead {
+  @apply text-base sm:text-lg leading-relaxed font-normal;
+}
+
+/* Párrafo bajo un h2 */
+@utility type-body {
+  @apply text-sm sm:text-base leading-relaxed font-normal;
+}
+
 /* Animaciones corporativas reutilizables */
 @keyframes fadeIn {
   from {
@@ -209,6 +264,49 @@
 
 .animate-pulse-subtle {
   animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+/* Entradas rápidas para menús desplegables y modales */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in-fast {
+  animation: fadeIn 0.2s ease-out both;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 8s linear infinite;
+}
+
+/* Respeta la preferencia de movimiento reducido del sistema */
+@media (prefers-reduced-motion: reduce) {
+  [class*="animate-"] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 @keyframes marquee {

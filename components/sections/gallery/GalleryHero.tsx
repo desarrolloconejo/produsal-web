@@ -30,20 +30,20 @@ export function GalleryHero({ dict, backgroundImageSrc }: GalleryHeroProps) {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl flex flex-col gap-6 text-left items-start">
           <ScrollReveal animation="fade-down">
-            <span className="text-sm sm:text-base font-bold text-[#02aeaa] font-heading">
+            <span className="type-eyebrow text-[#02aeaa]">
               {dict.badge}
             </span>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-up" delay={50}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] font-heading">
+            <h1 className="type-h1">
               <span className="text-[#02aeaa] drop-shadow-xs">{dict.titleHighlight}</span>{" "}
               <span className="text-white/95 block sm:inline">{dict.titleRest}</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-up" delay={100}>
-            <p className="text-base sm:text-lg text-white/80 max-w-3xl font-normal leading-relaxed">
+            <p className="type-lead text-white/80 max-w-3xl">
               {dict.subtitle}
             </p>
           </ScrollReveal>

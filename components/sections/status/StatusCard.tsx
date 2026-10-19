@@ -37,12 +37,12 @@ export function StatusCard({
         </div>
 
         {/* Badge */}
-        <span className="inline-block px-3 py-1 rounded-full bg-[#e5c798]/25 border border-[#e5c798]/40 text-[#183c6b] text-xs font-bold uppercase tracking-wider mb-3">
+        <span className="type-label inline-block px-3 py-1 rounded-full bg-[#e5c798]/25 border border-[#e5c798]/40 text-[#183c6b] mb-3">
           {badge}
         </span>
 
         {/* Título */}
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] mb-3 tracking-tight">
+        <h1 className="type-h3 text-[#183c6b] mb-3">
           {title}
         </h1>
 

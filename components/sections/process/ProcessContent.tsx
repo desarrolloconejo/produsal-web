@@ -52,16 +52,16 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
       <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-3 max-w-5xl border-b border-slate-200/80 pb-8 sm:pb-10">
           <div className="flex items-center gap-2">
-            <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+            <span className="type-eyebrow text-[#02aeaa]">
               {dict.badge}
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight leading-[1.15] font-heading">
+          <h2 className="type-h2 text-[#183c6b]">
             {dict.title}
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+          <p className="type-body text-slate-600">
             {dict.description}
           </p>
         </div>
@@ -128,12 +128,12 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                   {/* Contenido Principal */}
                   <div className="relative z-10 flex flex-col gap-4">
                     {/* Encabezado de la tarjeta: Badge de etapa (deja libre la esquina del número de fondo) */}
-                    <span className={`pr-16 sm:pr-20 text-xs font-bold ${currentTheme.badgeColor} uppercase tracking-wider font-heading`}>
+                    <span className={`type-label pr-16 sm:pr-20 ${currentTheme.badgeColor}`}>
                       {item.step} • {item.shortDesc}
                     </span>
 
                     {/* Título */}
-                    <h3 className={`text-xl sm:text-2xl font-extrabold text-[#183c6b] tracking-tight leading-snug font-heading ${currentTheme.titleHover} transition-colors duration-200`}>
+                    <h3 className={`type-h3 text-[#183c6b] ${currentTheme.titleHover} transition-colors duration-200`}>
                       {item.name}
                     </h3>
 

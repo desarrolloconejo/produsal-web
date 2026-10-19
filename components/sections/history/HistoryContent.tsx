@@ -26,16 +26,16 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           {/* Lado Izquierdo: Texto Editorial */}
           <div className="lg:col-span-7 flex flex-col gap-3">
             <div className="flex items-center gap-2">
-              <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+              <span className="type-eyebrow text-[#02aeaa]">
                 {dict.badge}
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight leading-[1.15]">
+            <h2 className="type-h2 text-[#183c6b]">
               {dict.title}
             </h2>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal max-w-2xl">
+            <p className="type-body text-slate-600 max-w-2xl">
               {dict.description}
             </p>
           </div>
@@ -72,10 +72,10 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
               </span>
 
               <div className="relative z-10 flex flex-col gap-2.5">
-                <span className="text-xs font-bold text-[#02aeaa] uppercase tracking-wider font-heading">
+                <span className="type-label text-[#02aeaa]">
                   {era1989.year} • {era1989.tag}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#183c6b] tracking-tight leading-snug">
+                <h3 className="type-h3 text-[#183c6b]">
                   {era1989.title}
                 </h3>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal pt-1">
@@ -95,10 +95,10 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
               </span>
 
               <div className="relative z-10 flex flex-col gap-2.5">
-                <span className="text-xs font-bold text-[#85b2cf] uppercase tracking-wider font-heading">
+                <span className="type-label text-[#85b2cf]">
                   {era1999.year} • {era1999.tag}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#183c6b] tracking-tight leading-snug">
+                <h3 className="type-h3 text-[#183c6b]">
                   {era1999.title}
                 </h3>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal pt-1">
@@ -141,12 +141,12 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           <div className="lg:col-span-7 relative z-10 flex flex-col justify-between gap-6 p-6 sm:p-8 lg:p-10">
             {/* Cabecera con Tag de Liderazgo y Reserva ABRAE */}
             <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold text-[#e5c798] uppercase tracking-wider font-heading flex items-center gap-1.5">
+              <span className="type-label text-[#e5c798] flex items-center gap-1.5">
                 <Leaf className="w-3.5 h-3.5 text-[#e5c798]" />
                 {eraHoy.tag} &bull; {currentLang === "es" ? "Reserva Natural ABRAE" : "ABRAE Nature Reserve"}
               </span>
 
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug">
+              <h3 className="type-h3 text-white">
                 {eraHoy.title}
               </h3>
 

@@ -40,7 +40,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
         <div className="flex flex-col gap-8 max-w-3xl mx-auto text-center items-center">
           {/* Badge corporativo */}
           <ScrollReveal animation="fade-down">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#02aeaa]/20 border border-[#02aeaa]/40 text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
+            <div className="type-eyebrow inline-flex items-center gap-2 text-[#02aeaa]">
               <Compass className="w-4 h-4 text-[#02aeaa]" />
               <span>{badgeText}</span>
             </div>
@@ -48,14 +48,14 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
 
           {/* Título Principal */}
           <ScrollReveal animation="fade-up" delay={50}>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] font-heading">
+            <h1 className="type-h1 text-white">
               {titleText}
             </h1>
           </ScrollReveal>
 
           {/* Subtítulo */}
           <ScrollReveal animation="fade-up" delay={100}>
-            <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal max-w-2xl">
+            <p className="type-lead text-white/85 max-w-2xl">
               {subtitleText}
             </p>
           </ScrollReveal>
@@ -69,7 +69,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col min-w-0">
-                  <span className="text-[11px] text-white/60 font-semibold uppercase tracking-wider font-heading">
+                  <span className="type-caption text-white/60">
                     {isEs ? "Ventas & Cotizaciones" : "Sales Office"}
                   </span>
                   <a href="tel:02122085111" className="text-sm font-extrabold text-white hover:text-[#02aeaa] transition-colors font-heading truncate">
@@ -87,7 +87,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col min-w-0">
-                  <span className="text-[11px] text-white/60 font-semibold uppercase tracking-wider font-heading">
+                  <span className="type-caption text-white/60">
                     {isEs ? "Atención Electrónica" : "Email Support"}
                   </span>
                   <a href="mailto:infoprodusal@grupomimesa.com" className="text-sm font-extrabold text-white hover:text-[#e5c798] transition-colors font-heading truncate">
@@ -105,7 +105,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col min-w-0">
-                  <span className="text-[11px] text-white/60 font-semibold uppercase tracking-wider font-heading">
+                  <span className="type-caption text-white/60">
                     {isEs ? "Planta & Salinas" : "Plant & Salt Flats"}
                   </span>
                   <span className="text-sm font-extrabold text-white font-heading truncate">

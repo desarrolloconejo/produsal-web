@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
   ShieldCheck,
   ArrowRight,
@@ -108,7 +109,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
   return (
     <div className="flex flex-col gap-20 sm:gap-24">
       {/* 2. Grid Panorámico e Historia Corporativa */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <ScrollReveal animation="fade-up" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 aspect-16/10">
           <Image
             src="/images/produsal-salina-horizonte.webp"
@@ -118,7 +119,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/90 via-[#183c6b]/30 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 text-white">
-            <span className="text-xs uppercase font-bold tracking-wider text-[#e5c798] block mb-1">
+            <span className="type-label text-[#e5c798] block mb-1">
               {isEs ? "5.400 Hectáreas Propias • 3.200 Ha Operativas" : "5,400 Proprietary Hectares • 3,200 Operational Ha"}
             </span>
             <p className="text-base sm:text-lg font-bold">
@@ -130,10 +131,10 @@ export function AboutContent({ currentLang }: AboutContentProps) {
         </div>
 
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] tracking-tight">
+          <h2 className="type-h2 text-[#183c6b]">
             {isEs ? "Nuestra Trayectoria" : "Our Heritage"}
           </h2>
-          <p className="text-slate-600 text-sm leading-relaxed">
+          <p className="type-body text-slate-600">
             {isEs
               ? "Desde su concepción en Maracaibo hasta convertirse en la principal salina del país, PRODUSAL ha desarrollado una infraestructura industrial única con tecnología de cristalización solar continua."
               : "From our roots in Maracaibo to operating the nation's leading salt facility, PRODUSAL has built specialized industrial capacity with continuous solar crystallization technology."}
@@ -146,27 +147,27 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                   {item.year}
                 </span>
                 <div>
-                  <h4 className="text-sm font-bold text-[#183c6b] mb-0.5">{item.title}</h4>
+                  <h4 className="type-h5 text-[#183c6b] mb-0.5">{item.title}</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* 3. Métricas Industriales y Capacidad Operativa */}
-      <div className="flex flex-col gap-8">
+      <ScrollReveal animation="fade-up" className="flex flex-col gap-8">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] block mb-2">
+          <span className="type-eyebrow text-[#02aeaa] block mb-2">
             {isEs ? "Capacidad y Logística" : "Capacity & Logistics"}
           </span>
-          <h2 className="text-3xl font-extrabold text-[#183c6b] tracking-tight">
+          <h2 className="type-h2 text-[#183c6b]">
             {isEs ? "Cifras que Respaldan Nuestro Liderazgo" : "Key Figures Backing Our Leadership"}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {operationalStats.map((stat, idx) => (
             <div
               key={idx}
@@ -178,27 +179,27 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                 </span>
                 <span className="text-xs font-bold text-[#02aeaa]">{stat.unit}</span>
               </div>
-              <h4 className="text-sm font-bold text-slate-900 mb-1">{stat.label}</h4>
+              <h4 className="type-h5 text-slate-900 mb-1">{stat.label}</h4>
               <p className="text-xs text-slate-600 leading-relaxed">{stat.desc}</p>
             </div>
           ))}
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* 4. Segmentación del Mercado Venezolano */}
-      <div className="rounded-3xl p-8 sm:p-12 bg-[#183c6b] text-white relative overflow-hidden">
+      <ScrollReveal animation="fade-up" className="rounded-3xl p-8 sm:p-12 bg-[#183c6b] text-white relative overflow-hidden">
         <div className="absolute inset-0 crystal-pattern opacity-10 pointer-events-none" />
         {/* Triángulos 2D corporativos en fondo azul */}
         <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-25" />
         <div className="relative z-10 flex flex-col gap-8">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#e5c798] block mb-2">
+            <span className="type-eyebrow text-[#e5c798] block mb-2">
               {isEs ? "Presencia en el Mercado Nacional" : "Domestic Market Leadership"}
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="type-h2 mb-4">
               {isEs ? "Sectores que Abastece PRODUSAL" : "Sectors Supplied by PRODUSAL"}
             </h2>
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="type-body text-white/80">
               {isEs
                 ? "Desde Los Olivitos abastecemos de forma estratégica a tres grandes sectores económicos del país:"
                 : "From Los Olivitos we strategically supply three primary economic sectors across the country:"}
@@ -219,22 +220,22 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                   key={idx}
                   className={`p-6 rounded-2xl bg-white/10 border border-white/15 ${segTheme.border} transition-all backdrop-blur-sm group`}
                 >
-                  <h3 className={`text-lg font-extrabold ${segTheme.color} font-heading mb-2 leading-snug`}>{seg.title}</h3>
+                  <h3 className={`type-h4 ${segTheme.color} mb-2`}>{seg.title}</h3>
                   <p className="text-xs text-white/70 leading-relaxed">{seg.desc}</p>
                 </div>
               );
             })}
           </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* 5. Sustentabilidad, Ecosistema y RSE */}
-      <div className="flex flex-col gap-8">
+      <ScrollReveal animation="fade-up" className="flex flex-col gap-8">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] block mb-2">
+          <span className="type-eyebrow text-[#02aeaa] block mb-2">
             {isEs ? "Compromiso Ambiental y Social" : "Environmental & Social Responsibility"}
           </span>
-          <h2 className="text-3xl font-extrabold text-[#183c6b] tracking-tight">
+          <h2 className="type-h2 text-[#183c6b]">
             {isEs ? "Armonía entre Industria y Naturaleza" : "Harmony Between Industry and Nature"}
           </h2>
         </div>
@@ -248,25 +249,25 @@ export function AboutContent({ currentLang }: AboutContentProps) {
               <div className="w-12 h-12 rounded-xl bg-white shadow-xs border border-slate-100 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
                 {item.icon}
               </div>
-              <h3 className="text-base font-bold text-[#183c6b] mb-2 group-hover:text-[#02aeaa] transition-colors leading-snug">
+              <h3 className="type-h5 text-[#183c6b] mb-2 group-hover:text-[#02aeaa] transition-colors">
                 {item.title}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* 6. Nuestro Equipo Humano y Operación en Campo */}
-      <div className="flex flex-col gap-8">
+      <ScrollReveal animation="fade-up" className="flex flex-col gap-8">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] block mb-2 font-heading">
+          <span className="type-eyebrow text-[#02aeaa] block mb-2">
             {isEs ? "Nuestro Talento y Gente" : "Our People & Workforce"}
           </span>
-          <h2 className="text-3xl font-extrabold text-[#183c6b] tracking-tight font-heading">
+          <h2 className="type-h2 text-[#183c6b]">
             {isEs ? "El Equipo que Impulsa la Industria Salinera" : "The Team Driving the Venezuelan Salt Industry"}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl mt-2">
+          <p className="type-body text-slate-600 max-w-3xl mt-2">
             {isEs
               ? "Más de 20 años de experiencia técnica respaldada por un equipo multidisciplinario de ingenieros químicos, mecánicos, supervisores de campo y operadores especializados que trabajan día a día en Los Olivitos."
               : "Over 20 years of industrial salt expertise delivered by a multidisciplinary team of chemical engineers, plant technicians, field supervisors, and specialized operators working daily at Los Olivitos."}
@@ -285,7 +286,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/90 via-[#183c6b]/30 to-transparent pointer-events-none" />
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
             <div>
-              <span className="text-xs uppercase font-bold tracking-wider text-[#e5c798] block mb-1 font-heading">
+              <span className="type-label text-[#e5c798] block mb-1">
                 {isEs ? "Familia PRODUSAL • Los Olivitos, Zulia" : "PRODUSAL Family • Los Olivitos, Zulia"}
               </span>
               <p className="text-base sm:text-lg font-bold">
@@ -317,7 +318,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
               <span className="text-[11px] font-bold text-[#85b2cf] uppercase font-heading">
                 {isEs ? "Envasado & Empaque" : "Packaging & Bagging"}
               </span>
-              <h4 className="text-base font-bold text-[#183c6b] leading-snug">
+              <h4 className="type-h5 text-[#183c6b]">
                 {isEs ? "Control Riguroso en Cada Saco" : "Rigorous Quality on Every Bag"}
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -342,7 +343,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
               <span className="text-[11px] font-bold text-[#02aeaa] uppercase font-heading">
                 {isEs ? "Despacho a Granel" : "Bulk Freight Dispatch"}
               </span>
-              <h4 className="text-base font-bold text-[#183c6b] leading-snug">
+              <h4 className="type-h5 text-[#183c6b]">
                 {isEs ? "Carga Rápida de Tolvas y Gandolas" : "Rapid Loading of Bulk Trailers"}
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -367,7 +368,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
               <span className="text-[11px] font-bold text-[#e5c798] uppercase font-heading">
                 {isEs ? "Entorno Los Olivitos" : "Los Olivitos Environment"}
               </span>
-              <h4 className="text-base font-bold text-[#183c6b] leading-snug">
+              <h4 className="type-h5 text-[#183c6b]">
                 {isEs ? "Sustentabilidad y Energía Solar" : "Sustainability & Solar Energy"}
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -378,12 +379,12 @@ export function AboutContent({ currentLang }: AboutContentProps) {
             </div>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* 7. Llamado a la Acción Transaccional */}
-      <div className="p-8 sm:p-12 rounded-3xl bg-[#183c6b] text-white border border-[#02aeaa]/30 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+      <ScrollReveal animation="fade-up" className="p-8 sm:p-12 rounded-3xl bg-[#183c6b] text-white border border-[#02aeaa]/30 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="max-w-2xl text-left">
-          <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
+          <h3 className="type-h3 mb-2">
             {isEs ? "¿Deseas solicitar especificaciones o cotización de sal al mayor?" : "Need technical specifications or wholesale salt pricing?"}
           </h3>
           <p className="text-sm text-white/90 leading-relaxed">
@@ -400,7 +401,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           <span>{isEs ? "Contáctanos" : "Contact Us"}</span>
           <ArrowRight className="w-4 h-4 text-[#02aeaa] group-hover:translate-x-1 transition-transform" />
         </Link>
-      </div>
+      </ScrollReveal>
     </div>
   );
 }

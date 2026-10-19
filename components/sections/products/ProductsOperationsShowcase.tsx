@@ -80,19 +80,19 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-10">
           <div className="max-w-2xl flex flex-col gap-3">
             <ScrollReveal animation="fade-down">
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#02aeaa] font-heading flex items-center gap-2.5">
+              <span className="type-eyebrow text-[#02aeaa] flex items-center gap-2.5">
                 <span>{isEs ? "Infraestructura & Capacidad de Suministro" : "Infrastructure & Supply Capability"}</span>
               </span>
             </ScrollReveal>
 
             <ScrollReveal animation="fade-up" delay={50}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#183c6b] tracking-tight font-heading">
+              <h2 className="type-h2 text-[#183c6b]">
                 {isEs ? "Excelencia Operativa en Cada Despacho" : "Operational Excellence in Every Dispatch"}
               </h2>
             </ScrollReveal>
 
             <ScrollReveal animation="fade-up" delay={100}>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p className="type-body text-slate-600">
                 {isEs
                   ? "Conoce las instalaciones, líneas de empaque y operaciones logísticas con las que abastecemos a la industria de todo el país."
                   : "Explore the facilities, packaging lines, and logistics operations that supply industries across the country."}
@@ -140,10 +140,10 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
                 {/* Contenido Editorial */}
                 <div className="p-6 flex flex-col justify-between flex-1 gap-4">
                   <div className="flex flex-col gap-2">
-                    <span className="text-[11px] font-bold text-[#e5c798] uppercase tracking-wider font-heading">
+                    <span className="type-caption text-[#e5c798]">
                       {c.subtitle}
                     </span>
-                    <h3 className="text-lg font-extrabold text-[#183c6b] font-heading group-hover:text-[#02aeaa] transition-colors leading-snug">
+                    <h3 className="type-h4 text-[#183c6b] group-hover:text-[#02aeaa] transition-colors">
                       {c.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-1">
@@ -176,10 +176,10 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
 
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-7 lg:gap-12">
               <div className="flex flex-col gap-3 max-w-2xl">
-                <span className="text-xs font-bold text-[#e5c798] uppercase tracking-wider font-heading">
+                <span className="type-label text-[#e5c798]">
                   {isEs ? "Cosecha Sustentable en el Estado Zulia" : "Sustainable Harvesting in Zulia State"}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white font-heading">
+                <h3 className="type-h3 text-white">
                   {isEs
                     ? "Compromiso con el Abastecimiento y la Preservación del Ecosistema"
                     : "Commitment to Industrial Supply and Ecosystem Stewardship"}

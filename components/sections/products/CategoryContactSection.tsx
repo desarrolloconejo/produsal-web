@@ -74,11 +74,11 @@ export function CategoryContactSection({
             {/* Columna Izquierda: Información de Despacho y Ficha del Producto (4 cols) */}
             <div className="lg:col-span-4 flex flex-col gap-6">
               <div className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] font-heading flex items-center gap-2">
+                <span className="type-label text-[#02aeaa] flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#02aeaa]" />
                   <span>{isEs ? "Atención y Suministro Mayorista" : "Wholesale Commercial Supply"}</span>
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#183c6b] font-heading tracking-tight">
+                <h3 className="type-h3 text-[#183c6b]">
                   {isEs ? `Cotizar ${category.name}` : `Quote ${category.name}`}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -139,7 +139,7 @@ export function CategoryContactSection({
               >
                 {/* 1. Selector de Producto Personalizado con DIVS (NO SELECT / NO OPTION) */}
                 <div className="flex flex-col gap-2.5">
-                  <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider font-heading">
+                  <label className="type-label block text-slate-800">
                     {isEs ? "Selecciona la Presentación o Formato de Interés *" : "Select Packaging Presentation of Interest *"}
                   </label>
 
