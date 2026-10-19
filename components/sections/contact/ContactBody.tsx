@@ -4,6 +4,7 @@ import Image from "next/image";
 import { MapPin, Clock, ShieldCheck, Factory } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ContactForm } from "./ContactForm";
+import { PLANT_LOCATION } from "@/data/plant-location";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 interface ContactBodyProps {
@@ -38,7 +39,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                 </span>
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#183c6b] text-white text-[11px] font-mono font-semibold border border-[#85b2cf]/30">
                   <MapPin className="w-3 h-3 text-[#e5c798]" />
-                  <span className="whitespace-nowrap">10°51&apos;N &bull; 71°20&apos;W</span>
+                  <span className="whitespace-nowrap">{PLANT_LOCATION.label}</span>
                 </span>
               </div>
 
@@ -46,7 +47,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <div className="relative w-full aspect-[1144/768] select-none rounded-2xl overflow-hidden bg-white p-2 border border-slate-100 my-auto">
                 <Image
                   src="/images/mapa-venezuela-final.png"
-                  alt={isEs ? "Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (10°51'N, 71°20'W)" : "Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (10°51'N, 71°20'W)"}
+                  alt={isEs ? `Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (${PLANT_LOCATION.label})` : `Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (${PLANT_LOCATION.label})`}
                   fill
                   priority
                   className="object-contain mix-blend-multiply"
@@ -56,7 +57,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                 {/* Pin interactivo pulsante en Los Olivitos */}
                 <div
                   className="absolute z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-                  style={{ left: "17.0%", top: "17.6%" }}
+                  style={PLANT_LOCATION.mapPin}
                   aria-label={isEs ? "Ubicación de PRODUSAL en Los Olivitos, Zulia" : "PRODUSAL location at Los Olivitos, Zulia"}
                 >
                   {/* Ondas de Radar Pulsantes */}
@@ -87,7 +88,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
 
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {isEs
-                    ? "Ubicado en el Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia. Cuenta con 5.400 Ha de superficie y capacidad instalada de 650.000 TM/año."
+                    ? "Ubicado en el Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia. Cuenta con 5.400 Ha de superficie y capacidad de 650.000 TM/año."
                     : "Located in Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State. Features 5,400 Ha total surface and 650,000 MT/yr operational capacity."}
                 </p>
 
@@ -103,10 +104,10 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
 
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-heading">
-                      {isEs ? "Participación Nacional" : "National Market Share"}
+                      {isEs ? "Distribución Nacional" : "National Distribution"}
                     </span>
                     <span className="text-sm font-extrabold text-[#183c6b] font-heading">
-                      {isEs ? "65% del mercado" : "65% of the market"}
+                      {isEs ? "Todo el país" : "Nationwide"}
                     </span>
                   </div>
                 </div>

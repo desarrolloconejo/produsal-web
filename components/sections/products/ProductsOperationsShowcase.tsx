@@ -17,12 +17,12 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
   const cards = [
     {
       title: isEs ? "Pureza Solar Natural" : "Natural Solar Purity",
-      subtitle: isEs ? "Cristalización Marina sin Aditivos" : "Additive-Free Marine Crystallization",
+      subtitle: isEs ? "Cristalización Solar sin Aditivos" : "Additive-Free Solar Crystallization",
       desc: isEs
-        ? "Sal 100% pura cosechada bajo evaporación solar y régimen de vientos alisios en Los Olivitos. Cristales limpios con ≥ 99,3% de NaCl garantizado."
-        : "100% pure solar sea salt harvested under continuous sun and trade winds at Los Olivitos. Clean crystals with ≥ 99.3% guaranteed NaCl.",
+        ? "Sal 100% pura cosechada bajo evaporación solar y régimen de vientos alisios en Los Olivitos. Cristales limpios con 99,3% de NaCl mínimo garantizado."
+        : "100% pure solar salt harvested under continuous sun and trade winds at Los Olivitos. Clean crystals with a guaranteed minimum of 99.3% NaCl.",
       image: "/images/produsal-sal-manos-pureza.webp",
-      alt: "Manos sosteniendo sal marina pura PRODUSAL",
+      alt: "Manos sosteniendo sal pura PRODUSAL",
       tag: isEs ? "Materia Prima Pura" : "Pure Raw Material",
       icon: <Sparkles className="w-4 h-4 text-[#e5c798]" />,
       tagClass: "text-[#e5c798] border-[#e5c798]/40",
@@ -32,8 +32,8 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
       title: isEs ? "Despacho Masivo a Granel" : "Massive Bulk Dispatch",
       subtitle: isEs ? "Tolvas Industriales y Gandolas" : "Industrial Hoppers & Bulk Trailers",
       desc: isEs
-        ? "Carga continua directa en patio de acopio con cargadores frontales y pesaje certificado. Abastecimiento ininterrumpido a plantas petroquímicas y alimentarias."
-        : "Continuous yard loading with front-end loaders and certified scales. Uninterrupted supply to petrochemical and food processing complexes.",
+        ? "Carga continua directa en patio de acopio con cargadores frontales y pesaje controlado. Abastecimiento ininterrumpido a plantas petroquímicas e industriales."
+        : "Continuous yard loading with front-end loaders and controlled weighing. Uninterrupted supply to petrochemical and industrial plants.",
       image: "/images/produsal-despacho-granel.webp",
       alt: "Cargador pesado despachando sal a granel en gandola tolva PRODUSAL",
       tag: isEs ? "Logística de Escala" : "Scale Logistics",
@@ -43,7 +43,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
     },
     {
       title: isEs ? "Líneas de Envasado Continuo" : "Automated Packaging Lines",
-      subtitle: isEs ? "Sacos de 20 kg y Big Bags de 1 TM" : "20 kg Bags & 1 MT Big Bags",
+      subtitle: isEs ? "Sacos de 20 kg y Big Bags" : "20 kg Bags & Big Bags",
       desc: isEs
         ? "Estaciones de ensacado con dosificación exacta y costura reforzada de alta resistencia. Identificación oficial de lote y código de control CPE."
         : "Bagging stations with precision dosing and reinforced heavy-duty stitching. Official lot identification and CPE regulatory compliance.",
@@ -56,7 +56,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
     },
     {
       title: isEs ? "Inspección y Trazabilidad" : "Quality Inspection & Traceability",
-      subtitle: isEs ? "Certificados de Calidad por Lote" : "Batch Quality Certification",
+      subtitle: isEs ? "Control de Calidad por Lote" : "Batch Quality Control",
       desc: isEs
         ? "Supervisión analítica de parámetros físico-químicos antes de cada salida. Cumplimiento estricto de especificaciones ASTM E534-98."
         : "Analytical verification of physicochemical parameters prior to dispatch. Strict compliance with ASTM E534-98 standards.",
@@ -94,8 +94,8 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
             <ScrollReveal animation="fade-up" delay={100}>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 {isEs
-                  ? "Conoce las instalaciones, líneas de empaque y operaciones logísticas que respaldan el 65% de la producción de sal marina en Venezuela."
-                  : "Explore the facilities, packaging lines, and logistics operations that deliver 65% of Venezuela's solar marine salt."}
+                  ? "Conoce las instalaciones, líneas de empaque y operaciones logísticas con las que abastecemos a la industria de todo el país."
+                  : "Explore the facilities, packaging lines, and logistics operations that supply industries across the country."}
               </p>
             </ScrollReveal>
           </div>
@@ -186,8 +186,8 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
                 </h3>
                 <p className="text-sm text-white/85 leading-relaxed max-w-2xl">
                   {isEs
-                    ? "Operamos dentro del Refugio de Fauna Silvestre Ciénaga de Los Olivitos, garantizando procesos 100% limpios que conviven en equilibrio con la colonia de flamencos y la biodiversidad marina."
-                    : "Operating within the Los Olivitos Wildlife Refuge, we maintain 100% clean solar processes coexisting in balance with flamingo colonies and marine biodiversity."}
+                    ? "Operamos dentro del Refugio de Fauna Silvestre Ciénaga de Los Olivitos, garantizando procesos 100% limpios que conviven en equilibrio con la colonia de flamencos y la biodiversidad costera."
+                    : "Operating within the Los Olivitos Wildlife Refuge, we maintain 100% clean solar processes coexisting in balance with flamingo colonies and coastal biodiversity."}
                 </p>
               </div>
 

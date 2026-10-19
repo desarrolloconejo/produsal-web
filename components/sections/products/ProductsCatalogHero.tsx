@@ -60,7 +60,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
                 {isEs ? "Soluciones Salinas" : "High-Purity"}
               </span>{" "}
               <span className="text-white/95 block sm:inline">
-                {isEs ? "de Alta Pureza" : "Sea Salt Solutions"}
+                {isEs ? "de Alta Pureza" : "Salt Solutions"}
               </span>
             </h1>
           </ScrollReveal>

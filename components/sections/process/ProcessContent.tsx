@@ -1,4 +1,4 @@
-import { Waves, Sun, Sparkles, Filter, Layers, Truck, ArrowRight, ArrowLeft, ArrowDown, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowLeft, ArrowDown, CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
@@ -9,9 +9,7 @@ interface ProcessContentProps {
   dict: ProcessSectionDict;
 }
 
-const STEP_ICONS = [Waves, Sun, Sparkles, Filter, Layers, Truck];
-
-// Configuración de distribución no uniforme: tarjetas con amplio margen para lucir los iconos en el lateral derecho
+// Configuración de distribución no uniforme de las tarjetas (zigzag)
 const CARD_LAYOUTS = [
   {
     align: "md:self-start",
@@ -72,7 +70,6 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
       {/* 2. Flujo Lineal No Uniforme con Líneas Conectoras */}
       <div className="relative flex flex-col w-full">
         {dict.steps.map((item, index) => {
-          const Icon = STEP_ICONS[index] || Waves;
           const isLast = index === dict.steps.length - 1;
           const nextStep = !isLast ? dict.steps[index + 1] : null;
           const layout = CARD_LAYOUTS[index % CARD_LAYOUTS.length];
@@ -83,7 +80,6 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
             {
               // Paso 1: Alimentación de agua de mar (Celeste Costero)
               badgeColor: "text-[#85b2cf]",
-              giantIcon: "text-[#85b2cf]/50 drop-shadow-[0_0_24px_rgba(133,178,207,0.3)]",
               watermark: "text-[#85b2cf]/20 group-hover:text-[#85b2cf]/35",
               hoverBorder: "hover:border-[#85b2cf]/60",
               titleHover: "group-hover:text-[#85b2cf]",
@@ -91,15 +87,13 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
             {
               // Paso 2: Evaporación y concentración solar (Arena / Dorado Solar)
               badgeColor: "text-[#e5c798]",
-              giantIcon: "text-[#e5c798]/50 drop-shadow-[0_0_24px_rgba(229,199,152,0.3)]",
               watermark: "text-[#e5c798]/20 group-hover:text-[#e5c798]/35",
               hoverBorder: "hover:border-[#e5c798]/60",
               titleHover: "group-hover:text-[#e5c798]",
             },
             {
-              // Paso 3: Cristalización marina (Turquesa Salinas)
+              // Paso 3: Cristalización (Turquesa Salinas)
               badgeColor: "text-[#02aeaa]",
-              giantIcon: "text-[#02aeaa]/55 drop-shadow-[0_0_24px_rgba(2,174,170,0.25)]",
               watermark: "text-[#02aeaa]/20 group-hover:text-[#02aeaa]/35",
               hoverBorder: "hover:border-[#02aeaa]/60",
               titleHover: "group-hover:text-[#02aeaa]",
@@ -107,7 +101,6 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
             {
               // Paso 4: Cosecha y despacho (Turquesa Salinas)
               badgeColor: "text-[#02aeaa]",
-              giantIcon: "text-[#02aeaa]/55 drop-shadow-[0_0_24px_rgba(2,174,170,0.25)]",
               watermark: "text-[#02aeaa]/20 group-hover:text-[#02aeaa]/35",
               hoverBorder: "hover:border-[#02aeaa]/60",
               titleHover: "group-hover:text-[#02aeaa]",
@@ -118,21 +111,11 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
 
           return (
             <div key={item.step} className="flex flex-col w-full">
-              {/* Contenedor relativo de la tarjeta y su icono flotante de fondo */}
+              {/* Contenedor relativo de la tarjeta */}
               <ScrollReveal
                 animation="fade-up"
                 className={`relative flex flex-col group ${layout.align} ${layout.widthClass} ${layout.offsetClass}`}
               >
-                {/* Icono gigante DETRÁS de la tarjeta en el lado derecho (oculto en móvil: solo asomaba un borde) */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -right-24 sm:-right-36 lg:-right-48 top-1/2 -translate-y-1/2 w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 pointer-events-none select-none z-0 hidden md:flex items-center justify-center"
-                >
-                  <Icon
-                    className={`w-full h-full ${currentTheme.giantIcon} stroke-[1.75]`}
-                  />
-                </div>
-
                 {/* Tarjeta de Etapa (Sólida con fondo blanco por encima) */}
                 <article
                   className={`relative z-10 flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white shadow-sm border border-slate-200/80 ${currentTheme.hoverBorder} hover:shadow-xl transition-all duration-300 overflow-hidden w-full`}

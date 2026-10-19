@@ -123,7 +123,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           <div className="lg:col-span-5 relative w-full min-h-[300px] sm:min-h-[360px] lg:min-h-full">
             <Image
               src="/images/produsal-flamencos-laguna.webp"
-              alt={dict.showcase?.abraeTitle || "Santuario de Flamencos en la Reserva Natural Los Olivitos"}
+              alt={dict.showcase.abraeTitle}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 42vw"
@@ -151,17 +151,13 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
               </h3>
 
               <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-normal pt-1">
-                {dict.showcase?.abraeDescription || (dict.showcase?.territoryDescription || eraHoy.description)}
+                {dict.showcase.abraeDescription}
               </p>
             </div>
 
             {/* Puntos Clave de la Reserva ABRAE (sin métricas numéricas) */}
             <div className="flex flex-col gap-2.5 py-3 border-y border-white/10">
-              {(dict.showcase?.abraePoints || [
-                currentLang === "es" ? "Santuario reproductivo del Flamenco Rosado (Phoenicopterus ruber)" : "Breeding sanctuary for the Caribbean Pink Flamingo (Phoenicopterus ruber)",
-                currentLang === "es" ? "Humedal Ramsar de Importancia Internacional y Sitio RHRAP" : "Ramsar Wetland of International Importance & WHSRN Site",
-                currentLang === "es" ? "Equilibrio biológico entre salinidad controlada y fauna costera" : "Ecological balance between salt harvesting and coastal biodiversity",
-              ]).map((point, pIdx) => (
+              {dict.showcase.abraePoints.map((point, pIdx) => (
                 <div key={pIdx} className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[#e5c798] shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm text-white/90 font-medium leading-relaxed">

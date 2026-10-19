@@ -1,20 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { Compass, MapPin, Sparkles, Factory, SunMedium } from "lucide-react";
+import { Compass, MapPin, Sparkles, Truck } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
-import type { HeroStatItem } from "@/components/sections/hero/HeroStats";
+import { PLANT_LOCATION } from "@/data/plant-location";
 
 export type LocationSectionDict = Dictionary["locationSection"];
 
 interface LocationContentProps {
   currentLang: Locale;
   dict: LocationSectionDict;
-  stats?: HeroStatItem[];
 }
 
-export function LocationContent({ currentLang, dict, stats }: LocationContentProps) {
+export function LocationContent({ currentLang, dict }: LocationContentProps) {
   if (!dict) return null;
 
   const {
@@ -26,7 +25,7 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
     locationDetails,
     capacityLabel,
     capacityValue,
-    status
+    stats
   } = dict;
 
   const statThemes = [
@@ -39,20 +38,12 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
       accentText: "group-hover:text-[#02aeaa]",
     },
     {
-      Icon: Factory,
+      Icon: Truck,
       iconColor: "text-[#85b2cf]",
       boxHoverStyle: "group-hover:border-[#85b2cf] group-hover:bg-[#85b2cf]/20",
       topLine: "via-[#85b2cf]",
       hoverBorder: "hover:border-[#85b2cf]/60",
       accentText: "group-hover:text-[#85b2cf]",
-    },
-    {
-      Icon: SunMedium,
-      iconColor: "text-[#e5c798]",
-      boxHoverStyle: "group-hover:border-[#e5c798] group-hover:bg-[#e5c798]/20",
-      topLine: "via-[#e5c798]",
-      hoverBorder: "hover:border-[#e5c798]/60",
-      accentText: "group-hover:text-[#e5c798]",
     },
   ];
 
@@ -80,7 +71,7 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Columna Izquierda: Tarjetas de Métricas integradas verticalmente y Ficha de la Planta */}
         <ScrollReveal animation="fade-right" delay={100} className="lg:col-span-5 flex flex-col gap-4">
-          {/* 3 Métricas Clave */}
+          {/* Métricas Clave */}
           {stats && stats.length > 0 && (
             <div className="flex flex-col gap-3">
               {stats.map((stat, index) => {
@@ -113,7 +104,8 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
                       </div>
                     </div>
 
-                    <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading shrink-0 pl-2">
+                    {/* Las cifras van grandes; los valores en texto (ej. "Todo el país") más pequeños para no apretar la tarjeta */}
+                    <span className={`${/\d/.test(stat.value) ? "text-2xl sm:text-3xl" : "text-lg sm:text-xl text-right leading-tight max-w-[7rem]"} font-extrabold text-white tracking-tight font-heading shrink-0 pl-2`}>
                       {stat.value}
                     </span>
                   </div>
@@ -131,7 +123,7 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
               </span>
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#183c6b]/5 text-[#183c6b] border border-[#e5c798]/60 text-[10px] font-mono font-semibold">
                 <MapPin className="w-3 h-3 text-[#e5c798]" />
-                <span>10°51&apos;N &bull; 71°20&apos;W</span>
+                <span>{PLANT_LOCATION.label}</span>
               </span>
             </div>
 
@@ -159,18 +151,18 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
           <div className="relative w-full aspect-[1144/768] max-w-2xl mx-auto select-none">
             <Image
               src="/images/mapa-venezuela-final.png"
-              alt={currentLang === "es" ? "Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (10°51'N, 71°20'W)" : "Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (10°51'N, 71°20'W)"}
+              alt={currentLang === "es" ? `Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (${PLANT_LOCATION.label})` : `Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (${PLANT_LOCATION.label})`}
               fill
               priority
               className="object-contain mix-blend-multiply"
               sizes="(max-width: 1024px) 100vw, 58vw"
             />
 
-            {/* Pin interactivo en Los Olivitos (10°51'N, 71°20'W) posicionado con coordenadas calibradas */}
+            {/* Pin interactivo en Los Olivitos posicionado con coordenadas calibradas */}
             <div
               className="absolute z-20 -translate-x-1/2 -translate-y-1/2 group"
-              style={{ left: "17.0%", top: "17.6%" }}
-              aria-label={currentLang === "es" ? "Ubicación de PRODUSAL en Los Olivitos, Zulia (10°51'N, 71°20'W)" : "PRODUSAL location at Los Olivitos, Zulia (10°51'N, 71°20'W)"}
+              style={PLANT_LOCATION.mapPin}
+              aria-label={currentLang === "es" ? `Ubicación de PRODUSAL en Los Olivitos, Zulia (${PLANT_LOCATION.label})` : `PRODUSAL location at Los Olivitos, Zulia (${PLANT_LOCATION.label})`}
             >
               {/* Ondas de Radar Pulsantes */}
               <span className="absolute -inset-3 rounded-full bg-[#02aeaa] opacity-75 animate-ping pointer-events-none" />
@@ -184,14 +176,14 @@ export function LocationContent({ currentLang, dict, stats }: LocationContentPro
               {/* Badge flotante con coordenadas exactas */}
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 whitespace-nowrap bg-[#183c6b]/95 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-medium shadow-md flex items-center gap-1.5 border border-[#02aeaa]/40">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#02aeaa] animate-pulse" />
-                <span>10°51&apos;N, 71°20&apos;W</span>
+                <span>{PLANT_LOCATION.label}</span>
               </div>
             </div>
 
             {/* Botón flotante para ver en Google Maps */}
             <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 z-10">
               <a
-                href="https://maps.google.com/?q=10.8500,-71.3333"
+                href={PLANT_LOCATION.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/90 hover:bg-white text-[#183c6b] hover:text-[#02aeaa] px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl shadow-sm border border-slate-200/80 text-[11px] sm:text-xs font-heading font-bold flex items-center gap-1.5 transition-all backdrop-blur-sm"

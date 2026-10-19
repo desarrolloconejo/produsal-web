@@ -32,11 +32,7 @@ export default async function HomePage({ params }: PageProps) {
 
       {/* Sección Unificada: Métricas de Producción + Ubicación e Infraestructura Nacional */}
       <StatsWrapper id="infraestructura">
-        <LocationContent
-          currentLang={currentLang}
-          dict={dict.locationSection}
-          stats={dict.hero.stats}
-        />
+        <LocationContent currentLang={currentLang} dict={dict.locationSection} />
       </StatsWrapper>
 
       {/* Sección Nuestra Historia / Quiénes Somos: page > wrapper > content */}
@@ -54,9 +50,9 @@ export default async function HomePage({ params }: PageProps) {
         <ProductsContent currentLang={currentLang} dict={dict.products} />
       </ProductsWrapper>
 
-      {/* Sección Liderazgo de Mercado y Capacidad Instalada: page > wrapper > content */}
+      {/* Sección Producción Nacional de Sal: page > wrapper > content */}
       <MarketWrapper id="mercado">
-        <MarketContent currentLang={currentLang} dict={dict.marketSection} />
+        <MarketContent dict={dict.marketSection} />
       </MarketWrapper>
 
       {/* Sección Contacto: page > wrapper > content */}

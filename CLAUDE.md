@@ -94,6 +94,40 @@ Reemplazan a Montserrat y Gilroy del brief original por decision del cliente.
 para los spans dependen de su importancia si es menu avenir si son listas o
 resaltar colores dependen de que tipografia esten envueltos
 
+### Reglas de contenido (revision del cliente)
+
+Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
+
+- No mostrar participacion de mercado ni cifras que cambian cada año (65%,
+  "% del mercado", ventas anuales, consumo nacional por año). Son metricas
+  internas del cliente.
+- Decir "sal industrial", no "sal marina" (en ingles "industrial salt", no
+  "sea salt"). No usar "marino/marina" para describir el producto.
+- No mencionar el Golfo. El origen es la cienaga de Los Olivitos, una laguna
+  salada alimentada por el Mar Caribe.
+- Usar "principal" en lugar de "mayor" para la empresa o la salina (en ingles
+  "leading"). Excepciones: "al mayor" (venta mayorista) y "la mayor colonia de
+  flamencos".
+- Palabras prohibidas: "soberania" (usar "autonomia productiva" o
+  "abastecimiento"), "certificado/certificada" (solo se permite en la politica
+  de privacidad), "doble lavado" (es "lavado continuo"), "especialmente
+  formulada".
+- No presentar la sal como producto alimenticio ni de "grado alimentario".
+  La unica mencion permitida es "materia prima para el sector alimentario".
+- Capacidad: 650.000 TM/año, sin "instalada". No usar 800.000 TM.
+- No publicar metricas operativas internas (lineas de lavado de 300 TM/h).
+- "Mas de 20 años" de trayectoria.
+- No decir "internacional" sobre el alcance comercial (si se permite en
+  "Humedal Ramsar de Importancia Internacional").
+- Especificaciones de producto: la fuente es la ficha tecnica PDF
+  (public/docs/fichas). Formato "mín/máx" (no "≤/≥"), sin densidad. En
+  tarjetas solo pureza y humedad.
+- Big Bags sin tonelaje (hay varias presentaciones). La Sal Bruta Tipo A no se
+  ofrece en sacos de 20 kg.
+- Coordenadas de la planta: 10.781482, -71.415893. Viven solo en
+  data/plant-location.ts.
+- Iconos solo si estan relacionados con el contenido.
+
 ### Secciones y Textos
 
 #### 404

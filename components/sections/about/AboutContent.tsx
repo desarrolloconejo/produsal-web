@@ -22,7 +22,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       title: isEs ? "Fundación en Maracaibo" : "Foundation in Maracaibo",
       desc: isEs
         ? "Creada por el Grupo Zuliano como iniciativa estratégica para el desarrollo industrial salinero en el occidente del país."
-        : "Founded by Grupo Zuliano as a strategic venture to pioneer industrial sea salt production in western Venezuela.",
+        : "Founded by Grupo Zuliano as a strategic venture to pioneer industrial salt production in western Venezuela.",
     },
     {
       year: "1999",
@@ -35,20 +35,12 @@ export function AboutContent({ currentLang }: AboutContentProps) {
 
   const operationalStats = [
     {
-      value: "800.000",
-      unit: isEs ? "TM / Año" : "MT / Year",
-      label: isEs ? "Capacidad Instalada Total" : "Total Installed Capacity",
-      desc: isEs
-        ? "Potencial de diseño industrial de cosecha marina solar en Los Olivitos."
-        : "Full industrial engineering design potential at Los Olivitos solar flats.",
-    },
-    {
       value: "650.000",
       unit: isEs ? "TM / Año" : "MT / Year",
       label: isEs ? "Capacidad Operativa Actual" : "Current Operational Output",
       desc: isEs
-        ? "La mayor salina de Venezuela operando bajo altos estándares de eficiencia."
-        : "Venezuela's largest operating sea salt facility with world-class efficiency.",
+        ? "La principal salina de Venezuela operando bajo altos estándares de eficiencia."
+        : "Venezuela's leading salt facility operating under high efficiency standards.",
     },
     {
       value: "450.000",
@@ -70,25 +62,22 @@ export function AboutContent({ currentLang }: AboutContentProps) {
 
   const marketSegments = [
     {
-      percent: "37%",
-      title: isEs ? "Consumo Humano e Industria Alimentaria" : "Human Consumption & Food Manufacturing",
+      title: isEs ? "Sector Petroquímico y Químico" : "Petrochemical & Chemical Sector",
       desc: isEs
-        ? "Sal refinada y de mesa, materia prima para refinerías, procesadoras de embutidos, panificación, lácteos y consumo masivo."
-        : "Table salt, refined crystals, and food-grade ingredients for industrial processors, baking, dairy, and consumer packaged goods.",
+        ? "Suministro directo a Pequiven y PDVSA para síntesis de cloro gas, ácido clorhídrico (HCl), soda cáustica, PVC y fluidos de perforación."
+        : "Direct supply to Pequiven and PDVSA for chlorine gas, hydrochloric acid (HCl), caustic soda, PVC, and drilling fluids.",
     },
     {
-      percent: "35%",
-      title: isEs ? "Nutrición Animal y Ganadería (ABA)" : "Animal Nutrition & Livestock Feed (ABA)",
+      title: isEs ? "Nutrición Animal y Ganadería" : "Animal Nutrition & Livestock",
       desc: isEs
-        ? "Insumo indispensable para Alimentos Balanceados para Animales (ABA), bloques nutricionales y sales minerales para el rebaño nacional."
-        : "Essential mineral base for livestock feed formulations (ABA), mineral lick blocks, and nutritional supplements for agriculture.",
+        ? "Materia prima para sales minerales, bloques nutricionales y suplementación del rebaño nacional."
+        : "Raw material for mineral salts, lick blocks, and nutritional supplementation for livestock.",
     },
     {
-      percent: "28%",
-      title: isEs ? "Sector Industrial, Petroquímica y Aguas" : "Industrial, Petrochemical & Water Treatment",
+      title: isEs ? "Tratamiento de Aguas e Industria" : "Water Treatment & Industry",
       desc: isEs
-        ? "Suministro directo a Pequiven, PDVSA y acueductos para síntesis de cloro gas, ácido clorhídrico (HCl), soda cáustica, PVC y fluidos de perforación."
-        : "Direct supply to Pequiven, PDVSA, and municipal utilities for chlorine gas, hydrochloric acid (HCl), caustic soda, PVC, and drilling fluids.",
+        ? "Suministro para acueductos, equipos suavizadores y procesos industriales que requieren sal de alta pureza."
+        : "Supply for municipal utilities, softening equipment, and industrial processes that require high-purity salt.",
     },
   ];
 
@@ -97,7 +86,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       icon: <ShieldCheck className="w-6 h-6 text-[#02aeaa]" />,
       title: isEs ? "Zona ABRAE Bajo Manejo Especial" : "ABRAE Protected Ecological Zone",
       desc: isEs
-        ? "Nuestras 5.400 hectáreas forman parte de un Área Bajo Régimen de Administración Especial, garantizando la preservación del ecosistema marino y costero."
+        ? "Nuestras 5.400 hectáreas forman parte de un Área Bajo Régimen de Administración Especial, garantizando la preservación del ecosistema costero y sus humedales."
         : "Our 5,400 proprietary hectares are integrated into an Area Under Special Administrative Regime, ensuring strict coastal and wetland stewardship.",
     },
     {
@@ -146,8 +135,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
             {isEs
-              ? "Desde su concepción en Maracaibo hasta convertirse en la salina más grande del país, PRODUSAL ha desarrollado una infraestructura industrial única con dos líneas de lavado de 300 TM/hr y tecnología de cristalización solar continua."
-              : "From our roots in Maracaibo to operating the nation's largest salt harvest facility, PRODUSAL has built specialized industrial capacity featuring two 300 MT/hr washing lines and continuous solar crystallization."}
+              ? "Desde su concepción en Maracaibo hasta convertirse en la principal salina del país, PRODUSAL ha desarrollado una infraestructura industrial única con tecnología de cristalización solar continua."
+              : "From our roots in Maracaibo to operating the nation's leading salt facility, PRODUSAL has built specialized industrial capacity with continuous solar crystallization technology."}
           </p>
 
           <div className="flex flex-col gap-4">
@@ -177,7 +166,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {operationalStats.map((stat, idx) => (
             <div
               key={idx}
@@ -211,8 +200,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
             </h2>
             <p className="text-sm sm:text-base text-white/80 leading-relaxed">
               {isEs
-                ? "El 88% de la sal producida en Venezuela proviene del Estado Zulia, y el 65% de ese volumen es generado por PRODUSAL. Abastecemos de forma estratégica a tres grandes segmentos económicos:"
-                : "88% of Venezuela's sea salt production originates in Zulia state, with 65% produced directly by PRODUSAL. We strategically supply three primary economic sectors:"}
+                ? "Desde Los Olivitos abastecemos de forma estratégica a tres grandes sectores económicos del país:"
+                : "From Los Olivitos we strategically supply three primary economic sectors across the country:"}
             </p>
           </div>
 
@@ -230,10 +219,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                   key={idx}
                   className={`p-6 rounded-2xl bg-white/10 border border-white/15 ${segTheme.border} transition-all backdrop-blur-sm group`}
                 >
-                  <div className={`text-3xl font-extrabold ${segTheme.color} font-heading mb-2`}>
-                    {seg.percent}
-                  </div>
-                  <h3 className="text-base font-bold text-white mb-2 leading-snug">{seg.title}</h3>
+                  <h3 className={`text-lg font-extrabold ${segTheme.color} font-heading mb-2 leading-snug`}>{seg.title}</h3>
                   <p className="text-xs text-white/70 leading-relaxed">{seg.desc}</p>
                 </div>
               );
@@ -282,8 +268,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl mt-2">
             {isEs
-              ? "Más de 35 años de experiencia técnica respaldada por un equipo multidisciplinario de ingenieros químicos, mecánicos, supervisores de campo y operadores certificados que trabajan día a día en Los Olivitos."
-              : "Over 35 years of industrial salt expertise delivered by a multidisciplinary team of chemical engineers, plant technicians, field supervisors, and certified operators working daily at Los Olivitos."}
+              ? "Más de 20 años de experiencia técnica respaldada por un equipo multidisciplinario de ingenieros químicos, mecánicos, supervisores de campo y operadores especializados que trabajan día a día en Los Olivitos."
+              : "Over 20 years of industrial salt expertise delivered by a multidisciplinary team of chemical engineers, plant technicians, field supervisors, and specialized operators working daily at Los Olivitos."}
           </p>
         </div>
 
@@ -321,7 +307,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
             <div className="relative aspect-16/10 bg-slate-100 overflow-hidden">
               <Image
                 src="/images/produsal-envasado-operadores.webp"
-                alt={isEs ? "Operadores en planta envasando sal marina Produsal" : "Plant operators packaging Produsal sea salt"}
+                alt={isEs ? "Operadores en planta envasando sal Produsal" : "Plant operators packaging Produsal salt"}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -402,8 +388,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </h3>
           <p className="text-sm text-white/90 leading-relaxed">
             {isEs
-              ? "Atendemos despachos en sacos de 20 Kg, Big Bags de 1 TM y despachos a granel directamente desde nuestro patio de acopio en Los Olivitos."
-              : "We fulfill shipments in 20 Kg bags, 1 MT Big Bags, and bulk freight directly from our Los Olivitos stockpiling terminal."}
+              ? "Atendemos despachos en sacos de 20 Kg, Big Bags y a granel directamente desde nuestro patio de acopio en Los Olivitos."
+              : "We fulfill shipments in 20 Kg bags, Big Bags, and bulk freight directly from our Los Olivitos stockpiling terminal."}
           </p>
         </div>
 

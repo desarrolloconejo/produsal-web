@@ -9,11 +9,11 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Produsal | Productora de Sal Marina de Venezuela",
+    default: "Produsal | Productora de Sal Industrial de Venezuela",
     template: "%s | Produsal",
   },
   description:
-    "Productora, refinadora y distribuidora de sal marina de alta pureza (99.8%) cosechada por evaporación solar en las costas de Venezuela.",
+    "Productora y distribuidora de sal industrial de alta pureza obtenida por evaporación solar en Los Olivitos, Zulia, Venezuela.",
   icons: {
     icon: [
       { url: "/icon.png", type: "image/png" },

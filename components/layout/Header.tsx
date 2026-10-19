@@ -67,7 +67,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
         >
           <Image
             src="/images/PRODUSAL.webp"
-            alt={currentLang === "es" ? "Produsal - Productora de Sal Marina" : "Produsal - Sea Salt Producer"}
+            alt={currentLang === "es" ? "Produsal - Productora de Sal Industrial" : "Produsal - Industrial Salt Producer"}
             width={160}
             height={35}
             priority

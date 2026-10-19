@@ -15,8 +15,8 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
   const title = contactDict?.title || (isEs ? "¡Cotiza Ahora!" : "Quote Now!");
   const badge = contactDict?.badge || (isEs ? "Atención Comercial e Industrial" : "Commercial & Industrial Inquiries");
   const description = contactDict?.description || (isEs
-    ? "Nuestro equipo de ventas técnicas y operaciones está disponible para atender requerimientos de la industria alimentaria, química, tratamiento de aguas y exportación."
-    : "Our technical sales and operations team is available to assist requirements for the food, chemical, water treatment, and export industries.");
+    ? "Nuestro equipo de ventas técnicas y operaciones está disponible para atender requerimientos de la industria petroquímica, química, tratamiento de aguas y nutrición animal."
+    : "Our technical sales and operations team is available to assist requirements for the petrochemical, chemical, water treatment, and animal nutrition industries.");
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

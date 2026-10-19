@@ -62,57 +62,51 @@ export function CategoryDetailView({
       param: isEs ? "Cloruro de Sodio (Base Seca % p/p)" : "Sodium Chloride (Dry Base % w/w)",
       value: category.purity,
       method: "ASTM E534-98",
-      coa: isEs ? "Por lote (Sí)" : "Per lot (Yes)",
+      frequency: isEs ? "Por lote" : "Per lot",
     },
     {
       param: isEs ? "Humedad Superficial (% p/p)" : "Surface Moisture (% w/w)",
       value: category.humidity,
       method: "ASTM E534-98",
-      coa: isEs ? "Por lote (Sí)" : "Per lot (Yes)",
+      frequency: isEs ? "Por lote" : "Per lot",
     },
     {
       param: isEs ? "Calcio como Ca++ (% p/p)" : "Calcium as Ca++ (% w/w)",
       value: category.calcium,
       method: "ASTM E534-98",
-      coa: isEs ? "Por lote (Sí)" : "Per lot (Yes)",
+      frequency: isEs ? "Por lote" : "Per lot",
     },
     {
       param: isEs ? "Magnesio como Mg++ (% p/p)" : "Magnesium as Mg++ (% w/w)",
       value: category.magnesium,
       method: "ASTM E534-98",
-      coa: isEs ? "Por lote (Sí)" : "Per lot (Yes)",
+      frequency: isEs ? "Por lote" : "Per lot",
     },
     {
       param: isEs ? "Sulfatos como SO4 (% p/p)" : "Sulfates as SO4 (% w/w)",
       value: category.sulfates,
       method: "ASTM E534-98",
-      coa: isEs ? "Por lote (Sí)" : "Per lot (Yes)",
+      frequency: isEs ? "Por lote" : "Per lot",
     },
     {
       param: isEs ? "Insolubles en Agua (% p/p)" : "Water Insolubles (% w/w)",
       value: category.insolubles,
       method: "ASTM E534-98",
-      coa: isEs ? "Por lote (Sí)" : "Per lot (Yes)",
-    },
-    {
-      param: isEs ? "Densidad Aparente (g/L)" : "Bulk Density (g/L)",
-      value: category.density,
-      method: isEs ? "Interno Produsal" : "Produsal Internal",
-      coa: isEs ? "Referencial" : "Referential",
+      frequency: isEs ? "Por lote" : "Per lot",
     },
     {
       param: isEs ? "Aditivos / Antiaglomerante" : "Additives / Anticaking",
       value: category.additives,
       method: isEs ? "Interno Produsal" : "Produsal Internal",
-      coa: isEs ? "Por lote (Sí)" : "Per lot (Yes)",
+      frequency: isEs ? "Por lote" : "Per lot",
     },
     {
       param: isEs ? "Empaque Sacos 20 kg (Control CPE)" : "20 kg Bags Packaging (CPE Control)",
       value: category.cpe,
       method: isEs ? "Regulación Nacional" : "National Standard",
-      coa: isEs ? "Identificado en saco" : "Bag labeled",
+      frequency: isEs ? "Identificado en saco" : "Bag labeled",
     },
-  ];
+  ].filter((row) => row.value); // sin fila de CPE en productos que no se venden en sacos
 
   return (
     <div className="w-full bg-brand-offwhite min-h-screen">
@@ -164,7 +158,7 @@ export function CategoryDetailView({
                     }`}
                   >
                     {isPremium
-                      ? isEs ? "Grado Premium Certificado" : "Certified Premium Grade"
+                      ? isEs ? "Grado Premium" : "Premium Grade"
                       : isEs ? "Tipo A Estándar Industrial" : "Standard Type A"}
                   </span>
                 </div>
@@ -232,8 +226,8 @@ export function CategoryDetailView({
                     <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/60 via-transparent to-transparent pointer-events-none" />
                   </div>
 
-                  {/* 3 Métricas flotantes al pie de la foto */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-3">
+                  {/* Métricas clave al pie de la foto: pureza y humedad */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3">
                     <div className="p-3 rounded-xl bg-white/10 border border-white/10 flex items-center justify-between gap-3 sm:block sm:text-center">
                       <span className="text-[10px] text-slate-400 uppercase font-heading block">
                         {dict.purityLabel}
@@ -249,15 +243,6 @@ export function CategoryDetailView({
                       </span>
                       <span className="text-sm font-extrabold text-[#85b2cf] font-heading">
                         {category.humidity}
-                      </span>
-                    </div>
-
-                    <div className="p-3 rounded-xl bg-white/10 border border-white/10 flex items-center justify-between gap-3 sm:block sm:text-center">
-                      <span className="text-[10px] text-slate-400 uppercase font-heading block">
-                        {isEs ? "Densidad" : "Density"}
-                      </span>
-                      <span className="text-sm sm:text-xs font-extrabold text-[#e5c798] font-heading sm:truncate sm:block">
-                        {category.density}
                       </span>
                     </div>
                   </div>
@@ -287,8 +272,8 @@ export function CategoryDetailView({
               </h2>
               <p className="text-slate-600 text-sm max-w-3xl">
                 {isEs
-                  ? "Parámetros certificados basados en la metodología normalizada ASTM E534-98 con entrega de Certificado de Análisis (CoA) lote a lote."
-                  : "Certified parameters based on ASTM E534-98 standard test methodology with Certificate of Analysis (CoA) issued per batch."}
+                  ? "Parámetros basados en la metodología normalizada ASTM E534-98, con control de calidad lote a lote."
+                  : "Parameters based on ASTM E534-98 standard test methodology, with batch-by-batch quality control."}
               </p>
             </div>
 
@@ -311,7 +296,7 @@ export function CategoryDetailView({
                         {isEs ? "Metodología Normativa" : "Standard Method"}
                       </th>
                       <th className="py-3.5 px-4 sm:px-6 font-bold">
-                        {isEs ? "Frecuencia CoA" : "CoA Frequency"}
+                        {isEs ? "Frecuencia de control" : "Control Frequency"}
                       </th>
                     </tr>
                   </thead>
@@ -331,7 +316,7 @@ export function CategoryDetailView({
                           {row.method}
                         </td>
                         <td className="py-3.5 px-4 sm:px-6 text-slate-600 font-medium">
-                          {row.coa}
+                          {row.frequency}
                         </td>
                       </tr>
                     ))}

@@ -28,13 +28,13 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-5">
               {isEs
-                ? "La mayor productora de sal marina de alta pureza en Venezuela"
-                : "Venezuela's premier producer of high-purity solar sea salt"}
+                ? "La principal productora de sal industrial de alta pureza en Venezuela"
+                : "Venezuela's leading producer of high-purity industrial salt"}
             </h1>
             <p className="text-base sm:text-lg text-white/80 leading-relaxed font-normal mb-6">
               {isEs
-                ? "PRODUSAL (Productora de Sal C.A.) es el pilar de la industria salinera venezolana. Aportamos el 65% de la producción nacional de sal marina desde nuestro complejo en Los Olivitos, combinando energía solar limpia con estándares de calidad de clase mundial."
-                : "PRODUSAL (Productora de Sal C.A.) is the cornerstone of the Venezuelan salt industry, supplying 65% of the country's sea salt from Los Olivitos through clean solar evaporation and world-class manufacturing standards."}
+                ? "PRODUSAL (Productora de Sal C.A.) es el pilar de la industria salinera venezolana. Aportamos a la producción nacional de sal industrial desde nuestro complejo en Los Olivitos, combinando energía solar limpia con estándares de calidad de clase mundial."
+                : "PRODUSAL (Productora de Sal C.A.) is the cornerstone of the Venezuelan salt industry, contributing to national industrial salt production from Los Olivitos through clean solar evaporation and world-class manufacturing standards."}
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -57,7 +57,7 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
           <div className="lg:col-span-5 relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
             <Image
               src="/images/produsal-piramides-cielo.webp"
-              alt={isEs ? "Estanques de cristalización solar y acopio de sal marina en Los Olivitos Produsal" : "Solar crystallization ponds and sea salt stockpiles at Produsal Los Olivitos"}
+              alt={isEs ? "Estanques de cristalización solar y acopio de sal en Los Olivitos Produsal" : "Solar crystallization ponds and salt stockpiles at Produsal Los Olivitos"}
               fill
               priority
               sizes="(max-width: 768px) 100vw, 40vw"
@@ -66,7 +66,7 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
             <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/85 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-4 left-4 right-4 text-white">
               <span className="text-[11px] font-bold text-[#e5c798] uppercase tracking-wider block font-heading">
-                {isEs ? "Cosecha Solar Marina" : "Solar Marine Harvest"}
+                {isEs ? "Cosecha Solar" : "Solar Harvest"}
               </span>
               <p className="text-xs sm:text-sm font-semibold text-white/95">
                 {isEs ? "Cristalización continua en Los Olivitos, Zulia" : "Continuous crystallization at Los Olivitos, Zulia"}

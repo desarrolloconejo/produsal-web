@@ -4,6 +4,7 @@ import { Compass, Phone, Mail, MapPin } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale } from "@/dictionaries/get-dictionary";
+import { PLANT_LOCATION } from "@/data/plant-location";
 
 interface ContactHeroProps {
   currentLang: Locale;
@@ -22,8 +23,8 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
   const subtitleText =
     dict?.subtitle ||
     (isEs
-      ? "Atendemos requerimientos de compra al mayor, despachos industriales, contratos a término y asesoría técnica para la industria química, alimentaria, petroquímica y nutrición animal."
-      : "We fulfill bulk wholesale orders, industrial shipments, long-term supply contracts, and custom technical support for the chemical, food manufacturing, and animal nutrition sectors.");
+      ? "Atendemos requerimientos de compra al mayor, despachos industriales, contratos a término y asesoría técnica para la industria química, petroquímica, tratamiento de agua y nutrición animal."
+      : "We fulfill bulk wholesale orders, industrial shipments, long-term supply contracts, and custom technical support for the chemical, petrochemical, water treatment, and animal nutrition sectors.");
 
   return (
     <section className="relative bg-[#183c6b] text-white py-16 sm:py-20 overflow-hidden border-b border-[#02aeaa]/20">
@@ -111,7 +112,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                     Los Olivitos, Zulia
                   </span>
                   <span className="text-[11px] text-white/60 truncate">
-                    10°51&apos;N, 71°20&apos;W
+                    {PLANT_LOCATION.label}
                   </span>
                 </div>
               </div>
