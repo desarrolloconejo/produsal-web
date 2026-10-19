@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { X, ArrowRight, Phone, Mail, ChevronDown } from "lucide-react";
@@ -17,7 +17,6 @@ interface MobileMenuProps {
     gallery: string;
     quality: string;
     contact: string;
-    intranet?: string;
   };
   productsDict?: Dictionary["products"];
 }
@@ -26,16 +25,24 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
   const [productsExpanded, setProductsExpanded] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
   const [animateIn, setAnimateIn] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [wasOpen, setWasOpen] = useState(isOpen);
+  // true solo en el cliente: el portal necesita document.body
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Al cambiar isOpen: montar el panel antes de animar la entrada, o iniciar la salida
+  if (isOpen !== wasOpen) {
+    setWasOpen(isOpen);
+    if (isOpen) setShouldRender(true);
+    else setAnimateIn(false);
+  }
 
   // Controlar animación fluida de entrada y salida (slide-in / slide-out)
   useEffect(() => {
     if (isOpen) {
-      setShouldRender(true);
       document.body.style.overflow = "hidden";
       const raf = requestAnimationFrame(() => {
         requestAnimationFrame(() => {
@@ -44,7 +51,6 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
       });
       return () => cancelAnimationFrame(raf);
     } else {
-      setAnimateIn(false);
       document.body.style.overflow = "";
       const timer = setTimeout(() => {
         setShouldRender(false);

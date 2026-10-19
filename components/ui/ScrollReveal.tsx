@@ -29,8 +29,8 @@ export function ScrollReveal({
   useEffect(() => {
     // Si el usuario prefiere movimiento reducido, mostrar inmediatamente
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
+      const raf = requestAnimationFrame(() => setIsVisible(true));
+      return () => cancelAnimationFrame(raf);
     }
 
     const observer = new IntersectionObserver(

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { X, Download, ExternalLink, FileText, Check } from "lucide-react";
+import { X, Download, ExternalLink, FileText } from "lucide-react";
 import type { Locale } from "@/dictionaries/get-dictionary";
 
 export interface PdfModalData {
@@ -25,13 +25,13 @@ export function PdfPreviewModal({
   currentLang,
 }: PdfPreviewModalProps) {
   const [activeLang, setActiveLang] = useState<Locale>(currentLang);
+  const [wasOpen, setWasOpen] = useState(isOpen);
 
-  // Sincronizar el idioma inicial cuando se abre el modal
-  useEffect(() => {
-    if (isOpen) {
-      setActiveLang(currentLang);
-    }
-  }, [isOpen, currentLang]);
+  // Sincronizar el idioma inicial cuando se abre el modal (ajuste durante el render, sin efecto)
+  if (isOpen !== wasOpen) {
+    setWasOpen(isOpen);
+    if (isOpen) setActiveLang(currentLang);
+  }
 
   // Manejo de tecla Escape y bloqueo de scroll
   useEffect(() => {

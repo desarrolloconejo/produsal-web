@@ -12,7 +12,6 @@ import {
   ShieldCheck,
   Layers,
   Truck,
-  CheckCircle2,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ProductsCarousel } from "./ProductsCarousel";

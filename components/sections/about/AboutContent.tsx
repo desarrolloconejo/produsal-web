@@ -2,17 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ShieldCheck,
-  Sun,
-  Droplets,
   ArrowRight,
-  CheckCircle,
-  Factory,
-  Layers,
   HeartHandshake,
   Trees,
-  Calendar,
-  Building2,
-  TrendingUp,
 } from "lucide-react";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale } from "@/dictionaries/get-dictionary";
