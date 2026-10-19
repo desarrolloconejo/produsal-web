@@ -176,14 +176,6 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
                 <span>{dict.ctaExplore}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-white group-hover/btn:translate-x-1 transition-transform" />
               </Link>
-
-              <Link
-                href={`/${currentLang}#contacto`}
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-white/90 hover:text-white font-bold text-xs bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 transition-all"
-              >
-                <span>{dict.ctaContact}</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
             </div>
           </div>
         </div>
