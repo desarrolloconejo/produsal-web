@@ -350,20 +350,23 @@
   "marketSection": {
     "badge": "Liderazgo Industrial y Producción Nacional",
     "title": "La sal en Venezuela",
-    "capacity": {
-      "text": "Capacidad operativa de PRODUSAL en el Complejo Los Olivitos",
-      "metric": "650.000 TM/año",
-      "subtext": "Producción solar continua para abastecer a la industria de todo el país."
-    },
-    "leadership": {
-      "text": "La principal salina del país es la de PRODUSAL, en Los Olivitos, Zulia",
-      "subtext": "Principal complejo de producción solar y abastecimiento estratégico para la industria venezolana."
-    },
-    "coastal": {
-      "metric": "100%",
-      "text": "de la sal en Venezuela se produce en zonas litorales de:",
-      "regions": "Sucre, Anzoátegui, Nueva Esparta, Falcón y Zulia."
-    }
+    "items": [
+      {
+        "label": "Origen de la sal",
+        "value": "Zonas litorales",
+        "text": "Toda la sal de Venezuela se produce en las costas de Sucre, Anzoátegui, Nueva Esparta, Falcón y Zulia."
+      },
+      {
+        "label": "Principal salina",
+        "value": "Los Olivitos, Zulia",
+        "text": "En la Costa Oriental del Lago de Maracaibo se encuentra la principal salina del país: un complejo de producción solar de 5.400 Ha."
+      },
+      {
+        "label": "Quiénes somos",
+        "value": "PRODUSAL",
+        "text": "Productora de Sal, C.A. opera el Complejo Los Olivitos desde 1999 y abastece a la industria de todo el país con sal solar de alta pureza."
+      }
+    ]
   },
   "locationSection": {
     "badge": "Infraestructura Nacional",

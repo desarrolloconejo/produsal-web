@@ -7,15 +7,16 @@ interface MarketContentProps {
   dict: MarketSectionDict;
 }
 
-// Solo datos estables: sin participación de mercado, ventas ni cifras que cambian cada año
+// Sin participación de mercado ni cifras que cambian cada año (regla del cliente).
+// Las tres columnas comparten la misma jerarquía: etiqueta, cifra y texto.
 export function MarketContent({ dict }: MarketContentProps) {
   if (!dict) return null;
 
-  const { badge, title, capacity, leadership, coastal } = dict;
+  const { badge, title, items } = dict;
 
   return (
-    <ScrollReveal animation="fade-up">
-      <div className="flex flex-col gap-8 sm:gap-10">
+    <div className="flex flex-col gap-10 sm:gap-12">
+      <ScrollReveal animation="fade-up">
         <div className="flex flex-col gap-3">
           <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
             {badge}
@@ -24,50 +25,25 @@ export function MarketContent({ dict }: MarketContentProps) {
             {title}
           </h2>
         </div>
+      </ScrollReveal>
 
-        {/* Grilla de 3 columnas con divisores verticales blancos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
-          {/* Columna 1: Capacidad operativa */}
-          <div className="flex flex-col justify-between pr-0 md:pr-8 lg:pr-10">
-            <div className="flex flex-col gap-3">
-              <p className="text-white/85 text-sm sm:text-base font-normal leading-relaxed">
-                {capacity.text}
-              </p>
-              <span className="my-2 text-xl sm:text-2xl lg:text-[1.75rem] xl:text-[2.1rem] font-black text-white font-heading tracking-tight leading-none whitespace-nowrap block">
-                {capacity.metric}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {items.map((item, index) => (
+          <ScrollReveal key={item.label} animation="fade-up" delay={index * 100}>
+            <div className="h-full flex flex-col gap-3 pt-5 border-t-2 border-[#02aeaa]/70">
+              <span className="text-[#85b2cf] text-xs font-bold uppercase tracking-wider font-heading">
+                {item.label}
               </span>
-            </div>
-            <p className="pt-3 mt-auto text-white/75 text-xs sm:text-sm font-normal leading-relaxed">
-              {capacity.subtext}
-            </p>
-          </div>
-
-          {/* Columna 2: Liderazgo de PRODUSAL */}
-          <div className="flex flex-col gap-3 pl-0 md:pl-8 lg:pl-10 pr-0 md:pr-8 lg:pr-10 border-t md:border-t-0 md:border-l border-white/20 pt-6 md:pt-0">
-            <p className="text-white font-extrabold text-sm sm:text-base leading-relaxed">
-              {leadership.text}
-            </p>
-            <p className="pt-2 text-white/80 text-xs sm:text-sm font-normal leading-relaxed">
-              {leadership.subtext}
-            </p>
-          </div>
-
-          {/* Columna 3: 100% Zonas litorales */}
-          <div className="flex flex-col justify-between pl-0 md:pl-8 lg:pr-10 border-t md:border-t-0 md:border-l border-white/20 pt-6 md:pt-0">
-            <div className="flex flex-col gap-3">
-              <span className="mb-1 text-4xl sm:text-5xl lg:text-6xl font-black text-[#85b2cf] font-heading tracking-tight leading-none block">
-                {coastal.metric}
+              <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight font-heading">
+                {item.value}
               </span>
-              <p className="text-white/85 text-xs sm:text-sm font-normal leading-relaxed">
-                {coastal.text}
+              <p className="text-white/80 text-sm leading-relaxed font-normal">
+                {item.text}
               </p>
             </div>
-            <p className="pt-3 mt-auto text-white/90 text-xs sm:text-sm font-semibold leading-relaxed">
-              {coastal.regions}
-            </p>
-          </div>
-        </div>
+          </ScrollReveal>
+        ))}
       </div>
-    </ScrollReveal>
+    </div>
   );
 }

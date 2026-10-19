@@ -350,20 +350,23 @@
   "marketSection": {
     "badge": "Industrial Leadership & National Production",
     "title": "Salt in Venezuela",
-    "capacity": {
-      "text": "PRODUSAL operational capacity at the Los Olivitos Complex",
-      "metric": "650,000 MT/year",
-      "subtext": "Continuous solar production supplying industries across the country."
-    },
-    "leadership": {
-      "text": "The leading salt facility in the country is PRODUSAL, in Los Olivitos, Zulia",
-      "subtext": "Main solar production complex and strategic supplier for Venezuelan industry."
-    },
-    "coastal": {
-      "metric": "100%",
-      "text": "of salt in Venezuela is harvested across coastal regions of:",
-      "regions": "Sucre, Anzoátegui, Nueva Esparta, Falcón and Zulia."
-    }
+    "items": [
+      {
+        "label": "Salt origin",
+        "value": "Coastal regions",
+        "text": "All of Venezuela's salt is produced along the coasts of Sucre, Anzoátegui, Nueva Esparta, Falcón and Zulia."
+      },
+      {
+        "label": "Leading salt facility",
+        "value": "Los Olivitos, Zulia",
+        "text": "On the Eastern Coast of Lake Maracaibo lies the country's leading salt facility: a 5,400 Ha solar production complex."
+      },
+      {
+        "label": "Who we are",
+        "value": "PRODUSAL",
+        "text": "Productora de Sal, C.A. has operated the Los Olivitos Complex since 1999, supplying industries across the country with high-purity solar salt."
+      }
+    ]
   },
   "locationSection": {
     "badge": "National Infrastructure",
