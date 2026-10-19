@@ -91,26 +91,6 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                     ? "Ubicado en el Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia. Cuenta con 5.400 Ha de superficie y capacidad de 650.000 TM/año."
                     : "Located in Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State. Features 5,400 Ha total surface and 650,000 MT/yr operational capacity."}
                 </p>
-
-                <div className="grid grid-cols-2 gap-3 pt-2">
-                  <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
-                    <span className="type-caption text-slate-400">
-                      {isEs ? "Capacidad Operativa" : "Operational Capacity"}
-                    </span>
-                    <span className="text-sm font-extrabold text-[#02aeaa] font-heading">
-                      {isEs ? "650.000 TM / año" : "650,000 MT / year"}
-                    </span>
-                  </div>
-
-                  <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
-                    <span className="type-caption text-slate-400">
-                      {isEs ? "Distribución Nacional" : "National Distribution"}
-                    </span>
-                    <span className="text-sm font-extrabold text-[#183c6b] font-heading">
-                      {isEs ? "Todo el país" : "Nationwide"}
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </ScrollReveal>
