@@ -372,16 +372,12 @@
     "locationHighlight": "PRODUSAL - Zulia",
     "plantName": "Los Olivitos Industrial Salt Complex",
     "locationDetails": "Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State.",
-    "capacityLabel": "Capacity:",
-    "capacityValue": "650,000 MT / year",
     "stats": [
       {
-        "value": "650K",
         "label": "MT / Year Output",
         "detail": "Venezuela's leading salt facility with 650,000 MT capacity"
       },
       {
-        "value": "Nationwide",
         "label": "National Distribution",
         "detail": "Direct dispatch from our plant to Venezuelan industry"
       }

@@ -16,14 +16,14 @@ interface HeroContentProps {
 
 export function HeroContent({ currentLang, dict }: HeroContentProps) {
   return (
-    <div className="max-w-4xl flex flex-col gap-4 sm:gap-6 text-left">
+    <div className="max-w-5xl flex flex-col gap-4 sm:gap-6 text-left">
       {/* Texto superior sin fondo, sin borde y sin icono */}
       <p className="animate-slide-up text-xs sm:text-base font-bold text-[#02aeaa] tracking-normal font-heading">
         {dict.badge}
       </p>
 
       {/* Gran Título Corporativo */}
-      <h1 className="animate-slide-up-delay-1 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-heading">
+      <h1 className="animate-slide-up-delay-1 text-3xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-heading">
         <span className="text-[#02aeaa] drop-shadow-xs">
           {dict.headlineHighlight}
         </span>{" "}

@@ -23,8 +23,6 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
     locationHighlight,
     plantName,
     locationDetails,
-    capacityLabel,
-    capacityValue,
     stats
   } = dict;
 
@@ -81,7 +79,7 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
                 return (
                   <div
                     key={stat.label + index}
-                    className={`rounded-2xl p-4 sm:p-5 bg-[#183c6b] border border-white/10 ${theme.hoverBorder} transition-all duration-300 hover:-translate-y-0.5 group relative overflow-hidden shadow-lg flex items-center justify-between gap-4`}
+                    className={`rounded-2xl p-4 sm:p-5 bg-[#183c6b] border border-white/10 ${theme.hoverBorder} transition-all duration-300 hover:-translate-y-0.5 group relative overflow-hidden shadow-lg flex items-center gap-4`}
                   >
                     {/* Acento sutil superior al hover */}
                     <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent ${theme.topLine} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
@@ -103,11 +101,6 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
                         </span>
                       </div>
                     </div>
-
-                    {/* Las cifras van grandes; los valores en texto (ej. "Todo el país") más pequeños para no apretar la tarjeta */}
-                    <span className={`${/\d/.test(stat.value) ? "text-2xl sm:text-3xl" : "text-lg sm:text-xl text-right leading-tight max-w-[7rem]"} font-extrabold text-white tracking-tight font-heading shrink-0 pl-2`}>
-                      {stat.value}
-                    </span>
                   </div>
                 );
               })}
@@ -134,15 +127,6 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
             <p className="text-xs text-slate-500 leading-relaxed font-normal">
               {locationDetails}
             </p>
-
-            <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
-              <span className="text-slate-400 font-medium font-heading uppercase text-[10px]">
-                {capacityLabel}
-              </span>
-              <span className="font-extrabold text-[#02aeaa] font-heading text-sm">
-                {capacityValue}
-              </span>
-            </div>
           </div>
         </ScrollReveal>
 

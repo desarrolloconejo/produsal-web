@@ -372,16 +372,12 @@
     "locationHighlight": "PRODUSAL - Zulia",
     "plantName": "Complejo Industrial Salinas Los Olivitos",
     "locationDetails": "Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia.",
-    "capacityLabel": "Capacidad:",
-    "capacityValue": "650.000 TM / año",
     "stats": [
       {
-        "value": "650K",
         "label": "TM / Año Operativas",
         "detail": "La principal salina de Venezuela con capacidad de 650.000 TM"
       },
       {
-        "value": "Todo el país",
         "label": "Distribución Nacional",
         "detail": "Despacho directo desde planta a la industria venezolana"
       }
