@@ -8,7 +8,7 @@ lograr.
 Uno de los requisitos indispensables es el diseño responsive y que es una web
 enfocada al multi idioma, de momento sera ingles y español, los trabajaremos con
 diccionarios de datos en .json, con next crearemos una carpeta (lang), que con
-el middleware se encargara de redirigir al usuario al idioma que desea, segun su
+el proxy (antes middleware) se encargara de redirigir al usuario al idioma que desea, segun su
 navegador y en las pages se consultara que idioma viene del usuario y se
 inyectara en la pagina pages.tsx arriba del header ira una barra delgada con los
 idiomas los logos en el extremo para que el usuario pueda seleccionarlo
@@ -22,14 +22,14 @@ app/
  ├── dictionaries/
  │    ├── es.json
  │    └── en.json
- └── middleware.ts
+ └── proxy.ts
 ```
 
-Next.js usa un archivo llamado middleware.ts que se ejecuta antes de que cargue
-la página. Su trabajo es revisar a los visitantes que entran a la raíz de tu
+Next.js usa un archivo llamado proxy.ts (en Next 16 reemplaza a middleware.ts,
+misma funcionalidad) que se ejecuta antes de que cargue la página. Su trabajo es revisar a los visitantes que entran a la raíz de tu
 sitio (tusitio.com) y redirigirlos.
 
-¿Qué hace el middleware exactamente?
+¿Qué hace el proxy exactamente?
 
 Revisa si el usuario ya tiene una cookie con su idioma preferido.
 
@@ -37,7 +37,7 @@ Si no la tiene, lee las cabeceras de su navegador (Accept-Language) para saber
 de qué país viene.
 
 Lo redirige automáticamente. Si alguien de México entra a tusitio.com, el
-middleware lo manda instantáneamente a [tusitio.com/es](https://tusitio.com/es).
+proxy lo manda instantáneamente a [tusitio.com/es](https://tusitio.com/es).
 
 ### Tecnologias a usar
 
@@ -86,10 +86,12 @@ Neutros:
 
 ### Tipografias
 
-- Montserrat (Textos)
-- Gilroy (Titulos y Subtitulos)
+- Work Sans (Textos)
+- Avenir (Titulos y Subtitulos)
 
-para los spans dependen de su importancia si es menu gilroy si son listas o
+Reemplazan a Montserrat y Gilroy del brief original por decision del cliente.
+
+para los spans dependen de su importancia si es menu avenir si son listas o
 resaltar colores dependen de que tipografia esten envueltos
 
 ### Secciones y Textos
@@ -109,8 +111,8 @@ Boton Volver al inicio
 #### Header
 
 Para mobile debe tener un menu hamburger con animaciones de entrada y salida
-para el suavizado, y debe tener menu y boton de intranet y contactanos que lleve
-a la seccion
+para el suavizado, y debe tener menu y boton de contactanos que lleve a la
+seccion (no lleva boton de intranet)
 
 Logo
 
