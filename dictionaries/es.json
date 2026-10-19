@@ -2,7 +2,34 @@
   "lang": "es",
   "meta": {
     "title": "Produsal | La Mayor Productora de Sal Marina de Venezuela | Los Olivitos, Zulia",
-    "description": "Líderes en extracción solar marina y distribución de sal de alta pureza (99.8%) con 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento mayorista para alimentos, petroquímica, tratamiento de agua y nutrición animal."
+    "description": "Líderes en extracción solar marina y distribución de sal de alta pureza (99.8%) con 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento mayorista para alimentos, petroquímica, tratamiento de agua y nutrición animal.",
+    "pages": {
+      "about": {
+        "title": "Nosotros | Produsal: La Mayor Salina de Venezuela | Los Olivitos, Zulia",
+        "description": "Descubre la historia, capacidad operativa (650.000 TM/año) y tecnología del Complejo Industrial Los Olivitos de Produsal en Zulia. Alianza estratégica y sustentabilidad marina."
+      },
+      "contact": {
+        "title": "Contacto y Ventas | Produsal C.A. - Los Olivitos, Zulia",
+        "description": "Contáctanos para atención comercial al mayor, despacho industrial de sal marina, especificaciones técnicas y cotizaciones para la industria alimentaria, química y nutrición animal."
+      },
+      "products": {
+        "title": "Catálogo de Productos Industriales | Produsal C.A.",
+        "description": "Catálogo oficial de sal marina solar de alta pureza (ASTM E534-98): Sal Bruta Premium, Sal Bruta Tipo A, Sal Molida Premium y Sal Molida Tipo A. Despachos a granel, Big Bags y sacos de 20 kg."
+      },
+      "privacy": {
+        "title": "Políticas de Privacidad | Produsal C.A. - Salinas Los Olivitos",
+        "description": "Conoce las políticas de privacidad y protección de datos comerciales de Productora de Sal, C.A. (PRODUSAL) en el Complejo Industrial Salinas Los Olivitos, Zulia."
+      },
+      "category": {
+        "title": "{name} ({code}) | Produsal C.A.",
+        "description": "{name} - {desc} Pureza certificada {purity} NaCl bajo norma ASTM E534-98. Ficha técnica y formatos disponibles.",
+        "notFound": "Categoría no encontrada | Produsal C.A."
+      },
+      "gallery": {
+        "title": "Galería | Produsal C.A. - Salinas Los Olivitos, Zulia",
+        "description": "Recorrido fotográfico por el Complejo Industrial Los Olivitos: salinas, cosecha, lavado, envasado y el equipo humano de Produsal."
+      }
+    }
   },
   "topBar": {
     "email": "infoprodusal@grupomimesa.com",
@@ -15,8 +42,7 @@
     "products": "Productos",
     "gallery": "Galería",
     "quality": "Calidad y Origen",
-    "contact": "Contacto",
-    "intranet": "Intranet"
+    "contact": "Contacto"
   },
   "hero": {
     "badge": "Complejo Industrial Los Olivitos • Zulia, Venezuela",
@@ -423,8 +449,6 @@
     ]
   },
   "gallery": {
-    "metaTitle": "Galería | Produsal C.A. - Salinas Los Olivitos, Zulia",
-    "metaDescription": "Recorrido fotográfico por el Complejo Industrial Los Olivitos: salinas, cosecha, lavado, envasado y el equipo humano de Produsal.",
     "badge": "Complejo Industrial Los Olivitos",
     "titleHighlight": "Galería",
     "titleRest": "Produsal",
@@ -495,7 +519,28 @@
     "formSubtitle": "Ingresa tus datos y te responderemos en menos de 24 horas hábiles con disponibilidad y cotización.",
     "privacyAcceptLabel": "He leído y acepto las",
     "privacyLinkLabel": "Políticas de Privacidad",
-    "privacyAcceptSuffix": "y el tratamiento de mis datos de contacto para fines comerciales."
+    "privacyAcceptSuffix": "y el tratamiento de mis datos de contacto para fines comerciales.",
+    "form": {
+      "nameLabel": "Nombre Completo *",
+      "namePlaceholder": "Ej. Carlos Mendoza",
+      "emailLabel": "Correo Electrónico *",
+      "emailPlaceholder": "carlos@empresa.com",
+      "companyLabel": "Empresa / Organización",
+      "companyPlaceholder": "Ej. Industria de Alimentos C.A.",
+      "messageLabel": "Mensaje o Requerimiento *",
+      "messagePlaceholder": "Indícanos tipo de sal requerida (grano grueso, fino, sal industrial), volumen estimado en TM y destino de despacho...",
+      "submit": "Enviar Solicitud",
+      "sending": "Enviando mensaje..."
+    },
+    "formMessages": {
+      "required": "Por favor completa todos los campos requeridos.",
+      "invalidEmail": "Por favor ingresa un correo electrónico válido.",
+      "tooLong": "Uno de los campos excede la longitud permitida.",
+      "success": "¡Gracias por contactarnos! Tu mensaje ha sido enviado correctamente a nuestro equipo.",
+      "devSuccess": "¡Mensaje recibido con éxito! En modo de desarrollo tu mensaje fue registrado.",
+      "error": "Ocurrió un error al enviar tu mensaje. Por favor intenta más tarde o contáctanos por teléfono.",
+      "companyFallback": "No especificada"
+    }
   },
   "privacy": {
     "badge": "Aviso Legal y Confidencialidad",

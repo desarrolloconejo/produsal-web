@@ -1,38 +1,20 @@
-import { Metadata } from "next";
-import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
+import { getDictionary, resolveLocale } from "@/dictionaries/get-dictionary";
+import { getPageMetadata } from "@/lib/metadata";
 import { ContactHero } from "@/components/sections/contact/ContactHero";
 import { ContactBody } from "@/components/sections/contact/ContactBody";
 
-export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+interface PageProps {
+  params: Promise<{ lang: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
-  const isEs = currentLang === "es";
-
-  return {
-    title: isEs
-      ? "Contacto y Ventas | Produsal C.A. - Los Olivitos, Zulia"
-      : "Contact & Sales | Produsal C.A. - Los Olivitos, Zulia",
-    description: isEs
-      ? "Contáctanos para atención comercial al mayor, despacho industrial de sal marina, especificaciones técnicas y cotizaciones para la industria alimentaria, química y nutrición animal."
-      : "Contact Produsal C.A. for commercial wholesale inquiries, industrial sea salt bulk orders, technical specifications, and quotations.",
-  };
+  return getPageMetadata(lang, "contact", "/contacto");
 }
 
-export default async function ContactoPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function ContactoPage({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
+  const currentLang = resolveLocale(lang);
   const dict = await getDictionary(currentLang);
 
   return (

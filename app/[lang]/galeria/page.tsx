@@ -1,51 +1,26 @@
-import { Metadata } from "next";
-import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
+import { getDictionary } from "@/dictionaries/get-dictionary";
+import { getPageMetadata } from "@/lib/metadata";
 import { GalleryHero, GalleryWrapper, GalleryContent } from "@/components/sections/gallery";
-import { galleryImages } from "@/data/gallery";
+import { galleryHeroImage, galleryGridImages } from "@/data/gallery-selection";
 
-// Foto del hero: no se repite en el grid ni en los heros de otras páginas
-const HERO_IMAGE = "/images/galeria/DSC00075.webp";
-
-export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+interface PageProps {
+  params: Promise<{ lang: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
-  const dict = await getDictionary(currentLang);
-
-  return {
-    title: dict.gallery.metaTitle,
-    description: dict.gallery.metaDescription,
-    alternates: {
-      languages: {
-        es: "/es/galeria",
-        en: "/en/galeria",
-      },
-    },
-  };
+  return getPageMetadata(lang, "gallery", "/galeria");
 }
 
-export default async function GaleriaPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function GaleriaPage({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
-  const dict = await getDictionary(currentLang);
-  const images = galleryImages.filter((image) => image.src !== HERO_IMAGE);
+  const dict = await getDictionary(lang);
 
   return (
     <div className="w-full">
-      <GalleryHero dict={dict.gallery} backgroundImageSrc={HERO_IMAGE} />
+      <GalleryHero dict={dict.gallery} backgroundImageSrc={galleryHeroImage} />
       <GalleryWrapper>
-        <GalleryContent dict={dict.gallery} images={images} />
+        <GalleryContent dict={dict.gallery} images={galleryGridImages} />
       </GalleryWrapper>
     </div>
   );

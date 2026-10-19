@@ -1,29 +1,20 @@
 "use client";
 
-import { useActionState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Send, CheckCircle2, AlertCircle, MapPin, Clock, ShieldCheck, Factory } from "lucide-react";
+import { MapPin, Clock, ShieldCheck, Factory } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { sendContactEmail, type ContactState } from "@/app/actions/send";
+import { ContactForm } from "./ContactForm";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 interface ContactBodyProps {
   currentLang: Locale;
-  dict?: Dictionary["contact"];
+  dict: Dictionary["contact"];
 }
-
-const initialState: ContactState = {
-  success: false,
-  message: "",
-};
 
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import { SectionTexture } from "@/components/ui/SectionTexture";
 
 export function ContactBody({ currentLang, dict }: ContactBodyProps) {
-  const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
-
   const isEs = currentLang === "es";
 
   return (
@@ -146,126 +137,12 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               </div>
 
               {/* Mensajes de Feedback de Formulario */}
-              {state.message && (
-                <div
-                  className={`p-4 rounded-xl mb-6 flex items-start gap-3 text-sm ${
-                    state.success
-                      ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
-                      : "bg-rose-50 text-rose-800 border border-rose-200"
-                  }`}
-                >
-                  {state.success ? (
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                  ) : (
-                    <AlertCircle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
-                  )}
-                  <p className="font-medium">{state.message}</p>
-                </div>
-              )}
-
-              <form action={formAction} className="flex flex-col gap-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-xs font-bold text-slate-700 mb-1.5 font-heading">
-                      {isEs ? "Nombre Completo *" : "Full Name *"}
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      placeholder={isEs ? "Ej. Carlos Mendoza" : "e.g. John Doe"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-xs font-bold text-slate-700 mb-1.5 font-heading">
-                      {isEs ? "Correo Electrónico *" : "Email Address *"}
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      placeholder={isEs ? "carlos@empresa.com" : "john@company.com"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="company" className="block text-xs font-bold text-slate-700 mb-1.5 font-heading">
-                    {isEs ? "Empresa / Organización" : "Company / Organization"}
-                  </label>
-                  <input
-                    id="company"
-                    name="company"
-                    type="text"
-                    placeholder={isEs ? "Ej. Industria de Alimentos C.A. / Pequiven" : "e.g. Food Processing Corp"}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-xs font-bold text-slate-700 mb-1.5 font-heading">
-                    {isEs ? "Mensaje o Requerimiento de Sal *" : "Message or Salt Requirement *"}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    placeholder={
-                      isEs
-                        ? "Indícanos tipo de sal requerida (grano grueso, fino, sal industrial), volumen estimado en TM y destino de despacho..."
-                        : "Specify required salt grade (coarse, fine, industrial), estimated tonnage volume, and delivery destination..."
-                    }
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-slate-50/50 focus:bg-white resize-none"
-                  />
-                </div>
-
-                {/* Checkbox de Políticas de Privacidad Obligatorio */}
-                <div className="flex items-start gap-2.5 pt-1">
-                  <input
-                    type="checkbox"
-                    id="privacy-contact"
-                    name="privacy"
-                    required
-                    className="mt-1 w-4 h-4 rounded text-[#02aeaa] border-slate-300 focus:ring-[#02aeaa] focus:ring-offset-0 cursor-pointer accent-[#02aeaa] shrink-0"
-                  />
-                  <label htmlFor="privacy-contact" className="text-xs text-slate-600 leading-snug cursor-pointer select-none">
-                    {dict?.privacyAcceptLabel || (isEs ? "He leído y acepto las" : "I have read and agree to the")}{" "}
-                    <Link
-                      href={`/${currentLang}/privacidad`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-[#02aeaa] hover:text-[#183c6b] underline underline-offset-2 transition-colors"
-                    >
-                      {dict?.privacyLinkLabel || (isEs ? "Políticas de Privacidad" : "Privacy Policy")}
-                    </Link>{" "}
-                    {dict?.privacyAcceptSuffix ||
-                      (isEs
-                        ? "y el tratamiento de mis datos de contacto para fines comerciales."
-                        : "and the processing of my contact information for commercial purposes.")}
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isPending}
-                  className="w-full mt-2 py-3.5 px-6 rounded-xl bg-[#02aeaa] hover:bg-[#183c6b] text-white font-bold text-sm shadow-md shadow-[#02aeaa]/20 hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer font-heading"
-                >
-                  {isPending ? (
-                    <span>{isEs ? "Enviando mensaje..." : "Sending message..."}</span>
-                  ) : (
-                    <>
-                      <span>{isEs ? "Enviar Solicitud de Cotización" : "Send Inquiry Request"}</span>
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </form>
+              <ContactForm
+                currentLang={currentLang}
+                dict={dict}
+                idPrefix="contact-page"
+                submitLabel={isEs ? "Enviar Solicitud de Cotización" : "Send Inquiry Request"}
+              />
             </div>
 
             {/* Garantía de respuesta rápida */}

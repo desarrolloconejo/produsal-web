@@ -1,27 +1,16 @@
 "use client";
 
-import { useActionState, useTransition } from "react";
-import Link from "next/link";
-import { Send, CheckCircle2, AlertCircle, Phone, Mail, MapPin, Building2 } from "lucide-react";
+import { Phone, Mail, MapPin, Building2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { sendContactEmail, type ContactState } from "@/app/actions/send";
+import { ContactForm } from "./ContactForm";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
-
-export type ContactSectionDict = Partial<Dictionary["contact"]>;
 
 interface ContactContentProps {
   currentLang: Locale;
-  contactDict?: ContactSectionDict;
+  contactDict: Dictionary["contact"];
 }
 
-const initialState: ContactState = {
-  success: false,
-  message: "",
-};
-
 export function ContactContent({ currentLang, contactDict }: ContactContentProps) {
-  const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
-
   const isEs = currentLang === "es";
   const title = contactDict?.title || (isEs ? "¡Cotiza Ahora!" : "Quote Now!");
   const badge = contactDict?.badge || (isEs ? "Atención Comercial e Industrial" : "Commercial & Industrial Inquiries");
@@ -108,126 +97,7 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
             : "We will respond within 24 business hours with specifications or quotation."}
         </p>
 
-        {state.message && (
-          <div
-            className={`p-4 rounded-xl mb-6 flex items-start gap-3 text-sm ${
-              state.success
-                ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
-                : "bg-rose-50 text-rose-800 border border-rose-200"
-            }`}
-          >
-            {state.success ? (
-              <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-            ) : (
-              <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
-            )}
-            <p className="font-medium">{state.message}</p>
-          </div>
-        )}
-
-        <form action={formAction} className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="name" className="block text-xs font-semibold text-slate-700 mb-1.5">
-                {isEs ? "Nombre Completo *" : "Full Name *"}
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                placeholder={isEs ? "Ej. Carlos Mendoza" : "e.g. John Doe"}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-xs font-semibold text-slate-700 mb-1.5">
-                {isEs ? "Correo Electrónico *" : "Email Address *"}
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                placeholder={isEs ? "carlos@empresa.com" : "john@company.com"}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label htmlFor="company" className="block text-xs font-semibold text-slate-700 mb-1.5">
-              {isEs ? "Empresa / Organización" : "Company / Organization"}
-            </label>
-            <input
-              id="company"
-              name="company"
-              type="text"
-              placeholder={isEs ? "Distribuidora / Industria Alimentos" : "Industry / Distribution Corp"}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-xs font-semibold text-slate-700 mb-1.5">
-              {isEs ? "Mensaje o Requerimiento *" : "Message or Requirement *"}
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              required
-              placeholder={
-                isEs
-                  ? "Indícanos tipo de sal requerida (grano grueso, fino, sal industrial), volumen estimado y lugar de entrega..."
-                  : "Specify required salt grade (coarse, fine, industrial), estimated volume, and destination..."
-              }
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 resize-none"
-            />
-          </div>
-
-          {/* Checkbox de Políticas de Privacidad Obligatorio */}
-          <div className="flex items-start gap-2.5 pt-1">
-            <input
-              type="checkbox"
-              id="privacy-home"
-              name="privacy"
-              required
-              className="mt-1 w-4 h-4 rounded text-[#02aeaa] border-slate-300 focus:ring-[#02aeaa] focus:ring-offset-0 cursor-pointer accent-[#02aeaa] shrink-0"
-            />
-            <label htmlFor="privacy-home" className="text-xs text-slate-600 leading-snug cursor-pointer select-none">
-              {contactDict?.privacyAcceptLabel || (isEs ? "He leído y acepto las" : "I have read and agree to the")}{" "}
-              <Link
-                href={`/${currentLang}/privacidad`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-[#02aeaa] hover:text-[#183c6b] underline underline-offset-2 transition-colors"
-              >
-                {contactDict?.privacyLinkLabel || (isEs ? "Políticas de Privacidad" : "Privacy Policy")}
-              </Link>{" "}
-              {contactDict?.privacyAcceptSuffix ||
-                (isEs
-                  ? "y el tratamiento de mis datos de contacto para fines comerciales."
-                  : "and the processing of my contact information for commercial purposes.")}
-            </label>
-          </div>
-
-          <button
-            type="submit"
-            disabled={isPending}
-            className="w-full mt-2 py-3.5 px-6 rounded-xl bg-[#02aeaa] hover:bg-[#183c6b] text-white font-bold text-sm shadow-md shadow-[#02aeaa]/20 hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
-          >
-            {isPending ? (
-              <span>{isEs ? "Enviando mensaje..." : "Sending message..."}</span>
-            ) : (
-              <>
-                <span>{isEs ? "Enviar Solicitud" : "Send Inquiry"}</span>
-                <Send className="w-4 h-4" />
-              </>
-            )}
-          </button>
-        </form>
+        <ContactForm currentLang={currentLang} dict={contactDict} idPrefix="home-contact" />
       </ScrollReveal>
     </div>
   );

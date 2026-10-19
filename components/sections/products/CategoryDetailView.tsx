@@ -4,22 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Sparkles,
-  Droplets,
   Package,
   Layers,
   ArrowRight,
-  ArrowLeft,
   FileText,
-  ShieldCheck,
   Truck,
   CheckCircle2,
   Download,
-  ExternalLink,
   ChevronRight,
-  Building2,
-  BadgeCheck,
-  Scale,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PdfPreviewModal, type PdfModalData } from "@/components/ui/PdfPreviewModal";
@@ -33,7 +25,7 @@ interface CategoryDetailViewProps {
   category: (Dictionary["products"]["categories"])[number];
   allCategories: Dictionary["products"]["categories"];
   dict: Dictionary["products"];
-  texture: TextureVariant;
+  contactDict: Dictionary["contact"];
 }
 
 export function CategoryDetailView({
@@ -41,8 +33,11 @@ export function CategoryDetailView({
   category,
   allCategories,
   dict,
-  texture,
+  contactDict,
 }: CategoryDetailViewProps) {
+  // Las texturas se intercalan entre categorías: ondas, cubos, ondas, cubos
+  const texture: TextureVariant =
+    allCategories.findIndex((c) => c.slug === category.slug) % 2 === 0 ? "waves" : "cubes";
   const isEs = currentLang === "es";
   const [modalData, setModalData] = useState<PdfModalData | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -538,7 +533,7 @@ export function CategoryDetailView({
         </ScrollReveal>
 
         {/* Sección de Cotización y Contacto Directo con selector interactivo de divs */}
-        <CategoryContactSection currentLang={currentLang} category={category} />
+        <CategoryContactSection currentLang={currentLang} category={category} contactDict={contactDict} />
 
         {/* Sección: Otras Categorías del Catálogo */}
         <ScrollReveal animation="fade-up">

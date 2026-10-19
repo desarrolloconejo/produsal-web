@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
+import { getDictionary, resolveLocale } from "@/dictionaries/get-dictionary";
 import { StatusCard } from "@/components/sections/status/StatusCard";
 
 export async function generateMetadata({
@@ -19,7 +19,7 @@ export default async function ConstructionPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
+  const currentLang = resolveLocale(lang);
   const dict = await getDictionary(currentLang);
 
   return (

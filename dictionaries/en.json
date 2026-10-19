@@ -2,7 +2,34 @@
   "lang": "en",
   "meta": {
     "title": "Produsal | Largest Sea Salt Producer in Venezuela | Los Olivitos, Zulia",
-    "description": "Leading solar sea salt harvest and distribution with 99.8% NaCl purity and 650,000 MT/year output at Los Olivitos, Zulia. Wholesale supplier for food, petrochemical, water treatment, and animal feed sectors."
+    "description": "Leading solar sea salt harvest and distribution with 99.8% NaCl purity and 650,000 MT/year output at Los Olivitos, Zulia. Wholesale supplier for food, petrochemical, water treatment, and animal feed sectors.",
+    "pages": {
+      "about": {
+        "title": "About Us | Produsal: Venezuela's Leading Sea Salt Producer | Los Olivitos, Zulia",
+        "description": "Discover the heritage, operational capacity (650,000 MT/year), and solar crystallization technology at Produsal's Los Olivitos complex in Zulia, Venezuela."
+      },
+      "contact": {
+        "title": "Contact & Sales | Produsal C.A. - Los Olivitos, Zulia",
+        "description": "Contact Produsal C.A. for commercial wholesale inquiries, industrial sea salt bulk orders, technical specifications, and quotations."
+      },
+      "products": {
+        "title": "Industrial Product Catalog | Produsal C.A.",
+        "description": "Official catalog of high-purity solar marine salt (ASTM E534-98): Premium Coarse Salt, Type A Coarse Salt, Premium Ground Salt, and Type A Ground Salt. Bulk hopper, Big Bags, and 20 kg bags."
+      },
+      "privacy": {
+        "title": "Privacy Policy | Produsal C.A. - Los Olivitos Saltworks",
+        "description": "Learn about the privacy policies and commercial data protection of Productora de Sal, C.A. (PRODUSAL) at Los Olivitos Industrial Complex, Zulia."
+      },
+      "category": {
+        "title": "{name} ({code}) | Produsal C.A.",
+        "description": "{name} - {desc} Certified purity {purity} NaCl per ASTM E534-98. Technical data sheet and available packaging.",
+        "notFound": "Category not found | Produsal C.A."
+      },
+      "gallery": {
+        "title": "Gallery | Produsal C.A. - Los Olivitos Salt Flats, Zulia",
+        "description": "A photo tour of the Los Olivitos Industrial Complex: salt flats, harvesting, washing, packaging and the Produsal team."
+      }
+    }
   },
   "topBar": {
     "email": "infoprodusal@grupomimesa.com",
@@ -15,8 +42,7 @@
     "products": "Products",
     "gallery": "Gallery",
     "quality": "Quality & Origin",
-    "contact": "Contact",
-    "intranet": "Intranet"
+    "contact": "Contact"
   },
   "hero": {
     "badge": "Los Olivitos Industrial Complex • Zulia, Venezuela",
@@ -423,8 +449,6 @@
     ]
   },
   "gallery": {
-    "metaTitle": "Gallery | Produsal C.A. - Los Olivitos Salt Flats, Zulia",
-    "metaDescription": "A photo tour of the Los Olivitos Industrial Complex: salt flats, harvesting, washing, packaging and the Produsal team.",
     "badge": "Los Olivitos Industrial Complex",
     "titleHighlight": "Produsal",
     "titleRest": "Gallery",
@@ -495,7 +519,28 @@
     "formSubtitle": "Submit your requirements and our commercial engineering team will respond within 24 business hours.",
     "privacyAcceptLabel": "I have read and agree to the",
     "privacyLinkLabel": "Privacy Policy",
-    "privacyAcceptSuffix": "and the processing of my contact information for commercial purposes."
+    "privacyAcceptSuffix": "and the processing of my contact information for commercial purposes.",
+    "form": {
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "e.g. John Doe",
+      "emailLabel": "Email Address *",
+      "emailPlaceholder": "john@company.com",
+      "companyLabel": "Company / Organization",
+      "companyPlaceholder": "e.g. Food Processing Corp",
+      "messageLabel": "Message or Requirement *",
+      "messagePlaceholder": "Specify required salt grade (coarse, fine, industrial), estimated tonnage volume, and delivery destination...",
+      "submit": "Send Inquiry",
+      "sending": "Sending message..."
+    },
+    "formMessages": {
+      "required": "Please fill in all required fields.",
+      "invalidEmail": "Please enter a valid email address.",
+      "tooLong": "One of the fields exceeds the allowed length.",
+      "success": "Thank you for contacting us! Your message has been sent to our team.",
+      "devSuccess": "Message received! In development mode your message was logged.",
+      "error": "An error occurred while sending your message. Please try again later or call us.",
+      "companyFallback": "Not specified"
+    }
   },
   "privacy": {
     "badge": "Legal Notice & Confidentiality",

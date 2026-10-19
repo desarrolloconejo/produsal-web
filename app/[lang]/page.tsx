@@ -1,5 +1,5 @@
-import { Metadata } from "next";
-import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
+import { getDictionary, resolveLocale } from "@/dictionaries/get-dictionary";
+import { getPageMetadata } from "@/lib/metadata";
 import { HeroWrapper, HeroContent } from "@/components/sections/hero";
 import { StatsWrapper } from "@/components/sections/stats";
 import { HistoryWrapper, HistoryContent } from "@/components/sections/history";
@@ -9,38 +9,18 @@ import { MarketWrapper, MarketContent } from "@/components/sections/market";
 import { LocationContent } from "@/components/sections/location";
 import { ContactWrapper, ContactContent } from "@/components/sections/contact";
 
-export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+interface PageProps {
+  params: Promise<{ lang: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
-  const dict = await getDictionary(currentLang);
-
-  return {
-    title: dict.meta.title,
-    description: dict.meta.description,
-    alternates: {
-      languages: {
-        es: "/es",
-        en: "/en",
-      },
-    },
-  };
+  return getPageMetadata(lang, "home");
 }
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function HomePage({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
+  const currentLang = resolveLocale(lang);
   const dict = await getDictionary(currentLang);
 
   return (
@@ -81,7 +61,7 @@ export default async function HomePage({
 
       {/* Sección Contacto: page > wrapper > content */}
       <ContactWrapper id="contacto">
-        <ContactContent currentLang={currentLang} contactDict={dict.contact || {}} />
+        <ContactContent currentLang={currentLang} contactDict={dict.contact} />
       </ContactWrapper>
     </>
   );

@@ -1,11 +1,7 @@
 "use client";
 
-import { useState, useActionState } from "react";
-import Link from "next/link";
+import { useState } from "react";
 import {
-  Send,
-  CheckCircle2,
-  AlertCircle,
   Truck,
   Package,
   Layers,
@@ -18,22 +14,19 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
-import { sendContactEmail, type ContactState } from "@/app/actions/send";
+import { ContactForm } from "@/components/sections/contact/ContactForm";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 interface CategoryContactSectionProps {
   currentLang: Locale;
   category: Dictionary["products"]["categories"][number];
+  contactDict: Dictionary["contact"];
 }
-
-const initialState: ContactState = {
-  success: false,
-  message: "",
-};
 
 export function CategoryContactSection({
   currentLang,
   category,
+  contactDict,
 }: CategoryContactSectionProps) {
   const isEs = currentLang === "es";
 
@@ -67,11 +60,6 @@ export function CategoryContactSection({
   // Estado del producto seleccionado (por defecto, la presentación principal a granel)
   const [selectedProduct, setSelectedProduct] = useState<string>(
     productOptions[0]?.name || category.name
-  );
-
-  const [state, formAction, isPending] = useActionState(
-    sendContactEmail,
-    initialState
   );
 
   return (
@@ -137,25 +125,18 @@ export function CategoryContactSection({
             {/* Columna Derecha: Formulario con Selector Div-based (8 cols) */}
             <div className="lg:col-span-8 bg-slate-50/80 rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-lg shadow-slate-200/40">
               
-              {/* Feedback de Envío */}
-              {state.message && (
-                <div
-                  className={`p-4 rounded-xl mb-6 flex items-start gap-3 text-sm ${
-                    state.success
-                      ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
-                      : "bg-rose-50 text-rose-800 border border-rose-200"
-                  }`}
-                >
-                  {state.success ? (
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                  ) : (
-                    <AlertCircle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
-                  )}
-                  <p className="font-medium">{state.message}</p>
-                </div>
-              )}
-
-              <form action={formAction} className="flex flex-col gap-6">
+              <ContactForm
+                currentLang={currentLang}
+                dict={contactDict}
+                idPrefix="cat-contact"
+                messageLabel={isEs ? "Detalles del Requerimiento o Volumen (TM) *" : "Requirement Details or Volume (MT) *"}
+                defaultMessage={
+                  isEs
+                    ? `Hola, deseo cotizar ${selectedProduct}. Indicar disponibilidad, volumen en toneladas y condiciones de despacho.`
+                    : `Hello, I would like to request a quote for ${selectedProduct}. Please provide availability, tonnage volume, and dispatch terms.`
+                }
+                submitLabel={isEs ? "Enviar Solicitud de Cotización" : "Submit Quotation Request"}
+              >
                 {/* 1. Selector de Producto Personalizado con DIVS (NO SELECT / NO OPTION) */}
                 <div className="flex flex-col gap-2.5">
                   <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider font-heading">
@@ -244,137 +225,7 @@ export function CategoryContactSection({
                   </div>
                 </div>
 
-                {/* 2. Campos de Datos de Contacto */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="cat-contact-name"
-                      className="block text-xs font-bold text-slate-700 mb-1.5 font-heading"
-                    >
-                      {isEs ? "Nombre Completo *" : "Full Name *"}
-                    </label>
-                    <input
-                      id="cat-contact-name"
-                      name="name"
-                      type="text"
-                      required
-                      placeholder={isEs ? "Ej. Carlos Mendoza" : "e.g. John Doe"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="cat-contact-email"
-                      className="block text-xs font-bold text-slate-700 mb-1.5 font-heading"
-                    >
-                      {isEs ? "Correo Electrónico *" : "Email Address *"}
-                    </label>
-                    <input
-                      id="cat-contact-email"
-                      name="email"
-                      type="email"
-                      required
-                      placeholder={isEs ? "carlos@empresa.com" : "john@company.com"}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="cat-contact-company"
-                    className="block text-xs font-bold text-slate-700 mb-1.5 font-heading"
-                  >
-                    {isEs ? "Empresa / Razón Social" : "Company / Organization"}
-                  </label>
-                  <input
-                    id="cat-contact-company"
-                    name="company"
-                    type="text"
-                    placeholder={
-                      isEs
-                        ? "Ej. Industria de Alimentos C.A. / Empresa Química"
-                        : "e.g. Chemical Manufacturing Corp"
-                    }
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white"
-                  />
-                </div>
-
-                {/* 3. Requerimiento / Mensaje */}
-                <div>
-                  <label
-                    htmlFor="cat-contact-message"
-                    className="block text-xs font-bold text-slate-700 mb-1.5 font-heading"
-                  >
-                    {isEs ? "Detalles del Requerimiento o Volumen (TM) *" : "Requirement Details or Volume (MT) *"}
-                  </label>
-                  <textarea
-                    id="cat-contact-message"
-                    name="message"
-                    rows={4}
-                    required
-                    defaultValue={
-                      isEs
-                        ? `Hola, deseo cotizar ${selectedProduct}. Indicar disponibilidad, volumen en toneladas y condiciones de despacho.`
-                        : `Hello, I would like to request a quote for ${selectedProduct}. Please provide availability, tonnage volume, and dispatch terms.`
-                    }
-                    placeholder={
-                      isEs
-                        ? "Indícanos volumen estimado en toneladas, destino de despacho y requerimientos particulares..."
-                        : "Indicate estimated tonnage, delivery destination, and specific requirements..."
-                    }
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-[#02aeaa] focus:ring-2 focus:ring-[#02aeaa]/20 transition-all text-slate-900 bg-white resize-none"
-                  />
-                </div>
-
-                {/* Checkbox de Políticas de Privacidad Obligatorio */}
-                <div className="flex items-start gap-2.5 pt-1">
-                  <input
-                    type="checkbox"
-                    id="privacy-category"
-                    name="privacy"
-                    required
-                    className="mt-1 w-4 h-4 rounded text-[#02aeaa] border-slate-300 focus:ring-[#02aeaa] focus:ring-offset-0 cursor-pointer accent-[#02aeaa] shrink-0"
-                  />
-                  <label htmlFor="privacy-category" className="text-xs text-slate-600 leading-snug cursor-pointer select-none">
-                    {isEs ? "He leído y acepto las" : "I have read and agree to the"}{" "}
-                    <Link
-                      href={`/${currentLang}/privacidad`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-[#02aeaa] hover:text-[#183c6b] underline underline-offset-2 transition-colors"
-                    >
-                      {isEs ? "Políticas de Privacidad" : "Privacy Policy"}
-                    </Link>{" "}
-                    {isEs
-                      ? "y el tratamiento de mis datos de contacto para fines comerciales."
-                      : "and the processing of my contact information for commercial purposes."}
-                  </label>
-                </div>
-
-                {/* Botón de Envío */}
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                  <span className="text-xs text-slate-500">
-                    {isEs
-                      ? "* Campos obligatorios para el procesamiento comercial."
-                      : "* Required fields for quotation processing."}
-                  </span>
-
-                  <button
-                    type="submit"
-                    disabled={isPending}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-[#183c6b] hover:bg-[#02aeaa] shadow-md hover:shadow-lg transition-all font-heading cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
-                  >
-                    <Send className={`w-4 h-4 ${isPending ? "animate-pulse" : ""}`} />
-                    <span>
-                      {isPending
-                        ? isEs ? "Enviando cotización..." : "Submitting quote..."
-                        : isEs ? "Enviar Solicitud de Cotización" : "Submit Quotation Request"}
-                    </span>
-                  </button>
-                </div>
-              </form>
+</ContactForm>
             </div>
           </div>
         </ScrollReveal>

@@ -1,6 +1,7 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { getDictionary } from "@/dictionaries/get-dictionary";
 
 export interface ContactState {
   success: boolean;
@@ -8,30 +9,65 @@ export interface ContactState {
   errors?: Record<string, string>;
 }
 
+const MAX_LENGTH = {
+  name: 120,
+  email: 254,
+  company: 160,
+  product: 200,
+  message: 5000,
+};
+
+// Evita que el contenido del formulario se interprete como HTML en el correo
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+// Quita saltos de línea para que no se puedan inyectar cabeceras en el asunto
+function singleLine(value: string): string {
+  return value.replace(/[\r\n]+/g, " ");
+}
+
 export async function sendContactEmail(
   prevState: ContactState | null,
   formData: FormData
 ): Promise<ContactState> {
+  const lang = formData.get("lang")?.toString() ?? "es";
+  const { formMessages: t } = (await getDictionary(lang)).contact;
+
+  // Honeypot: los bots rellenan el campo oculto, las personas no lo ven
+  if (formData.get("website")?.toString()) {
+    return { success: true, message: t.success };
+  }
+
   const name = formData.get("name")?.toString().trim();
   const email = formData.get("email")?.toString().trim();
-  const company = formData.get("company")?.toString().trim() || "No especificada";
+  const company = formData.get("company")?.toString().trim() || t.companyFallback;
   const product = formData.get("product")?.toString().trim();
   const message = formData.get("message")?.toString().trim();
 
   // Validación básica
   if (!name || !email || !message) {
-    return {
-      success: false,
-      message: "Por favor completa todos los campos requeridos.",
-    };
+    return { success: false, message: t.required };
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return {
-      success: false,
-      message: "Por favor ingresa un correo electrónico válido.",
-    };
+    return { success: false, message: t.invalidEmail };
+  }
+
+  if (
+    name.length > MAX_LENGTH.name ||
+    email.length > MAX_LENGTH.email ||
+    company.length > MAX_LENGTH.company ||
+    (product?.length ?? 0) > MAX_LENGTH.product ||
+    message.length > MAX_LENGTH.message
+  ) {
+    return { success: false, message: t.tooLong };
   }
 
   // Comprobar si las credenciales de correo están configuradas en el entorno
@@ -47,11 +83,16 @@ export async function sendContactEmail(
     console.warn(
       "Produsal Server Action: Credenciales SMTP no detectadas en .env. Simulación de envío exitoso."
     );
-    return {
-      success: true,
-      message: "¡Mensaje recibido con éxito! En modo de desarrollo tu mensaje fue registrado.",
-    };
+    return { success: true, message: t.devSuccess };
   }
+
+  const safe = {
+    name: escapeHtml(name),
+    email: escapeHtml(email),
+    company: escapeHtml(company),
+    product: product ? escapeHtml(product) : "",
+    message: escapeHtml(message),
+  };
 
   try {
     const transporter = nodemailer.createTransport({
@@ -67,20 +108,23 @@ export async function sendContactEmail(
     await transporter.sendMail({
       from: contactFrom,
       to: contactTo,
-      subject: product
-        ? `Cotización [${product}]: ${name} (${company})`
-        : `Nuevo mensaje de contacto web: ${name} (${company})`,
+      replyTo: email,
+      subject: singleLine(
+        product
+          ? `Cotización [${product}]: ${name} (${company})`
+          : `Nuevo mensaje de contacto web: ${name} (${company})`
+      ),
       text: `Nombre: ${name}\nEmpresa: ${company}\nEmail: ${email}\nProducto / Formato: ${product || "General"}\n\nMensaje:\n${message}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; color: #183c6b;">
           <h2 style="color: #02aeaa;">Nuevo Requerimiento desde Sitio Web Produsal</h2>
-          <p><strong>Nombre:</strong> ${name}</p>
-          <p><strong>Empresa:</strong> ${company}</p>
-          <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-          ${product ? `<p><strong>Producto / Presentación de Interés:</strong> <span style="color: #02aeaa; font-weight: bold;">${product}</span></p>` : ""}
+          <p><strong>Nombre:</strong> ${safe.name}</p>
+          <p><strong>Empresa:</strong> ${safe.company}</p>
+          <p><strong>Email:</strong> <a href="mailto:${safe.email}">${safe.email}</a></p>
+          ${safe.product ? `<p><strong>Producto / Presentación de Interés:</strong> <span style="color: #02aeaa; font-weight: bold;">${safe.product}</span></p>` : ""}
           <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 4px solid #02aeaa; border-radius: 4px;">
             <strong>Mensaje o Requerimiento:</strong>
-            <p style="white-space: pre-line;">${message}</p>
+            <p style="white-space: pre-line;">${safe.message}</p>
           </div>
           <hr style="margin-top: 25px; border: none; border-top: 1px solid #e2e8f0;" />
           <small style="color: #64748b;">Notificación automática de Produsal Web</small>
@@ -88,15 +132,9 @@ export async function sendContactEmail(
       `,
     });
 
-    return {
-      success: true,
-      message: "¡Gracias por contactarnos! Tu mensaje ha sido enviado correctamente a nuestro equipo.",
-    };
+    return { success: true, message: t.success };
   } catch (error) {
     console.error("Error al despachar correo con Nodemailer:", error);
-    return {
-      success: false,
-      message: "Ocurrió un error al enviar tu mensaje. Por favor intenta más tarde o contáctanos por teléfono.",
-    };
+    return { success: false, message: t.error };
   }
 }

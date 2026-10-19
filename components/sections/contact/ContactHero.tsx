@@ -1,6 +1,6 @@
 "use client";
 
-import { Compass, Phone, Mail, MapPin, Building2, Clock } from "lucide-react";
+import { Compass, Phone, Mail, MapPin } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale } from "@/dictionaries/get-dictionary";

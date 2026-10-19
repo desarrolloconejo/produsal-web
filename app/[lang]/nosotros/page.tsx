@@ -1,37 +1,19 @@
-import { Metadata } from "next";
-import { getDictionary, locales, type Locale } from "@/dictionaries/get-dictionary";
+import { resolveLocale } from "@/dictionaries/get-dictionary";
+import { getPageMetadata } from "@/lib/metadata";
 import { AboutHero, AboutWrapper, AboutContent } from "@/components/sections/about";
 
-export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+interface PageProps {
+  params: Promise<{ lang: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
-  const isEs = currentLang === "es";
-
-  return {
-    title: isEs
-      ? "Nosotros | Produsal: La Mayor Salina de Venezuela | Los Olivitos, Zulia"
-      : "About Us | Produsal: Venezuela's Leading Sea Salt Producer | Los Olivitos, Zulia",
-    description: isEs
-      ? "Descubre la historia, capacidad operativa (650.000 TM/año) y tecnología del Complejo Industrial Los Olivitos de Produsal en Zulia. Alianza estratégica y sustentabilidad marina."
-      : "Discover the heritage, operational capacity (650,000 MT/year), and solar crystallization technology at Produsal's Los Olivitos complex in Zulia, Venezuela.",
-  };
+  return getPageMetadata(lang, "about", "/nosotros");
 }
 
-export default async function NosotrosPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function NosotrosPage({ params }: PageProps) {
   const { lang } = await params;
-  const currentLang = (locales.includes(lang as Locale) ? lang : "es") as Locale;
+  const currentLang = resolveLocale(lang);
 
   return (
     <div className="w-full">
