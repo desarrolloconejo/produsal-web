@@ -128,13 +128,6 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 42vw"
             />
-            {/* Badge sutil sobre la foto de flamencos */}
-            <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-10 bg-[#183c6b]/85 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15 text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse" />
-              <span className="text-[11px] sm:text-xs font-heading font-medium tracking-wide">
-                {currentLang === "es" ? "Flamencos Rosados en Los Olivitos" : "Pink Flamingos at Los Olivitos"}
-              </span>
-            </div>
           </div>
 
           {/* Lado Derecho: Contenido Editorial sobre la Reserva ABRAE */}
