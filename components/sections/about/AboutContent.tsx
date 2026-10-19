@@ -55,8 +55,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       unit: isEs ? "TM / Año" : "MT / Year",
       label: isEs ? "Planta de Molienda y Empacado" : "Milling & Packaging Plant",
       desc: isEs
-        ? "Procesamiento de sal molida Premium y Tipo A en sacos de 20 Kg y Big Bags."
-        : "High-spec processing for Premium & Grade A milled salt in 20 Kg and Big Bags.",
+        ? "Procesamiento de sal molida Premium y Tipo A en sacos y Big Bags."
+        : "High-spec processing for Premium & Grade A milled salt in bags and Big Bags.",
     },
   ];
 
@@ -322,8 +322,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
                 {isEs
-                  ? "Operadores equipados con protección integral asegurando llenado y sellado de alta resistencia en sacos de 20 kg."
-                  : "Fully equipped operators ensuring precise filling and heavy-duty sealing of 20 kg bags."}
+                  ? "Operadores equipados con protección integral asegurando llenado y sellado de alta resistencia en sacos."
+                  : "Fully equipped operators ensuring precise filling and heavy-duty sealing of bags."}
               </p>
             </div>
           </div>
@@ -388,8 +388,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </h3>
           <p className="text-sm text-white/90 leading-relaxed">
             {isEs
-              ? "Atendemos despachos en sacos de 20 Kg, Big Bags y a granel directamente desde nuestro patio de acopio en Los Olivitos."
-              : "We fulfill shipments in 20 Kg bags, Big Bags, and bulk freight directly from our Los Olivitos stockpiling terminal."}
+              ? "Atendemos despachos en sacos, Big Bags y a granel directamente desde nuestro patio de acopio en Los Olivitos."
+              : "We fulfill shipments in bags, Big Bags, and bulk freight directly from our Los Olivitos stockpiling terminal."}
           </p>
         </div>
 

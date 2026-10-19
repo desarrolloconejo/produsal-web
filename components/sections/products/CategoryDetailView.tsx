@@ -101,7 +101,7 @@ export function CategoryDetailView({
       frequency: isEs ? "Por lote" : "Per lot",
     },
     {
-      param: isEs ? "Empaque Sacos 20 kg (Control CPE)" : "20 kg Bags Packaging (CPE Control)",
+      param: isEs ? "Empaque en Sacos (Control CPE)" : "Bag Packaging (CPE Control)",
       value: category.cpe,
       method: isEs ? "Regulación Nacional" : "National Standard",
       frequency: isEs ? "Identificado en saco" : "Bag labeled",

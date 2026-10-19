@@ -122,8 +122,8 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 - Especificaciones de producto: la fuente es la ficha tecnica PDF
   (public/docs/fichas). Formato "mín/máx" (no "≤/≥"), sin densidad. En
   tarjetas solo pureza y humedad.
-- Big Bags sin tonelaje (hay varias presentaciones). La Sal Bruta Tipo A no se
-  ofrece en sacos de 20 kg.
+- Big Bags y sacos sin peso ni tonelaje (hay varias presentaciones). La Sal
+  Bruta Tipo A no se ofrece en sacos.
 - Coordenadas de la planta: 10.781482, -71.415893. Viven solo en
   data/plant-location.ts.
 - Iconos solo si estan relacionados con el contenido.

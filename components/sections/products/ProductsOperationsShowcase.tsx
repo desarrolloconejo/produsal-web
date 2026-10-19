@@ -43,7 +43,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
     },
     {
       title: isEs ? "Líneas de Envasado Continuo" : "Automated Packaging Lines",
-      subtitle: isEs ? "Sacos de 20 kg y Big Bags" : "20 kg Bags & Big Bags",
+      subtitle: isEs ? "Sacos y Big Bags" : "Bags & Big Bags",
       desc: isEs
         ? "Estaciones de ensacado con dosificación exacta y costura reforzada de alta resistencia. Identificación oficial de lote y código de control CPE."
         : "Bagging stations with precision dosing and reinforced heavy-duty stitching. Official lot identification and CPE regulatory compliance.",

@@ -49,7 +49,7 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
     <div className="flex flex-col gap-10 sm:gap-12 lg:gap-14">
       {/* Cabecera Editorial Unificada */}
       <ScrollReveal animation="fade-up">
-        <div className="flex flex-col gap-3 max-w-3xl">
+        <div className="flex flex-col gap-3 max-w-5xl">
           <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading flex items-center gap-2">
             <Compass className="w-4 h-4 text-[#02aeaa]" />
             <span>{badge}</span>

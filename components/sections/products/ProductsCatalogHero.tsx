@@ -57,10 +57,10 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
           <ScrollReveal animation="fade-up" delay={50}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-heading text-left">
               <span className="text-[#02aeaa] drop-shadow-xs">
-                {isEs ? "Soluciones Salinas" : "High-Purity"}
+                {isEs ? "Productos" : "High-Purity"}
               </span>{" "}
               <span className="text-white/95 block sm:inline">
-                {isEs ? "de Alta Pureza" : "Salt Solutions"}
+                {isEs ? "de Alta Pureza" : "Salt Products"}
               </span>
             </h1>
           </ScrollReveal>

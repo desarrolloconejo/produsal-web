@@ -14,7 +14,7 @@
       },
       "products": {
         "title": "Catálogo de Productos Industriales | Produsal C.A.",
-        "description": "Catálogo oficial de sal solar de alta pureza: Sal Bruta Premium, Sal Bruta Tipo A, Sal Molida Premium y Sal Molida Tipo A. Despachos a granel, Big Bags y sacos de 20 kg."
+        "description": "Catálogo oficial de sal solar de alta pureza: Sal Bruta Premium, Sal Bruta Tipo A, Sal Molida Premium y Sal Molida Tipo A. Despachos a granel, Big Bags y sacos."
       },
       "privacy": {
         "title": "Políticas de Privacidad | Produsal C.A. - Salinas Los Olivitos",
@@ -89,7 +89,7 @@
     }
   },
   "processSection": {
-    "badge": "Proceso de Producción Solar",
+    "badge": "Proceso de Producción de la Sal",
     "title": "¿Cómo se hace la sal en PRODUSAL?",
     "description": "Una combinación armónica de sol, viento y mar: transformamos de forma sustentable el agua salada en sal de clase mundial.",
     "phaseLabel": "Fase",
@@ -136,7 +136,7 @@
   },
   "products": {
     "badge": "Catálogo Industrial y Comercial",
-    "title": "Soluciones Salinas de Alta Pureza",
+    "title": "Productos de Alta Pureza",
     "subtitle": "Sal solar cosechada en Los Olivitos con altos estándares de pureza físico-química para la industria petroquímica, química, tratamiento de agua y nutrición animal, entre otros usos.",
     "ctaQuote": "Contáctanos",
     "ctaSpec": "Ficha Técnica",
@@ -150,7 +150,7 @@
     "qualityGuarantee": "Pureza mínima garantizada según la metodología ASTM E534-98, con trazabilidad continua por lote.",
     "carouselBadge": "Presentaciones y Formatos Disponibles",
     "carouselTitle": "Catálogo de Productos por Presentación",
-    "carouselSubtitle": "Despachos industriales en camiones tolva a granel, Big Bags y sacos de 20 Kg listos para la cadena productiva.",
+    "carouselSubtitle": "Despachos industriales en camiones tolva a granel, Big Bags y sacos listos para la cadena productiva.",
     "categories": [
       {
         "id": "sal-bruta-premium",
@@ -168,7 +168,7 @@
         "insolubles": "0,08% máx",
         "additives": "Sin aditivos",
         "cpe": "CPE 0317416481",
-        "packaging": "Granel / Big Bag / Sacos 20 kg",
+        "packaging": "Granel / Big Bag / Sacos",
         "image": "/images/products/sal-bruta-premium.webp",
         "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
@@ -192,9 +192,9 @@
             "use": "Tratamiento de Aguas y Procesos Industriales"
           },
           {
-            "name": "Sal Bruta Premium en Sacos (20 Kg)",
-            "slug": "sal-bruta-premium-sacos-20kg",
-            "format": "Sacos 20 Kg (CPE 0317416481)",
+            "name": "Sal Bruta Premium en Sacos",
+            "slug": "sal-bruta-premium-sacos",
+            "format": "Sacos (CPE 0317416481)",
             "use": "Distribución y Procesamiento Mayorista"
           }
         ]
@@ -256,7 +256,7 @@
         "insolubles": "0,08% máx",
         "additives": "Ferrocianuro de Sodio (YPS) 10 ppm máx",
         "cpe": "CPE 0308115248",
-        "packaging": "Granel / Big Bag / Sacos 20 kg",
+        "packaging": "Granel / Big Bag / Sacos",
         "image": "/images/products/sal-molida-premium.webp",
         "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
@@ -280,9 +280,9 @@
             "use": "Formulaciones Químicas e Industriales"
           },
           {
-            "name": "Sal Molida Premium en Sacos (20 Kg)",
-            "slug": "sal-molida-premium-sacos-20kg",
-            "format": "Sacos 20 Kg (CPE 0308115248)",
+            "name": "Sal Molida Premium en Sacos",
+            "slug": "sal-molida-premium-sacos",
+            "format": "Sacos (CPE 0308115248)",
             "use": "Distribución e Industria en General"
           }
         ]
@@ -303,7 +303,7 @@
         "insolubles": "0,1% máx",
         "additives": "Ferrocianuro de Sodio (YPS) 10 ppm máx",
         "cpe": "CPE 0813313838",
-        "packaging": "Granel / Big Bag / Sacos 20 kg",
+        "packaging": "Granel / Big Bag / Sacos",
         "image": "/images/products/sal-molida-tipo-a.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
@@ -327,9 +327,9 @@
             "use": "Nutrición Animal"
           },
           {
-            "name": "Sal Molida Tipo A en Sacos (20 Kg)",
-            "slug": "sal-molida-tipo-a-sacos-20kg",
-            "format": "Sacos 20 Kg (CPE 0813313838)",
+            "name": "Sal Molida Tipo A en Sacos",
+            "slug": "sal-molida-tipo-a-sacos",
+            "format": "Sacos (CPE 0813313838)",
             "use": "Nutrición Animal e Industria"
           }
         ]
@@ -443,7 +443,7 @@
       {
         "id": "finalidad",
         "title": "3. Finalidad del Tratamiento de Datos",
-        "content": "Los datos suministrados se utilizarán exclusivamente para: procesar cotizaciones y solicitudes de compra, enviar fichas técnicas oficiales y certificados de análisis de laboratorio, coordinar la logística de despachos industriales (tolva a granel, Big Bags, sacos de 20 kg) y atender consultas técnicas o comerciales."
+        "content": "Los datos suministrados se utilizarán exclusivamente para: procesar cotizaciones y solicitudes de compra, enviar fichas técnicas oficiales y certificados de análisis de laboratorio, coordinar la logística de despachos industriales (tolva a granel, Big Bags, sacos) y atender consultas técnicas o comerciales."
       },
       {
         "id": "confidencialidad",

@@ -14,7 +14,7 @@
       },
       "products": {
         "title": "Industrial Product Catalog | Produsal C.A.",
-        "description": "Official catalog of high-purity solar salt: Premium Coarse Salt, Type A Coarse Salt, Premium Ground Salt, and Type A Ground Salt. Bulk, Big Bags, and 20 kg bags."
+        "description": "Official catalog of high-purity solar salt: Premium Coarse Salt, Type A Coarse Salt, Premium Ground Salt, and Type A Ground Salt. Bulk, Big Bags, and bags."
       },
       "privacy": {
         "title": "Privacy Policy | Produsal C.A. - Los Olivitos Saltworks",
@@ -89,7 +89,7 @@
     }
   },
   "processSection": {
-    "badge": "Solar Production Process",
+    "badge": "Salt Production Process",
     "title": "How is Salt Made at PRODUSAL?",
     "description": "A harmonious blend of sun, wind, and sea: we sustainably transform salt water into world-class salt.",
     "phaseLabel": "Phase",
@@ -136,7 +136,7 @@
   },
   "products": {
     "badge": "Industrial & Commercial Catalog",
-    "title": "High-Purity Salt Solutions",
+    "title": "High-Purity Salt Products",
     "subtitle": "Solar salt harvested at Los Olivitos under high physicochemical purity standards for the petrochemical, chemical, water treatment, and animal nutrition industries, among other uses.",
     "ctaQuote": "Contact Us",
     "ctaSpec": "Data Sheet",
@@ -150,7 +150,7 @@
     "qualityGuarantee": "Minimum purity guaranteed under ASTM E534-98 methodology, with continuous batch traceability.",
     "carouselBadge": "Available Presentations & Packaging",
     "carouselTitle": "Product Catalog by Presentation",
-    "carouselSubtitle": "Industrial dispatch available in bulk hopper trucks, Big Bags, and 20 Kg bags ready for production lines.",
+    "carouselSubtitle": "Industrial dispatch available in bulk hopper trucks, Big Bags, and bags ready for production lines.",
     "categories": [
       {
         "id": "sal-bruta-premium",
@@ -168,7 +168,7 @@
         "insolubles": "0.08% max",
         "additives": "No additives",
         "cpe": "CPE 0317416481",
-        "packaging": "Bulk / Big Bag / 20 Kg Bags",
+        "packaging": "Bulk / Big Bag / Bags",
         "image": "/images/products/sal-bruta-premium.webp",
         "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
@@ -192,9 +192,9 @@
             "use": "Water Treatment & Industrial Processing"
           },
           {
-            "name": "Premium Coarse Salt in 20 Kg Bags",
-            "slug": "sal-bruta-premium-20kg-bags",
-            "format": "20 Kg Polyethylene Bags (CPE 0317416481)",
+            "name": "Premium Coarse Salt in Bags",
+            "slug": "sal-bruta-premium-bags",
+            "format": "Polyethylene Bags (CPE 0317416481)",
             "use": "Wholesale Distribution & Processing"
           }
         ]
@@ -256,7 +256,7 @@
         "insolubles": "0.08% max",
         "additives": "Sodium Ferrocyanide (YPS) 10 ppm max",
         "cpe": "CPE 0308115248",
-        "packaging": "Bulk / Big Bag / 20 Kg Bags",
+        "packaging": "Bulk / Big Bag / Bags",
         "image": "/images/products/sal-molida-premium.webp",
         "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
@@ -280,9 +280,9 @@
             "use": "Chemical & Industrial Formulations"
           },
           {
-            "name": "Premium Ground Salt in 20 Kg Bags",
-            "slug": "sal-molida-premium-20kg-bags",
-            "format": "20 Kg Polyethylene Bags (CPE 0308115248)",
+            "name": "Premium Ground Salt in Bags",
+            "slug": "sal-molida-premium-bags",
+            "format": "Polyethylene Bags (CPE 0308115248)",
             "use": "Distribution & General Industry"
           }
         ]
@@ -303,7 +303,7 @@
         "insolubles": "0.1% max",
         "additives": "Sodium Ferrocyanide (YPS) 10 ppm max",
         "cpe": "CPE 0813313838",
-        "packaging": "Bulk / Big Bag / 20 Kg Bags",
+        "packaging": "Bulk / Big Bag / Bags",
         "image": "/images/products/sal-molida-tipo-a.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
@@ -327,9 +327,9 @@
             "use": "Animal Nutrition"
           },
           {
-            "name": "Type A Ground Salt in 20 Kg Bags",
-            "slug": "sal-molida-tipo-a-20kg-bags",
-            "format": "20 Kg Polyethylene Bags (CPE 0813313838)",
+            "name": "Type A Ground Salt in Bags",
+            "slug": "sal-molida-tipo-a-bags",
+            "format": "Polyethylene Bags (CPE 0813313838)",
             "use": "Animal Nutrition & Manufacturing"
           }
         ]
@@ -443,7 +443,7 @@
       {
         "id": "purpose",
         "title": "3. Purpose of Data Processing",
-        "content": "The provided data is used exclusively to: process quotations and purchase orders, provide official technical datasheets and laboratory certificates of analysis, coordinate industrial dispatch logistics (bulk hopper, Big Bags, 20 kg bags), and respond to technical or commercial inquiries."
+        "content": "The provided data is used exclusively to: process quotations and purchase orders, provide official technical datasheets and laboratory certificates of analysis, coordinate industrial dispatch logistics (bulk hopper, Big Bags, bags), and respond to technical or commercial inquiries."
       },
       {
         "id": "confidentiality",

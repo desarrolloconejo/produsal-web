@@ -50,7 +50,7 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
     <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20">
       {/* 1. Cabecera Editorial (Minimalista, sin fondo ni bordes) */}
       <ScrollReveal animation="fade-up">
-        <div className="flex flex-col gap-3 max-w-3xl border-b border-slate-200/80 pb-8 sm:pb-10">
+        <div className="flex flex-col gap-3 max-w-5xl border-b border-slate-200/80 pb-8 sm:pb-10">
           <div className="flex items-center gap-2">
             <span className="text-[#02aeaa] text-xs sm:text-sm font-bold uppercase tracking-wider font-heading">
               {dict.badge}
