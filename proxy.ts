@@ -28,7 +28,7 @@ function getLocale(request: NextRequest): string {
   return defaultLocale;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
   // Ignorar archivos estáticos, imágenes, favicon y rutas internas de Next.js
