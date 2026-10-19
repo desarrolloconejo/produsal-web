@@ -156,8 +156,9 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 - No decir "internacional" sobre el alcance comercial (si se permite en
   "Humedal Ramsar de Importancia Internacional").
 - Especificaciones de producto: la fuente es la ficha tecnica PDF
-  (public/docs/fichas). Formato "mín/máx" (no "≤/≥"), sin densidad. En
-  tarjetas solo pureza y humedad.
+  (public/docs/fichas). La web no repite la tabla fisico-quimica: solo
+  muestra pureza y humedad (formato "mín/máx", no "≤/≥") y enlaza a la
+  ficha para el resto.
 - Big Bags y sacos sin peso ni tonelaje (hay varias presentaciones). La Sal
   Bruta Tipo A no se ofrece en sacos.
 - Coordenadas de la planta: 10.781482, -71.415893. Viven solo en
