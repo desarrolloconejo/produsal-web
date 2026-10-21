@@ -24,7 +24,7 @@ export function BrandTrianglesBackground({
 }: BrandTrianglesBackgroundProps) {
   // Dimensiones según tamaño
   const scaleMap = {
-    xs: { greenW: 46, greenH: 53, blueW: 40, blueH: 64, duoW: 110, duoH: 88 },
+    xs: { greenW: 46, greenH: 53, blueW: 40, blueH: 64, duoW: 80, duoH: 63 }, // duo cabe en el header móvil (64 px)
     sm: { greenW: 90, greenH: 104, blueW: 100, blueH: 150, duoW: 200, duoH: 160 },
     md: { greenW: 140, greenH: 162, blueW: 155, blueH: 232, duoW: 300, duoH: 240 },
     lg: { greenW: 220, greenH: 254, blueW: 245, blueH: 368, duoW: 460, duoH: 370 },
