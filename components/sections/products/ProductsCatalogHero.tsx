@@ -28,7 +28,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
         />
 
         {/* Capa 1: Filtro horizontal azul marino para legibilidad hacia la izquierda */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#183c6b]/95 via-[#183c6b]/85 to-[#183c6b]/50 backdrop-blur-[0.5px]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#183c6b]/95 via-[#183c6b]/85 to-[#183c6b]/50" />
 
         {/* Capa 2: Gradiente vertical para suavizar la unión superior e inferior */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#183c6b]/70 via-transparent to-[#183c6b]" />
@@ -37,9 +37,9 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
         <div className="absolute inset-0 crystal-pattern opacity-25 pointer-events-none" />
 
         {/* Destellos ambientales de color Turquesa, Celeste y Dorado Solar */}
-        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#02aeaa]/20 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 right-0 w-96 h-96 rounded-full bg-[#85b2cf]/20 blur-3xl pointer-events-none" />
-        <div className="absolute top-1/2 right-1/4 w-72 h-72 rounded-full bg-[#e5c798]/10 blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(2,174,170,0.2),transparent)] pointer-events-none" />
+        <div className="absolute -bottom-32 right-0 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(133,178,207,0.2),transparent)] pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 w-72 h-72 rounded-full bg-[radial-gradient(closest-side,rgba(229,199,152,0.1),transparent)] pointer-events-none" />
       </div>
 
       {/* 2. Contenido Amplio Orientado a la Izquierda (Misma anchura y escala del Home) */}
@@ -87,7 +87,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
               {/* Botón Secundario: Nosotros */}
               <Link
                 href={`/${currentLang}/nosotros`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#85b2cf]/15 text-white font-semibold text-sm border border-[#85b2cf]/40 hover:border-[#85b2cf] backdrop-blur-sm transition-all duration-200 font-heading"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#85b2cf]/15 text-white font-semibold text-sm border border-[#85b2cf]/40 hover:border-[#85b2cf] transition-all duration-200 font-heading"
               >
                 <Waves className="w-4 h-4 text-[#85b2cf]" />
                 <span>{isEs ? "Conoce nuestra historia" : "Discover our history"}</span>

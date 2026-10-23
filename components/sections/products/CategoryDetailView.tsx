@@ -84,8 +84,8 @@ export function CategoryDetailView({
         {/* Triángulos 2D corporativos en el fondo azul del hero */}
         <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-25" />
         <div className="absolute inset-0 bg-[radial-gradient(#02aeaa_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
-        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-[#02aeaa]/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 -left-20 w-80 h-80 bg-[#85b2cf]/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-[radial-gradient(closest-side,rgba(2,174,170,0.2),transparent)] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 -left-20 w-80 h-80 bg-[radial-gradient(closest-side,rgba(133,178,207,0.15),transparent)] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -150,7 +150,7 @@ export function CategoryDetailView({
             {/* Lado Derecho: Tarjeta Visual con Foto y Métricas Clave */}
             <div className="lg:col-span-5">
               <ScrollReveal animation="fade-left" delay={100}>
-                <div className="relative rounded-3xl bg-white/5 border border-white/15 p-3.5 shadow-2xl backdrop-blur-sm group">
+                <div className="relative rounded-3xl bg-white/5 border border-white/15 p-3.5 shadow-2xl group">
                   <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-slate-900/40 shadow-inner">
                     <Image
                       src={category.image}

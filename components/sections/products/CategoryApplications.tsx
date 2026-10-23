@@ -1,4 +1,4 @@
-import { Droplets, Factory, FlaskConical, Fuel, Mountain, PawPrint, type LucideIcon } from "lucide-react";
+import { Cog, Droplets, Factory, FlaskConical, Mountain, PawPrint, type LucideIcon } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 
@@ -12,13 +12,15 @@ interface CategoryApplicationsProps {
 // Ícono y color por sector según el texto de la aplicación (ES o EN).
 // "petroquímico" va antes que "químico" porque lo contiene.
 const SECTORS: { match: RegExp; Icon: LucideIcon; color: string }[] = [
-  { match: /petroqu|petrochem/i, Icon: Fuel, color: "#e5c798" },
+  // Planta con chimeneas: una refinería, no una bomba de gasolina
+  { match: /petroqu|petrochem/i, Icon: Factory, color: "#e5c798" },
   { match: /químic|chemical/i, Icon: FlaskConical, color: "#02aeaa" },
   { match: /agua|water/i, Icon: Droplets, color: "#85b2cf" },
   { match: /animal/i, Icon: PawPrint, color: "#e5c798" },
   { match: /procesamiento de sal|salt processing/i, Icon: Mountain, color: "#85b2cf" },
 ];
-const DEFAULT_SECTOR = { Icon: Factory, color: "#02aeaa" };
+// Industria en general y cualquier sector nuevo
+const DEFAULT_SECTOR = { Icon: Cog, color: "#02aeaa" };
 
 // Las tarjetas ocupan todo el ancho sin importar cuántas aplicaciones tenga el producto
 const LG_COLUMNS: Record<number, string> = {
@@ -40,7 +42,7 @@ export function CategoryApplications({ isEs, eyebrow, productName, applications 
     <ScrollReveal animation="fade-up">
       <div className="relative rounded-3xl bg-[#183c6b] text-white p-6 sm:p-10 lg:p-12 overflow-hidden shadow-xl">
         <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-15" />
-        <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#02aeaa]/15 blur-3xl pointer-events-none" />
+        <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[radial-gradient(closest-side,rgba(2,174,170,0.15),transparent)] pointer-events-none" />
 
         <div className="relative z-10 flex flex-col gap-8 sm:gap-10">
           {/* Encabezado: el nombre del producto recuerda en qué página estamos */}

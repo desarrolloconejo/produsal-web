@@ -13,9 +13,9 @@ export function AboutWrapper({ children }: AboutWrapperProps) {
       <SectionTexture variant="cubes" className="bottom-auto h-[760px] lg:h-[820px]" />
       {/* Triángulos 2D corporativos en el fondo */}
       <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-30" />
-      <div className="absolute top-1/4 -left-36 w-96 h-96 rounded-full bg-[#02aeaa]/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-36 w-96 h-96 rounded-full bg-[#85b2cf]/5 blur-3xl pointer-events-none" />
-      <div className="absolute top-2/3 right-1/4 w-80 h-80 rounded-full bg-[#e5c798]/5 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-36 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(2,174,170,0.05),transparent)] pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-36 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(133,178,207,0.05),transparent)] pointer-events-none" />
+      <div className="absolute top-2/3 right-1/4 w-80 h-80 rounded-full bg-[radial-gradient(closest-side,rgba(229,199,152,0.05),transparent)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {children}

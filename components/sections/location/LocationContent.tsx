@@ -158,7 +158,7 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
               </div>
 
               {/* Badge flotante con coordenadas exactas */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 whitespace-nowrap bg-[#183c6b]/95 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-medium shadow-md flex items-center gap-1.5 border border-[#02aeaa]/40">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 whitespace-nowrap bg-[#183c6b]/95 text-white px-2.5 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-medium shadow-md flex items-center gap-1.5 border border-[#02aeaa]/40">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#02aeaa] animate-pulse" />
                 <span>{PLANT_LOCATION.label}</span>
               </div>
@@ -170,7 +170,7 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
                 href={PLANT_LOCATION.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/90 hover:bg-white text-[#183c6b] hover:text-[#02aeaa] px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl shadow-sm border border-slate-200/80 text-[11px] sm:text-xs font-heading font-bold flex items-center gap-1.5 transition-all backdrop-blur-sm"
+                className="bg-white/90 hover:bg-white text-[#183c6b] hover:text-[#02aeaa] px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl shadow-sm border border-slate-200/80 text-[11px] sm:text-xs font-heading font-bold flex items-center gap-1.5 transition-all"
               >
                 <MapPin className="w-3 h-3 text-[#02aeaa]" />
                 <span>{currentLang === "es" ? "Abrir en Maps" : "Open in Maps"}</span>

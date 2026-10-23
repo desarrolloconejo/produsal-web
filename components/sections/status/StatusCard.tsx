@@ -23,8 +23,8 @@ export function StatusCard({
     <div className="relative w-full min-h-[75vh] flex items-center justify-center py-20 px-4 bg-slate-50 overflow-hidden">
       {/* Trama topográfica continua compartida */}
       <div className="absolute inset-0 bg-[radial-gradient(rgba(2,174,170,0.06)_1px,transparent_1px)] [background-size:28px_28px] pointer-events-none" />
-      <div className="absolute top-1/4 -left-36 w-96 h-96 rounded-full bg-[#02aeaa]/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-36 w-96 h-96 rounded-full bg-[#e5c798]/10 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-36 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(2,174,170,0.05),transparent)] pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-36 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(229,199,152,0.1),transparent)] pointer-events-none" />
 
       <div className="relative z-10 max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xl shadow-slate-200/50 text-center flex flex-col items-center animate-slide-up">
         {/* Ícono animado */}

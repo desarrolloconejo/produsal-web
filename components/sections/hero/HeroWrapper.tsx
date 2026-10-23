@@ -38,7 +38,7 @@ export function HeroWrapper({
 
         {/* Gradiente multicapa de alta legibilidad corporativa */}
         {/* Capa 1: Filtro azul petróleo y turquesa para amalgamar con la marca */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#183c6b]/95 via-[#183c6b]/80 to-[#183c6b]/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#183c6b]/95 via-[#183c6b]/80 to-[#183c6b]/60" />
 
         {/* Capa 2: Gradiente vertical para suavizar la unión con el header y la siguiente sección */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#183c6b]/70 via-transparent to-[#183c6b]/95" />
@@ -47,9 +47,9 @@ export function HeroWrapper({
         <div className="absolute inset-0 crystal-pattern opacity-30" />
 
         {/* Destellos ambientales: Azul Claro, Celeste Costero y Arena Solar */}
-        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#02aeaa]/20 blur-3xl pointer-events-none" />
-        <div className="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-[#85b2cf]/20 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 right-10 w-96 h-96 rounded-full bg-[#e5c798]/15 blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(2,174,170,0.2),transparent)] pointer-events-none" />
+        <div className="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-[radial-gradient(closest-side,rgba(133,178,207,0.2),transparent)] pointer-events-none" />
+        <div className="absolute -bottom-32 right-10 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(229,199,152,0.15),transparent)] pointer-events-none" />
       </div>
 
       {/* Contenedor de contenido estructurado */}

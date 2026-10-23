@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { Dictionary } from "@/dictionaries/get-dictionary";
 
@@ -8,9 +8,11 @@ interface IntroSplashProps {
   dict: Dictionary["intro"];
 }
 
-type Phase = "loading" | "ready" | "leaving" | "done";
+type Phase = "loading" | "leaving" | "done";
 
-const MAX_WAIT_MS = 6000; // si algo tarda demasiado, igual se marca el botón como listo
+const MIN_VISIBLE_MS = 2600; // tiempo mínimo para que la foto se luzca
+const MAX_WAIT_MS = 6000; // nunca bloquea la página más que esto
+const BAR_FILL_MS = 400; // la barra llega al 100 % antes de salir
 const EXIT_MS = 1150; // retraso + fundido de salida (delay-150 + duration-1000)
 
 // Sale en cada carga completa de la página; si se navega dentro del sitio y se
@@ -25,7 +27,8 @@ const waitForWindowLoad = () =>
 
 /**
  * Bienvenida del inicio: foto de las pilas de sal a pantalla completa con el
- * logo. El usuario decide cuándo entrar.
+ * logo y una barra de carga. Sale sola cuando la página terminó de cargar
+ * (mínimo 2,6 s, máximo 6 s).
  *
  * - El scroll se bloquea con CSS (globals.css, html:has(#intro-splash[data-state="open"]))
  *   desde el primer pintado y se libera en cuanto empieza la salida.
@@ -33,32 +36,45 @@ const waitForWindowLoad = () =>
  *   reaparece la barra de scroll, ni la pantalla ni el logo se mueven.
  * - El fundido arranca 150 ms después: la página de abajo se reacomoda a la
  *   barra de scroll mientras la pantalla todavía la tapa por completo.
+ * - Todo se anima con opacidad y transform (la barra usa scaleX), sin filtros.
  */
 export function IntroSplash({ dict }: IntroSplashProps) {
   const [phase, setPhase] = useState<Phase>(() => (dismissedThisLoad ? "done" : "loading"));
-  const enterRef = useRef<HTMLButtonElement>(null);
+  const [progress, setProgress] = useState(0);
 
-  // Espera la carga de la página: al terminar, el botón para entrar se marca más
+  // Carga: la barra avanza mientras carga la página; al terminar se completa y sale
   useEffect(() => {
     if (phase !== "loading") return;
     let cancelled = false;
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    const start = performance.now();
+    const frame = requestAnimationFrame(() => setProgress(0.85));
     const loaded = Promise.all([waitForWindowLoad(), document.fonts?.ready]);
 
     Promise.race([loaded, new Promise((r) => setTimeout(r, MAX_WAIT_MS))]).then(() => {
-      if (!cancelled) setPhase((p) => (p === "loading" ? "ready" : p));
+      if (cancelled) return;
+      const remaining = Math.max(0, MIN_VISIBLE_MS - (performance.now() - start));
+      timers.push(
+        setTimeout(() => {
+          setProgress(1);
+          timers.push(
+            setTimeout(() => {
+              dismissedThisLoad = true;
+              setPhase("leaving");
+            }, BAR_FILL_MS),
+          );
+        }, remaining),
+      );
     });
 
     return () => {
       cancelled = true;
+      cancelAnimationFrame(frame);
+      timers.forEach(clearTimeout);
     };
     // Solo al montar
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Con la página lista, el foco pasa al botón para poder entrar con Enter
-  useEffect(() => {
-    if (phase === "ready") enterRef.current?.focus({ preventScroll: true });
-  }, [phase]);
 
   // Se desmonta al terminar el fundido de salida
   useEffect(() => {
@@ -70,12 +86,6 @@ export function IntroSplash({ dict }: IntroSplashProps) {
   if (phase === "done") return null;
 
   const leaving = phase === "leaving";
-  const ready = phase === "ready";
-
-  const enter = () => {
-    dismissedThisLoad = true;
-    setPhase("leaving");
-  };
 
   return (
     <div
@@ -89,23 +99,28 @@ export function IntroSplash({ dict }: IntroSplashProps) {
         leaving ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      {/* Foto a pantalla completa: acercamiento lento; al salir se desenfoca y oscurece */}
-      <div
-        className={`absolute inset-0 will-change-[filter] transition-[filter] duration-700 ease-out ${
-          leaving ? "blur-lg brightness-50" : "blur-[0px] brightness-100"
-        }`}
-      >
-        <div className="absolute inset-0 will-change-transform animate-ken-burns">
-          <Image
-            src="/images/produsal-bienvenida-pilas.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            quality={90}
-            className="object-cover object-center"
-          />
-        </div>
+      {/* Foto a pantalla completa con acercamiento lento. Al salir, el desenfoque es un
+          fundido hacia una copia ya desenfocada (96 px estirada) y una capa oscura: solo se
+          anima la opacidad, que el navegador resuelve en la GPU sin recalcular filtros */}
+      <div className="absolute inset-0 will-change-transform animate-ken-burns">
+        <Image
+          src="/images/produsal-bienvenida-pilas.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          quality={90}
+          className="object-cover object-center"
+        />
+        <Image
+          src="/images/produsal-bienvenida-pilas-blur.webp"
+          alt=""
+          fill
+          priority
+          unoptimized
+          className={`object-cover object-center scale-105 transition-opacity duration-500 ease-out ${leaving ? "opacity-100" : "opacity-0"}`}
+        />
+        <div className={`absolute inset-0 bg-[#0c2240] transition-opacity duration-500 ease-out ${leaving ? "opacity-50" : "opacity-0"}`} />
       </div>
 
       {/* Capas para legibilidad y color de marca */}
@@ -114,8 +129,8 @@ export function IntroSplash({ dict }: IntroSplashProps) {
 
       {/* Solo el logo */}
       <div
-        className={`relative z-10 h-full flex items-center justify-center px-8 transition-[opacity,filter] duration-500 ease-out ${
-          leaving ? "opacity-0 blur-sm" : ""
+        className={`relative z-10 h-full flex items-center justify-center px-8 transition-[opacity,transform] duration-500 ease-out ${
+          leaving ? "opacity-0 scale-95" : ""
         }`}
       >
         <Image
@@ -129,20 +144,19 @@ export function IntroSplash({ dict }: IntroSplashProps) {
         />
       </div>
 
-      {/* Botón para entrar: el usuario decide cuándo pasar a la página */}
+      {/* Barra de carga */}
       <div className={`absolute inset-x-0 bottom-0 z-10 transition-opacity duration-300 ${leaving ? "opacity-0" : "opacity-100"}`}>
         {/* La animación de entrada va en un hijo: quitarla al salir haría parpadear la opacidad */}
-        <div className="flex justify-center px-6 pb-10 sm:pb-14 animate-slide-up-delay-2">
-          <button
-            ref={enterRef}
-            type="button"
-            onClick={enter}
-            className={`type-caption tracking-[0.2em] px-6 py-2 rounded-full border transition-colors duration-500 cursor-pointer hover:bg-white/10 hover:text-white hover:border-white/60 focus:outline-hidden focus-visible:ring-1 focus-visible:ring-white/60 ${
-              ready ? "border-white/35 text-white/85" : "border-white/15 text-white/50"
-            }`}
-          >
-            {dict.skip}
-          </button>
+        <div className="flex justify-center px-6 pb-12 sm:pb-16 animate-slide-up-delay-2">
+          <div className="w-40 sm:w-56 h-0.5 rounded-full bg-white/15 overflow-hidden">
+            <div
+              className="h-full w-full origin-left rounded-full bg-gradient-to-r from-[#02aeaa] via-[#85b2cf] to-[#e5c798] transition-transform ease-out"
+              style={{
+                transform: `scaleX(${progress})`,
+                transitionDuration: progress === 1 ? `${BAR_FILL_MS}ms` : `${MIN_VISIBLE_MS}ms`,
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

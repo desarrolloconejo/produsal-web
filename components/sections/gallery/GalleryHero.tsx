@@ -23,8 +23,8 @@ export function GalleryHero({ dict, backgroundImageSrc }: GalleryHeroProps) {
         <div className="absolute inset-0 bg-gradient-to-r from-[#183c6b]/95 via-[#183c6b]/80 to-[#183c6b]/40" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#183c6b]/70 via-transparent to-[#183c6b]" />
         <div className="absolute inset-0 crystal-pattern opacity-25 pointer-events-none" />
-        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#02aeaa]/20 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 right-0 w-96 h-96 rounded-full bg-[#e5c798]/15 blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(2,174,170,0.2),transparent)] pointer-events-none" />
+        <div className="absolute -bottom-32 right-0 w-96 h-96 rounded-full bg-[radial-gradient(closest-side,rgba(229,199,152,0.15),transparent)] pointer-events-none" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -20,9 +20,9 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
       <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-25" />
       {/* Fondo con patrones y resplandor decorativo */}
       <div className="absolute inset-0 bg-[radial-gradient(#02aeaa_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#02aeaa]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#85b2cf]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-[#e5c798]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[radial-gradient(closest-side,rgba(2,174,170,0.2),transparent)] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[radial-gradient(closest-side,rgba(133,178,207,0.2),transparent)] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-[radial-gradient(closest-side,rgba(229,199,152,0.1),transparent)] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col gap-8 max-w-3xl mx-auto text-center items-center">
@@ -52,7 +52,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
           <ScrollReveal animation="fade-up" delay={150} className="w-full pt-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
               {/* Correo Electrónico */}
-              <div className="p-4 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md hover:border-[#e5c798]/70 transition-all duration-300 flex items-center gap-3.5 group">
+              <div className="p-4 rounded-2xl bg-white/10 border border-white/15 hover:border-[#e5c798]/70 transition-all duration-300 flex items-center gap-3.5 group">
                 <div className="w-10 h-10 rounded-xl bg-[#e5c798]/25 text-[#e5c798] group-hover:bg-[#e5c798] group-hover:text-[#183c6b] flex items-center justify-center shrink-0 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
@@ -67,7 +67,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
               </div>
 
               {/* Ubicación Planta */}
-              <div className="p-4 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md hover:border-[#85b2cf]/70 transition-all duration-300 flex items-center gap-3.5 group">
+              <div className="p-4 rounded-2xl bg-white/10 border border-white/15 hover:border-[#85b2cf]/70 transition-all duration-300 flex items-center gap-3.5 group">
                 <div className="w-10 h-10 rounded-xl bg-[#85b2cf]/25 text-[#85b2cf] group-hover:bg-[#85b2cf] group-hover:text-[#183c6b] flex items-center justify-center shrink-0 transition-colors">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -76,7 +76,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                     {isEs ? "Planta y salina" : "Plant and saltworks"}
                   </span>
                   <span className="text-sm font-extrabold text-white font-heading truncate">
-                    {isEs ? "Los Olivitos, municipio Miranda, Zulia" : "Los Olivitos, Miranda, Zulia"}
+                    Los Olivitos, Miranda, Zulia
                   </span>
                   <span className="text-[11px] text-white/60 truncate">
                     {PLANT_LOCATION.label}

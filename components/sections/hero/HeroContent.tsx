@@ -49,7 +49,7 @@ export function HeroContent({ currentLang, dict }: HeroContentProps) {
 
         <Link
           href={`/${currentLang}/nosotros`}
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#85b2cf]/15 text-white font-semibold text-sm border border-[#85b2cf]/40 hover:border-[#85b2cf] backdrop-blur-sm transition-all duration-200 font-heading text-center"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#85b2cf]/15 text-white font-semibold text-sm border border-[#85b2cf]/40 hover:border-[#85b2cf] transition-all duration-200 font-heading text-center"
         >
           <Waves className="w-4 h-4 text-[#85b2cf] shrink-0" />
           <span>{dict.ctaAbout}</span>

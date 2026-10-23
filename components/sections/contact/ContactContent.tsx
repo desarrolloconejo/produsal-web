@@ -57,8 +57,8 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
               </span>
               <span className="text-sm font-bold text-slate-800">
                 {isEs
-                  ? "Complejo Industrial Los Olivitos, municipio Miranda, estado Zulia, Venezuela"
-                  : "Los Olivitos Industrial Complex, Miranda Municipality, Zulia State, Venezuela"}
+                  ? "Complejo Industrial Los Olivitos, Miranda, Zulia, Venezuela"
+                  : "Los Olivitos Industrial Complex, Miranda, Zulia, Venezuela"}
               </span>
             </div>
           </div>

@@ -60,7 +60,7 @@ export function PrivacyContent({ currentLang, dict }: PrivacyContentProps) {
       {/* 2. Hero Editorial Legal */}
       <section className="relative bg-[#183c6b] text-white py-14 sm:py-20 overflow-hidden border-b border-[#02aeaa]/20">
         <div className="absolute inset-0 bg-[radial-gradient(#02aeaa_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#02aeaa]/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(closest-side,rgba(2,174,170,0.15),transparent)] rounded-full pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal animation="fade-down">

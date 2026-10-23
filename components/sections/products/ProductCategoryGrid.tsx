@@ -62,7 +62,7 @@ export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridPr
 
                   <div className="absolute top-3 right-3 z-10">
                     <span
-                      className={`type-caption px-2.5 py-1 rounded-full backdrop-blur-xs shadow-xs ${isPremium ? "bg-[#02aeaa] text-white" : "bg-[#85b2cf] text-[#183c6b]"
+                      className={`type-caption px-2.5 py-1 rounded-full shadow-xs ${isPremium ? "bg-[#02aeaa] text-white" : "bg-[#85b2cf] text-[#183c6b]"
                       }`}
                     >
                       {isPremium

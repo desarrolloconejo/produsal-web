@@ -18,9 +18,19 @@ export const galleryImages: GalleryImage[] = [
     "height": 1350
   },
   {
+    "src": "/images/galeria/DSC00060.webp",
+    "width": 2000,
+    "height": 1333
+  },
+  {
     "src": "/images/galeria/DSC00072.webp",
     "width": 2000,
     "height": 1333
+  },
+  {
+    "src": "/images/galeria/producto-sal-bruta-premium.webp",
+    "width": 1000,
+    "height": 1250
   },
   {
     "src": "/images/galeria/cristalizadores-aerea.webp",
@@ -33,6 +43,11 @@ export const galleryImages: GalleryImage[] = [
     "height": 2400
   },
   {
+    "src": "/images/galeria/DSC00068.webp",
+    "width": 2000,
+    "height": 1333
+  },
+  {
     "src": "/images/galeria/DSC00008.webp",
     "width": 2000,
     "height": 1333
@@ -41,6 +56,11 @@ export const galleryImages: GalleryImage[] = [
     "src": "/images/galeria/colonia-flamencos-aerea.webp",
     "width": 2400,
     "height": 1350
+  },
+  {
+    "src": "/images/galeria/DSC00071.webp",
+    "width": 2000,
+    "height": 1333
   },
   {
     "src": "/images/galeria/pilas-cielo-azul.webp",
@@ -53,6 +73,16 @@ export const galleryImages: GalleryImage[] = [
     "height": 1350
   },
   {
+    "src": "/images/galeria/producto-sal-bruta-tipo-a.webp",
+    "width": 1000,
+    "height": 1333
+  },
+  {
+    "src": "/images/galeria/DSC00162.webp",
+    "width": 2000,
+    "height": 1333
+  },
+  {
     "src": "/images/galeria/DSC00320.webp",
     "width": 1500,
     "height": 2000
@@ -61,6 +91,11 @@ export const galleryImages: GalleryImage[] = [
     "src": "/images/galeria/flamencos-orilla.webp",
     "width": 2400,
     "height": 1350
+  },
+  {
+    "src": "/images/galeria/carga-camion-pila.webp",
+    "width": 2000,
+    "height": 1333
   },
   {
     "src": "/images/galeria/DSC00079.webp",
@@ -73,9 +108,19 @@ export const galleryImages: GalleryImage[] = [
     "height": 1080
   },
   {
+    "src": "/images/galeria/sacos-paleta-camion.webp",
+    "width": 960,
+    "height": 600
+  },
+  {
     "src": "/images/galeria/textura-sal.webp",
     "width": 2400,
     "height": 1800
+  },
+  {
+    "src": "/images/galeria/producto-sal-molida-premium.webp",
+    "width": 1000,
+    "height": 1333
   },
   {
     "src": "/images/galeria/costa-flamencos-aerea.webp",
@@ -106,11 +151,6 @@ export const galleryImages: GalleryImage[] = [
     "src": "/images/galeria/flamencos-vuelo-aerea.webp",
     "width": 2400,
     "height": 1350
-  },
-  {
-    "src": "/images/galeria/DSC00085.webp",
-    "width": 2000,
-    "height": 1333
   },
   {
     "src": "/images/galeria/flamencos-laguna.webp",

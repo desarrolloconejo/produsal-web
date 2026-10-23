@@ -123,10 +123,14 @@ color se pone aparte en cada componente.
   escalonado de 100 ms).
 - El hero del inicio usa las clases animate-slide-up-delay-*.
 - El inicio abre con una bienvenida a pantalla completa (IntroSplash) en cada
-  recarga: foto de las pilas de sal y solo el logo, sin barra de carga. El
-  usuario decide cuando entrar con el boton "Entrar" (salida con desenfoque
-  y fundido). El scroll se bloquea con CSS (html:has(#intro-splash)), sin
-  scrollbar-gutter, y la pantalla mide 100vw para que nada se mueva al salir.
+  recarga: foto de las pilas de sal, el logo y una barra de carga. Sale sola
+  cuando la pagina termino de cargar (minimo 2,6 s, maximo 6 s) con un fundido
+  hacia una copia desenfocada. El scroll se bloquea con CSS
+  (html:has(#intro-splash)), sin scrollbar-gutter, y la pantalla mide 100vw
+  para que nada se mueva al salir.
+- Rendimiento: no usar blur ni backdrop-blur en capas grandes ni en brillos
+  decorativos (usar degradados radiales). backdrop-blur solo en fondos de
+  modales y menu movil. Animar solo opacity y transform.
 - Solo usar animaciones definidas en app/globals.css (animate-fade-in,
   animate-fade-in-fast, animate-slide-up*, animate-slide-down,
   animate-zoom-in, animate-float-slow, animate-pulse-subtle,
@@ -174,10 +178,8 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
   (solo sacos). No se sectorizan las presentaciones (sin "uso" por formato).
 - Decir "Materia prima para el sector de consumo animal" en lugar de
   "nutricion animal" (en ingles "Raw material for the animal feed sector").
-- Aplicaciones de las molidas: premium = sector quimico, tratamiento de aguas,
-  industria en general y materia prima para el sector de consumo animal;
-  tipo A = industria en general y materia prima para el sector de consumo
-  animal.
+- Aplicaciones de las molidas (por ahora): premium = sector quimico e
+  industria en general; tipo A = solo industria en general.
 - EXW siempre explicado: retiro en planta con transporte del cliente (incluye
   servicio de carga); para entrega en destino se conecta con el distribuidor
   autorizado mas cercano.
@@ -190,7 +192,8 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 - Sin telefonos en la web: el canal de contacto es el correo
   infoprodusal@grupomimesa.com.
 - RIF: J-07042868-6. La planta es "Salina Los Olivitos" (singular),
-  municipio Miranda, estado Zulia. Se puede llamar "Complejo Industrial Los
+  en Miranda, Zulia (asi, sin "municipio" ni "estado", en toda la web).
+  Se puede llamar "Complejo Industrial Los
   Olivitos" o "Complejo Salinero Los Olivitos"; los dos nombres son validos.
 - No usar "cotizar/cotizacion" en la web (ni "quote" en ingles). El
   contacto no promete cotizacion formal: primero se entiende la necesidad

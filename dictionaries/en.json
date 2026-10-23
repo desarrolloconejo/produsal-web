@@ -52,8 +52,7 @@
     "ctaAbout": "Discover our history"
   },
   "intro": {
-    "label": "Welcome to Produsal",
-    "skip": "Enter"
+    "label": "Welcome to Produsal"
   },
   "historySection": {
     "badge": "Origin and heritage",
@@ -132,7 +131,7 @@
         "step": "06",
         "name": "Dispatch",
         "shortDesc": "Bulk, big bags, and bags",
-        "description": "Direct delivery at our plant, in different packaging formats, for the whole country."
+        "description": "Direct delivery at our plant in different packaging formats for the whole country."
       }
     ]
   },
@@ -236,9 +235,7 @@
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
           "Chemical sector",
-          "Water treatment",
-          "General industry",
-          "Raw material for the animal feed sector"
+          "General industry"
         ],
         "items": [
           {
@@ -268,8 +265,7 @@
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "General industry",
-          "Raw material for the animal feed sector"
+          "General industry"
         ],
         "items": [
           {
@@ -319,11 +315,11 @@
     "subtitle": "From western Venezuela to industries across the country.",
     "locationHighlight": "PRODUSAL - Zulia",
     "plantName": "Los Olivitos Saltworks Industrial Complex",
-    "locationDetails": "Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State.",
+    "locationDetails": "Miranda, Eastern Coast of Lake Maracaibo, Zulia.",
     "stats": [
       {
         "label": "Capacity",
-        "detail": "650,000 MT/year"
+        "detail": "Venezuela's leading saltworks with a capacity of 650,000 MT"
       },
       {
         "label": "National distribution",
@@ -371,7 +367,7 @@
       "title": "1. Data controller identification",
       "company": "Productora de Sal, C.A. (PRODUSAL)",
       "rif": "Tax ID (RIF): J-07042868-6",
-      "address": "Los Olivitos Saltworks Industrial Complex, Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State, Venezuela.",
+      "address": "Los Olivitos Saltworks Industrial Complex, Miranda, Eastern Coast of Lake Maracaibo, Zulia, Venezuela.",
       "email": "infoprodusal@grupomimesa.com"
     },
     "sections": [
@@ -424,7 +420,7 @@
     "quickLinksTitle": "Quick navigation",
     "contactTitle": "Contact information",
     "plantLabel": "Plant and saltworks",
-    "plantAddress": "Los Olivitos Industrial Complex, Miranda Municipality, Zulia State, Venezuela",
+    "plantAddress": "Los Olivitos Industrial Complex, Miranda, Zulia, Venezuela",
     "email": "infoprodusal@grupomimesa.com",
     "scrollToTop": "Back to top",
     "copyright": "© 2026 Produsal C.A. RIF J-07042868-6. All rights reserved.",

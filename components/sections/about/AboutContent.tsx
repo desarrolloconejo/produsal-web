@@ -105,8 +105,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
             </span>
             <p className="text-base sm:text-lg font-bold">
               {isEs
-                ? "Complejo 'Green Field' Los Olivitos, municipio Miranda, Zulia"
-                : "Los Olivitos 'Green Field' complex, Miranda Municipality, Zulia"}
+                ? "Complejo 'Green Field' Los Olivitos, Miranda, Zulia"
+                : "Los Olivitos 'Green Field' complex, Miranda, Zulia"}
             </p>
           </div>
         </div>
@@ -234,7 +234,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                   : "Human commitment and workplace safety"}
               </p>
             </div>
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/20 backdrop-blur-md border border-white/20 text-xs font-bold font-heading shrink-0 self-start sm:self-auto">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/20 border border-white/20 text-xs font-bold font-heading shrink-0 self-start sm:self-auto">
               <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse" />
               {isEs ? "100% talento venezolano" : "100% Venezuelan talent"}
             </span>

@@ -131,7 +131,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
 
                   {/* Tag flotante */}
                   <div className="absolute top-3 left-3 z-10">
-                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-white/95 backdrop-blur-md ${c.tagClass} border font-heading shadow-xs`}>
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-white/95 ${c.tagClass} border font-heading shadow-xs`}>
                       {c.icon}
                       {c.tag}
                     </span>

@@ -52,8 +52,7 @@
     "ctaAbout": "Conoce nuestra historia"
   },
   "intro": {
-    "label": "Bienvenida a Produsal",
-    "skip": "Entrar"
+    "label": "Bienvenida a Produsal"
   },
   "historySection": {
     "badge": "Origen y trayectoria",
@@ -132,7 +131,7 @@
         "step": "06",
         "name": "Despacho",
         "shortDesc": "Granel, big bags y sacos",
-        "description": "Entrega directa en planta, en distintas presentaciones, para todo el país."
+        "description": "Entrega directa en planta en distintas presentaciones para todo el país."
       }
     ]
   },
@@ -236,9 +235,7 @@
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
           "Sector químico",
-          "Tratamiento de aguas",
-          "Industria en general",
-          "Materia prima para el sector de consumo animal"
+          "Industria en general"
         ],
         "items": [
           {
@@ -268,8 +265,7 @@
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "Industria en general",
-          "Materia prima para el sector de consumo animal"
+          "Industria en general"
         ],
         "items": [
           {
@@ -319,11 +315,11 @@
     "subtitle": "Desde el occidente venezolano hacia la industria de todo el país.",
     "locationHighlight": "PRODUSAL - Zulia",
     "plantName": "Complejo Industrial Salina Los Olivitos",
-    "locationDetails": "Municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia.",
+    "locationDetails": "Miranda, Costa Oriental del Lago de Maracaibo, Zulia.",
     "stats": [
       {
-        "label": "Capacidad",
-        "detail": "650.000 TM/año"
+        "label": "Capacidades",
+        "detail": "La principal salina de Venezuela con capacidad de 650.000 TM"
       },
       {
         "label": "Distribución nacional",
@@ -371,7 +367,7 @@
       "title": "1. Identificación del responsable",
       "company": "Productora de Sal, C.A. (PRODUSAL)",
       "rif": "RIF J-07042868-6",
-      "address": "Complejo Industrial Salina Los Olivitos, municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia, Venezuela.",
+      "address": "Complejo Industrial Salina Los Olivitos, Miranda, Costa Oriental del Lago de Maracaibo, Zulia, Venezuela.",
       "email": "infoprodusal@grupomimesa.com"
     },
     "sections": [
@@ -424,7 +420,7 @@
     "quickLinksTitle": "Navegación rápida",
     "contactTitle": "Información de contacto",
     "plantLabel": "Planta y salina",
-    "plantAddress": "Complejo Industrial Los Olivitos, municipio Miranda, estado Zulia, Venezuela",
+    "plantAddress": "Complejo Industrial Los Olivitos, Miranda, Zulia, Venezuela",
     "email": "infoprodusal@grupomimesa.com",
     "scrollToTop": "Volver arriba",
     "copyright": "© 2026 Produsal C.A. RIF J-07042868-6. Todos los derechos reservados.",
