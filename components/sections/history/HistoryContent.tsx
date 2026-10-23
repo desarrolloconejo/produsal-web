@@ -44,7 +44,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           <div className="lg:col-span-5 relative w-full h-52 sm:h-64 lg:h-72 overflow-hidden rounded-3xl lg:rounded-tl-[60px] lg:rounded-br-[60px] shadow-lg border border-slate-200/60 group">
             <Image
               src="/images/produsal-salina-horizonte.webp"
-              alt={currentLang === "es" ? "Complejo Industrial Salinas Los Olivitos - Vista Panorámica" : "Los Olivitos Industrial Salt Complex - Panoramic View"}
+              alt={currentLang === "es" ? "Complejo Industrial Salina Los Olivitos - vista panorámica" : "Los Olivitos Saltworks Industrial Complex - panoramic view"}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 42vw"
@@ -54,7 +54,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
             <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10 bg-[#183c6b]/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-white flex items-center gap-2 max-w-[calc(100%-1.5rem)]">
               <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse shrink-0" />
               <span className="text-[11px] font-heading font-medium tracking-wide truncate">
-                {currentLang === "es" ? "Salinas Los Olivitos • Producción Solar" : "Los Olivitos Salt Flats • Solar Harvesting"}
+                {currentLang === "es" ? "Salina Los Olivitos • producción solar" : "Los Olivitos Saltworks • solar production"}
               </span>
             </div>
           </div>
@@ -136,7 +136,7 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
             <div className="flex flex-col gap-2">
               <span className="type-label text-[#e5c798] flex items-center gap-1.5">
                 <Leaf className="w-3.5 h-3.5 text-[#e5c798]" />
-                {eraHoy.tag} &bull; {currentLang === "es" ? "Reserva Natural ABRAE" : "ABRAE Nature Reserve"}
+                {eraHoy.tag} &bull; {currentLang === "es" ? "Reserva natural ABRAE" : "ABRAE nature reserve"}
               </span>
 
               <h3 className="type-h3 text-white">

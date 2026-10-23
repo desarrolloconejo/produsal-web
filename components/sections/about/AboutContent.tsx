@@ -7,7 +7,6 @@ import {
   HeartHandshake,
   Trees,
 } from "lucide-react";
-import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale } from "@/dictionaries/get-dictionary";
 
 interface AboutContentProps {
@@ -22,122 +21,74 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       year: "1989",
       title: isEs ? "Fundación en Maracaibo" : "Foundation in Maracaibo",
       desc: isEs
-        ? "Creada por el Grupo Zuliano como iniciativa estratégica para el desarrollo industrial salinero en el occidente del país."
-        : "Founded by Grupo Zuliano as a strategic venture to pioneer industrial salt production in western Venezuela.",
+        ? "Creada por el Grupo Zuliano como iniciativa estratégica para el desarrollo salinero en el occidente del país."
+        : "Founded by Grupo Zuliano as a strategic venture for salt production in western Venezuela.",
     },
     {
       year: "1999",
-      title: isEs ? "Puesta en Marcha 'Green Field'" : "'Green Field' Commercial Launch",
+      title: isEs ? "Puesta en marcha 'Green Field'" : "'Green Field' launch",
       desc: isEs
-        ? "Construido entre 1994 y 1998, el Complejo Industrial Los Olivitos inicia operaciones comerciales continuas en marzo de 1999."
-        : "Built between 1994 and 1998, the Los Olivitos Industrial Complex began continuous commercial operations in March 1999.",
-    },
-  ];
-
-  const operationalStats = [
-    {
-      value: "650.000",
-      unit: isEs ? "TM / Año" : "MT / Year",
-      label: isEs ? "Capacidad Operativa Actual" : "Current Operational Output",
-      desc: isEs
-        ? "La principal salina de Venezuela operando bajo altos estándares de eficiencia."
-        : "Venezuela's leading salt facility operating under high efficiency standards.",
-    },
-    {
-      value: "450.000",
-      unit: isEs ? "TM" : "MT",
-      label: isEs ? "Almacenaje en Patio" : "Stockpile Yard Capacity",
-      desc: isEs
-        ? "Respaldo continuo de inventario para asegurar despachos ininterrumpidos."
-        : "Continuous stockpile buffer ensuring uninterrupted supply year-round.",
-    },
-    {
-      value: "60.000",
-      unit: isEs ? "TM / Año" : "MT / Year",
-      label: isEs ? "Planta de Molienda y Empacado" : "Milling & Packaging Plant",
-      desc: isEs
-        ? "Procesamiento de sal molida Premium y Tipo A en sacos y Big Bags."
-        : "High-spec processing for Premium & Grade A milled salt in bags and Big Bags.",
-    },
-  ];
-
-  const marketSegments = [
-    {
-      title: isEs ? "Sector Petroquímico y Químico" : "Petrochemical & Chemical Sector",
-      desc: isEs
-        ? "Suministro directo a Pequiven y PDVSA para síntesis de cloro gas, ácido clorhídrico (HCl), soda cáustica, PVC y fluidos de perforación."
-        : "Direct supply to Pequiven and PDVSA for chlorine gas, hydrochloric acid (HCl), caustic soda, PVC, and drilling fluids.",
-    },
-    {
-      title: isEs ? "Nutrición Animal y Ganadería" : "Animal Nutrition & Livestock",
-      desc: isEs
-        ? "Materia prima para sales minerales, bloques nutricionales y suplementación del rebaño nacional."
-        : "Raw material for mineral salts, lick blocks, and nutritional supplementation for livestock.",
-    },
-    {
-      title: isEs ? "Tratamiento de Aguas e Industria" : "Water Treatment & Industry",
-      desc: isEs
-        ? "Suministro para acueductos, equipos suavizadores y procesos industriales que requieren sal de alta pureza."
-        : "Supply for municipal utilities, softening equipment, and industrial processes that require high-purity salt.",
+        ? "Construido entre 1994 y 1998, el Complejo Industrial Los Olivitos inicia operaciones comerciales en marzo de 1999."
+        : "Built between 1994 and 1998, the Los Olivitos Industrial Complex began commercial operations in March 1999.",
     },
   ];
 
   const sustainabilityItems = [
     {
       icon: <ShieldCheck className="w-6 h-6 text-[#02aeaa]" />,
-      title: isEs ? "Zona ABRAE Bajo Manejo Especial" : "ABRAE Protected Ecological Zone",
+      title: isEs ? "Zona ABRAE" : "ABRAE zone",
       desc: isEs
-        ? "Nuestras 5.400 hectáreas forman parte de un Área Bajo Régimen de Administración Especial, garantizando la preservación del ecosistema costero y sus humedales."
-        : "Our 5,400 proprietary hectares are integrated into an Area Under Special Administrative Regime, ensuring strict coastal and wetland stewardship.",
+        ? "Nuestra salina forma parte de un Área Bajo Régimen de Administración Especial, que protege el ecosistema costero y sus humedales."
+        : "Our saltworks are part of an Area Under Special Administration Regime, which protects the coastal ecosystem and its wetlands.",
     },
     {
       icon: <Trees className="w-6 h-6 text-[#85b2cf]" />,
-      title: isEs ? "Sitio Internacional RHRAP y Jardín Los Yabos" : "WHSRN International Site & Los Yabos Reserve",
+      title: isEs ? "Sitio RHRAP y jardín Los Yabos" : "WHSRN site and Los Yabos garden",
       desc: isEs
-        ? "Primer enclave en Venezuela proclamado de Importancia Internacional por la Red Hemisférica de Reservas de Aves Playeras (RHRAP) y hogar del jardín xerofítico 'Los Yabos'."
-        : "First site in Venezuela recognized by the Western Hemisphere Shorebird Reserve Network (WHSRN) and habitat to 'Los Yabos' xerophytic botanical sanctuary.",
+        ? "Los Olivitos fue el primer sitio de Venezuela reconocido por la Red Hemisférica de Reservas de Aves Playeras (RHRAP) por su importancia para las aves migratorias. En el mismo entorno se encuentra el jardín xerofítico Los Yabos, que conserva la flora de la zona."
+        : "Los Olivitos was the first site in Venezuela recognized by the Western Hemisphere Shorebird Reserve Network (WHSRN) for its importance to migratory birds. The same area is home to the Los Yabos xerophytic garden, which preserves the local flora.",
     },
     {
       icon: <HeartHandshake className="w-6 h-6 text-[#e5c798]" />,
-      title: isEs ? "Programa RSE: Nutriendo La Prosperidad" : "CSR Initiative: Nutriendo La Prosperidad",
+      title: isEs ? "Programa RSE: Nutriendo la Prosperidad" : "CSR program: Nutriendo la Prosperidad",
       desc: isEs
-        ? "En alianza con el Dividendo Voluntario para la Comunidad (DVC), hemos servido más de 840.000 raciones nutricionales a niños preescolares de comunidades zulianas."
-        : "In partnership with Dividendo Voluntario para la Comunidad (DVC), we have provided over 840,000 daily nutritional meals to preschool children in Zulia communities.",
+        ? "Programa de responsabilidad social desarrollado en alianza con el Dividendo Voluntario para la Comunidad (DVC), orientado a la nutrición de niños en edad preescolar de comunidades zulianas."
+        : "Social responsibility program developed in partnership with Dividendo Voluntario para la Comunidad (DVC), focused on the nutrition of preschool children in Zulia communities.",
     },
   ];
 
   return (
     <div className="flex flex-col gap-20 sm:gap-24">
-      {/* 2. Grid Panorámico e Historia Corporativa */}
+      {/* 2. Grid panorámico e historia corporativa */}
       <ScrollReveal animation="fade-up" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 aspect-16/10">
           <Image
             src="/images/produsal-salina-horizonte.webp"
-            alt={isEs ? "Salinas Los Olivitos de Produsal, Zulia, Venezuela" : "Produsal Los Olivitos salt flats, Zulia, Venezuela"}
+            alt={isEs ? "Salina Los Olivitos de Produsal, Zulia, Venezuela" : "Produsal Los Olivitos saltworks, Zulia, Venezuela"}
             fill
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/90 via-[#183c6b]/30 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 text-white">
             <span className="type-label text-[#e5c798] block mb-1">
-              {isEs ? "5.400 Hectáreas Propias • 3.200 Ha Operativas" : "5,400 Proprietary Hectares • 3,200 Operational Ha"}
+              {isEs ? "5.400 hectáreas propias" : "5,400 proprietary hectares"}
             </span>
             <p className="text-base sm:text-lg font-bold">
               {isEs
-                ? "Complejo 'Green Field' Los Olivitos, Municipio Miranda, Zulia"
-                : "Los Olivitos 'Green Field' Industrial Complex, Miranda, Zulia"}
+                ? "Complejo 'Green Field' Los Olivitos, municipio Miranda, Zulia"
+                : "Los Olivitos 'Green Field' complex, Miranda Municipality, Zulia"}
             </p>
           </div>
         </div>
 
         <div className="lg:col-span-5 flex flex-col gap-6">
           <h2 className="type-h2 text-[#183c6b]">
-            {isEs ? "Nuestra Trayectoria" : "Our Heritage"}
+            {isEs ? "Nuestra trayectoria" : "Our heritage"}
           </h2>
           <p className="type-body text-slate-600">
             {isEs
-              ? "Desde su concepción en Maracaibo hasta convertirse en la principal salina del país, PRODUSAL ha desarrollado una infraestructura industrial única con tecnología de cristalización solar continua."
-              : "From our roots in Maracaibo to operating the nation's leading salt facility, PRODUSAL has built specialized industrial capacity with continuous solar crystallization technology."}
+              ? "Desde su concepción en Maracaibo hasta convertirse en la principal salina del país, PRODUSAL ha desarrollado una infraestructura industrial con tecnología de cristalización solar."
+              : "From its roots in Maracaibo to operating the country's leading saltworks, PRODUSAL has built industrial infrastructure with solar crystallization technology."}
           </p>
 
           <div className="flex flex-col gap-4">
@@ -156,87 +107,39 @@ export function AboutContent({ currentLang }: AboutContentProps) {
         </div>
       </ScrollReveal>
 
-      {/* 3. Métricas Industriales y Capacidad Operativa */}
-      <ScrollReveal animation="fade-up" className="flex flex-col gap-8">
-        <div>
+      {/* 3. Capacidad: una sola cifra, junto al encabezado */}
+      <ScrollReveal animation="fade-up" className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-center">
+        <div className="md:col-span-7">
           <span className="type-eyebrow text-[#02aeaa] block mb-2">
-            {isEs ? "Capacidad y Logística" : "Capacity & Logistics"}
+            {isEs ? "Capacidad y logística" : "Capacity and logistics"}
           </span>
           <h2 className="type-h2 text-[#183c6b]">
-            {isEs ? "Cifras que Respaldan Nuestro Liderazgo" : "Key Figures Backing Our Leadership"}
+            {isEs ? "Cifras que respaldan nuestro liderazgo" : "Figures behind our leadership"}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {operationalStats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-[#02aeaa] transition-all"
-            >
-              <div className="flex items-baseline gap-1.5 mb-2">
-                <span className="text-3xl sm:text-4xl font-extrabold text-[#183c6b] font-heading tracking-tight">
-                  {stat.value}
-                </span>
-                <span className="text-xs font-bold text-[#02aeaa]">{stat.unit}</span>
-              </div>
-              <h4 className="type-h5 text-slate-900 mb-1">{stat.label}</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">{stat.desc}</p>
-            </div>
-          ))}
-        </div>
-      </ScrollReveal>
-
-      {/* 4. Segmentación del Mercado Venezolano */}
-      <ScrollReveal animation="fade-up" className="rounded-3xl p-8 sm:p-12 bg-[#183c6b] text-white relative overflow-hidden">
-        <div className="absolute inset-0 crystal-pattern opacity-10 pointer-events-none" />
-        {/* Triángulos 2D corporativos en fondo azul */}
-        <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-25" />
-        <div className="relative z-10 flex flex-col gap-8">
-          <div className="max-w-3xl">
-            <span className="type-eyebrow text-[#e5c798] block mb-2">
-              {isEs ? "Presencia en el Mercado Nacional" : "Domestic Market Leadership"}
+        <div className="md:col-span-5 p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-[#02aeaa] transition-all">
+          <div className="flex items-baseline gap-1.5 mb-2">
+            <span className="text-3xl sm:text-4xl font-extrabold text-[#183c6b] font-heading tracking-tight">
+              650.000
             </span>
-            <h2 className="type-h2 mb-4">
-              {isEs ? "Sectores que Abastece PRODUSAL" : "Sectors Supplied by PRODUSAL"}
-            </h2>
-            <p className="type-body text-white/80">
-              {isEs
-                ? "Desde Los Olivitos abastecemos de forma estratégica a tres grandes sectores económicos del país:"
-                : "From Los Olivitos we strategically supply three primary economic sectors across the country:"}
-            </p>
+            <span className="text-xs font-bold text-[#02aeaa]">{isEs ? "TM / año" : "MT / year"}</span>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {marketSegments.map((seg, idx) => {
-              const segTheme =
-                idx === 0
-                  ? { color: "text-[#02aeaa]", border: "hover:border-[#02aeaa]/60" }
-                  : idx === 1
-                  ? { color: "text-[#e5c798]", border: "hover:border-[#e5c798]/60" }
-                  : { color: "text-[#85b2cf]", border: "hover:border-[#85b2cf]/60" };
-
-              return (
-                <div
-                  key={idx}
-                  className={`p-6 rounded-2xl bg-white/10 border border-white/15 ${segTheme.border} transition-all backdrop-blur-sm group`}
-                >
-                  <h3 className={`type-h4 ${segTheme.color} mb-2`}>{seg.title}</h3>
-                  <p className="text-xs text-white/70 leading-relaxed">{seg.desc}</p>
-                </div>
-              );
-            })}
-          </div>
+          <h4 className="type-h5 text-slate-900 mb-1">{isEs ? "Capacidad" : "Capacity"}</h4>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            {isEs ? "La principal salina de Venezuela." : "Venezuela's leading saltworks."}
+          </p>
         </div>
       </ScrollReveal>
 
-      {/* 5. Sustentabilidad, Ecosistema y RSE */}
+      {/* 4. Sustentabilidad, ecosistema y RSE */}
       <ScrollReveal animation="fade-up" className="flex flex-col gap-8">
         <div>
           <span className="type-eyebrow text-[#02aeaa] block mb-2">
-            {isEs ? "Compromiso Ambiental y Social" : "Environmental & Social Responsibility"}
+            {isEs ? "Compromiso ambiental y social" : "Environmental and social commitment"}
           </span>
           <h2 className="type-h2 text-[#183c6b]">
-            {isEs ? "Armonía entre Industria y Naturaleza" : "Harmony Between Industry and Nature"}
+            {isEs ? "Armonía entre industria y naturaleza" : "Harmony between industry and nature"}
           </h2>
         </div>
 
@@ -258,27 +161,27 @@ export function AboutContent({ currentLang }: AboutContentProps) {
         </div>
       </ScrollReveal>
 
-      {/* 6. Nuestro Equipo Humano y Operación en Campo */}
+      {/* 5. Nuestro equipo humano */}
       <ScrollReveal animation="fade-up" className="flex flex-col gap-8">
         <div>
           <span className="type-eyebrow text-[#02aeaa] block mb-2">
-            {isEs ? "Nuestro Talento y Gente" : "Our People & Workforce"}
+            {isEs ? "Nuestra gente" : "Our people"}
           </span>
           <h2 className="type-h2 text-[#183c6b]">
-            {isEs ? "El Equipo que Impulsa la Industria Salinera" : "The Team Driving the Venezuelan Salt Industry"}
+            {isEs ? "El equipo que impulsa la industria salinera" : "The team driving the salt industry"}
           </h2>
           <p className="type-body text-slate-600 max-w-3xl mt-2">
             {isEs
-              ? "Más de 20 años de experiencia técnica respaldada por un equipo multidisciplinario de ingenieros químicos, mecánicos, supervisores de campo y operadores especializados que trabajan día a día en Los Olivitos."
-              : "Over 20 years of industrial salt expertise delivered by a multidisciplinary team of chemical engineers, plant technicians, field supervisors, and specialized operators working daily at Los Olivitos."}
+              ? "Más de 20 años de experiencia respaldados por un equipo multidisciplinario que trabaja día a día en Los Olivitos."
+              : "Over 20 years of experience backed by a multidisciplinary team working every day at Los Olivitos."}
           </p>
         </div>
 
-        {/* Fotografía Panorámica del Equipo Completo PRODUSAL */}
+        {/* Foto del equipo (pendiente: reemplazar por un collage sin caras) */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 aspect-16/9 sm:aspect-21/9 bg-slate-900 group">
           <Image
             src="/images/produsal-equipo-humano.webp"
-            alt={isEs ? "Equipo de trabajo y profesionales de PRODUSAL en el monumento Los Olivitos" : "PRODUSAL team and professionals at the Los Olivitos monument"}
+            alt={isEs ? "Equipo de trabajo de PRODUSAL en Los Olivitos" : "PRODUSAL team at Los Olivitos"}
             fill
             sizes="100vw"
             className="object-cover group-hover:scale-102 transition-transform duration-700"
@@ -287,118 +190,40 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
             <div>
               <span className="type-label text-[#e5c798] block mb-1">
-                {isEs ? "Familia PRODUSAL • Los Olivitos, Zulia" : "PRODUSAL Family • Los Olivitos, Zulia"}
+                Los Olivitos, Zulia
               </span>
               <p className="text-base sm:text-lg font-bold">
                 {isEs
-                  ? "Compromiso humano, seguridad industrial y vocación de excelencia"
-                  : "Human commitment, workplace safety, and pursuit of operational excellence"}
+                  ? "Compromiso humano y seguridad industrial"
+                  : "Human commitment and workplace safety"}
               </p>
             </div>
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/20 backdrop-blur-md border border-white/20 text-xs font-bold font-heading shrink-0 self-start sm:self-auto">
               <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse" />
-              {isEs ? "100% Talento Venezolano" : "100% Venezuelan Talent"}
+              {isEs ? "100% talento venezolano" : "100% Venezuelan talent"}
             </span>
-          </div>
-        </div>
-
-        {/* 3 Bloques Operativos con Fotos Reales */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm flex flex-col group hover:shadow-md transition-all">
-            <div className="relative aspect-16/10 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/produsal-envasado-operadores.webp"
-                alt={isEs ? "Operadores en planta envasando sal Produsal" : "Plant operators packaging Produsal salt"}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-5 flex flex-col gap-2">
-              <span className="text-[11px] font-bold text-[#85b2cf] uppercase font-heading">
-                {isEs ? "Envasado & Empaque" : "Packaging & Bagging"}
-              </span>
-              <h4 className="type-h5 text-[#183c6b]">
-                {isEs ? "Control Riguroso en Cada Saco" : "Rigorous Quality on Every Bag"}
-              </h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {isEs
-                  ? "Operadores equipados con protección integral asegurando llenado y sellado de alta resistencia en sacos."
-                  : "Fully equipped operators ensuring precise filling and heavy-duty sealing of bags."}
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm flex flex-col group hover:shadow-md transition-all">
-            <div className="relative aspect-16/10 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/produsal-despacho-granel.webp"
-                alt={isEs ? "Carga de gandola tolva a granel con cargador pesado" : "Bulk hopper truck being loaded by a heavy loader"}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-5 flex flex-col gap-2">
-              <span className="text-[11px] font-bold text-[#02aeaa] uppercase font-heading">
-                {isEs ? "Despacho a Granel" : "Bulk Freight Dispatch"}
-              </span>
-              <h4 className="type-h5 text-[#183c6b]">
-                {isEs ? "Carga Rápida de Tolvas y Gandolas" : "Rapid Loading of Bulk Trailers"}
-              </h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {isEs
-                  ? "Capacidad de movilización de hasta 650.000 TM/año con maquinaria pesada dedicada en patio de acopio."
-                  : "Handling capacity up to 650,000 MT/year with dedicated heavy machinery on stockpiling yards."}
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm flex flex-col group hover:shadow-md transition-all">
-            <div className="relative aspect-16/10 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/produsal-atardecer-reflejo.webp"
-                alt={isEs ? "Reflejo del atardecer en los canales de la salina" : "Sunset reflected on the salt flat channels"}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-5 flex flex-col gap-2">
-              <span className="text-[11px] font-bold text-[#e5c798] uppercase font-heading">
-                {isEs ? "Entorno Los Olivitos" : "Los Olivitos Environment"}
-              </span>
-              <h4 className="type-h5 text-[#183c6b]">
-                {isEs ? "Sustentabilidad y Energía Solar" : "Sustainability & Solar Energy"}
-              </h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {isEs
-                  ? "Operación limpia en coexistencia armónica con la biodiversidad y el refugio de fauna silvestre."
-                  : "Clean solar operation coexisting harmoniously with coastal biodiversity and wildlife reserve."}
-              </p>
-            </div>
           </div>
         </div>
       </ScrollReveal>
 
-      {/* 7. Llamado a la Acción Transaccional */}
+      {/* 6. Llamado a la acción */}
       <ScrollReveal animation="fade-up" className="p-8 sm:p-12 rounded-3xl bg-[#183c6b] text-white border border-[#02aeaa]/30 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="max-w-2xl text-left">
           <h3 className="type-h3 mb-2">
-            {isEs ? "¿Deseas solicitar especificaciones o cotización de sal al mayor?" : "Need technical specifications or wholesale salt pricing?"}
+            {isEs ? "¿Deseas solicitar especificaciones o cotización de sal al mayor?" : "Need specifications or wholesale salt pricing?"}
           </h3>
           <p className="text-sm text-white/90 leading-relaxed">
             {isEs
-              ? "Atendemos despachos en sacos, Big Bags y a granel directamente desde nuestro patio de acopio en Los Olivitos."
-              : "We fulfill shipments in bags, Big Bags, and bulk freight directly from our Los Olivitos stockpiling terminal."}
+              ? "Atendemos despachos en sacos, big bags y a granel directamente desde nuestra planta en Los Olivitos."
+              : "We fulfill shipments in bags, big bags, and bulk directly from our plant at Los Olivitos."}
           </p>
         </div>
 
         <Link
-          href={`/${currentLang}#contacto`}
+          href={`/${currentLang}/contacto`}
           className="px-8 py-4 rounded-xl bg-white text-[#183c6b] hover:bg-slate-100 font-bold text-sm shadow-md transition-all shrink-0 inline-flex items-center gap-2 group"
         >
-          <span>{isEs ? "Contáctanos" : "Contact Us"}</span>
+          <span>{isEs ? "Contáctanos" : "Contact us"}</span>
           <ArrowRight className="w-4 h-4 text-[#02aeaa] group-hover:translate-x-1 transition-transform" />
         </Link>
       </ScrollReveal>

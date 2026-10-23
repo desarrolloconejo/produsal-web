@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Phone, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, Mail, ChevronDown, ArrowRight } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
@@ -67,7 +67,7 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
         >
           <Image
             src="/images/PRODUSAL.webp"
-            alt={currentLang === "es" ? "Produsal - Productora de Sal Industrial" : "Produsal - Industrial Salt Producer"}
+            alt={currentLang === "es" ? "Produsal - Productora de Sal Industrial" : "Produsal - Industrial salt producer"}
             width={160}
             height={35}
             priority
@@ -173,10 +173,10 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
           <Link
             href={`/${currentLang}/contacto`}
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-white bg-[#02aeaa] hover:bg-[#183c6b] shadow-sm shadow-[#02aeaa]/20 hover:shadow-md transition-all duration-200 group font-heading"
-            aria-label={currentLang === "es" ? "Contáctanos" : "Contact Us"}
+            aria-label={currentLang === "es" ? "Contáctanos" : "Contact us"}
           >
-            <Phone className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
-            <span>{currentLang === "es" ? "Contáctanos" : "Contact Us"}</span>
+            <Mail className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
+            <span>{currentLang === "es" ? "Contáctanos" : "Contact us"}</span>
           </Link>
         </div>
 

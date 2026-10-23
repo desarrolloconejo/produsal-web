@@ -16,53 +16,53 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
 
   const cards = [
     {
-      title: isEs ? "Pureza Solar Natural" : "Natural Solar Purity",
-      subtitle: isEs ? "Evaporación Solar y Lavado Continuo" : "Solar Evaporation & Continuous Washing",
+      title: isEs ? "Pureza solar natural" : "Natural solar purity",
+      subtitle: isEs ? "Evaporación solar y lavado" : "Solar evaporation and washing",
       desc: isEs
-        ? "Sal de alta pureza obtenida por evaporación solar en Los Olivitos y lavada con salmueras frescas. La Sal Premium garantiza un mínimo de 99,3% de NaCl."
-        : "High-purity salt obtained through solar evaporation at Los Olivitos and washed with fresh brines. Premium Salt guarantees a minimum of 99.3% NaCl.",
+        ? "Sal obtenida por evaporación solar en Los Olivitos y lavada con salmueras frescas. La Sal premium tiene un mínimo de 99,3% de NaCl."
+        : "Salt obtained through solar evaporation at Los Olivitos and washed with fresh brines. Premium salt has a minimum of 99.3% NaCl.",
       image: "/images/produsal-sal-manos-pureza.webp",
-      alt: "Manos sosteniendo sal pura PRODUSAL",
-      tag: isEs ? "Materia Prima Pura" : "Pure Raw Material",
+      alt: isEs ? "Manos sosteniendo sal PRODUSAL" : "Hands holding PRODUSAL salt",
+      tag: isEs ? "Materia prima" : "Raw material",
       icon: <Sparkles className="w-4 h-4 text-[#e5c798]" />,
       tagClass: "text-[#e5c798] border-[#e5c798]/40",
       hoverBorder: "hover:border-[#e5c798]/60",
     },
     {
-      title: isEs ? "Despacho Masivo a Granel" : "Massive Bulk Dispatch",
-      subtitle: isEs ? "Tolvas Industriales y Gandolas" : "Industrial Hoppers & Bulk Trailers",
+      title: isEs ? "Despacho a granel" : "Bulk dispatch",
+      subtitle: isEs ? "Vehículos de gran capacidad" : "High-capacity vehicles",
       desc: isEs
-        ? "Carga continua directa en patio de acopio con cargadores frontales y pesaje controlado. Abastecimiento ininterrumpido a plantas petroquímicas e industriales."
-        : "Continuous yard loading with front-end loaders and controlled weighing. Uninterrupted supply to petrochemical and industrial plants.",
+        ? "Carga directa en patio con cargadores frontales y pesaje controlado."
+        : "Direct yard loading with front-end loaders and controlled weighing.",
       image: "/images/produsal-despacho-granel.webp",
-      alt: "Cargador pesado despachando sal a granel en gandola tolva PRODUSAL",
-      tag: isEs ? "Logística de Escala" : "Scale Logistics",
+      alt: isEs ? "Cargador despachando sal a granel PRODUSAL" : "Loader dispatching PRODUSAL bulk salt",
+      tag: isEs ? "Logística" : "Logistics",
       icon: <Truck className="w-4 h-4 text-[#02aeaa]" />,
       tagClass: "text-[#02aeaa] border-[#02aeaa]/40",
       hoverBorder: "hover:border-[#02aeaa]/60",
     },
     {
-      title: isEs ? "Líneas de Envasado Continuo" : "Automated Packaging Lines",
-      subtitle: isEs ? "Sacos y Big Bags" : "Bags & Big Bags",
+      title: isEs ? "Líneas de envasado" : "Packaging lines",
+      subtitle: isEs ? "Sacos y big bags" : "Bags and big bags",
       desc: isEs
-        ? "Estaciones de ensacado con dosificación exacta y costura reforzada de alta resistencia. Identificación oficial de lote y código de control CPE."
-        : "Bagging stations with precision dosing and reinforced heavy-duty stitching. Official lot identification and CPE regulatory compliance.",
+        ? "Estaciones de ensacado y costura."
+        : "Bagging and stitching stations.",
       image: "/images/produsal-linea-envasado.webp",
-      alt: "Línea de ensacado automático y costura de sal PRODUSAL",
-      tag: isEs ? "Empaque Industrial" : "Industrial Packaging",
+      alt: isEs ? "Línea de ensacado y costura de sal PRODUSAL" : "PRODUSAL salt bagging and stitching line",
+      tag: isEs ? "Empaque industrial" : "Industrial packaging",
       icon: <Factory className="w-4 h-4 text-[#85b2cf]" />,
       tagClass: "text-[#85b2cf] border-[#85b2cf]/40",
       hoverBorder: "hover:border-[#85b2cf]/60",
     },
     {
-      title: isEs ? "Inspección y Trazabilidad" : "Quality Inspection & Traceability",
-      subtitle: isEs ? "Control de Calidad por Lote" : "Batch Quality Control",
+      title: isEs ? "Inspección y trazabilidad" : "Inspection and traceability",
+      subtitle: isEs ? "Control de calidad por lote" : "Batch quality control",
       desc: isEs
-        ? "Supervisión analítica de parámetros físico-químicos antes de cada salida. Cumplimiento estricto de especificaciones ASTM E534-98."
-        : "Analytical verification of physicochemical parameters prior to dispatch. Strict compliance with ASTM E534-98 standards.",
+        ? "Supervisión analítica de parámetros físico-químicos antes de cada salida. Cumplimiento de especificaciones ASTM E534-98."
+        : "Analytical verification of physicochemical parameters before each dispatch. Compliance with ASTM E534-98 specifications.",
       image: "/images/produsal-inspeccion-calidad.webp",
-      alt: "Supervisor de calidad inspeccionando manifiesto de despacho PRODUSAL",
-      tag: isEs ? "Garantía Analítica" : "Analytical Warranty",
+      alt: isEs ? "Supervisor de calidad revisando un despacho PRODUSAL" : "Quality supervisor checking a PRODUSAL dispatch",
+      tag: isEs ? "Control analítico" : "Analytical control",
       icon: <ShieldCheck className="w-4 h-4 text-[#02aeaa]" />,
       tagClass: "text-[#02aeaa] border-[#02aeaa]/40",
       hoverBorder: "hover:border-[#02aeaa]/60",
@@ -81,13 +81,13 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
           <div className="max-w-2xl flex flex-col gap-3">
             <ScrollReveal animation="fade-down">
               <span className="type-eyebrow text-[#02aeaa] flex items-center gap-2.5">
-                <span>{isEs ? "Infraestructura & Capacidad de Suministro" : "Infrastructure & Supply Capability"}</span>
+                <span>{isEs ? "Infraestructura y suministro" : "Infrastructure and supply"}</span>
               </span>
             </ScrollReveal>
 
             <ScrollReveal animation="fade-up" delay={50}>
               <h2 className="type-h2 text-[#183c6b]">
-                {isEs ? "Excelencia Operativa en Cada Despacho" : "Operational Excellence in Every Dispatch"}
+                {isEs ? "Operación en cada despacho" : "Operations behind every dispatch"}
               </h2>
             </ScrollReveal>
 
@@ -105,13 +105,13 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
               href={`/${currentLang}/contacto`}
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#02aeaa] hover:bg-[#183c6b] text-white font-bold text-sm font-heading shadow-md hover:shadow-lg transition-all duration-200"
             >
-              <span>{isEs ? "Solicitar Cotización de Suministro" : "Request Wholesale Quote"}</span>
+              <span>{isEs ? "Contáctanos" : "Contact us"}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </ScrollReveal>
         </div>
 
-        {/* Grid de 4 Bloques Fotográficos Reales */}
+        {/* Grid de 4 bloques fotográficos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-7">
           {cards.map((c, idx) => (
             <ScrollReveal key={idx} animation="fade-up" delay={idx * 80}>
@@ -152,7 +152,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
                   </div>
 
                   <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-[#02aeaa]">
-                    <span>{isEs ? "Garantía PRODUSAL" : "PRODUSAL Quality"}</span>
+                    <span>{isEs ? "Garantía PRODUSAL" : "PRODUSAL quality"}</span>
                     <CheckCircle2 className="w-4 h-4 text-[#e5c798]" />
                   </div>
                 </div>
@@ -161,46 +161,6 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
           ))}
         </div>
 
-        {/* Banner Informativo Inferior con Foto de Atardecer */}
-        <ScrollReveal animation="fade-up" delay={200}>
-          <div className="relative rounded-3xl overflow-hidden border border-[#02aeaa]/30 shadow-xl p-7 sm:p-10 lg:px-14 lg:py-12 bg-[#183c6b] text-white">
-            <div className="absolute inset-0 z-0 opacity-25">
-              <Image
-                src="/images/produsal-atardecer-reflejo.webp"
-                alt={isEs ? "Reflejo del atardecer en las salinas Los Olivitos" : "Sunset reflected on the Los Olivitos salt flats"}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#183c6b] via-[#183c6b]/90 to-transparent" />
-            </div>
-
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-7 lg:gap-12">
-              <div className="flex flex-col gap-3 max-w-2xl">
-                <span className="type-label text-[#e5c798]">
-                  {isEs ? "Cosecha Sustentable en el Estado Zulia" : "Sustainable Harvesting in Zulia State"}
-                </span>
-                <h3 className="type-h3 text-white">
-                  {isEs
-                    ? "Compromiso con el Abastecimiento y la Preservación del Ecosistema"
-                    : "Commitment to Industrial Supply and Ecosystem Stewardship"}
-                </h3>
-                <p className="text-sm text-white/85 leading-relaxed max-w-2xl">
-                  {isEs
-                    ? "Operamos dentro del Refugio de Fauna Silvestre Ciénaga de Los Olivitos, garantizando procesos 100% limpios que conviven en equilibrio con la colonia de flamencos y la biodiversidad costera."
-                    : "Operating within the Los Olivitos Wildlife Refuge, we maintain 100% clean solar processes coexisting in balance with flamingo colonies and coastal biodiversity."}
-                </p>
-              </div>
-
-              <Link
-                href={`/${currentLang}/nosotros`}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#183c6b] hover:bg-[#02aeaa] hover:text-white font-bold text-sm font-heading shadow-md transition-all shrink-0 group self-start lg:self-center"
-              >
-                <span>{isEs ? "Conocer Nuestro Compromiso" : "Learn About Our Reserve"}</span>
-                <ArrowRight className="w-4 h-4 text-[#02aeaa] group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </Link>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

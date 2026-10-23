@@ -175,9 +175,9 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
 
               {/* Línea Conectora Fluida entre Tarjetas Consecutivas */}
               {nextStep && (
-                <div className="relative w-full my-6 sm:my-8 lg:my-10 flex flex-col items-center justify-center">
+                <div className="relative w-full my-2 sm:my-3 flex flex-col items-center justify-center">
                   {/* Conector para pantallas de escritorio (Curva SVG en S) */}
-                  <div className="hidden md:block w-full h-24 lg:h-32 relative">
+                  <div className="hidden md:block w-full h-14 lg:h-20 relative">
                     <svg
                       className="w-full h-full overflow-visible"
                       viewBox="0 0 1000 120"
@@ -241,7 +241,7 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
 
                   {/* Conector para pantallas móviles (Línea vertical con flecha) */}
                   <div className="flex md:hidden flex-col items-center justify-center py-2">
-                    <div className="w-0.5 h-8 bg-gradient-to-b from-[#02aeaa] via-[#85b2cf] to-[#e5c798]" />
+                    <div className="w-0.5 h-5 bg-gradient-to-b from-[#02aeaa] via-[#85b2cf] to-[#e5c798]" />
                     <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border ${
                       index === 0 ? "border-[#85b2cf]/60" : index === 1 ? "border-[#e5c798]/60" : "border-[#02aeaa]/40"
                     } shadow-sm text-xs font-bold text-[#183c6b] font-heading -my-1 z-10`}>
@@ -249,7 +249,7 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
                       <ArrowDown className={`w-3.5 h-3.5 ${currentTheme.badgeColor}`} />
                       <span className="text-[#183c6b]">{nextStep.step}</span>
                     </div>
-                    <div className="w-0.5 h-8 bg-gradient-to-b from-[#e5c798] via-[#85b2cf] to-[#02aeaa]" />
+                    <div className="w-0.5 h-5 bg-gradient-to-b from-[#e5c798] via-[#85b2cf] to-[#02aeaa]" />
                   </div>
                 </div>
               )}

@@ -1,30 +1,18 @@
 "use client";
 
-import { Compass, Phone, Mail, MapPin } from "lucide-react";
+import { Compass, Mail, MapPin } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
-import type { Locale } from "@/dictionaries/get-dictionary";
+import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 import { PLANT_LOCATION } from "@/data/plant-location";
 
 interface ContactHeroProps {
   currentLang: Locale;
-  dict?: {
-    badge?: string;
-    title?: string;
-    subtitle?: string;
-  };
+  dict: Dictionary["contact"];
 }
 
 export function ContactHero({ currentLang, dict }: ContactHeroProps) {
   const isEs = currentLang === "es";
-
-  const badgeText = dict?.badge || (isEs ? "Atención Comercial e Industrial" : "Commercial & Industrial Sales");
-  const titleText = dict?.title || (isEs ? "Contacto y Atenciones Comerciales" : "Contact & Commercial Support");
-  const subtitleText =
-    dict?.subtitle ||
-    (isEs
-      ? "Atendemos requerimientos de compra al mayor, despachos industriales, contratos a término y asesoría técnica para la industria química, petroquímica, tratamiento de agua y nutrición animal."
-      : "We fulfill bulk wholesale orders, industrial shipments, long-term supply contracts, and custom technical support for the chemical, petrochemical, water treatment, and animal nutrition sectors.");
 
   return (
     <section className="relative bg-[#183c6b] text-white py-16 sm:py-20 overflow-hidden border-b border-[#02aeaa]/20">
@@ -42,45 +30,27 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
           <ScrollReveal animation="fade-down">
             <div className="type-eyebrow inline-flex items-center gap-2 text-[#02aeaa]">
               <Compass className="w-4 h-4 text-[#02aeaa]" />
-              <span>{badgeText}</span>
+              <span>{dict.badge}</span>
             </div>
           </ScrollReveal>
 
           {/* Título Principal */}
           <ScrollReveal animation="fade-up" delay={50}>
             <h1 className="type-h1 text-white">
-              {titleText}
+              {dict.title}
             </h1>
           </ScrollReveal>
 
           {/* Subtítulo */}
           <ScrollReveal animation="fade-up" delay={100}>
             <p className="type-lead text-white/85 max-w-2xl">
-              {subtitleText}
+              {dict.description}
             </p>
           </ScrollReveal>
 
-          {/* 3 Tarjetas de Acceso Rápido */}
+          {/* Accesos rápidos: correo y ubicación (sin teléfonos) */}
           <ScrollReveal animation="fade-up" delay={150} className="w-full pt-4">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-              {/* Teléfonos */}
-              <div className="p-4 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md hover:border-[#02aeaa]/50 transition-all duration-300 flex items-center gap-3.5 group">
-                <div className="w-10 h-10 rounded-xl bg-[#02aeaa]/25 text-[#02aeaa] group-hover:bg-[#02aeaa] group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div className="flex flex-col min-w-0">
-                  <span className="type-caption text-white/60">
-                    {isEs ? "Ventas & Cotizaciones" : "Sales Office"}
-                  </span>
-                  <a href="tel:02122085111" className="text-sm font-extrabold text-white hover:text-[#02aeaa] transition-colors font-heading truncate">
-                    0212 208 51 11
-                  </a>
-                  <a href="tel:08002274455" className="text-xs font-bold text-[#02aeaa] hover:text-white transition-colors font-heading truncate">
-                    0800 2274455
-                  </a>
-                </div>
-              </div>
-
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
               {/* Correo Electrónico */}
               <div className="p-4 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md hover:border-[#e5c798]/70 transition-all duration-300 flex items-center gap-3.5 group">
                 <div className="w-10 h-10 rounded-xl bg-[#e5c798]/25 text-[#e5c798] group-hover:bg-[#e5c798] group-hover:text-[#183c6b] flex items-center justify-center shrink-0 transition-colors">
@@ -88,13 +58,13 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="type-caption text-white/60">
-                    {isEs ? "Atención Electrónica" : "Email Support"}
+                    {isEs ? "Escríbenos" : "Write to us"}
                   </span>
-                  <a href="mailto:infoprodusal@grupomimesa.com" className="text-sm font-extrabold text-white hover:text-[#e5c798] transition-colors font-heading truncate">
-                    infoprodusal@grupomimesa.com
+                  <a href={`mailto:${dict.email}`} className="text-sm font-extrabold text-white hover:text-[#e5c798] transition-colors font-heading truncate">
+                    {dict.email}
                   </a>
                   <span className="text-[11px] text-white/60 truncate">
-                    {isEs ? "Respuesta en < 24 hrs" : "24h response time"}
+                    {isEs ? "Respuesta en menos de 24 horas" : "Response within 24 hours"}
                   </span>
                 </div>
               </div>
@@ -106,10 +76,10 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="type-caption text-white/60">
-                    {isEs ? "Planta & Salinas" : "Plant & Salt Flats"}
+                    {isEs ? "Planta y salina" : "Plant and saltworks"}
                   </span>
                   <span className="text-sm font-extrabold text-white font-heading truncate">
-                    Los Olivitos, Zulia
+                    {isEs ? "Los Olivitos, municipio Miranda, Zulia" : "Los Olivitos, Miranda, Zulia"}
                   </span>
                   <span className="text-[11px] text-white/60 truncate">
                     {PLANT_LOCATION.label}

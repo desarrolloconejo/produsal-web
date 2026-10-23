@@ -35,7 +35,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-4">
                 <span className="type-label text-[#02aeaa] flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#02aeaa] animate-pulse" />
-                  <span>{isEs ? "Ubicación Geográfica" : "Geographic Location"}</span>
+                  <span>{isEs ? "Ubicación geográfica" : "Geographic location"}</span>
                 </span>
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#183c6b] text-white text-[11px] font-mono font-semibold border border-[#85b2cf]/30">
                   <MapPin className="w-3 h-3 text-[#e5c798]" />
@@ -47,7 +47,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <div className="relative w-full aspect-[1144/768] select-none rounded-2xl overflow-hidden bg-white p-2 border border-slate-100 my-auto">
                 <Image
                   src="/images/mapa-venezuela-final.png"
-                  alt={isEs ? `Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (${PLANT_LOCATION.label})` : `Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (${PLANT_LOCATION.label})`}
+                  alt={isEs ? `Mapa completo de Venezuela con Guayana Esequiba - ubicación de PRODUSAL en Los Olivitos (${PLANT_LOCATION.label})` : `Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (${PLANT_LOCATION.label})`}
                   fill
                   priority
                   className="object-contain mix-blend-multiply"
@@ -82,14 +82,14 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                 <div className="flex items-center gap-2">
                   <Factory className="w-4.5 h-4.5 text-[#85b2cf]" />
                   <h4 className="type-h5 text-[#183c6b]">
-                    {isEs ? "Complejo Industrial Salinas Los Olivitos" : "Los Olivitos Industrial Salt Complex"}
+                    {isEs ? "Complejo Industrial Salina Los Olivitos" : "Los Olivitos Saltworks Industrial Complex"}
                   </h4>
                 </div>
 
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {isEs
-                    ? "Ubicado en el Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia. Cuenta con 5.400 Ha de superficie y capacidad de 650.000 TM/año."
-                    : "Located in Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State. Features 5,400 Ha total surface and 650,000 MT/yr operational capacity."}
+                    ? "Ubicado en el municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia. Cuenta con 5.400 Ha de superficie y capacidad de 650.000 TM/año."
+                    : "Located in Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State. It covers 5,400 Ha and has a capacity of 650,000 MT/year."}
                 </p>
               </div>
             </div>
@@ -105,10 +105,10 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <div className="flex flex-col gap-1.5 mb-6 pb-4 border-b border-slate-100">
                 <span className="type-label text-[#02aeaa] flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4" />
-                  {isEs ? "Atención Comercial Directa" : "Direct Commercial Inquiry"}
+                  {isEs ? "Atención comercial" : "Commercial support"}
                 </span>
                 <h3 className="type-h3 text-[#183c6b]">
-                  {isEs ? "Solicitar Cotización o Ficha Técnica" : "Request Quote or Technical Sheet"}
+                  {isEs ? "Solicitar cotización o ficha técnica" : "Request a quote or data sheet"}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500">
                   {isEs
@@ -122,7 +122,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                 currentLang={currentLang}
                 dict={dict}
                 idPrefix="contact-page"
-                submitLabel={isEs ? "Enviar Solicitud de Cotización" : "Send Inquiry Request"}
+                submitLabel={isEs ? "Enviar solicitud" : "Send request"}
               />
             </div>
 
@@ -131,8 +131,8 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <Clock className="w-3.5 h-3.5 text-[#e5c798]" />
               <span>
                 {isEs
-                  ? "Atención técnica y comercial de Lunes a Viernes 8:00 AM - 5:00 PM"
-                  : "Technical & commercial support Monday to Friday 8:00 AM - 5:00 PM"}
+                  ? "Atención comercial de lunes a viernes, de 8:00 a. m. a 5:00 p. m."
+                  : "Commercial support Monday to Friday, 8:00 AM to 5:00 PM"}
               </span>
             </div>
           </ScrollReveal>

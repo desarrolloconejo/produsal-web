@@ -9,7 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Produsal | Productora de Sal Industrial de Venezuela",
+    default: "Produsal | Productora de sal industrial de Venezuela",
     template: "%s | Produsal",
   },
   description:

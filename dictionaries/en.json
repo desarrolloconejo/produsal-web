@@ -1,167 +1,161 @@
 {
   "lang": "en",
   "meta": {
-    "title": "Produsal | Venezuela's Leading Industrial Salt Producer | Los Olivitos, Zulia",
-    "description": "Solar production and distribution of high-purity industrial salt with 650,000 MT/year output at Los Olivitos, Zulia. Wholesale supplier for the petrochemical, chemical, water treatment, and animal nutrition industries.",
+    "title": "Produsal | Venezuela's leading industrial salt producer | Los Olivitos, Zulia",
+    "description": "Solar production and distribution of industrial salt with a capacity of 650,000 MT/year at Los Olivitos, Zulia. Wholesale supplier for the petrochemical, chemical, water treatment, and animal nutrition industries.",
     "pages": {
       "about": {
-        "title": "About Us | Produsal: Venezuela's Leading Salt Producer | Los Olivitos, Zulia",
-        "description": "Discover the heritage, operational capacity (650,000 MT/year), and solar crystallization technology at Produsal's Los Olivitos complex in Zulia, Venezuela."
+        "title": "About us | Produsal: Venezuela's leading salt producer | Los Olivitos, Zulia",
+        "description": "Discover the history, capacity (650,000 MT/year), and the Los Olivitos Industrial Complex of Produsal in Zulia, along with its environmental and social commitment."
       },
       "contact": {
-        "title": "Contact & Sales | Produsal C.A. - Los Olivitos, Zulia",
-        "description": "Contact Produsal C.A. for commercial wholesale inquiries, industrial salt bulk orders, technical specifications, and quotations."
+        "title": "Contact | Produsal C.A. - Los Olivitos, Zulia",
+        "description": "Write to Produsal C.A. for wholesale inquiries, industrial salt shipments, and technical data sheets."
       },
       "products": {
-        "title": "Industrial Product Catalog | Produsal C.A.",
-        "description": "Official catalog of high-purity solar salt: Premium Coarse Salt, Type A Coarse Salt, Premium Ground Salt, and Type A Ground Salt. Bulk, Big Bags, and bags."
+        "title": "Product catalog | Produsal C.A.",
+        "description": "Solar salt catalog: Premium coarse salt, Type A coarse salt, Premium ground salt, and Type A ground salt. Bulk, big bags, and bags."
       },
       "privacy": {
-        "title": "Privacy Policy | Produsal C.A. - Los Olivitos Saltworks",
-        "description": "Learn about the privacy policies and commercial data protection of Productora de Sal, C.A. (PRODUSAL) at Los Olivitos Industrial Complex, Zulia."
+        "title": "Privacy policy | Produsal C.A. - Los Olivitos Saltworks",
+        "description": "Learn about the privacy policies and commercial data protection of Productora de Sal, C.A. (PRODUSAL) at the Los Olivitos Industrial Complex, Zulia."
       },
       "category": {
-        "title": "{name} ({code}) | Produsal C.A.",
+        "title": "{name} | Produsal C.A.",
         "description": "{name} - {desc} Purity: {purity}. Technical data sheet and available packaging.",
-        "notFound": "Category not found | Produsal C.A."
+        "notFound": "Product not found | Produsal C.A."
       },
       "gallery": {
-        "title": "Gallery | Produsal C.A. - Los Olivitos Salt Flats, Zulia",
-        "description": "A photo tour of the Los Olivitos Industrial Complex: salt flats, harvesting, washing, packaging and the Produsal team."
+        "title": "Gallery | Produsal C.A. - Los Olivitos Saltworks, Zulia",
+        "description": "A photo tour of the Los Olivitos Industrial Complex: saltworks, harvesting, washing, packaging and the Produsal team."
       }
     }
   },
   "topBar": {
     "email": "infoprodusal@grupomimesa.com",
-    "phone": "0212 208 51 11",
     "location": "Los Olivitos, Zulia"
   },
   "nav": {
     "home": "Home",
-    "about": "About Us",
+    "about": "About us",
     "products": "Products",
     "gallery": "Gallery",
-    "quality": "Quality & Origin",
+    "quality": "Quality and origin",
     "contact": "Contact"
   },
   "hero": {
     "badge": "Los Olivitos Industrial Complex • Zulia, Venezuela",
-    "headlineHighlight": "The leading salt flats",
-    "headlineRest": "with high-purity solar production in Venezuela.",
-    "description": "We operate the country's most important salt complex across 5,400 proprietary hectares, contributing to national industrial salt production with a capacity of 650,000 MT/year. Quality for the petrochemical and industrial sectors, and raw material for the food sector.",
-    "ctaProducts": "View Product Catalog",
-    "ctaAbout": "Our Industrial Heritage"
+    "headlineHighlight": "The leading saltworks",
+    "headlineRest": "with high-purity solar production in Venezuela",
+    "description": "We operate the country's most important salt complex across 5,400 proprietary hectares, contributing to national industrial salt production with a capacity of 650,000 MT/year. Salt for the petrochemical and industrial sectors, and raw material for the food sector.",
+    "ctaProducts": "View product catalog",
+    "ctaAbout": "Discover our history"
   },
   "historySection": {
-    "badge": "Origin & Industrial Heritage",
-    "title": "From the Caribbean Sea to Venezuela's Leading Salt Facility",
-    "description": "Over 20 years of solar engineering, ecological balance, and productive autonomy supplying the nation's key industries.",
-    "ctaExplore": "Read Full Company History",
+    "badge": "Origin and heritage",
+    "title": "From the Caribbean Sea to Venezuela's leading saltworks",
+    "description": "Over 20 years of solar production, ecological balance, and productive autonomy supplying the nation's key industries.",
+    "ctaExplore": "Read our full history",
     "eras": [
       {
         "year": "1989",
-        "tag": "Zulian Project",
+        "tag": "Zulian project",
         "title": "Foundation in Maracaibo",
         "description": "Established to harness the solar potential of Zulia and secure the country's salt supply."
       },
       {
         "year": "1999",
-        "tag": "Commercial Inauguration",
-        "title": "Los Olivitos Commercial Launch",
+        "tag": "Start of operations",
+        "title": "Los Olivitos launch",
         "description": "Start of operations at the Los Olivitos Industrial Complex, a 'Green Field' development on 5,400 proprietary hectares on the Eastern Coast of Lake Maracaibo."
       },
       {
         "year": "Now",
-        "tag": "National Pillar",
-        "title": "Venezuela's Leading Salt Facility",
-        "description": "650,000 MT/year operational output supplying the petrochemical, chemical, and animal nutrition industries in environmental harmony."
+        "tag": "National presence",
+        "title": "Venezuela's leading saltworks",
+        "description": "With a capacity of 650,000 MT/year, it supplies the petrochemical, chemical, and animal nutrition industries in harmony with its surroundings."
       }
     ],
     "showcase": {
-      "abraeTitle": "Pink Flamingo Sanctuary at Los Olivitos",
-      "abraeDescription": "Our solar salt harvesting operations coexist in ecological harmony within a Special Administrative Area (ABRAE), declared a Ramsar Wetland of International Importance and WHSRN site. It hosts Venezuela's largest breeding colony of Caribbean flamingos.",
+      "abraeTitle": "Pink flamingo sanctuary at Los Olivitos",
+      "abraeDescription": "Our saltworks coexist with an Area Under Special Administration Regime (ABRAE), declared a wetland of international importance (Ramsar and WHSRN site). It hosts Venezuela's largest breeding colony of Caribbean flamingos.",
       "abraePoints": [
-        "Breeding sanctuary for the Caribbean Pink Flamingo (Phoenicopterus ruber)",
-        "Ramsar Wetland of International Importance & WHSRN Site",
-        "Ecological balance between salt harvesting and coastal biodiversity"
+        "Breeding sanctuary of the pink flamingo (Phoenicopterus ruber)",
+        "Ramsar wetland of international importance and WHSRN site",
+        "Balance between salt production and coastal wildlife"
       ]
     }
   },
   "processSection": {
-    "badge": "Salt Production Process",
-    "title": "How is Salt Made at PRODUSAL?",
-    "description": "A harmonious blend of sun, wind, and sea: we sustainably transform salt water into world-class salt.",
+    "badge": "Salt production process",
+    "title": "How is salt made at PRODUSAL?",
+    "description": "Sun, wind, and sea: this is how we turn salt water into industrial salt.",
     "phaseLabel": "Phase",
     "ofLabel": "of",
-    "completedBadge": "Finished Product",
+    "completedBadge": "Finished product",
     "steps": [
       {
         "step": "01",
         "name": "Seawater",
-        "shortDesc": "Intake & inflow",
-        "description": "Controlled intake of water from the Los Olivitos marsh, a saline lagoon fed by the Caribbean Sea that concentrates salinity more than the open sea, into the complex's first concentration lagoons."
+        "shortDesc": "Intake and inflow",
+        "description": "Controlled intake of water from the Los Olivitos marsh into the complex's first concentration lagoons."
       },
       {
         "step": "02",
         "name": "Concentration",
         "shortDesc": "Solar evaporation",
-        "description": "Intense solar radiation and steady trade winds evaporate water across 3,200 operating hectares, steadily raising brine concentration."
+        "description": "The sun and the Zulia trade winds evaporate the water across 3,200 hectares, raising its salinity."
       },
       {
         "step": "03",
         "name": "Crystallization",
         "shortDesc": "Sodium chloride precipitation",
-        "description": "Saturated brine flows into crystallizer beds where pure sodium chloride crystals precipitate at industrial grade."
+        "description": "Saturated brine flows into the crystallizers, where sodium chloride precipitates as salt crystals."
       },
       {
         "step": "04",
         "name": "Washing",
         "shortDesc": "Two washing lines",
-        "description": "Harvested salt feeds two continuous industrial washing lines with fresh brines that remove impurities."
+        "description": "Harvested salt goes through two industrial washing lines with fresh brines that remove impurities."
       },
       {
         "step": "05",
         "name": "Stockpiling",
         "shortDesc": "Storage yard",
-        "description": "Massive stockpiling in the storage yard for natural drainage and open-air drying."
+        "description": "Storage in the yard for natural drainage and open-air drying."
       },
       {
         "step": "06",
         "name": "Dispatch",
-        "shortDesc": "Bulk, Big Bags & bags",
-        "description": "Direct dispatch at our plant in different packaging formats for the whole country."
+        "shortDesc": "Bulk, big bags, and bags",
+        "description": "Direct delivery at our plant, in different packaging formats, for the whole country."
       }
     ]
   },
   "products": {
-    "badge": "Industrial & Commercial Catalog",
-    "title": "High-Purity Salt Products",
-    "subtitle": "Solar salt harvested at Los Olivitos under high physicochemical purity standards for the petrochemical, chemical, water treatment, and animal nutrition industries, among other uses.",
-    "ctaQuote": "Contact Us",
-    "ctaSpec": "Data Sheet",
+    "badge": "Industrial and commercial catalog",
+    "title": "High-purity salt products",
+    "subtitle": "Solar salt harvested at Los Olivitos for the petrochemical, chemical, water treatment, and animal nutrition industries, among other uses.",
+    "ctaQuote": "Contact us",
+    "ctaSpec": "Data sheet",
     "ctaDownload": "Download PDF",
-    "ctaPreview": "Preview Sheet",
+    "ctaPreview": "Preview",
     "purityLabel": "Purity",
     "humidityLabel": "Moisture",
     "packagingLabel": "Packaging",
-    "applicationsLabel": "Key Applications",
-    "viewDetails": "View Specifications",
-    "qualityGuarantee": "Minimum purity guaranteed under ASTM E534-98 methodology, with continuous batch traceability.",
-    "carouselBadge": "Available Presentations & Packaging",
-    "carouselTitle": "Product Catalog by Presentation",
-    "carouselSubtitle": "Industrial dispatch available in bulk hopper trucks, Big Bags, and bags ready for production lines.",
+    "applicationsLabel": "Applications",
     "categories": [
       {
         "id": "sal-bruta-premium",
         "slug": "sal-bruta-premium",
         "code": "REG-SAL-CM-001",
-        "name": "Premium Coarse Salt",
-        "pdfTitle": "Sal Bruta Premium",
-        "tagline": "Continuous Washing • Maximum Purity",
-        "desc": "Industrial-use salt obtained through solar evaporation of water from the Los Olivitos marsh, under strict physicochemical controls. It is harvested and continuously washed with fresh brines that remove as much insoluble matter as possible.",
+        "name": "Premium coarse salt",
+        "pdfTitle": "Premium coarse salt",
+        "tagline": "Washed with fresh brines",
+        "desc": "Industrial-use salt obtained through solar evaporation of water from the Los Olivitos marsh, under physicochemical controls. It is harvested and washed with fresh brines that remove as much insoluble matter as possible.",
         "purity": "99.3% NaCl min",
         "humidity": "3.5% max",
-        "packaging": "Bulk / Big Bag / Bags",
+        "packaging": "Bulk / big bag / bags",
         "image": "/images/products/sal-bruta-premium-sacos.webp",
         "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
@@ -174,22 +168,19 @@
         ],
         "items": [
           {
-            "name": "Premium Coarse Salt in Bulk",
+            "name": "Premium coarse salt in bulk",
             "slug": "sal-bruta-premium-bulk",
-            "format": "Hopper / Bulk",
-            "use": "Petrochemical & Chemical Sector"
+            "format": "Bulk"
           },
           {
-            "name": "Premium Coarse Salt in Big Bag",
+            "name": "Premium coarse salt in big bag",
             "slug": "sal-bruta-premium-big-bag",
-            "format": "Big Bag",
-            "use": "Water Treatment & Industry"
+            "format": "big bag"
           },
           {
-            "name": "Premium Coarse Salt in Bags",
+            "name": "Premium coarse salt in bags",
             "slug": "sal-bruta-premium-bags",
-            "format": "Polyethylene Bags (CPE 0317416481)",
-            "use": "General Industry"
+            "format": "Bags"
           }
         ]
       },
@@ -197,13 +188,13 @@
         "id": "sal-bruta-tipo-a",
         "slug": "sal-bruta-tipo-a",
         "code": "REG-SAL-CM-003",
-        "name": "Type A Coarse Salt",
-        "pdfTitle": "Sal Bruta Tipo A",
-        "tagline": "Brine Recovery • Industrial Use",
-        "desc": "Industrial-use salt obtained through the recovery of brines from the Premium Salt production process. It is harvested and washed with fresh brines that remove as much insoluble matter as possible.",
+        "name": "Type A coarse salt",
+        "pdfTitle": "Type A coarse salt",
+        "tagline": "Brine recovery",
+        "desc": "Industrial-use salt obtained through the recovery of brines from the Premium salt production process. It is harvested and washed with fresh brines that remove as much insoluble matter as possible.",
         "purity": "98.5% NaCl min",
         "humidity": "3.5% max",
-        "packaging": "Bulk / Big Bag",
+        "packaging": "Bulk / big bag",
         "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp",
         "pdfEs": "/docs/fichas/sal-bruta-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
@@ -214,16 +205,14 @@
         ],
         "items": [
           {
-            "name": "Type A Coarse Salt in Bulk",
+            "name": "Type A coarse salt in bulk",
             "slug": "sal-bruta-tipo-a-bulk",
-            "format": "Hopper / Bulk",
-            "use": "Salt Processing & Industry"
+            "format": "Bulk"
           },
           {
-            "name": "Type A Coarse Salt in Big Bag",
+            "name": "Type A coarse salt in big bag",
             "slug": "sal-bruta-tipo-a-big-bag",
-            "format": "Big Bag",
-            "use": "Animal Nutrition & Industry"
+            "format": "big bag"
           }
         ]
       },
@@ -231,41 +220,30 @@
         "id": "sal-molida-premium",
         "slug": "sal-molida-premium",
         "code": "REG-SAL-CM-002",
-        "name": "Premium Ground Salt",
-        "pdfTitle": "Sal Molida Premium",
-        "tagline": "Crushing & Milling • With Anticaking Agent",
-        "desc": "Industrial-use salt obtained through solar evaporation of water from the Los Olivitos marsh, washed with fresh brines and processed in our crushing and milling plant. Contains Sodium Ferrocyanide (YPS) as anticaking agent.",
+        "name": "Premium ground salt",
+        "pdfTitle": "Premium ground salt",
+        "tagline": "Processed in our packaging plant",
+        "desc": "Industrial-use salt obtained through solar evaporation of water from the Los Olivitos marsh, washed with fresh brines and processed in our packaging plant.",
         "purity": "99.3% NaCl min",
         "humidity": "2.5% max",
-        "packaging": "Bulk / Big Bag / Bags",
+        "packaging": "big bag / bags",
         "image": "/images/products/sal-molida-premium-sacos.webp",
         "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
-          "Petrochemical sector",
           "Chemical sector",
-          "Water treatment",
-          "General industry",
-          "Raw material for salt processing"
+          "General industry"
         ],
         "items": [
           {
-            "name": "Premium Ground Salt in Bulk",
-            "slug": "sal-molida-premium-bulk",
-            "format": "Hopper / Bulk",
-            "use": "Petrochemical & Chemical Sector"
-          },
-          {
-            "name": "Premium Ground Salt in Big Bag",
+            "name": "Premium ground salt in big bag",
             "slug": "sal-molida-premium-big-bag",
-            "format": "Big Bag",
-            "use": "Water Treatment & Industry"
+            "format": "big bag"
           },
           {
-            "name": "Premium Ground Salt in Bags",
+            "name": "Premium ground salt in bags",
             "slug": "sal-molida-premium-bags",
-            "format": "Polyethylene Bags (CPE 0308115248)",
-            "use": "General Industry"
+            "format": "Bags"
           }
         ]
       },
@@ -273,39 +251,24 @@
         "id": "sal-molida-tipo-a",
         "slug": "sal-molida-tipo-a",
         "code": "REG-SAL-CM-004",
-        "name": "Type A Ground Salt",
-        "pdfTitle": "Sal Molida Tipo A",
-        "tagline": "Crushing & Milling • Industrial Use",
-        "desc": "Industrial-use salt obtained through the recovery of brines from the Premium Salt production process, washed with fresh brines and processed in our crushing and milling plant. Contains Sodium Ferrocyanide (YPS) as anticaking agent.",
+        "name": "Type A ground salt",
+        "pdfTitle": "Type A ground salt",
+        "tagline": "Processed in our packaging plant",
+        "desc": "Industrial-use salt obtained through the recovery of brines from the Premium salt production process, washed with fresh brines and processed in our packaging plant.",
         "purity": "98.5% NaCl min",
         "humidity": "2.0% max",
-        "packaging": "Bulk / Big Bag / Bags",
+        "packaging": "Bags",
         "image": "/images/products/sal-molida-tipo-a-saco.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "Raw material for salt processing",
-          "Animal nutrition",
           "General industry"
         ],
         "items": [
           {
-            "name": "Type A Ground Salt in Bulk",
-            "slug": "sal-molida-tipo-a-bulk",
-            "format": "Hopper / Bulk",
-            "use": "Salt Processing & Industry"
-          },
-          {
-            "name": "Type A Ground Salt in Big Bag",
-            "slug": "sal-molida-tipo-a-big-bag",
-            "format": "Big Bag",
-            "use": "Animal Nutrition"
-          },
-          {
-            "name": "Type A Ground Salt in Bags",
+            "name": "Type A ground salt in bags",
             "slug": "sal-molida-tipo-a-bags",
-            "format": "Polyethylene Bags (CPE 0813313838)",
-            "use": "General Industry"
+            "format": "Bags"
           }
         ]
       }
@@ -314,16 +277,16 @@
   "gallery": {
     "badge": "Los Olivitos Industrial Complex",
     "titleHighlight": "Produsal",
-    "titleRest": "Gallery",
-    "subtitle": "A visual tour of our salt flats, the harvest, the packaging lines and the people behind Produsal salt.",
-    "gridBadge": "Our Operation",
-    "gridTitle": "Our salt flats, our people",
+    "titleRest": "gallery",
+    "subtitle": "A visual tour of our saltworks, the harvest, the packaging lines and the people behind Produsal salt.",
+    "gridBadge": "Our operation",
+    "gridTitle": "Our saltworks, our people",
     "gridSubtitle": "Photographs taken at the Los Olivitos Industrial Complex, Zulia State.",
     "heroAlt": "View of the Produsal Los Olivitos Industrial Complex",
     "imageAlt": "Produsal, Los Olivitos Industrial Complex - photograph"
   },
   "marketSection": {
-    "badge": "Industrial Leadership & National Production",
+    "badge": "National salt production",
     "title": "Salt in Venezuela",
     "items": [
       {
@@ -332,9 +295,9 @@
         "text": "All of Venezuela's salt is produced along the coasts of Sucre, Anzoátegui, Nueva Esparta, Falcón and Zulia."
       },
       {
-        "label": "Leading salt facility",
+        "label": "Leading saltworks",
         "value": "Los Olivitos, Zulia",
-        "text": "On the Eastern Coast of Lake Maracaibo lies the country's leading salt facility: a 5,400 Ha solar production complex."
+        "text": "On the Eastern Coast of Lake Maracaibo lies the country's leading saltworks: a 5,400 Ha solar production complex."
       },
       {
         "label": "Who we are",
@@ -344,48 +307,41 @@
     ]
   },
   "locationSection": {
-    "badge": "National Infrastructure",
-    "title": "The Country's Leading Salt Facility",
-    "subtitle": "Continuous operations and productive leadership from western Venezuela to industries across the country.",
+    "badge": "National infrastructure",
+    "title": "The country's leading saltworks",
+    "subtitle": "From western Venezuela to industries across the country.",
     "locationHighlight": "PRODUSAL - Zulia",
-    "plantName": "Los Olivitos Industrial Salt Complex",
+    "plantName": "Los Olivitos Saltworks Industrial Complex",
     "locationDetails": "Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State.",
     "stats": [
       {
-        "label": "MT / Year Output",
-        "detail": "Venezuela's leading salt facility with 650,000 MT capacity"
+        "label": "Capacity",
+        "detail": "650,000 MT/year"
       },
       {
-        "label": "National Distribution",
+        "label": "National distribution",
         "detail": "Direct dispatch from our plant to Venezuelan industry"
       }
     ]
   },
   "contact": {
-    "badge": "Commercial & Industrial Sales",
-    "title": "Quote Now!",
-    "description": "We fulfill bulk wholesale orders, long-term supply agreements, and technical advisory for the petrochemical, chemical, water treatment, and animal nutrition industries.",
-    "phoneLabel": "Sales Office",
-    "phone": "0212 208 51 11 / 0800 2274455",
-    "emailLabel": "Inquiries & Quotes",
+    "badge": "Commercial and industrial inquiries",
+    "title": "Request a quote!",
+    "description": "We handle wholesale purchase requests, industrial shipments, and inquiries from the petrochemical, chemical, water treatment, and animal nutrition industries.",
     "email": "infoprodusal@grupomimesa.com",
-    "locationLabel": "Complex Location",
-    "location": "Los Olivitos Industrial Complex, Zulia, Venezuela",
-    "formTitle": "Request a Quote or Technical Data Sheet",
-    "formSubtitle": "Submit your requirements and our commercial engineering team will respond within 24 business hours.",
     "privacyAcceptLabel": "I have read and agree to the",
-    "privacyLinkLabel": "Privacy Policy",
+    "privacyLinkLabel": "privacy policy",
     "privacyAcceptSuffix": "and the processing of my contact information for commercial purposes.",
     "form": {
-      "nameLabel": "Full Name *",
+      "nameLabel": "Full name *",
       "namePlaceholder": "e.g. John Doe",
-      "emailLabel": "Email Address *",
+      "emailLabel": "Email address *",
       "emailPlaceholder": "john@company.com",
-      "companyLabel": "Company / Organization",
+      "companyLabel": "Company or organization",
       "companyPlaceholder": "e.g. Chemical Industries Corp",
-      "messageLabel": "Message or Requirement *",
-      "messagePlaceholder": "Specify required salt grade (coarse, fine, industrial), estimated tonnage volume, and delivery destination...",
-      "submit": "Send Inquiry",
+      "messageLabel": "Message or requirement *",
+      "messagePlaceholder": "Tell us the type of salt you need (coarse or ground), the estimated volume in MT, and the delivery location...",
+      "submit": "Send request",
       "sending": "Sending message..."
     },
     "formMessages": {
@@ -394,83 +350,78 @@
       "tooLong": "One of the fields exceeds the allowed length.",
       "success": "Thank you for contacting us! Your message has been sent to our team.",
       "devSuccess": "Message received! In development mode your message was logged.",
-      "error": "An error occurred while sending your message. Please try again later or call us.",
+      "error": "An error occurred while sending your message. Please try again later or write to infoprodusal@grupomimesa.com.",
       "companyFallback": "Not specified"
     }
   },
   "privacy": {
-    "badge": "Legal Notice & Confidentiality",
-    "title": "Privacy Policy",
-    "subtitle": "Transparent, confidential, and secure management of commercial data for our clients, suppliers, and industrial partners.",
+    "badge": "Legal notice and confidentiality",
+    "title": "Privacy policy",
+    "subtitle": "Transparent, confidential, and secure management of commercial data for our clients, suppliers, and partners.",
     "lastUpdated": "Last updated: October 2026",
-    "backHome": "Back to Home",
+    "backHome": "Back to home",
     "responsible": {
-      "title": "1. Data Controller Identification",
+      "title": "1. Data controller identification",
       "company": "Productora de Sal, C.A. (PRODUSAL)",
-      "rif": "Tax ID (RIF): J-31298456-0",
-      "address": "Los Olivitos Saltworks Industrial Complex, Miranda Municipality, Eastern Shore of Lake Maracaibo, Zulia State, Venezuela.",
-      "email": "infoprodusal@grupomimesa.com",
-      "phone": "+58 212 208 51 11 / 0800 2274455"
+      "rif": "Tax ID (RIF): J-07042868-6",
+      "address": "Los Olivitos Saltworks Industrial Complex, Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State, Venezuela.",
+      "email": "infoprodusal@grupomimesa.com"
     },
     "sections": [
       {
         "id": "collection",
-        "title": "2. Personal & Commercial Data We Collect",
-        "content": "Through our web forms and official quote channels, PRODUSAL C.A. only requests and stores data strictly necessary for B2B commercial interactions: full name, corporate email, company name, phone number, and salt requirement specifications (estimated tonnage, salt grade, delivery destination)."
+        "title": "2. Personal and commercial data we collect",
+        "content": "Through our web forms and official channels, PRODUSAL C.A. only requests and stores the data needed for B2B commercial interactions: full name, corporate email, company name, and requirement specifications (estimated tonnage, salt type, delivery destination)."
       },
       {
         "id": "purpose",
-        "title": "3. Purpose of Data Processing",
-        "content": "The provided data is used exclusively to: process quotations and purchase orders, provide official technical datasheets and laboratory certificates of analysis, coordinate industrial dispatch logistics (bulk hopper, Big Bags, bags), and respond to technical or commercial inquiries."
+        "title": "3. Purpose of data processing",
+        "content": "The provided data is used exclusively to: handle purchase requests, provide official technical data sheets and laboratory certificates of analysis, coordinate industrial dispatch logistics (bulk, big bags, and bags), and respond to commercial inquiries."
       },
       {
         "id": "confidentiality",
-        "title": "4. Confidentiality & Non-Disclosure to Third Parties",
-        "content": "PRODUSAL C.A. does not sell, rent, lease, or transfer customer or prospective client data to third parties under any circumstances. All commercial information is held under strict industrial confidentiality in compliance with Venezuelan legal framework and international best practices."
+        "title": "4. Confidentiality and non-disclosure to third parties",
+        "content": "PRODUSAL C.A. does not sell, rent, lease, or transfer customer or prospective client data to third parties under any circumstances. All commercial information is held confidentially in compliance with the Venezuelan legal framework and international good practices."
       },
       {
         "id": "security",
-        "title": "5. Data Security & Storage",
+        "title": "5. Data security and storage",
         "content": "We implement technical and organizational security measures (TLS/HTTPS in-transit encryption, access controls restricted to authorized commercial personnel) to protect data against unauthorized access, loss, or alteration."
       },
       {
         "id": "rights",
-        "title": "6. Data Subject Rights (Access, Correction & Deletion)",
-        "content": "At any time, users or corporate representatives may exercise their rights to access, rectify, update, or delete their data by sending an email to infoprodusal@grupomimesa.com with the subject line 'Data Protection'."
+        "title": "6. Data subject rights (access, correction, and deletion)",
+        "content": "At any time, users or corporate representatives may exercise their rights to access, rectify, update, or delete their data by sending an email to infoprodusal@grupomimesa.com with the subject line 'Data protection'."
       },
       {
         "id": "cookies",
-        "title": "7. Use of Cookies & Web Technologies",
-        "content": "This website uses only essential technical cookies to ensure smooth browsing, remember language preferences (Spanish/English), and optimize loading performance without invasive tracking or third-party behavioral advertising."
+        "title": "7. Use of cookies and web technologies",
+        "content": "This website uses only essential technical cookies to enable browsing, remember the language preference (Spanish/English), and optimize loading, without invasive tracking or third-party advertising."
       }
     ]
   },
   "notFound": {
     "code": "404",
-    "title": "Page Not Found",
+    "title": "Page not found",
     "description": "The page you are looking for does not exist or has been relocated.",
-    "button": "Return to Home"
+    "button": "Back to home"
   },
   "underConstruction": {
-    "badge": "In Progress",
-    "title": "We are building an enhanced experience",
+    "badge": "In progress",
+    "title": "We are building a new space",
     "description": "Our interactive product catalog and client portal will be available shortly.",
-    "button": "Return to Home"
+    "button": "Back to home"
   },
   "footer": {
-    "companyDescription": "Produsal C.A. is Venezuela's leading industrial salt producer. Founded in 1989 and in continuous commercial operation since 1999 at Los Olivitos (Zulia), supplying solar salt for the petrochemical, chemical, and livestock sectors.",
-    "quickLinksTitle": "Quick Navigation",
-    "contactTitle": "Contact Information",
-    "plantLabel": "Plant & Salt Flats",
-    "plantAddress": "Los Olivitos Industrial Complex, Zulia State",
-    "officeLabel": "Corporate Offices",
-    "officeAddress": "Maracaibo, Zulia State, Venezuela",
-    "address": "Los Olivitos / Maracaibo, Zulia State",
-    "phone": "0212 208 51 11 / 0800 2274455",
+    "companyDescription": "Produsal C.A. is Venezuela's leading industrial salt producer. Founded in 1989 and in commercial operation since 1999 at Los Olivitos (Zulia), it supplies solar salt to the petrochemical, chemical, and industrial sectors.",
+    "quickLinksTitle": "Quick navigation",
+    "contactTitle": "Contact information",
+    "plantLabel": "Plant and saltworks",
+    "plantAddress": "Los Olivitos Industrial Complex, Miranda Municipality, Zulia State, Venezuela",
     "email": "infoprodusal@grupomimesa.com",
-    "scrollToTop": "Back to Top",
-    "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. All rights reserved.",
-    "privacyPolicy": "Privacy Policy",
+    "scrollToTop": "Back to top",
+    "copyright": "© 2026 Produsal C.A. RIF J-07042868-6. All rights reserved.",
+    "privacyPolicy": "Privacy policy",
     "developerCredit": "Developed by",
     "social": {
       "linkedin": "https://linkedin.com",

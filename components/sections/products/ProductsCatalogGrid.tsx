@@ -31,14 +31,16 @@ export function ProductsCatalogGrid({ currentLang, dict }: ProductsCatalogGridPr
             <div className="flex flex-col gap-2 max-w-2xl">
               <div className="flex items-center gap-2.5">
                 <span className="type-eyebrow text-[#02aeaa]">
-                  {isEs ? "Clasificación Oficial" : "Official Classification"}
+                  {isEs ? "Línea de productos" : "Product line"}
                 </span>
               </div>
               <h2 className="type-h2 text-[#183c6b]">
-                {isEs ? "Las 4 Categorías Industriales" : "The 4 Industrial Categories"}
+                {isEs ? "Nuestros productos" : "Our products"}
               </h2>
               <p className="type-body text-slate-600">
-                {dict.qualityGuarantee}
+                {isEs
+                  ? "Sal bruta y sal molida, cada una con su ficha técnica."
+                  : "Coarse and ground salt, each with its own data sheet."}
               </p>
             </div>
 
@@ -52,7 +54,7 @@ export function ProductsCatalogGrid({ currentLang, dict }: ProductsCatalogGridPr
           </div>
         </ScrollReveal>
 
-        {/* Grid de las 4 categorías oficiales */}
+        {/* Grid de los 4 productos */}
         <ProductCategoryGrid currentLang={currentLang} dict={dict} />
       </div>
     </div>

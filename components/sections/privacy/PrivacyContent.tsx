@@ -7,7 +7,6 @@ import {
   Lock,
   FileText,
   Mail,
-  Phone,
   MapPin,
   CheckCircle2,
   ChevronRight,
@@ -117,21 +116,14 @@ export function PrivacyContent({ currentLang, dict }: PrivacyContentProps) {
                   <span className="leading-relaxed">{dict.responsible.address}</span>
                 </div>
 
-                <div className="flex flex-col gap-2.5">
-                  <div className="flex items-center gap-2.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-100">
-                    <Mail className="w-4 h-4 text-[#02aeaa] shrink-0" />
-                    <a
-                      href={`mailto:${dict.responsible.email}`}
-                      className="text-[#183c6b] font-semibold hover:text-[#02aeaa] transition-colors"
-                    >
-                      {dict.responsible.email}
-                    </a>
-                  </div>
-
-                  <div className="flex items-center gap-2.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-100">
-                    <Phone className="w-4 h-4 text-[#02aeaa] shrink-0" />
-                    <span className="font-semibold text-slate-800">{dict.responsible.phone}</span>
-                  </div>
+                <div className="flex items-start gap-2.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-100">
+                  <Mail className="w-4 h-4 text-[#02aeaa] shrink-0 mt-0.5" />
+                  <a
+                    href={`mailto:${dict.responsible.email}`}
+                    className="text-[#183c6b] font-semibold hover:text-[#02aeaa] transition-colors break-all"
+                  >
+                    {dict.responsible.email}
+                  </a>
                 </div>
               </div>
             </div>
@@ -177,7 +169,7 @@ export function PrivacyContent({ currentLang, dict }: PrivacyContentProps) {
               href={`/${currentLang}/contacto`}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-[#183c6b] bg-slate-200 hover:bg-slate-300 transition-all font-heading"
             >
-              <span>{isEs ? "Contactar a Ventas" : "Contact Sales"}</span>
+              <span>{isEs ? "Contactar a ventas" : "Contact sales"}</span>
             </Link>
           </div>
         </div>

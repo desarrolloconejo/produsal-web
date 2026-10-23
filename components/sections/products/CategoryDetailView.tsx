@@ -4,11 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Package,
-  Layers,
   ArrowRight,
   FileText,
-  Truck,
   CheckCircle2,
   Download,
   ChevronRight,
@@ -17,6 +14,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PdfPreviewModal, type PdfModalData } from "@/components/ui/PdfPreviewModal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import { CategoryContactSection } from "./CategoryContactSection";
+import { packagingKind, PACKAGING_STYLES } from "./packaging";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 import { SectionTexture, type TextureVariant } from "@/components/ui/SectionTexture";
 
@@ -35,7 +33,7 @@ export function CategoryDetailView({
   dict,
   contactDict,
 }: CategoryDetailViewProps) {
-  // Las texturas se intercalan entre categorías: ondas, cubos, ondas, cubos
+  // Las texturas se intercalan entre productos: ondas, cubos, ondas, cubos
   const texture: TextureVariant =
     allCategories.findIndex((c) => c.slug === category.slug) % 2 === 0 ? "waves" : "cubes";
   const isEs = currentLang === "es";
@@ -44,8 +42,7 @@ export function CategoryDetailView({
 
   const openPdfModal = () => {
     setModalData({
-      title: `${isEs ? "Ficha Técnica" : "Data Sheet"} — ${category.pdfTitle}`,
-      code: category.code,
+      title: `${isEs ? "Ficha técnica" : "Data sheet"} — ${category.pdfTitle}`,
       pdfEs: category.pdfEs,
       pdfEn: category.pdfEn,
     });
@@ -81,7 +78,7 @@ export function CategoryDetailView({
         </div>
       </div>
 
-      {/* 2. Hero de Categoría */}
+      {/* 2. Hero del producto */}
       <section className="relative bg-[#183c6b] text-white py-14 sm:py-18 overflow-hidden border-b border-[#02aeaa]/20">
         {/* Triángulos 2D corporativos en el fondo azul del hero */}
         <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-25" />
@@ -94,29 +91,21 @@ export function CategoryDetailView({
             {/* Lado Izquierdo: Textos y Datos Oficiales */}
             <div className="lg:col-span-7 flex flex-col gap-6">
               <ScrollReveal animation="fade-down">
-                <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-[#02aeaa]/20 text-[#02aeaa] border border-[#02aeaa]/40">
-                    {category.code}
-                  </span>
-                  <span
-                    className={`type-label px-3 py-1 rounded-full ${
-                      isPremium ? "bg-[#02aeaa] text-[#183c6b]" : "bg-[#85b2cf] text-[#183c6b]"
-                    }`}
-                  >
-                    {isPremium
-                      ? isEs ? "Grado Premium" : "Premium Grade"
-                      : isEs ? "Tipo A Estándar Industrial" : "Standard Type A"}
-                  </span>
-                </div>
+                <span
+                  className={`type-label px-3 py-1 rounded-full w-fit inline-block ${
+                    isPremium ? "bg-[#02aeaa] text-[#183c6b]" : "bg-[#85b2cf] text-[#183c6b]"
+                  }`}
+                >
+                  {isPremium
+                    ? isEs ? "Grado premium" : "Premium grade"
+                    : isEs ? "Tipo A estándar" : "Standard type A"}
+                </span>
               </ScrollReveal>
 
               <ScrollReveal animation="fade-up" delay={50}>
                 <h1 className="type-h1 text-white">
                   {category.name}
                 </h1>
-                <p className="text-[#02aeaa] text-sm sm:text-base font-bold font-heading mt-2">
-                  {category.tagline}
-                </p>
               </ScrollReveal>
 
               <ScrollReveal animation="fade-up" delay={100}>
@@ -125,7 +114,7 @@ export function CategoryDetailView({
                 </p>
               </ScrollReveal>
 
-              {/* Acciones del Hero: Ficha Técnica (Modal + Descarga) y Cotización */}
+              {/* Acciones del Hero: Ficha Técnica (Modal + Descarga) y Contacto */}
               <ScrollReveal animation="fade-up" delay={150}>
                 <div className="flex flex-wrap items-center gap-3.5 pt-2">
                   <button
@@ -134,7 +123,7 @@ export function CategoryDetailView({
                     className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-bold text-sm text-[#183c6b] bg-[#02aeaa] hover:bg-white transition-all font-heading shadow-md cursor-pointer"
                   >
                     <FileText className="w-4 h-4 text-[#183c6b]" />
-                    <span>{isEs ? "Previsualizar Ficha Técnica" : "Preview Technical Sheet"}</span>
+                    <span>{isEs ? "Ver ficha técnica" : "View data sheet"}</span>
                   </button>
 
                   <a
@@ -204,59 +193,35 @@ export function CategoryDetailView({
         <SectionTexture variant={texture} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 flex flex-col gap-16 sm:gap-20 relative z-10">
-        {/* Sección: Presentaciones Disponibles (Regla de Granel en Primer Lugar) */}
+        {/* Sección: Presentaciones disponibles (mismos íconos que el catálogo) */}
         <ScrollReveal animation="fade-up">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-1.5">
               <span className="type-eyebrow text-[#02aeaa]">
-                {isEs ? "Logística y Formatos" : "Logistics & Formats"}
+                {isEs ? "Logística y formatos" : "Logistics and formats"}
               </span>
               <h2 className="type-h2 text-[#183c6b]">
-                {isEs ? "Presentaciones de Despacho" : "Packaging & Dispatch Formats"}
+                {isEs ? "Presentaciones de despacho" : "Dispatch formats"}
               </h2>
               <p className="type-body text-slate-600 max-w-2xl">
                 {isEs
-                  ? "Capacidad de despacho directo desde el Complejo Salinero Los Olivitos bajo modalidad EXW planta."
-                  : "Direct dispatch capacity from Los Olivitos Saltworks complex under EXW plant terms."}
+                  ? "Despacho directo desde el Complejo Industrial Los Olivitos bajo modalidad EXW."
+                  : "Direct dispatch from the Los Olivitos Industrial Complex under EXW terms."}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {category.items.map((item, idx) => {
-                const isGranelItem =
-                  item.format.toLowerCase().includes("granel") ||
-                  item.format.toLowerCase().includes("bulk");
+              {category.items.map((item) => {
+                const style = PACKAGING_STYLES[packagingKind(item)];
 
                 return (
                   <div
                     key={item.slug}
-                    className={`relative p-6 sm:p-7 rounded-3xl border flex flex-col justify-between gap-5 transition-all ${
-                      isGranelItem
-                        ? "bg-white border-[#02aeaa] shadow-md ring-2 ring-[#02aeaa]/20"
-                        : "bg-white border-slate-200/90 hover:border-slate-300 shadow-xs"
-                    }`}
+                    className="relative p-6 sm:p-7 rounded-3xl border bg-white border-slate-200/90 hover:border-[#02aeaa]/60 shadow-xs flex flex-col justify-between gap-5 transition-all"
                   >
-                    {isGranelItem && (
-                      <span className="type-caption absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#02aeaa] text-[#183c6b]">
-                        {isEs ? "Despacho Mayorista Masivo" : "Bulk High-Volume Dispatch"}
-                      </span>
-                    )}
-
                     <div className="flex flex-col gap-3">
-                      <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-colors ${
-                        isGranelItem
-                          ? "bg-[#02aeaa]/15 text-[#02aeaa] border border-[#02aeaa]/30"
-                          : idx === 1
-                          ? "bg-[#85b2cf]/20 text-[#85b2cf] border border-[#85b2cf]/35"
-                          : "bg-[#e5c798]/25 text-[#183c6b] border border-[#e5c798]/40"
-                      }`}>
-                        {isGranelItem ? (
-                          <Truck className="w-6 h-6 text-[#02aeaa]" />
-                        ) : idx === 1 ? (
-                          <Package className="w-6 h-6 text-[#85b2cf]" />
-                        ) : (
-                          <Layers className="w-6 h-6 text-[#e5c798]" />
-                        )}
+                      <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${style.className}`}>
+                        <style.Icon className={`w-6 h-6 ${style.iconColor}`} />
                       </div>
 
                       <div className="flex flex-col">
@@ -267,10 +232,6 @@ export function CategoryDetailView({
                           {item.name}
                         </h3>
                       </div>
-
-                      <p className="text-slate-600 text-xs sm:text-sm font-normal">
-                        {item.use}
-                      </p>
                     </div>
 
                     <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold font-heading text-[#02aeaa]">
@@ -284,75 +245,7 @@ export function CategoryDetailView({
           </div>
         </ScrollReveal>
 
-        {/* Sección: Ficha Técnica Oficial con Visor y Descarga */}
-        <ScrollReveal animation="fade-up">
-          <div className="p-8 sm:p-10 rounded-3xl bg-[#183c6b] text-white border border-[#02aeaa]/30 shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#02aeaa]/15 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-              <div className="flex flex-col gap-3 max-w-2xl">
-                <span className="type-label text-[#02aeaa] flex items-center gap-1.5">
-                  <FileText className="w-4 h-4 text-[#02aeaa]" />
-                  {isEs ? "Documento Oficial de Calidad" : "Official Quality Document"}
-                </span>
-
-                <h3 className="type-h3 text-white">
-                  {isEs
-                    ? `Ficha Técnica Comercial — ${category.name}`
-                    : `Commercial Technical Sheet — ${category.name}`}
-                </h3>
-
-                <p className="text-slate-300 text-sm leading-relaxed">
-                  {isEs
-                    ? "Accede a la especificación completa emitida por nuestro Departamento de Aseguramiento de Calidad. Puedes previsualizar el documento de forma interactiva o descargarlo en formato PDF en español o inglés."
-                    : "Access the complete specification issued by our Quality Assurance Department. You can preview the document interactively or download the PDF in Spanish or English."}
-                </p>
-
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400 font-mono mt-1">
-                  <span>{category.code}</span>
-                  <span>•</span>
-                  <span>ASTM E534-98</span>
-                  <span>•</span>
-                  <span>{isEs ? "CoA lote a lote" : "CoA lot by lot"}</span>
-                </div>
-              </div>
-
-              {/* Botones de Acción */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
-                <button
-                  type="button"
-                  onClick={openPdfModal}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-sm text-[#183c6b] bg-[#02aeaa] hover:bg-white transition-all font-heading shadow-md cursor-pointer"
-                >
-                  <FileText className="w-4 h-4" />
-                  <span>{isEs ? "Abrir Vista Previa" : "Open Live Preview"}</span>
-                </button>
-
-                <a
-                  href={category.pdfEs}
-                  download
-                  className="inline-flex items-center justify-center gap-2 px-4 py-4 rounded-xl font-bold text-sm text-white bg-white/10 hover:bg-[#85b2cf]/20 border border-[#85b2cf]/40 hover:border-[#85b2cf] transition-all font-heading"
-                  title={isEs ? "Descargar en Español" : "Download in Spanish"}
-                >
-                  <Download className="w-4 h-4 text-[#85b2cf]" />
-                  <span>PDF (ES)</span>
-                </a>
-
-                <a
-                  href={category.pdfEn}
-                  download
-                  className="inline-flex items-center justify-center gap-2 px-4 py-4 rounded-xl font-bold text-sm text-white bg-white/10 hover:bg-[#85b2cf]/20 border border-[#85b2cf]/40 hover:border-[#85b2cf] transition-all font-heading"
-                  title={isEs ? "Descargar en Inglés" : "Download in English"}
-                >
-                  <Download className="w-4 h-4 text-[#85b2cf]" />
-                  <span>PDF (EN)</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* Sección: Aplicaciones Clave */}
+        {/* Sección: Aplicaciones */}
         <ScrollReveal animation="fade-up">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-1.5">
@@ -360,7 +253,7 @@ export function CategoryDetailView({
                 {dict.applicationsLabel}
               </span>
               <h2 className="type-h2 text-[#183c6b]">
-                {isEs ? "Sectores e Industrias que Abastecemos" : "Key Industries & Applications"}
+                {isEs ? "Sectores que abastecemos" : "Industries we supply"}
               </h2>
             </div>
 
@@ -382,15 +275,15 @@ export function CategoryDetailView({
           </div>
         </ScrollReveal>
 
-        {/* Sección de Cotización y Contacto Directo con selector interactivo de divs */}
+        {/* Sección de contacto con selector de presentación */}
         <CategoryContactSection currentLang={currentLang} category={category} contactDict={contactDict} />
 
-        {/* Sección: Otras Categorías del Catálogo */}
+        {/* Sección: Otros productos del catálogo */}
         <ScrollReveal animation="fade-up">
           <div className="flex flex-col gap-6 pt-6 border-t border-slate-200">
             <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
               <h3 className="type-h4 text-[#183c6b]">
-                {isEs ? "Explorar las Otras Categorías" : "Explore Other Categories"}
+                {isEs ? "Otros productos" : "Other products"}
               </h3>
               <Link
                 href={`/${currentLang}/productos`}
@@ -409,9 +302,6 @@ export function CategoryDetailView({
                   className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-[#02aeaa] shadow-2xs hover:shadow-md transition-all group flex flex-col justify-between gap-4"
                 >
                   <div className="flex flex-col gap-1">
-                    <span className="text-[10px] font-mono font-bold text-slate-400">
-                      {other.code}
-                    </span>
                     <h4 className="type-h5 text-[#183c6b] group-hover:text-[#02aeaa] transition-colors">
                       {other.name}
                     </h4>

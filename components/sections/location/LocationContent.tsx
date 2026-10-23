@@ -135,7 +135,7 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
           <div className="relative w-full aspect-[1144/768] max-w-2xl mx-auto select-none">
             <Image
               src="/images/mapa-venezuela-final.png"
-              alt={currentLang === "es" ? `Mapa Completo de Venezuela con Guayana Esequiba - Ubicación PRODUSAL Los Olivitos (${PLANT_LOCATION.label})` : `Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (${PLANT_LOCATION.label})`}
+              alt={currentLang === "es" ? `Mapa completo de Venezuela con Guayana Esequiba - ubicación de PRODUSAL en Los Olivitos (${PLANT_LOCATION.label})` : `Full map of Venezuela including Guayana Esequiba - PRODUSAL location at Los Olivitos (${PLANT_LOCATION.label})`}
               fill
               priority
               className="object-contain mix-blend-multiply"

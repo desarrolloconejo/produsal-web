@@ -3,7 +3,7 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { X, ArrowRight, Phone, Mail, ChevronDown } from "lucide-react";
+import { X, ArrowRight, Mail, ChevronDown } from "lucide-react";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 interface MobileMenuProps {
@@ -82,7 +82,7 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
         {/* 1. Cabecera Fija del Drawer */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-slate-100 shrink-0 bg-white">
           <span className="text-xs font-bold uppercase tracking-wider text-[#02aeaa] font-heading">
-            {currentLang === "es" ? "Menú Produsal" : "Produsal Menu"}
+            {currentLang === "es" ? "Menú Produsal" : "Produsal menu"}
           </span>
           <button
             onClick={onClose}
@@ -192,23 +192,19 @@ export function MobileMenu({ isOpen, onClose, currentLang, dict, productsDict }:
           </nav>
         </div>
 
-        {/* 3. Acciones Fijas Inferiores (Botón Contáctanos y teléfonos) */}
+        {/* 3. Acciones Fijas Inferiores (Botón Contáctanos y correo) */}
         <div className="p-6 border-t border-slate-100 flex flex-col gap-3 font-heading bg-white shrink-0">
           <Link
             href={`/${currentLang}/contacto`}
             onClick={onClose}
             className="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-[#02aeaa] hover:bg-[#183c6b] text-white font-bold shadow-md shadow-[#02aeaa]/20 hover:shadow-lg transition-all"
-            aria-label={currentLang === "es" ? "Contáctanos" : "Contact Us"}
+            aria-label={currentLang === "es" ? "Contáctanos" : "Contact us"}
           >
-            <Phone className="w-4 h-4" />
-            <span>{currentLang === "es" ? "Contáctanos" : "Contact Us"}</span>
+            <Mail className="w-4 h-4" />
+            <span>{currentLang === "es" ? "Contáctanos" : "Contact us"}</span>
           </Link>
 
           <div className="pt-2 text-xs text-slate-500 flex flex-col gap-1.5 font-sans">
-            <div className="flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#02aeaa]" />
-              <span>0212 208 51 11 / 0800 2274455</span>
-            </div>
             <div className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-[#02aeaa]" />
               <span>infoprodusal@grupomimesa.com</span>

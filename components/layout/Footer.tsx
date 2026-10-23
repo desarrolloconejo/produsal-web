@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUp, Mail, MapPin, Phone, Building2 } from "lucide-react";
+import { ArrowUp, Mail, MapPin } from "lucide-react";
 import type { Locale } from "@/dictionaries/get-dictionary";
 
 type SocialNetwork = "linkedin" | "instagram" | "facebook";
@@ -35,12 +35,8 @@ interface FooterProps {
     companyDescription: string;
     quickLinksTitle: string;
     contactTitle: string;
-    address: string;
-    plantLabel?: string;
-    plantAddress?: string;
-    officeLabel?: string;
-    officeAddress?: string;
-    phone: string;
+    plantLabel: string;
+    plantAddress: string;
     email: string;
     scrollToTop: string;
     copyright: string;
@@ -73,7 +69,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
     { href: `/${currentLang}/contacto`, label: navDict.contact },
     {
       href: `/${currentLang}/privacidad`,
-      label: dict.privacyPolicy || (isEs ? "Políticas de Privacidad" : "Privacy Policy"),
+      label: dict.privacyPolicy || (isEs ? "Políticas de privacidad" : "Privacy policy"),
     },
   ];
 
@@ -87,7 +83,7 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
             <div className="relative flex items-center w-fit">
               <Image
                 src="/images/PRODUSAL-white.webp"
-                alt="Produsal - Productora de Sal Marina"
+                alt={isEs ? "Produsal - Productora de sal industrial" : "Produsal - Industrial salt producer"}
                 width={160}
                 height={35}
                 className="object-contain max-h-6 sm:max-h-7 w-auto"
@@ -144,48 +140,16 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
             </h3>
 
             <div className="flex flex-col gap-3.5 text-sm text-white/75">
-              {/* Planta Industrial y Salinas */}
+              {/* Planta y salina */}
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#e5c798] flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col text-xs leading-relaxed">
                   <span className="font-bold text-[#e5c798] uppercase tracking-wider text-[10px]">
-                    {dict.plantLabel || (currentLang === "es" ? "Planta y Salinas" : "Plant & Salt Flats")}
+                    {dict.plantLabel}
                   </span>
                   <span className="text-white/90">
-                    {dict.plantAddress || "Complejo Industrial Los Olivitos, Edo. Zulia"}
+                    {dict.plantAddress}
                   </span>
-                </div>
-              </div>
-
-              {/* Oficinas Administrativas */}
-              <div className="flex items-start gap-3">
-                <Building2 className="w-4 h-4 text-[#85b2cf] flex-shrink-0 mt-0.5" />
-                <div className="flex flex-col text-xs leading-relaxed">
-                  <span className="font-bold text-[#85b2cf] uppercase tracking-wider text-[10px]">
-                    {dict.officeLabel || (currentLang === "es" ? "Oficinas Administrativas" : "Corporate Offices")}
-                  </span>
-                  <span className="text-white/90">
-                    {dict.officeAddress || "Maracaibo, Edo. Zulia, Venezuela"}
-                  </span>
-                </div>
-              </div>
-
-              {/* Teléfonos */}
-              <div className="flex items-start gap-3 pt-1 border-t border-white/10">
-                <Phone className="w-4 h-4 text-[#02aeaa] flex-shrink-0 mt-0.5" />
-                <div className="flex flex-col gap-1 text-xs text-white/90">
-                  <a
-                    href="tel:02122085111"
-                    className="hover:text-white transition-colors font-medium"
-                  >
-                    0212 208 51 11
-                  </a>
-                  <a
-                    href="tel:08002274455"
-                    className="hover:text-[#02aeaa] transition-colors font-medium text-[#85b2cf]"
-                  >
-                    0800 2274455
-                  </a>
                 </div>
               </div>
 
@@ -193,10 +157,10 @@ export function Footer({ currentLang, dict, navDict }: FooterProps) {
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#85b2cf] flex-shrink-0" />
                 <a
-                  href="mailto:infoprodusal@grupomimesa.com"
+                  href={`mailto:${dict.email}`}
                   className="hover:text-white transition-colors text-xs text-white/90"
                 >
-                  infoprodusal@grupomimesa.com
+                  {dict.email}
                 </a>
               </div>
             </div>

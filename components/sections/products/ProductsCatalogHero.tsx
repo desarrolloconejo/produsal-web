@@ -20,7 +20,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/produsal-piramides-cielo.webp"
-          alt={isEs ? "Complejo Industrial Salinas Los Olivitos - PRODUSAL" : "Los Olivitos Industrial Salt Complex - PRODUSAL"}
+          alt={isEs ? "Complejo Industrial Salina Los Olivitos - PRODUSAL" : "Los Olivitos Saltworks Industrial Complex - PRODUSAL"}
           fill
           priority
           sizes="100vw"
@@ -60,7 +60,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
                 {isEs ? "Productos" : "High-Purity"}
               </span>{" "}
               <span className="text-white/95 block sm:inline">
-                {isEs ? "de Alta Pureza" : "Salt Products"}
+                {isEs ? "de alta pureza" : "salt products"}
               </span>
             </h1>
           </ScrollReveal>
@@ -80,7 +80,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
                 href={`/${currentLang}/contacto`}
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#02aeaa] hover:bg-[#029693] text-white font-bold text-sm shadow-md shadow-[#02aeaa]/25 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group font-heading"
               >
-                <span>{isEs ? "Contáctanos" : "Contact Us"}</span>
+                <span>{isEs ? "Contáctanos" : "Contact us"}</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
@@ -90,7 +90,7 @@ export function ProductsCatalogHero({ currentLang, dict }: ProductsCatalogHeroPr
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#85b2cf]/15 text-white font-semibold text-sm border border-[#85b2cf]/40 hover:border-[#85b2cf] backdrop-blur-sm transition-all duration-200 font-heading"
               >
                 <Waves className="w-4 h-4 text-[#85b2cf]" />
-                <span>{isEs ? "Conoce Nuestra Historia" : "Our Story & Heritage"}</span>
+                <span>{isEs ? "Conoce nuestra historia" : "Discover our history"}</span>
               </Link>
             </div>
           </ScrollReveal>

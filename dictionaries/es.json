@@ -1,39 +1,38 @@
 {
   "lang": "es",
   "meta": {
-    "title": "Produsal | La Principal Productora de Sal Industrial de Venezuela | Los Olivitos, Zulia",
-    "description": "Producción solar y distribución de sal industrial de alta pureza con 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento mayorista para la industria petroquímica, química, tratamiento de agua y nutrición animal.",
+    "title": "Produsal | La principal productora de sal industrial de Venezuela | Los Olivitos, Zulia",
+    "description": "Producción solar y distribución de sal industrial con capacidad de 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento al mayor para la industria petroquímica, química, tratamiento de agua y nutrición animal.",
     "pages": {
       "about": {
-        "title": "Nosotros | Produsal: La Principal Salina de Venezuela | Los Olivitos, Zulia",
-        "description": "Descubre la historia, capacidad operativa (650.000 TM/año) y tecnología del Complejo Industrial Los Olivitos de Produsal en Zulia. Alianza estratégica y sustentabilidad ambiental."
+        "title": "Nosotros | Produsal: la principal salina de Venezuela | Los Olivitos, Zulia",
+        "description": "Conoce la historia, la capacidad (650.000 TM/año) y el Complejo Industrial Los Olivitos de Produsal en Zulia, con su compromiso ambiental y social."
       },
       "contact": {
-        "title": "Contacto y Ventas | Produsal C.A. - Los Olivitos, Zulia",
-        "description": "Contáctanos para atención comercial al mayor, despacho industrial de sal, especificaciones técnicas y cotizaciones para la industria petroquímica, química, tratamiento de agua y nutrición animal."
+        "title": "Contacto | Produsal C.A. - Los Olivitos, Zulia",
+        "description": "Escríbenos para atención comercial al mayor, despachos industriales de sal y fichas técnicas para la industria petroquímica, química, tratamiento de agua y nutrición animal."
       },
       "products": {
-        "title": "Catálogo de Productos Industriales | Produsal C.A.",
-        "description": "Catálogo oficial de sal solar de alta pureza: Sal Bruta Premium, Sal Bruta Tipo A, Sal Molida Premium y Sal Molida Tipo A. Despachos a granel, Big Bags y sacos."
+        "title": "Catálogo de productos | Produsal C.A.",
+        "description": "Catálogo de sal solar: Sal bruta premium, Sal bruta tipo A, Sal molida premium y Sal molida tipo A. Despachos a granel, en big bags y sacos."
       },
       "privacy": {
-        "title": "Políticas de Privacidad | Produsal C.A. - Salinas Los Olivitos",
-        "description": "Conoce las políticas de privacidad y protección de datos comerciales de Productora de Sal, C.A. (PRODUSAL) en el Complejo Industrial Salinas Los Olivitos, Zulia."
+        "title": "Políticas de privacidad | Produsal C.A. - Salina Los Olivitos",
+        "description": "Conoce las políticas de privacidad y protección de datos comerciales de Productora de Sal, C.A. (PRODUSAL) en el Complejo Industrial Salina Los Olivitos, Zulia."
       },
       "category": {
-        "title": "{name} ({code}) | Produsal C.A.",
+        "title": "{name} | Produsal C.A.",
         "description": "{name} - {desc} Pureza: {purity}. Ficha técnica y presentaciones disponibles.",
-        "notFound": "Categoría no encontrada | Produsal C.A."
+        "notFound": "Producto no encontrado | Produsal C.A."
       },
       "gallery": {
-        "title": "Galería | Produsal C.A. - Salinas Los Olivitos, Zulia",
-        "description": "Recorrido fotográfico por el Complejo Industrial Los Olivitos: salinas, cosecha, lavado, envasado y el equipo humano de Produsal."
+        "title": "Galería | Produsal C.A. - Salina Los Olivitos, Zulia",
+        "description": "Recorrido fotográfico por el Complejo Industrial Los Olivitos: salina, cosecha, lavado, envasado y el equipo humano de Produsal."
       }
     }
   },
   "topBar": {
     "email": "infoprodusal@grupomimesa.com",
-    "phone": "0212 208 51 11",
     "location": "Los Olivitos, Zulia"
   },
   "nav": {
@@ -41,127 +40,122 @@
     "about": "Nosotros",
     "products": "Productos",
     "gallery": "Galería",
-    "quality": "Calidad y Origen",
+    "quality": "Calidad y origen",
     "contact": "Contacto"
   },
   "hero": {
     "badge": "Complejo Industrial Los Olivitos • Zulia, Venezuela",
     "headlineHighlight": "La principal salina",
-    "headlineRest": "de producción solar de alta pureza en Venezuela.",
-    "description": "Operamos el complejo salinero más importante del país en 5.400 Ha propias, aportando a la producción nacional de sal industrial con capacidad de 650.000 TM/año. Calidad para el sector petroquímico, industrial y materia prima para el sector alimentario.",
-    "ctaProducts": "Ver Catálogo Industrial",
-    "ctaAbout": "Conoce Nuestra Historia"
+    "headlineRest": "de producción solar de alta pureza en Venezuela",
+    "description": "Operamos el complejo salinero más importante del país en 5.400 Ha propias, aportando a la producción nacional de sal industrial con capacidad de 650.000 TM/año. Sal para el sector petroquímico e industrial, y materia prima para el sector alimentario.",
+    "ctaProducts": "Ver catálogo industrial",
+    "ctaAbout": "Conoce nuestra historia"
   },
   "historySection": {
-    "badge": "Origen y Trayectoria Industrial",
+    "badge": "Origen y trayectoria",
     "title": "Del Mar Caribe a la principal salina de Venezuela",
-    "description": "Más de 20 años de ingeniería solar, equilibrio ecológico y autonomía productiva abasteciendo a los sectores estratégicos del país.",
-    "ctaExplore": "Explorar Historia Completa",
+    "description": "Más de 20 años de producción solar, equilibrio ecológico y autonomía productiva abasteciendo a los sectores estratégicos del país.",
+    "ctaExplore": "Conoce la historia completa",
     "eras": [
       {
         "year": "1989",
-        "tag": "Proyecto Zuliano",
+        "tag": "Proyecto zuliano",
         "title": "Fundación en Maracaibo",
-        "description": "Nace con la visión de aprovechar el potencial solar del Zulia para garantizar el abastecimiento salinero del país."
+        "description": "Nace con la visión de aprovechar el potencial solar del Zulia para asegurar el abastecimiento de sal del país."
       },
       {
         "year": "1999",
-        "tag": "Inauguración Comercial",
-        "title": "Puesta en Marcha Los Olivitos",
+        "tag": "Inicio de operaciones",
+        "title": "Puesta en marcha de Los Olivitos",
         "description": "Inicio de operaciones del Complejo Industrial Los Olivitos, un desarrollo 'Green Field' en 5.400 Ha propias en la Costa Oriental del Lago de Maracaibo."
       },
       {
         "year": "Hoy",
-        "tag": "Liderazgo Nacional",
-        "title": "La Principal Salina del País",
-        "description": "650.000 TM/año operativas abasteciendo a la industria petroquímica, química y de nutrición animal en armonía ambiental."
+        "tag": "Presencia nacional",
+        "title": "La principal salina del país",
+        "description": "Con capacidad de 650.000 TM/año, abastece a la industria petroquímica, química y de nutrición animal en armonía con el entorno."
       }
     ],
     "showcase": {
-      "abraeTitle": "Santuario del Flamenco Rosado en Los Olivitos",
-      "abraeDescription": "Nuestras operaciones salineras coexisten en armonía ecológica dentro de un Área Bajo Régimen de Administración Especial (ABRAE), declarada humedal de importancia internacional (Sitio Ramsar y RHRAP). Alberga la mayor colonia reproductiva de flamencos del Caribe en Venezuela.",
+      "abraeTitle": "Santuario del flamenco rosado en Los Olivitos",
+      "abraeDescription": "Nuestra salina convive con un Área Bajo Régimen de Administración Especial (ABRAE), declarada humedal de importancia internacional (sitio Ramsar y RHRAP). Alberga la mayor colonia reproductiva de flamencos del Caribe en Venezuela.",
       "abraePoints": [
-        "Santuario reproductivo del Flamenco Rosado (Phoenicopterus ruber)",
-        "Humedal Ramsar de Importancia Internacional y Sitio RHRAP",
-        "Equilibrio biológico entre salinidad controlada y fauna costera"
+        "Santuario reproductivo del flamenco rosado (Phoenicopterus ruber)",
+        "Humedal Ramsar de importancia internacional y sitio RHRAP",
+        "Equilibrio entre la producción de sal y la fauna costera"
       ]
     }
   },
   "processSection": {
-    "badge": "Proceso de Producción de la Sal",
+    "badge": "Proceso de producción de la sal",
     "title": "¿Cómo se hace la sal en PRODUSAL?",
-    "description": "Una combinación armónica de sol, viento y mar: transformamos de forma sustentable el agua salada en sal de clase mundial.",
+    "description": "Sol, viento y mar: así transformamos el agua salada en sal industrial.",
     "phaseLabel": "Fase",
     "ofLabel": "de",
-    "completedBadge": "Producto Terminado",
+    "completedBadge": "Producto terminado",
     "steps": [
       {
         "step": "01",
-        "name": "Agua de Mar",
+        "name": "Agua de mar",
         "shortDesc": "Captación e ingreso",
-        "description": "Ingreso controlado del agua de la ciénaga de Los Olivitos, una laguna salada alimentada por el Mar Caribe que concentra más la salinidad que el mar abierto, hacia las primeras lagunas concentradoras del complejo."
+        "description": "Ingreso controlado del agua de la ciénaga de Los Olivitos hacia las primeras lagunas concentradoras del complejo."
       },
       {
         "step": "02",
         "name": "Concentración",
         "shortDesc": "Evaporación solar",
-        "description": "El sol radiante y los constantes vientos alisios del Zulia evaporan el agua a lo largo de 3.200 Ha operativas, aumentando la salinidad."
+        "description": "El sol y los vientos alisios del Zulia evaporan el agua a lo largo de 3.200 Ha, aumentando la salinidad."
       },
       {
         "step": "03",
         "name": "Cristalización",
         "shortDesc": "Precipitación de cloruro de sodio",
-        "description": "La salmuera saturada pasa a los cristalizadores donde precipita el cloruro de sodio en cristales puros de grado industrial."
+        "description": "La salmuera saturada pasa a los cristalizadores, donde el cloruro de sodio precipita en cristales de sal."
       },
       {
         "step": "04",
         "name": "Lavado",
         "shortDesc": "Dos líneas de lavado",
-        "description": "La sal cosechada ingresa a dos líneas industriales de lavado continuo con salmueras frescas que retiran impurezas."
+        "description": "La sal cosechada pasa por dos líneas industriales de lavado con salmueras frescas que retiran impurezas."
       },
       {
         "step": "05",
         "name": "Apilamiento",
         "shortDesc": "Patio de almacenamiento",
-        "description": "Apilamiento masivo en patio de acopio para drenaje natural y secado óptimo al aire libre."
+        "description": "Almacenamiento en patio de acopio para el drenaje natural y el secado al aire libre."
       },
       {
         "step": "06",
         "name": "Despacho",
-        "shortDesc": "Granel, Big Bags y sacos",
-        "description": "Despacho directo en planta en distintas presentaciones para todo el país."
+        "shortDesc": "Granel, big bags y sacos",
+        "description": "Entrega directa en planta, en distintas presentaciones, para todo el país."
       }
     ]
   },
   "products": {
-    "badge": "Catálogo Industrial y Comercial",
-    "title": "Productos de Alta Pureza",
-    "subtitle": "Sal solar cosechada en Los Olivitos con altos estándares de pureza físico-química para la industria petroquímica, química, tratamiento de agua y nutrición animal, entre otros usos.",
+    "badge": "Catálogo industrial y comercial",
+    "title": "Productos de alta pureza",
+    "subtitle": "Sal solar cosechada en Los Olivitos para la industria petroquímica, química, tratamiento de agua y nutrición animal, entre otros usos.",
     "ctaQuote": "Contáctanos",
-    "ctaSpec": "Ficha Técnica",
+    "ctaSpec": "Ficha técnica",
     "ctaDownload": "Descargar PDF",
-    "ctaPreview": "Vista Previa",
+    "ctaPreview": "Vista previa",
     "purityLabel": "Pureza",
     "humidityLabel": "Humedad",
     "packagingLabel": "Presentación",
-    "applicationsLabel": "Aplicaciones clave",
-    "viewDetails": "Ver especificaciones",
-    "qualityGuarantee": "Pureza mínima garantizada según la metodología ASTM E534-98, con trazabilidad continua por lote.",
-    "carouselBadge": "Presentaciones y Formatos Disponibles",
-    "carouselTitle": "Catálogo de Productos por Presentación",
-    "carouselSubtitle": "Despachos industriales en camiones tolva a granel, Big Bags y sacos listos para la cadena productiva.",
+    "applicationsLabel": "Aplicaciones",
     "categories": [
       {
         "id": "sal-bruta-premium",
         "slug": "sal-bruta-premium",
         "code": "REG-SAL-CM-001",
-        "name": "Sal Bruta Premium",
-        "pdfTitle": "Sal Bruta Premium",
-        "tagline": "Lavado Continuo • Máxima Pureza",
-        "desc": "Sal de uso industrial obtenida por evaporación solar del agua de la ciénaga de Los Olivitos, bajo estrictos controles físico-químicos. Se cosecha y somete a lavado continuo con salmueras frescas que remueven la mayor cantidad posible de insolubles.",
+        "name": "Sal bruta premium",
+        "pdfTitle": "Sal bruta premium",
+        "tagline": "Lavado con salmueras frescas",
+        "desc": "Sal de uso industrial obtenida por evaporación solar del agua de la ciénaga de Los Olivitos, bajo controles físico-químicos. Se cosecha y se lava con salmueras frescas que remueven la mayor cantidad posible de insolubles.",
         "purity": "99,3% NaCl mín",
         "humidity": "3,5% máx",
-        "packaging": "Granel / Big Bag / Sacos",
+        "packaging": "Granel / big bag / sacos",
         "image": "/images/products/sal-bruta-premium-sacos.webp",
         "pdfEs": "/docs/fichas/sal-bruta-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
@@ -174,22 +168,19 @@
         ],
         "items": [
           {
-            "name": "Sal Bruta Premium a Granel",
+            "name": "Sal bruta premium a granel",
             "slug": "sal-bruta-premium-granel",
-            "format": "Tolva / Granel",
-            "use": "Sector Petroquímico y Químico"
+            "format": "Granel"
           },
           {
-            "name": "Sal Bruta Premium en Big Bag",
+            "name": "Sal bruta premium en big bag",
             "slug": "sal-bruta-premium-big-bag",
-            "format": "Big Bag",
-            "use": "Tratamiento de Aguas e Industria"
+            "format": "big bag"
           },
           {
-            "name": "Sal Bruta Premium en Sacos",
+            "name": "Sal bruta premium en sacos",
             "slug": "sal-bruta-premium-sacos",
-            "format": "Sacos (CPE 0317416481)",
-            "use": "Industria en General"
+            "format": "Sacos"
           }
         ]
       },
@@ -197,13 +188,13 @@
         "id": "sal-bruta-tipo-a",
         "slug": "sal-bruta-tipo-a",
         "code": "REG-SAL-CM-003",
-        "name": "Sal Bruta Tipo A",
-        "pdfTitle": "Sal Bruta Tipo A",
-        "tagline": "Recuperación de Salmueras • Uso Industrial",
-        "desc": "Sal de uso industrial obtenida a través de la recuperación de salmueras provenientes del proceso de producción de Sal Premium. Se cosecha y lava con salmueras frescas que remueven la mayor cantidad posible de insolubles.",
+        "name": "Sal bruta tipo A",
+        "pdfTitle": "Sal bruta tipo A",
+        "tagline": "Recuperación de salmueras",
+        "desc": "Sal de uso industrial obtenida a través de la recuperación de salmueras provenientes del proceso de producción de la Sal premium. Se cosecha y se lava con salmueras frescas que remueven la mayor cantidad posible de insolubles.",
         "purity": "98,5% NaCl mín",
         "humidity": "3,5% máx",
-        "packaging": "Granel / Big Bag",
+        "packaging": "Granel / big bag",
         "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp",
         "pdfEs": "/docs/fichas/sal-bruta-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
@@ -214,16 +205,14 @@
         ],
         "items": [
           {
-            "name": "Sal Bruta Tipo A a Granel",
+            "name": "Sal bruta tipo A a granel",
             "slug": "sal-bruta-tipo-a-granel",
-            "format": "Tolva / Granel",
-            "use": "Procesamiento de Sal e Industria"
+            "format": "Granel"
           },
           {
-            "name": "Sal Bruta Tipo A en Big Bag",
+            "name": "Sal bruta tipo A en big bag",
             "slug": "sal-bruta-tipo-a-big-bag",
-            "format": "Big Bag",
-            "use": "Nutrición Animal e Industria"
+            "format": "big bag"
           }
         ]
       },
@@ -231,41 +220,30 @@
         "id": "sal-molida-premium",
         "slug": "sal-molida-premium",
         "code": "REG-SAL-CM-002",
-        "name": "Sal Molida Premium",
-        "pdfTitle": "Sal Molida Premium",
-        "tagline": "Trituración y Molienda • Con Antiaglomerante",
-        "desc": "Sal de uso industrial obtenida por evaporación solar del agua de la ciénaga de Los Olivitos, lavada con salmueras frescas y procesada en nuestra planta de trituración y molienda. Contiene Ferrocianuro de Sodio (YPS) como antiaglomerante.",
+        "name": "Sal molida premium",
+        "pdfTitle": "Sal molida premium",
+        "tagline": "Procesada en planta de empaque",
+        "desc": "Sal de uso industrial obtenida por evaporación solar del agua de la ciénaga de Los Olivitos, lavada con salmueras frescas y procesada en nuestra planta de empaque.",
         "purity": "99,3% NaCl mín",
         "humidity": "2,5% máx",
-        "packaging": "Granel / Big Bag / Sacos",
+        "packaging": "big bag / sacos",
         "image": "/images/products/sal-molida-premium-sacos.webp",
         "pdfEs": "/docs/fichas/sal-molida-premium-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
-          "Sector petroquímico",
           "Sector químico",
-          "Tratamiento de aguas",
-          "Industria en general",
-          "Materia prima para el procesamiento de sal"
+          "Industria en general"
         ],
         "items": [
           {
-            "name": "Sal Molida Premium a Granel",
-            "slug": "sal-molida-premium-granel",
-            "format": "Tolva / Granel",
-            "use": "Sector Petroquímico y Químico"
-          },
-          {
-            "name": "Sal Molida Premium en Big Bag",
+            "name": "Sal molida premium en big bag",
             "slug": "sal-molida-premium-big-bag",
-            "format": "Big Bag",
-            "use": "Tratamiento de Aguas e Industria"
+            "format": "big bag"
           },
           {
-            "name": "Sal Molida Premium en Sacos",
+            "name": "Sal molida premium en sacos",
             "slug": "sal-molida-premium-sacos",
-            "format": "Sacos (CPE 0308115248)",
-            "use": "Industria en General"
+            "format": "Sacos"
           }
         ]
       },
@@ -273,39 +251,24 @@
         "id": "sal-molida-tipo-a",
         "slug": "sal-molida-tipo-a",
         "code": "REG-SAL-CM-004",
-        "name": "Sal Molida Tipo A",
-        "pdfTitle": "Sal Molida Tipo A",
-        "tagline": "Trituración y Molienda • Uso Industrial",
-        "desc": "Sal de uso industrial obtenida a través de la recuperación de salmueras del proceso de producción de Sal Premium, lavada con salmueras frescas y procesada en nuestra planta de trituración y molienda. Contiene Ferrocianuro de Sodio (YPS) como antiaglomerante.",
+        "name": "Sal molida tipo A",
+        "pdfTitle": "Sal molida tipo A",
+        "tagline": "Procesada en planta de empaque",
+        "desc": "Sal de uso industrial obtenida a través de la recuperación de salmueras del proceso de producción de la Sal premium, lavada con salmueras frescas y procesada en nuestra planta de empaque.",
         "purity": "98,5% NaCl mín",
         "humidity": "2,0% máx",
-        "packaging": "Granel / Big Bag / Sacos",
+        "packaging": "Sacos",
         "image": "/images/products/sal-molida-tipo-a-saco.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "Materia prima para el procesamiento de sal",
-          "Nutrición animal",
           "Industria en general"
         ],
         "items": [
           {
-            "name": "Sal Molida Tipo A a Granel",
-            "slug": "sal-molida-tipo-a-granel",
-            "format": "Tolva / Granel",
-            "use": "Procesamiento de Sal e Industria"
-          },
-          {
-            "name": "Sal Molida Tipo A en Big Bag",
-            "slug": "sal-molida-tipo-a-big-bag",
-            "format": "Big Bag",
-            "use": "Nutrición Animal"
-          },
-          {
-            "name": "Sal Molida Tipo A en Sacos",
+            "name": "Sal molida tipo A en sacos",
             "slug": "sal-molida-tipo-a-sacos",
-            "format": "Sacos (CPE 0813313838)",
-            "use": "Industria en General"
+            "format": "Sacos"
           }
         ]
       }
@@ -315,15 +278,15 @@
     "badge": "Complejo Industrial Los Olivitos",
     "titleHighlight": "Galería",
     "titleRest": "Produsal",
-    "subtitle": "Un recorrido visual por nuestras salinas, la cosecha, las líneas de envasado y la gente que hace posible la sal de Produsal.",
-    "gridBadge": "Nuestra Operación",
-    "gridTitle": "Nuestras salinas, nuestra gente",
+    "subtitle": "Un recorrido visual por nuestra salina, la cosecha, las líneas de envasado y la gente que hace posible la sal de Produsal.",
+    "gridBadge": "Nuestra operación",
+    "gridTitle": "Nuestra salina, nuestra gente",
     "gridSubtitle": "Fotografías tomadas en el Complejo Industrial Los Olivitos, estado Zulia.",
     "heroAlt": "Vista del Complejo Industrial Los Olivitos de Produsal",
     "imageAlt": "Produsal, Complejo Industrial Los Olivitos - fotografía"
   },
   "marketSection": {
-    "badge": "Liderazgo Industrial y Producción Nacional",
+    "badge": "Producción nacional de sal",
     "title": "La sal en Venezuela",
     "items": [
       {
@@ -344,104 +307,96 @@
     ]
   },
   "locationSection": {
-    "badge": "Infraestructura Nacional",
+    "badge": "Infraestructura nacional",
     "title": "Principal salina del país",
-    "subtitle": "Operación continua y liderazgo productivo desde el occidente venezolano hacia toda la industria nacional.",
+    "subtitle": "Desde el occidente venezolano hacia la industria de todo el país.",
     "locationHighlight": "PRODUSAL - Zulia",
-    "plantName": "Complejo Industrial Salinas Los Olivitos",
-    "locationDetails": "Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia.",
+    "plantName": "Complejo Industrial Salina Los Olivitos",
+    "locationDetails": "Municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia.",
     "stats": [
       {
-        "label": "TM / Año Operativas",
-        "detail": "La principal salina de Venezuela con capacidad de 650.000 TM"
+        "label": "Capacidad",
+        "detail": "650.000 TM/año"
       },
       {
-        "label": "Distribución Nacional",
+        "label": "Distribución nacional",
         "detail": "Despacho directo desde planta a la industria venezolana"
       }
     ]
   },
   "contact": {
-    "badge": "Atención Comercial e Industrial",
-    "title": "¡Cotiza Ahora!",
-    "description": "Atendemos requerimientos de compra al mayor, despachos industriales, contratos a término y asesoría técnica para la industria petroquímica, química, tratamiento de agua y nutrición animal.",
-    "phoneLabel": "Teléfono Comercial",
-    "phone": "0212 208 51 11 / 0800 2274455",
-    "emailLabel": "Ventas y Cotizaciones",
+    "badge": "Atención comercial e industrial",
+    "title": "¡Cotiza ahora!",
+    "description": "Atendemos requerimientos de compra al mayor, despachos industriales y consultas de la industria petroquímica, química, tratamiento de agua y nutrición animal.",
     "email": "infoprodusal@grupomimesa.com",
-    "locationLabel": "Ubicación del Complejo",
-    "location": "Complejo Industrial Los Olivitos, Zulia, Venezuela",
-    "formTitle": "Solicitar Cotización o Ficha Técnica",
-    "formSubtitle": "Ingresa tus datos y te responderemos en menos de 24 horas hábiles con disponibilidad y cotización.",
     "privacyAcceptLabel": "He leído y acepto las",
-    "privacyLinkLabel": "Políticas de Privacidad",
+    "privacyLinkLabel": "políticas de privacidad",
     "privacyAcceptSuffix": "y el tratamiento de mis datos de contacto para fines comerciales.",
     "form": {
-      "nameLabel": "Nombre Completo *",
+      "nameLabel": "Nombre completo *",
       "namePlaceholder": "Ej. Carlos Mendoza",
-      "emailLabel": "Correo Electrónico *",
+      "emailLabel": "Correo electrónico *",
       "emailPlaceholder": "carlos@empresa.com",
-      "companyLabel": "Empresa / Organización",
+      "companyLabel": "Empresa u organización",
       "companyPlaceholder": "Ej. Industrias Químicas C.A.",
-      "messageLabel": "Mensaje o Requerimiento *",
-      "messagePlaceholder": "Indícanos tipo de sal requerida (grano grueso, fino, sal industrial), volumen estimado en TM y destino de despacho...",
-      "submit": "Enviar Solicitud",
+      "messageLabel": "Mensaje o requerimiento *",
+      "messagePlaceholder": "Indícanos el tipo de sal que necesitas (bruta o molida), el volumen estimado en TM y el lugar de entrega...",
+      "submit": "Enviar solicitud",
       "sending": "Enviando mensaje..."
     },
     "formMessages": {
       "required": "Por favor completa todos los campos requeridos.",
       "invalidEmail": "Por favor ingresa un correo electrónico válido.",
       "tooLong": "Uno de los campos excede la longitud permitida.",
-      "success": "¡Gracias por contactarnos! Tu mensaje ha sido enviado correctamente a nuestro equipo.",
-      "devSuccess": "¡Mensaje recibido con éxito! En modo de desarrollo tu mensaje fue registrado.",
-      "error": "Ocurrió un error al enviar tu mensaje. Por favor intenta más tarde o contáctanos por teléfono.",
+      "success": "¡Gracias por contactarnos! Tu mensaje ha sido enviado a nuestro equipo.",
+      "devSuccess": "¡Mensaje recibido! En modo de desarrollo tu mensaje fue registrado.",
+      "error": "Ocurrió un error al enviar tu mensaje. Intenta más tarde o escríbenos a infoprodusal@grupomimesa.com.",
       "companyFallback": "No especificada"
     }
   },
   "privacy": {
-    "badge": "Aviso Legal y Confidencialidad",
-    "title": "Políticas de Privacidad",
-    "subtitle": "Tratamiento transparente, confidencial y seguro de datos comerciales de nuestros clientes, proveedores y aliados industriales.",
-    "lastUpdated": "Última actualización: Octubre 2026",
-    "backHome": "Volver al Inicio",
+    "badge": "Aviso legal y confidencialidad",
+    "title": "Políticas de privacidad",
+    "subtitle": "Tratamiento transparente, confidencial y seguro de los datos comerciales de nuestros clientes, proveedores y aliados.",
+    "lastUpdated": "Última actualización: octubre 2026",
+    "backHome": "Volver al inicio",
     "responsible": {
-      "title": "1. Identificación del Responsable",
+      "title": "1. Identificación del responsable",
       "company": "Productora de Sal, C.A. (PRODUSAL)",
-      "rif": "RIF J-31298456-0",
-      "address": "Complejo Industrial Salinas Los Olivitos, Municipio Miranda, Costa Oriental del Lago de Maracaibo, Estado Zulia, Venezuela.",
-      "email": "infoprodusal@grupomimesa.com",
-      "phone": "0212 208 51 11 / 0800 2274455"
+      "rif": "RIF J-07042868-6",
+      "address": "Complejo Industrial Salina Los Olivitos, municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia, Venezuela.",
+      "email": "infoprodusal@grupomimesa.com"
     },
     "sections": [
       {
         "id": "recoleccion",
-        "title": "2. Datos Personales y Comerciales que Recopilamos",
-        "content": "A través de nuestros formularios web y canales de cotización oficial, PRODUSAL C.A. únicamente solicita y almacena datos necesarios para la relación comercial B2B: nombre y apellido, correo electrónico corporativo, empresa o razón social, número telefónico y especificaciones de requerimiento (tonelaje estimado, tipo de sal, destino de entrega)."
+        "title": "2. Datos personales y comerciales que recopilamos",
+        "content": "A través de nuestros formularios web y canales oficiales, PRODUSAL C.A. únicamente solicita y almacena los datos necesarios para la relación comercial B2B: nombre y apellido, correo electrónico corporativo, empresa o razón social y especificaciones del requerimiento (tonelaje estimado, tipo de sal, destino de entrega)."
       },
       {
         "id": "finalidad",
-        "title": "3. Finalidad del Tratamiento de Datos",
-        "content": "Los datos suministrados se utilizarán exclusivamente para: procesar cotizaciones y solicitudes de compra, enviar fichas técnicas oficiales y certificados de análisis de laboratorio, coordinar la logística de despachos industriales (tolva a granel, Big Bags, sacos) y atender consultas técnicas o comerciales."
+        "title": "3. Finalidad del tratamiento de datos",
+        "content": "Los datos suministrados se utilizarán exclusivamente para: atender solicitudes de compra, enviar fichas técnicas oficiales y certificados de análisis de laboratorio, coordinar la logística de despachos industriales (a granel, en big bags y sacos) y atender consultas comerciales."
       },
       {
         "id": "confidencialidad",
-        "title": "4. Confidencialidad y No Transferencia a Terceros",
-        "content": "PRODUSAL C.A. no vende, alquila, cede ni transfiere datos de sus clientes o prospectos a terceros bajo ningún concepto. Toda la información comercial se maneja con estricta confidencialidad industrial conforme al ordenamiento jurídico venezolano y mejores prácticas internacionales."
+        "title": "4. Confidencialidad y no transferencia a terceros",
+        "content": "PRODUSAL C.A. no vende, alquila, cede ni transfiere datos de sus clientes o prospectos a terceros bajo ningún concepto. Toda la información comercial se maneja con confidencialidad conforme al ordenamiento jurídico venezolano y a las buenas prácticas internacionales."
       },
       {
         "id": "seguridad",
-        "title": "5. Seguridad y Conservación de la Información",
+        "title": "5. Seguridad y conservación de la información",
         "content": "Implementamos medidas técnicas y organizativas de seguridad (cifrado TLS/HTTPS en tránsito, controles de acceso restringido a personal comercial autorizado) para proteger los datos frente a accesos no autorizados, pérdidas o alteraciones."
       },
       {
         "id": "derechos",
-        "title": "6. Derechos del Titular (Acceso, Rectificación y Supresión)",
-        "content": "En cualquier momento, los usuarios o representantes empresariales pueden ejercer sus derechos de acceso, rectificación, actualización o eliminación de sus datos enviando un correo electrónico a infoprodusal@grupomimesa.com con el asunto 'Protección de Datos'."
+        "title": "6. Derechos del titular (acceso, rectificación y supresión)",
+        "content": "En cualquier momento, los usuarios o representantes empresariales pueden ejercer sus derechos de acceso, rectificación, actualización o eliminación de sus datos enviando un correo electrónico a infoprodusal@grupomimesa.com con el asunto 'Protección de datos'."
       },
       {
         "id": "cookies",
-        "title": "7. Uso de Cookies y Tecnologías Web",
-        "content": "Este portal web utiliza únicamente cookies técnicas esenciales para garantizar la navegación fluida, recordar las preferencias de idioma (español/inglés) y optimizar el rendimiento de carga sin realizar seguimiento invasivo ni publicidad de terceros."
+        "title": "7. Uso de cookies y tecnologías web",
+        "content": "Este portal web utiliza únicamente cookies técnicas esenciales para permitir la navegación, recordar la preferencia de idioma (español/inglés) y optimizar la carga, sin seguimiento invasivo ni publicidad de terceros."
       }
     ]
   },
@@ -452,25 +407,21 @@
     "button": "Volver al inicio"
   },
   "underConstruction": {
-    "badge": "En Desarrollo",
+    "badge": "En desarrollo",
     "title": "Estamos construyendo un nuevo espacio",
     "description": "Muy pronto tendrás acceso a nuestro catálogo interactivo de sales y portal de clientes.",
     "button": "Volver al inicio"
   },
   "footer": {
-    "companyDescription": "Produsal C.A. es la principal empresa productora de sal industrial de Venezuela. Fundada en 1989 y en operación comercial continua desde 1999 en Los Olivitos (Zulia), abastece sal solar para la industria petroquímica, química y ganadera.",
-    "quickLinksTitle": "Navegación Rápida",
-    "contactTitle": "Información de Contacto",
-    "plantLabel": "Planta y Salinas",
-    "plantAddress": "Complejo Industrial Los Olivitos, Edo. Zulia",
-    "officeLabel": "Oficinas Administrativas",
-    "officeAddress": "Maracaibo, Edo. Zulia, Venezuela",
-    "address": "Los Olivitos / Maracaibo, Edo. Zulia",
-    "phone": "0212 208 51 11 / 0800 2274455",
+    "companyDescription": "Produsal C.A. es la principal empresa productora de sal industrial de Venezuela. Fundada en 1989 y en operación comercial desde 1999 en Los Olivitos (Zulia), abastece de sal solar a los sectores petroquímico, químico e industrial.",
+    "quickLinksTitle": "Navegación rápida",
+    "contactTitle": "Información de contacto",
+    "plantLabel": "Planta y salina",
+    "plantAddress": "Complejo Industrial Los Olivitos, municipio Miranda, estado Zulia, Venezuela",
     "email": "infoprodusal@grupomimesa.com",
     "scrollToTop": "Volver arriba",
-    "copyright": "© 2026 Produsal C.A. RIF J-31298456-0. Todos los derechos reservados.",
-    "privacyPolicy": "Políticas de Privacidad",
+    "copyright": "© 2026 Produsal C.A. RIF J-07042868-6. Todos los derechos reservados.",
+    "privacyPolicy": "Políticas de privacidad",
     "developerCredit": "Desarrollado por",
     "social": {
       "linkedin": "https://linkedin.com",

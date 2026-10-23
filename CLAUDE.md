@@ -146,8 +146,11 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
   flamencos".
 - Palabras prohibidas: "soberania" (usar "autonomia productiva" o
   "abastecimiento"), "certificado/certificada" (solo se permite en la politica
-  de privacidad), "doble lavado" (es "lavado continuo"), "especialmente
-  formulada".
+  de privacidad), "doble lavado" (es "lavado"), "especialmente formulada",
+  "continuo/continua", "tolva" (decir "granel") y el verbo "garantizar" en
+  cualquier forma (usar asegurar, proteger, permitir, tener).
+- Sin exceso de calificativos (masivo, maxima, de clase mundial, estricto,
+  riguroso, alta resistencia...). Se dicen los datos, no se adornan.
 - No presentar la sal como producto alimenticio ni de "grado alimentario".
   La unica mencion permitida es "materia prima para el sector alimentario".
 - Capacidad: 650.000 TM/año, sin "instalada". No usar 800.000 TM.
@@ -159,8 +162,25 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
   (public/docs/fichas). La web no repite la tabla fisico-quimica: solo
   muestra pureza y humedad (formato "mín/máx", no "≤/≥") y enlaza a la
   ficha para el resto.
-- Big Bags y sacos sin peso ni tonelaje (hay varias presentaciones). La Sal
-  Bruta Tipo A no se ofrece en sacos.
+- Big bags y sacos sin peso ni tonelaje (hay varias presentaciones). "big bag"
+  va siempre en minuscula.
+- Presentaciones: Sal bruta premium (granel, big bag, sacos), Sal bruta tipo A
+  (granel, big bag), Sal molida premium (big bag, sacos), Sal molida tipo A
+  (solo sacos). No se sectorizan las presentaciones (sin "uso" por formato).
+- Aplicaciones de las molidas: premium = sector quimico e industria en
+  general; tipo A = solo industria en general.
+- Nombres de producto en minuscula salvo la A: "Sal bruta premium", "Sal
+  molida tipo A" (en ingles "Premium coarse salt", "Type A ground salt").
+- No mostrar codigos de ficha (REG-SAL-CM-00X) ni codigos CPE.
+- Mayusculas: formato oracion (solo la primera letra y los nombres propios)
+  en titulos, botones, etiquetas y textos, en espanol e ingles. Los
+  eyebrows que el CSS pone en mayusculas se quedan asi.
+- Sin telefonos en la web: el canal de contacto es el correo
+  infoprodusal@grupomimesa.com.
+- RIF: J-07042868-6. La planta es "Salina Los Olivitos" (singular),
+  municipio Miranda, estado Zulia.
+- El contacto no promete cotizacion formal: primero se entiende la necesidad
+  y se atiende directo o se remite al proveedor mas cercano.
 - Coordenadas de la planta: 10.781482, -71.415893. Viven solo en
   data/plant-location.ts.
 - Iconos solo si estan relacionados con el contenido.

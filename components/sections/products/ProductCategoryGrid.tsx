@@ -3,32 +3,18 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, Droplets, Package, ArrowRight, FileText, Layers, Truck } from "lucide-react";
+import { Sparkles, Droplets, ArrowRight, FileText } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PdfPreviewModal, type PdfModalData } from "@/components/ui/PdfPreviewModal";
+import { packagingKind, PACKAGING_STYLES } from "./packaging";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 type Category = Dictionary["products"]["categories"][number];
-type Item = Category["items"][number];
 
 interface ProductCategoryGridProps {
   currentLang: Locale;
   dict: Dictionary["products"];
 }
-
-// Tipo de presentación según el formato: define el color y el ícono de la etiqueta
-function packagingKind(item: Item): "bigBag" | "bulk" | "bag" {
-  const format = item.format.toLowerCase();
-  if (format.includes("big bag")) return "bigBag";
-  if (format.includes("granel") || format.includes("bulk")) return "bulk";
-  return "bag";
-}
-
-const PACKAGING_STYLES = {
-  bulk: { className: "bg-[#02aeaa]/15 border-[#02aeaa]/30", Icon: Truck, iconColor: "text-[#02aeaa]" },
-  bigBag: { className: "bg-[#e5c798]/25 border-[#e5c798]/40", Icon: Layers, iconColor: "text-[#e5c798]" },
-  bag: { className: "bg-[#85b2cf]/20 border-[#85b2cf]/40", Icon: Package, iconColor: "text-[#85b2cf]" },
-};
 
 /** Grilla de las 4 categorías de producto con visor de ficha técnica (inicio y /productos) */
 export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridProps) {
@@ -38,8 +24,7 @@ export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridPr
 
   const openPdfModal = (category: Category) => {
     setModalData({
-      title: `${isEs ? "Ficha Técnica" : "Data Sheet"} — ${category.pdfTitle}`,
-      code: category.code,
+      title: `${isEs ? "Ficha técnica" : "Data sheet"} — ${category.pdfTitle}`,
       pdfEs: category.pdfEs,
       pdfEn: category.pdfEn,
     });
@@ -75,17 +60,14 @@ export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridPr
                     className="object-cover object-center group-hover/img:scale-105 transition-transform duration-700"
                   />
 
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-1.5 z-10">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-[#183c6b]/90 text-cyan-300 border border-cyan-400/30 backdrop-blur-xs shadow-xs">
-                      {category.code}
-                    </span>
+                  <div className="absolute top-3 right-3 z-10">
                     <span
                       className={`type-caption px-2.5 py-1 rounded-full backdrop-blur-xs shadow-xs ${isPremium ? "bg-[#02aeaa] text-white" : "bg-[#85b2cf] text-[#183c6b]"
                       }`}
                     >
                       {isPremium
-                        ? isEs ? "Grado Premium" : "Premium Grade"
-                        : isEs ? "Tipo A Estándar" : "Standard Type A"}
+                        ? isEs ? "Grado premium" : "Premium grade"
+                        : isEs ? "Tipo A estándar" : "Standard type A"}
                     </span>
                   </div>
                 </Link>
@@ -147,7 +129,7 @@ export function ProductCategoryGrid({ currentLang, dict }: ProductCategoryGridPr
                       type="button"
                       onClick={() => openPdfModal(category)}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#183c6b] hover:text-white bg-slate-100 hover:bg-[#183c6b] border border-slate-200/80 hover:border-[#183c6b] transition-all duration-200 font-heading cursor-pointer group/pdf shadow-2xs hover:shadow-xs active:scale-95"
-                      title={isEs ? "Abrir visor de Ficha Técnica" : "Open Technical Sheet Preview"}
+                      title={isEs ? "Abrir visor de ficha técnica" : "Open data sheet preview"}
                     >
                       <FileText className="w-3.5 h-3.5 text-[#02aeaa] group-hover/pdf:text-cyan-300 transition-colors" />
                       <span>{dict.ctaSpec}</span>

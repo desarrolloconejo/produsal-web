@@ -6,7 +6,6 @@ import type { Locale } from "@/dictionaries/get-dictionary";
 
 export interface PdfModalData {
   title: string;
-  code?: string;
   pdfEs: string;
   pdfEn: string;
 }
@@ -88,16 +87,11 @@ export function PdfPreviewModal({
                 >
                   {data.title}
                 </h3>
-                {data.code && (
-                  <span className="hidden sm:inline-flex px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white/10 text-cyan-300">
-                    {data.code}
-                  </span>
-                )}
               </div>
               <span className="text-[11px] text-slate-400 font-heading">
                 {currentLang === "es"
-                  ? "Ficha Técnica Oficial • Productora de Sal, C.A."
-                  : "Official Technical Data Sheet • Productora de Sal, C.A."}
+                  ? "Ficha técnica oficial • Productora de Sal, C.A."
+                  : "Official technical data sheet • Productora de Sal, C.A."}
               </span>
             </div>
           </div>
@@ -114,7 +108,7 @@ export function PdfPreviewModal({
                     ? "bg-[#02aeaa] text-white shadow-xs"
                     : "text-slate-400 hover:text-white"
                 }`}
-                title={currentLang === "es" ? "Ver versión en Español" : "View Spanish version"}
+                title={currentLang === "es" ? "Ver versión en español" : "View Spanish version"}
               >
                 ES
               </button>
@@ -126,7 +120,7 @@ export function PdfPreviewModal({
                     ? "bg-[#02aeaa] text-white shadow-xs"
                     : "text-slate-400 hover:text-white"
                 }`}
-                title={currentLang === "es" ? "Ver versión en Inglés" : "View English version"}
+                title={currentLang === "es" ? "Ver versión en inglés" : "View English version"}
               >
                 EN
               </button>

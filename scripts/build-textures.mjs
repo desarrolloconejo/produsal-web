@@ -129,26 +129,63 @@ console.log(
   `salt-waves-seamless.svg ${(svg.length / 1024).toFixed(0)} KB (${(zlib.gzipSync(svg).length / 1024).toFixed(0)} KB gzip)`
 );
 
-// Montañas de sal punteadas para el header: el PNG del manual no cierra en los
-// bordes, así que se une con su reflejo para obtener un tile continuo en horizontal.
+// Pilas de sal punteadas para el header: conos de pendiente suave como los del
+// patio de acopio (no picos de montaña). El tile cierra en los bordes porque
+// cada pila se dibuja también desplazada un ancho a cada lado.
 
-const STIPPLE_SRC = path.join(ROOT, "public/images/textures/salt-stipple-mountains.png");
 const STIPPLE_OUT = path.join(ROOT, "public/images/textures/salt-stipple-mountains-seamless.webp");
-// Se recortan los márgenes transparentes y el degradado del borde izquierdo
-// para que las montañas lleguen hasta la unión.
-const trimmed = await sharp(STIPPLE_SRC).trim().toBuffer({ resolveWithObject: true });
-const EDGE = 26;
-const tileW = trimmed.info.width - EDGE * 2;
-const tileH = trimmed.info.height;
-const half = await sharp(trimmed.data).extract({ left: EDGE, top: 0, width: tileW, height: tileH }).toBuffer();
-const mirrored = await sharp(half).flop().toBuffer();
-const stipple = await sharp({
-  create: { width: tileW * 2, height: tileH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
-})
-  .composite([
-    { input: half, left: 0, top: 0 },
-    { input: mirrored, left: tileW, top: 0 },
-  ])
-  .webp({ lossless: true, effort: 6 })
-  .toFile(STIPPLE_OUT);
-console.log(`salt-stipple-mountains-seamless.webp ${stipple.width}x${stipple.height} ${(stipple.size / 1024).toFixed(0)} KB`);
+const SW = 1600;
+const SH = 240;
+const srand = mulberry32(1999);
+
+// Cada pila: centro, altura y pendiente (~30-35°, ángulo de reposo de la sal)
+const piles = [
+  { cx: 120, h: 150, slope: 0.74 },
+  { cx: 330, h: 205, slope: 0.72 },
+  { cx: 560, h: 120, slope: 0.78 },
+  { cx: 760, h: 215, slope: 0.7 },
+  { cx: 1000, h: 165, slope: 0.75 },
+  { cx: 1210, h: 110, slope: 0.8 },
+  { cx: 1400, h: 195, slope: 0.72 },
+].sort((p, q) => p.h - q.h); // las altas quedan detrás de las bajas
+
+// Altura de una pila en x, con la cima redondeada
+const ROUND = 14;
+function pileHeight(pile, x) {
+  const dx = wrapDelta(x - pile.cx, SW);
+  return pile.h - (Math.hypot(dx * pile.slope, ROUND) - ROUND);
+}
+
+// Pila visible en un punto (la de delante tapa a las de atrás) y su lado
+function pileAt(x, y) {
+  const fromBottom = SH - y;
+  for (let i = 0; i < piles.length; i++) {
+    const pile = piles[i];
+    if (fromBottom <= pileHeight(pile, x)) {
+      return { pile, dx: wrapDelta(x - pile.cx, SW), depth: pileHeight(pile, x) - fromBottom };
+    }
+  }
+  return null;
+}
+
+const dots = [];
+const SAMPLES = 52000;
+for (let i = 0; i < SAMPLES; i++) {
+  const x = srand() * SW;
+  const y = srand() * SH;
+  const hit = pileAt(x, y);
+  if (!hit) continue;
+  // Cara izquierda iluminada (pocos puntos), cara derecha en sombra (más densa),
+  // borde del perfil marcado y la base algo más cargada
+  let density = hit.dx > 0 ? 0.42 : 0.07;
+  if (hit.depth < 5) density = 0.9;
+  density += (y / SH) * 0.12;
+  if (srand() < density) dots.push([x, y]);
+}
+
+const circles = dots
+  .map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.15"/>`)
+  .join("");
+const stippleSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${SW}" height="${SH}" fill="${NAVY}">${circles}</svg>`;
+const stipple = await sharp(Buffer.from(stippleSvg)).webp({ lossless: true, effort: 6 }).toFile(STIPPLE_OUT);
+console.log(`salt-stipple-mountains-seamless.webp ${stipple.width}x${stipple.height} ${(stipple.size / 1024).toFixed(0)} KB (${dots.length} puntos)`);

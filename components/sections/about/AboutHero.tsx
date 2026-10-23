@@ -34,22 +34,18 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
             </h1>
             <p className="type-lead text-white/80 mb-6">
               {isEs
-                ? "PRODUSAL (Productora de Sal C.A.) es el pilar de la industria salinera venezolana. Aportamos a la producción nacional de sal industrial desde nuestro complejo en Los Olivitos, combinando energía solar limpia con estándares de calidad de clase mundial."
-                : "PRODUSAL (Productora de Sal C.A.) is the cornerstone of the Venezuelan salt industry, contributing to national industrial salt production from Los Olivitos through clean solar evaporation and world-class manufacturing standards."}
+                ? "PRODUSAL (Productora de Sal C.A.) es un pilar de la industria salinera venezolana. Aportamos a la producción nacional de sal industrial desde nuestro complejo en Los Olivitos, combinando energía solar con controles de calidad."
+                : "PRODUSAL (Productora de Sal C.A.) is a pillar of the Venezuelan salt industry, contributing to national industrial salt production from Los Olivitos through solar evaporation and quality controls."}
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm text-xs font-bold text-white">
-                <span className="w-2 h-2 rounded-full bg-[#02aeaa]" />
-                {isEs ? "650.000 TM / año operativas" : "650,000 MT / year operative"}
-              </span>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm text-xs font-bold text-white">
                 <span className="w-2 h-2 rounded-full bg-[#85b2cf]" />
-                {isEs ? "5.400 Ha Reserva ABRAE" : "5,400 Ha ABRAE Reserve"}
+                {isEs ? "Conciencia ambiental" : "Environmental awareness"}
               </span>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm text-xs font-bold text-white">
                 <span className="w-2 h-2 rounded-full bg-[#e5c798]" />
-                {isEs ? "100% Cosecha Solar" : "100% Solar Harvesting"}
+                {isEs ? "100% cosecha solar" : "100% solar harvesting"}
               </span>
             </div>
           </ScrollReveal>
@@ -66,11 +62,8 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/85 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-4 left-4 right-4 text-white">
-              <span className="type-caption text-[#e5c798] block">
-                {isEs ? "Cosecha Solar" : "Solar Harvest"}
-              </span>
               <p className="text-xs sm:text-sm font-semibold text-white/95">
-                {isEs ? "Cristalización continua en Los Olivitos, Zulia" : "Continuous crystallization at Los Olivitos, Zulia"}
+                {isEs ? "Cristalización solar en Los Olivitos, Zulia" : "Solar crystallization at Los Olivitos, Zulia"}
               </p>
             </div>
           </ScrollReveal>
