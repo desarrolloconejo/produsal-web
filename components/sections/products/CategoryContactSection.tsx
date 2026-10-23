@@ -69,8 +69,8 @@ export function CategoryContactSection({
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                 {isEs
-                  ? "Cuéntanos qué necesitas: presentación, volumen aproximado y lugar de entrega. Con esa información te orientamos y, según el requerimiento, te atendemos directamente o te remitimos al proveedor más cercano a tu zona."
-                  : "Tell us what you need: packaging, approximate volume, and delivery location. With that information we will guide you and, depending on the requirement, serve you directly or refer you to the supplier closest to your area."}
+                  ? "Cuéntanos qué necesitas: presentación, volumen aproximado y lugar de entrega. Con esa información te orientamos y, según el requerimiento, te atendemos directamente o te conectamos con el distribuidor autorizado más cercano a tu zona."
+                  : "Tell us what you need: packaging, approximate volume, and delivery location. With that information we will guide you and, depending on the requirement, serve you directly or connect you with the authorized distributor closest to your area."}
               </p>
             </div>
 

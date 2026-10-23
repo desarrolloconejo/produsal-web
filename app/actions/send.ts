@@ -111,7 +111,7 @@ export async function sendContactEmail(
       replyTo: email,
       subject: singleLine(
         product
-          ? `Cotización [${product}]: ${name} (${company})`
+          ? `Requerimiento [${product}]: ${name} (${company})`
           : `Nuevo mensaje de contacto web: ${name} (${company})`
       ),
       text: `Nombre: ${name}\nEmpresa: ${company}\nEmail: ${email}\nProducto / Formato: ${product || "General"}\n\nMensaje:\n${message}`,

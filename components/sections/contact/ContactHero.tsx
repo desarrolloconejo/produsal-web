@@ -37,7 +37,7 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
           {/* Título Principal */}
           <ScrollReveal animation="fade-up" delay={50}>
             <h1 className="type-h1 text-white">
-              {dict.title}
+              {isEs ? "Contáctanos" : "Contact us"}
             </h1>
           </ScrollReveal>
 
@@ -63,9 +63,6 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                   <a href={`mailto:${dict.email}`} className="text-sm font-extrabold text-white hover:text-[#e5c798] transition-colors font-heading truncate">
                     {dict.email}
                   </a>
-                  <span className="text-[11px] text-white/60 truncate">
-                    {isEs ? "Respuesta en menos de 24 horas" : "Response within 24 hours"}
-                  </span>
                 </div>
               </div>
 

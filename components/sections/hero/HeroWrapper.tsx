@@ -11,7 +11,7 @@ interface HeroWrapperProps {
 
 export function HeroWrapper({
   children,
-  backgroundImageSrc = "/images/produsal-apilador-salina.webp",
+  backgroundImageSrc = "/images/produsal-hero-pilas-aerea.webp",
   id = "inicio",
 }: HeroWrapperProps) {
   useEffect(() => {

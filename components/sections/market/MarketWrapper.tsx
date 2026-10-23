@@ -19,6 +19,7 @@ export function MarketWrapper({ children, id = "mercado" }: MarketWrapperProps) 
           src="/images/produsal-atardecer-piramide.webp"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover object-right"
           priority
         />

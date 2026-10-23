@@ -1,4 +1,5 @@
-// Archivo generado por scripts/optimize-gallery.mjs. No editar a mano.
+// Lista de fotos de la galería (orden intercalado para que el grid sea variado).
+// Fotos permitidas: planos abiertos, sin caras, sin placas y sin maquinaria de cerca.
 export interface GalleryImage {
   src: string;
   width: number;
@@ -7,34 +8,14 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   {
-    "src": "/images/galeria/DSC00008.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/pilas-hilera.webp",
+    "width": 2400,
+    "height": 1350
   },
   {
-    "src": "/images/galeria/DSC00060.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00082.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00115.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00162.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00036.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/flamencos-laguna-aerea.webp",
+    "width": 2400,
+    "height": 1350
   },
   {
     "src": "/images/galeria/DSC00072.webp",
@@ -42,14 +23,34 @@ export const galleryImages: GalleryImage[] = [
     "height": 1333
   },
   {
-    "src": "/images/galeria/DSC00091.webp",
+    "src": "/images/galeria/cristalizadores-aerea.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/images/galeria/sal-molida-tipo-a-saco.webp",
+    "width": 1802,
+    "height": 2400
+  },
+  {
+    "src": "/images/galeria/DSC00008.webp",
     "width": 2000,
     "height": 1333
   },
   {
-    "src": "/images/galeria/DSC00140.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/colonia-flamencos-aerea.webp",
+    "width": 2400,
+    "height": 1350
+  },
+  {
+    "src": "/images/galeria/pilas-cielo-azul.webp",
+    "width": 2400,
+    "height": 1802
+  },
+  {
+    "src": "/images/galeria/despacho-patio-aerea.webp",
+    "width": 2400,
+    "height": 1350
   },
   {
     "src": "/images/galeria/DSC00320.webp",
@@ -57,54 +58,9 @@ export const galleryImages: GalleryImage[] = [
     "height": 2000
   },
   {
-    "src": "/images/galeria/DSC00049.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00081.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00111.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00161.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00023.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00071.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00087.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00136.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00292.webp",
-    "width": 2000,
-    "height": 1500
-  },
-  {
-    "src": "/images/galeria/DSC00045.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/flamencos-orilla.webp",
+    "width": 2400,
+    "height": 1350
   },
   {
     "src": "/images/galeria/DSC00079.webp",
@@ -112,24 +68,44 @@ export const galleryImages: GalleryImage[] = [
     "height": 2000
   },
   {
-    "src": "/images/galeria/DSC00104.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/pilas-canales-aerea.webp",
+    "width": 1920,
+    "height": 1080
   },
   {
-    "src": "/images/galeria/DSC00150.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/textura-sal.webp",
+    "width": 2400,
+    "height": 1800
   },
   {
-    "src": "/images/galeria/DSC00018.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/costa-flamencos-aerea.webp",
+    "width": 2400,
+    "height": 1350
   },
   {
-    "src": "/images/galeria/DSC00068.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/pilas-sin-tierra.webp",
+    "width": 2400,
+    "height": 1152
+  },
+  {
+    "src": "/images/galeria/cargador-pila.webp",
+    "width": 2400,
+    "height": 1350
+  },
+  {
+    "src": "/images/galeria/salina-atardecer-reflejo.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/images/galeria/pilas-cielo.webp",
+    "width": 2400,
+    "height": 1800
+  },
+  {
+    "src": "/images/galeria/flamencos-vuelo-aerea.webp",
+    "width": 2400,
+    "height": 1350
   },
   {
     "src": "/images/galeria/DSC00085.webp",
@@ -137,32 +113,12 @@ export const galleryImages: GalleryImage[] = [
     "height": 1333
   },
   {
-    "src": "/images/galeria/DSC00127.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00163.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00038.webp",
-    "width": 2000,
-    "height": 1333
+    "src": "/images/galeria/flamencos-laguna.webp",
+    "width": 2400,
+    "height": 1350
   },
   {
     "src": "/images/galeria/DSC00075.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00101.webp",
-    "width": 2000,
-    "height": 1333
-  },
-  {
-    "src": "/images/galeria/DSC00146.webp",
     "width": 2000,
     "height": 1333
   }

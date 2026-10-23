@@ -72,8 +72,8 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
         </h3>
         <p className="text-xs text-slate-500 mb-6">
           {isEs
-            ? "Te responderemos en menos de 24 horas hábiles."
-            : "We will respond within 24 business hours."}
+            ? "Ingresa los datos de tu requerimiento y nuestro equipo comercial se pondrá en contacto contigo muy pronto."
+            : "Enter your requirement details and our commercial team will get in touch with you very soon."}
         </p>
 
         <ContactForm currentLang={currentLang} dict={contactDict} idPrefix="home-contact" />

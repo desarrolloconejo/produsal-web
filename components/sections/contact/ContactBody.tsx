@@ -88,14 +88,14 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
 
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {isEs
-                    ? "Ubicado en el municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia. Cuenta con 5.400 Ha de superficie y capacidad de 650.000 TM/año."
-                    : "Located in Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State. It covers 5,400 Ha and has a capacity of 650,000 MT/year."}
+                    ? "Ubicado en el municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia."
+                    : "Located in Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State."}
                 </p>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Columna Derecha: Formulario de Cotización Nodemailer (7 cols) */}
+          {/* Columna Derecha: Formulario de contacto Nodemailer (7 cols) */}
           <ScrollReveal
             animation="fade-left"
             delay={150}
@@ -108,12 +108,12 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
                   {isEs ? "Atención comercial" : "Commercial support"}
                 </span>
                 <h3 className="type-h3 text-[#183c6b]">
-                  {isEs ? "Solicitar cotización o ficha técnica" : "Request a quote or data sheet"}
+                  {isEs ? "Descubre cómo podemos ayudarte" : "Find out how we can help you"}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500">
                   {isEs
-                    ? "Ingresa los datos de tu requerimiento y nuestro equipo comercial te responderá en menos de 24 horas hábiles."
-                    : "Enter your requirements and our commercial team will respond within 24 business hours."}
+                    ? "Ingresa los datos de tu requerimiento y nuestro equipo comercial se pondrá en contacto contigo muy pronto."
+                    : "Enter your requirement details and our commercial team will get in touch with you very soon."}
                 </p>
               </div>
 
@@ -131,8 +131,8 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
               <Clock className="w-3.5 h-3.5 text-[#e5c798]" />
               <span>
                 {isEs
-                  ? "Atención comercial de lunes a viernes, de 8:00 a. m. a 5:00 p. m."
-                  : "Commercial support Monday to Friday, 8:00 AM to 5:00 PM"}
+                  ? "Atención comercial de lunes a viernes, de 7:00 a. m. a 4:00 p. m."
+                  : "Commercial support Monday to Friday, 7:00 AM to 4:00 PM"}
               </span>
             </div>
           </ScrollReveal>

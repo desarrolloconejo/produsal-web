@@ -14,6 +14,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PdfPreviewModal, type PdfModalData } from "@/components/ui/PdfPreviewModal";
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import { CategoryContactSection } from "./CategoryContactSection";
+import { CategoryApplications } from "./CategoryApplications";
 import { packagingKind, PACKAGING_STYLES } from "./packaging";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 import { SectionTexture, type TextureVariant } from "@/components/ui/SectionTexture";
@@ -203,10 +204,11 @@ export function CategoryDetailView({
               <h2 className="type-h2 text-[#183c6b]">
                 {isEs ? "Presentaciones de despacho" : "Dispatch formats"}
               </h2>
-              <p className="type-body text-slate-600 max-w-2xl">
+              {/* EXW explicado: muchos clientes no conocen el término */}
+              <p className="type-body text-slate-600 max-w-3xl">
                 {isEs
-                  ? "Despacho directo desde el Complejo Industrial Los Olivitos bajo modalidad EXW."
-                  : "Direct dispatch from the Los Olivitos Industrial Complex under EXW terms."}
+                  ? "Despacho directo en el Complejo Salinero Los Olivitos bajo modalidad EXW: retiro en planta con transporte del cliente (incluye servicio de carga). ¿Necesitas el producto en tu destino? Contáctanos y cuéntanos lo que requieres, y te conectaremos con el distribuidor autorizado más cercano a tu zona."
+                  : "Direct dispatch at the Los Olivitos Saltworks Complex under EXW terms: pickup at our plant with the customer's own transport (loading service included). Need the product delivered to your location? Contact us and tell us what you need, and we will connect you with the authorized distributor closest to your area."}
               </p>
             </div>
 
@@ -245,35 +247,13 @@ export function CategoryDetailView({
           </div>
         </ScrollReveal>
 
-        {/* Sección: Aplicaciones */}
-        <ScrollReveal animation="fade-up">
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-1.5">
-              <span className="type-eyebrow text-[#02aeaa]">
-                {dict.applicationsLabel}
-              </span>
-              <h2 className="type-h2 text-[#183c6b]">
-                {isEs ? "Sectores que abastecemos" : "Industries we supply"}
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {category.applications.map((app, idx) => (
-                <div
-                  key={idx}
-                  className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex flex-col gap-2.5"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-[#85b2cf]/20 text-[#183c6b] flex items-center justify-center font-bold text-xs font-mono">
-                    0{idx + 1}
-                  </div>
-                  <p className="text-xs sm:text-sm font-bold text-[#183c6b] font-heading leading-snug">
-                    {app}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
+        {/* Sección: Aplicaciones (bloque azul con ícono por sector) */}
+        <CategoryApplications
+          isEs={isEs}
+          eyebrow={dict.applicationsLabel}
+          productName={category.name}
+          applications={category.applications}
+        />
 
         {/* Sección de contacto con selector de presentación */}
         <CategoryContactSection currentLang={currentLang} category={category} contactDict={contactDict} />

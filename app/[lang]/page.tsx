@@ -1,5 +1,6 @@
 import { getDictionary, resolveLocale } from "@/dictionaries/get-dictionary";
 import { getPageMetadata } from "@/lib/metadata";
+import { IntroSplash } from "@/components/sections/intro";
 import { HeroWrapper, HeroContent } from "@/components/sections/hero";
 import { StatsWrapper } from "@/components/sections/stats";
 import { HistoryWrapper, HistoryContent } from "@/components/sections/history";
@@ -25,8 +26,11 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <>
+      {/* Bienvenida a pantalla completa (una vez por sesión) */}
+      <IntroSplash dict={dict.intro} />
+
       {/* Sección Hero: page > wrapper > content */}
-      <HeroWrapper backgroundImageSrc="/images/produsal-apilador-salina.webp">
+      <HeroWrapper backgroundImageSrc="/images/produsal-hero-pilas-aerea.webp">
         <HeroContent currentLang={currentLang} dict={dict.hero} />
       </HeroWrapper>
 

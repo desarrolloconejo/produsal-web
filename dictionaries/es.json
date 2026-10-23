@@ -2,7 +2,7 @@
   "lang": "es",
   "meta": {
     "title": "Produsal | La principal productora de sal industrial de Venezuela | Los Olivitos, Zulia",
-    "description": "Producción solar y distribución de sal industrial con capacidad de 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento al mayor para la industria petroquímica, química, tratamiento de agua y nutrición animal.",
+    "description": "Producción solar y distribución de sal industrial con capacidad de 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento al mayor para la industria petroquímica, química, tratamiento de agua, y materia prima para el sector de consumo animal.",
     "pages": {
       "about": {
         "title": "Nosotros | Produsal: la principal salina de Venezuela | Los Olivitos, Zulia",
@@ -10,7 +10,7 @@
       },
       "contact": {
         "title": "Contacto | Produsal C.A. - Los Olivitos, Zulia",
-        "description": "Escríbenos para atención comercial al mayor, despachos industriales de sal y fichas técnicas para la industria petroquímica, química, tratamiento de agua y nutrición animal."
+        "description": "Escríbenos para atención comercial al mayor, despachos industriales de sal y fichas técnicas para la industria petroquímica, química, tratamiento de agua, y materia prima para el sector de consumo animal."
       },
       "products": {
         "title": "Catálogo de productos | Produsal C.A.",
@@ -27,7 +27,7 @@
       },
       "gallery": {
         "title": "Galería | Produsal C.A. - Salina Los Olivitos, Zulia",
-        "description": "Recorrido fotográfico por el Complejo Industrial Los Olivitos: salina, cosecha, lavado, envasado y el equipo humano de Produsal."
+        "description": "Un recorrido visual a las instalaciones del Complejo Industrial Los Olivitos: la salina, las pilas de sal, el despacho y la colonia de flamencos."
       }
     }
   },
@@ -51,6 +51,10 @@
     "ctaProducts": "Ver catálogo industrial",
     "ctaAbout": "Conoce nuestra historia"
   },
+  "intro": {
+    "label": "Bienvenida a Produsal",
+    "skip": "Entrar"
+  },
   "historySection": {
     "badge": "Origen y trayectoria",
     "title": "Del Mar Caribe a la principal salina de Venezuela",
@@ -73,7 +77,7 @@
         "year": "Hoy",
         "tag": "Presencia nacional",
         "title": "La principal salina del país",
-        "description": "Con capacidad de 650.000 TM/año, abastece a la industria petroquímica, química y de nutrición animal en armonía con el entorno."
+        "description": "Con capacidad de 650.000 TM/año, abastece a la industria petroquímica y química, y es materia prima para el sector de consumo animal, en armonía con el entorno."
       }
     ],
     "showcase": {
@@ -135,7 +139,7 @@
   "products": {
     "badge": "Catálogo industrial y comercial",
     "title": "Productos de alta pureza",
-    "subtitle": "Sal solar cosechada en Los Olivitos para la industria petroquímica, química, tratamiento de agua y nutrición animal, entre otros usos.",
+    "subtitle": "Sal solar cosechada en Los Olivitos para la industria petroquímica, química y de tratamiento de agua, y como materia prima para el sector de consumo animal, entre otros usos.",
     "ctaQuote": "Contáctanos",
     "ctaSpec": "Ficha técnica",
     "ctaDownload": "Descargar PDF",
@@ -200,7 +204,7 @@
         "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
         "applications": [
           "Materia prima para el procesamiento de sal",
-          "Nutrición animal",
+          "Materia prima para el sector de consumo animal",
           "Industria en general"
         ],
         "items": [
@@ -232,7 +236,9 @@
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
           "Sector químico",
-          "Industria en general"
+          "Tratamiento de aguas",
+          "Industria en general",
+          "Materia prima para el sector de consumo animal"
         ],
         "items": [
           {
@@ -258,11 +264,12 @@
         "purity": "98,5% NaCl mín",
         "humidity": "2,0% máx",
         "packaging": "Sacos",
-        "image": "/images/products/sal-molida-tipo-a-saco.webp",
+        "image": "/images/products/sal-molida-tipo-a-saco-solo.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "Industria en general"
+          "Industria en general",
+          "Materia prima para el sector de consumo animal"
         ],
         "items": [
           {
@@ -278,9 +285,9 @@
     "badge": "Complejo Industrial Los Olivitos",
     "titleHighlight": "Galería",
     "titleRest": "Produsal",
-    "subtitle": "Un recorrido visual por nuestra salina, la cosecha, las líneas de envasado y la gente que hace posible la sal de Produsal.",
+    "subtitle": "Un recorrido visual a nuestras instalaciones.",
     "gridBadge": "Nuestra operación",
-    "gridTitle": "Nuestra salina, nuestra gente",
+    "gridTitle": "Nuestra salina",
     "gridSubtitle": "Fotografías tomadas en el Complejo Industrial Los Olivitos, estado Zulia.",
     "heroAlt": "Vista del Complejo Industrial Los Olivitos de Produsal",
     "imageAlt": "Produsal, Complejo Industrial Los Olivitos - fotografía"
@@ -326,8 +333,8 @@
   },
   "contact": {
     "badge": "Atención comercial e industrial",
-    "title": "¡Cotiza ahora!",
-    "description": "Atendemos requerimientos de compra al mayor, despachos industriales y consultas de la industria petroquímica, química, tratamiento de agua y nutrición animal.",
+    "title": "Descubre cómo podemos ayudarte",
+    "description": "Atendemos requerimientos de compra al mayor, despachos industriales y consultas de la industria petroquímica, química y de tratamiento de agua, y del sector de consumo animal.",
     "email": "infoprodusal@grupomimesa.com",
     "privacyAcceptLabel": "He leído y acepto las",
     "privacyLinkLabel": "políticas de privacidad",

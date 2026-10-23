@@ -2,7 +2,7 @@
   "lang": "en",
   "meta": {
     "title": "Produsal | Venezuela's leading industrial salt producer | Los Olivitos, Zulia",
-    "description": "Solar production and distribution of industrial salt with a capacity of 650,000 MT/year at Los Olivitos, Zulia. Wholesale supplier for the petrochemical, chemical, water treatment, and animal nutrition industries.",
+    "description": "Solar production and distribution of industrial salt with a capacity of 650,000 MT/year at Los Olivitos, Zulia. Wholesale supplier for the petrochemical, chemical, and water treatment industries, and raw material for the animal feed sector.",
     "pages": {
       "about": {
         "title": "About us | Produsal: Venezuela's leading salt producer | Los Olivitos, Zulia",
@@ -27,7 +27,7 @@
       },
       "gallery": {
         "title": "Gallery | Produsal C.A. - Los Olivitos Saltworks, Zulia",
-        "description": "A photo tour of the Los Olivitos Industrial Complex: saltworks, harvesting, washing, packaging and the Produsal team."
+        "description": "A visual tour of the Los Olivitos Industrial Complex facilities: the saltworks, the salt piles, dispatch and the flamingo colony."
       }
     }
   },
@@ -51,6 +51,10 @@
     "ctaProducts": "View product catalog",
     "ctaAbout": "Discover our history"
   },
+  "intro": {
+    "label": "Welcome to Produsal",
+    "skip": "Enter"
+  },
   "historySection": {
     "badge": "Origin and heritage",
     "title": "From the Caribbean Sea to Venezuela's leading saltworks",
@@ -73,7 +77,7 @@
         "year": "Now",
         "tag": "National presence",
         "title": "Venezuela's leading saltworks",
-        "description": "With a capacity of 650,000 MT/year, it supplies the petrochemical, chemical, and animal nutrition industries in harmony with its surroundings."
+        "description": "With a capacity of 650,000 MT/year, it supplies the petrochemical and chemical industries and provides raw material for the animal feed sector, in harmony with its surroundings."
       }
     ],
     "showcase": {
@@ -135,7 +139,7 @@
   "products": {
     "badge": "Industrial and commercial catalog",
     "title": "High-purity salt products",
-    "subtitle": "Solar salt harvested at Los Olivitos for the petrochemical, chemical, water treatment, and animal nutrition industries, among other uses.",
+    "subtitle": "Solar salt harvested at Los Olivitos for the petrochemical, chemical, and water treatment industries, and as raw material for the animal feed sector, among other uses.",
     "ctaQuote": "Contact us",
     "ctaSpec": "Data sheet",
     "ctaDownload": "Download PDF",
@@ -200,7 +204,7 @@
         "pdfEn": "/docs/fichas/sal-bruta-tipo-a-en.pdf",
         "applications": [
           "Raw material for salt processing",
-          "Animal nutrition",
+          "Raw material for the animal feed sector",
           "General industry"
         ],
         "items": [
@@ -232,7 +236,9 @@
         "pdfEn": "/docs/fichas/sal-molida-premium-en.pdf",
         "applications": [
           "Chemical sector",
-          "General industry"
+          "Water treatment",
+          "General industry",
+          "Raw material for the animal feed sector"
         ],
         "items": [
           {
@@ -258,11 +264,12 @@
         "purity": "98.5% NaCl min",
         "humidity": "2.0% max",
         "packaging": "Bags",
-        "image": "/images/products/sal-molida-tipo-a-saco.webp",
+        "image": "/images/products/sal-molida-tipo-a-saco-solo.webp",
         "pdfEs": "/docs/fichas/sal-molida-tipo-a-es.pdf",
         "pdfEn": "/docs/fichas/sal-molida-tipo-a-en.pdf",
         "applications": [
-          "General industry"
+          "General industry",
+          "Raw material for the animal feed sector"
         ],
         "items": [
           {
@@ -278,9 +285,9 @@
     "badge": "Los Olivitos Industrial Complex",
     "titleHighlight": "Produsal",
     "titleRest": "gallery",
-    "subtitle": "A visual tour of our saltworks, the harvest, the packaging lines and the people behind Produsal salt.",
+    "subtitle": "A visual tour of our facilities.",
     "gridBadge": "Our operation",
-    "gridTitle": "Our saltworks, our people",
+    "gridTitle": "Our saltworks",
     "gridSubtitle": "Photographs taken at the Los Olivitos Industrial Complex, Zulia State.",
     "heroAlt": "View of the Produsal Los Olivitos Industrial Complex",
     "imageAlt": "Produsal, Los Olivitos Industrial Complex - photograph"
@@ -326,8 +333,8 @@
   },
   "contact": {
     "badge": "Commercial and industrial inquiries",
-    "title": "Request a quote!",
-    "description": "We handle wholesale purchase requests, industrial shipments, and inquiries from the petrochemical, chemical, water treatment, and animal nutrition industries.",
+    "title": "Find out how we can help you",
+    "description": "We handle wholesale purchase requests, industrial shipments, and inquiries from the petrochemical, chemical, and water treatment industries, and the animal feed sector.",
     "email": "infoprodusal@grupomimesa.com",
     "privacyAcceptLabel": "I have read and agree to the",
     "privacyLinkLabel": "privacy policy",

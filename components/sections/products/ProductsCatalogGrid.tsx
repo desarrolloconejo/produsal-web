@@ -28,20 +28,15 @@ export function ProductsCatalogGrid({ currentLang, dict }: ProductsCatalogGridPr
         {/* Cabecera de Sección */}
         <ScrollReveal animation="fade-up">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200/80 pb-8 sm:pb-10 mb-10 sm:mb-12">
-            <div className="flex flex-col gap-2 max-w-2xl">
+            <div className="flex flex-col gap-2 max-w-4xl">
               <div className="flex items-center gap-2.5">
                 <span className="type-eyebrow text-[#02aeaa]">
-                  {isEs ? "Línea de productos" : "Product line"}
+                  {isEs ? "Nuestras líneas de producto" : "Our product lines"}
                 </span>
               </div>
               <h2 className="type-h2 text-[#183c6b]">
-                {isEs ? "Nuestros productos" : "Our products"}
+                {isEs ? "Soluciones a granel y en sacos según el requerimiento de tu negocio" : "Bulk and bagged solutions for your business requirements"}
               </h2>
-              <p className="type-body text-slate-600">
-                {isEs
-                  ? "Sal bruta y sal molida, cada una con su ficha técnica."
-                  : "Coarse and ground salt, each with its own data sheet."}
-              </p>
             </div>
 
             <Link

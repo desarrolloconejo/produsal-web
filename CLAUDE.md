@@ -122,10 +122,15 @@ color se pone aparte en cada componente.
   fade-right en columnas enfrentadas; las tarjetas en grilla con delay
   escalonado de 100 ms).
 - El hero del inicio usa las clases animate-slide-up-delay-*.
+- El inicio abre con una bienvenida a pantalla completa (IntroSplash) en cada
+  recarga: foto de las pilas de sal y solo el logo, sin barra de carga. El
+  usuario decide cuando entrar con el boton "Entrar" (salida con desenfoque
+  y fundido). El scroll se bloquea con CSS (html:has(#intro-splash)), sin
+  scrollbar-gutter, y la pantalla mide 100vw para que nada se mueva al salir.
 - Solo usar animaciones definidas en app/globals.css (animate-fade-in,
   animate-fade-in-fast, animate-slide-up*, animate-slide-down,
   animate-zoom-in, animate-float-slow, animate-pulse-subtle,
-  animate-spin-slow, animate-marquee) o las nativas de Tailwind
+  animate-spin-slow, animate-marquee, animate-ken-burns) o las nativas de Tailwind
   (animate-pulse, animate-ping). No hay plugin tailwindcss-animate: clases
   como animate-in o fade-in no funcionan.
 - Todas respetan prefers-reduced-motion.
@@ -167,8 +172,15 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 - Presentaciones: Sal bruta premium (granel, big bag, sacos), Sal bruta tipo A
   (granel, big bag), Sal molida premium (big bag, sacos), Sal molida tipo A
   (solo sacos). No se sectorizan las presentaciones (sin "uso" por formato).
-- Aplicaciones de las molidas: premium = sector quimico e industria en
-  general; tipo A = solo industria en general.
+- Decir "Materia prima para el sector de consumo animal" en lugar de
+  "nutricion animal" (en ingles "Raw material for the animal feed sector").
+- Aplicaciones de las molidas: premium = sector quimico, tratamiento de aguas,
+  industria en general y materia prima para el sector de consumo animal;
+  tipo A = industria en general y materia prima para el sector de consumo
+  animal.
+- EXW siempre explicado: retiro en planta con transporte del cliente (incluye
+  servicio de carga); para entrega en destino se conecta con el distribuidor
+  autorizado mas cercano.
 - Nombres de producto en minuscula salvo la A: "Sal bruta premium", "Sal
   molida tipo A" (en ingles "Premium coarse salt", "Type A ground salt").
 - No mostrar codigos de ficha (REG-SAL-CM-00X) ni codigos CPE.
@@ -178,12 +190,18 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 - Sin telefonos en la web: el canal de contacto es el correo
   infoprodusal@grupomimesa.com.
 - RIF: J-07042868-6. La planta es "Salina Los Olivitos" (singular),
-  municipio Miranda, estado Zulia.
-- El contacto no promete cotizacion formal: primero se entiende la necesidad
-  y se atiende directo o se remite al proveedor mas cercano.
+  municipio Miranda, estado Zulia. Se puede llamar "Complejo Industrial Los
+  Olivitos" o "Complejo Salinero Los Olivitos"; los dos nombres son validos.
+- No usar "cotizar/cotizacion" en la web (ni "quote" en ingles). El
+  contacto no promete cotizacion formal: primero se entiende la necesidad
+  y se atiende directo o se conecta con el distribuidor autorizado mas
+  cercano.
 - Coordenadas de la planta: 10.781482, -71.415893. Viven solo en
   data/plant-location.ts.
 - Iconos solo si estan relacionados con el contenido.
+- Fotos: sin caras del personal (la gente cambia), sin placas de vehiculos y
+  sin maquinaria ni estructuras de cerca (informacion sensible para la
+  competencia). Se prefieren planos abiertos, manos trabajando y producto.
 
 ### Secciones y Textos
 

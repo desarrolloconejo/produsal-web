@@ -34,8 +34,8 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
       desc: isEs
         ? "Carga directa en patio con cargadores frontales y pesaje controlado."
         : "Direct yard loading with front-end loaders and controlled weighing.",
-      image: "/images/produsal-despacho-granel.webp",
-      alt: isEs ? "Cargador despachando sal a granel PRODUSAL" : "Loader dispatching PRODUSAL bulk salt",
+      image: "/images/produsal-despacho-granel-aerea.webp",
+      alt: isEs ? "Vista aérea de la carga de sal a granel en el patio" : "Aerial view of bulk salt loading at the yard",
       tag: isEs ? "Logística" : "Logistics",
       icon: <Truck className="w-4 h-4 text-[#02aeaa]" />,
       tagClass: "text-[#02aeaa] border-[#02aeaa]/40",
@@ -47,21 +47,21 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
       desc: isEs
         ? "Estaciones de ensacado y costura."
         : "Bagging and stitching stations.",
-      image: "/images/produsal-linea-envasado.webp",
-      alt: isEs ? "Línea de ensacado y costura de sal PRODUSAL" : "PRODUSAL salt bagging and stitching line",
+      image: "/images/produsal-envasado-sacos-hd.webp",
+      alt: isEs ? "Sacos de sal PRODUSAL apilados en la planta de empaque" : "PRODUSAL salt bags stacked at the packaging plant",
       tag: isEs ? "Empaque industrial" : "Industrial packaging",
       icon: <Factory className="w-4 h-4 text-[#85b2cf]" />,
       tagClass: "text-[#85b2cf] border-[#85b2cf]/40",
       hoverBorder: "hover:border-[#85b2cf]/60",
     },
     {
-      title: isEs ? "Inspección y trazabilidad" : "Inspection and traceability",
+      title: isEs ? "Inspección y seguimiento" : "Inspection and monitoring",
       subtitle: isEs ? "Control de calidad por lote" : "Batch quality control",
       desc: isEs
-        ? "Supervisión analítica de parámetros físico-químicos antes de cada salida. Cumplimiento de especificaciones ASTM E534-98."
-        : "Analytical verification of physicochemical parameters before each dispatch. Compliance with ASTM E534-98 specifications.",
-      image: "/images/produsal-inspeccion-calidad.webp",
-      alt: isEs ? "Supervisor de calidad revisando un despacho PRODUSAL" : "Quality supervisor checking a PRODUSAL dispatch",
+        ? "Supervisión y control de procesos desde el origen hasta el producto terminado."
+        : "Supervision and process control from origin to finished product.",
+      image: "/images/produsal-control-lista.webp",
+      alt: isEs ? "Registro de control de un despacho PRODUSAL" : "Control record of a PRODUSAL dispatch",
       tag: isEs ? "Control analítico" : "Analytical control",
       icon: <ShieldCheck className="w-4 h-4 text-[#02aeaa]" />,
       tagClass: "text-[#02aeaa] border-[#02aeaa]/40",
@@ -124,6 +124,7 @@ export function ProductsOperationsShowcase({ currentLang }: ProductsOperationsSh
                     alt={c.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    quality={90}
                     className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />

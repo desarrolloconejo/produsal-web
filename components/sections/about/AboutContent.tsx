@@ -57,6 +57,36 @@ export function AboutContent({ currentLang }: AboutContentProps) {
     },
   ];
 
+  // Collage del equipo: manos y operación sin caras. Las fotos casi no se recortan:
+  // la de manos ocupa dos filas y las otras cuatro (3:2 y 16:9) van en recuadros apaisados
+  const teamPhotos = [
+    {
+      src: "/images/produsal-sal-manos-pureza.webp",
+      alt: isEs ? "Manos sosteniendo sal de Los Olivitos" : "Hands holding salt from Los Olivitos",
+      className: "row-span-2",
+    },
+    {
+      src: "/images/produsal-equipo-cristalizadores-aereo.webp",
+      alt: isEs ? "Vista aérea de las lagunas de cristalización" : "Aerial view of the crystallization ponds",
+      className: "",
+    },
+    {
+      src: "/images/produsal-equipo-cargador.webp",
+      alt: isEs ? "Maquinaria trabajando sobre una pila de sal" : "Machinery working on a salt pile",
+      className: "",
+    },
+    {
+      src: "/images/produsal-equipo-despacho-aereo.webp",
+      alt: isEs ? "Vista aérea de la carga de camiones en el patio" : "Aerial view of trucks loading at the yard",
+      className: "",
+    },
+    {
+      src: "/images/produsal-equipo-patio-aereo.webp",
+      alt: isEs ? "Vista aérea de las pilas de sal y los canales" : "Aerial view of salt piles and channels",
+      className: "",
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-20 sm:gap-24">
       {/* 2. Grid panorámico e historia corporativa */}
@@ -177,17 +207,23 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </p>
         </div>
 
-        {/* Foto del equipo (pendiente: reemplazar por un collage sin caras) */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 aspect-16/9 sm:aspect-21/9 bg-slate-900 group">
-          <Image
-            src="/images/produsal-equipo-humano.webp"
-            alt={isEs ? "Equipo de trabajo de PRODUSAL en Los Olivitos" : "PRODUSAL team at Los Olivitos"}
-            fill
-            sizes="100vw"
-            className="object-cover group-hover:scale-102 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/90 via-[#183c6b]/30 to-transparent pointer-events-none" />
-          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
+        {/* Collage del equipo: manos y trabajo, sin caras (el personal cambia con el tiempo) */}
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 bg-[#183c6b] grid grid-cols-2 grid-rows-3 sm:grid-cols-[0.8fr_1fr_1fr] sm:grid-rows-2 gap-1.5 h-[560px] sm:h-[420px] lg:h-[500px]">
+          {teamPhotos.map((photo) => (
+            <div key={photo.src} className={`relative overflow-hidden group ${photo.className}`}>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes={photo.className ? "(max-width: 640px) 50vw, 30vw" : "(max-width: 640px) 50vw, 36vw"}
+                quality={90}
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          ))}
+
+          <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#183c6b]/95 via-[#183c6b]/50 to-transparent pointer-events-none" />
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white pointer-events-none">
             <div>
               <span className="type-label text-[#e5c798] block mb-1">
                 Los Olivitos, Zulia
@@ -210,7 +246,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       <ScrollReveal animation="fade-up" className="p-8 sm:p-12 rounded-3xl bg-[#183c6b] text-white border border-[#02aeaa]/30 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="max-w-2xl text-left">
           <h3 className="type-h3 mb-2">
-            {isEs ? "¿Deseas solicitar especificaciones o cotización de sal al mayor?" : "Need specifications or wholesale salt pricing?"}
+            {isEs ? "¿Necesitas sal industrial al mayor o la ficha técnica de un producto?" : "Need wholesale industrial salt or a product data sheet?"}
           </h3>
           <p className="text-sm text-white/90 leading-relaxed">
             {isEs

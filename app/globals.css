@@ -300,6 +300,26 @@
   animation: spinSlow 8s linear infinite;
 }
 
+/* Pantalla de bienvenida del inicio: acercamiento lento de la foto */
+@keyframes kenBurns {
+  from {
+    transform: scale(1.18);
+  }
+  to {
+    transform: scale(1.02);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Bienvenida del inicio: bloquea el scroll desde el primer pintado (sin esperar
+   a JavaScript) y lo libera en cuanto empieza la salida */
+html:has(#intro-splash[data-state="open"]) {
+  overflow: hidden;
+}
+
 /* Respeta la preferencia de movimiento reducido del sistema */
 @media (prefers-reduced-motion: reduce) {
   [class*="animate-"] {
