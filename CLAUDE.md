@@ -194,6 +194,8 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 - RIF: J-07042868-6. La planta es "Salina Los Olivitos" (singular),
   en el municipio Miranda, estado Zulia (en las direcciones de ubicacion,
   contacto, footer y privacidad se escribe con "municipio" y "estado").
+  Direccion completa de la planta: Km 11, carretera Los Puertos de
+  Altagracia - Quisiro, municipio Miranda, estado Zulia, Venezuela.
   Se puede llamar "Complejo Industrial Los
   Olivitos" o "Complejo Salinero Los Olivitos"; los dos nombres son validos.
 - No usar "cotizar/cotizacion" en la web (ni "quote" en ingles). El
