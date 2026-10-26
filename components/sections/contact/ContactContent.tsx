@@ -57,8 +57,8 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
               </span>
               <span className="text-sm font-bold text-slate-800">
                 {isEs
-                  ? "Complejo Industrial Los Olivitos, Km 11, carretera Los Puertos de Altagracia - Quisiro, municipio Miranda, estado Zulia, Venezuela"
-                  : "Los Olivitos Industrial Complex, Km 11, Los Puertos de Altagracia - Quisiro road, Miranda Municipality, Zulia State, Venezuela"}
+                  ? "Km. 11 carretera Los Puertos de Altagracia - Quisiro. Municipio Miranda. Edo. Zulia"
+                  : "Km. 11 Los Puertos de Altagracia - Quisiro road. Miranda Municipality. Zulia State"}
               </span>
             </div>
           </div>
