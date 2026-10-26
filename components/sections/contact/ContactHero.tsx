@@ -75,8 +75,8 @@ export function ContactHero({ currentLang, dict }: ContactHeroProps) {
                   <span className="type-caption text-white/60">
                     {isEs ? "Planta y salina" : "Plant and saltworks"}
                   </span>
-                  <span className="text-sm font-extrabold text-white font-heading truncate">
-                    Los Olivitos, Miranda, Zulia
+                  <span className="text-sm font-extrabold text-white font-heading">
+                    {isEs ? "Los Olivitos, municipio Miranda, estado Zulia" : "Los Olivitos, Miranda Municipality, Zulia State"}
                   </span>
                   <span className="text-[11px] text-white/60 truncate">
                     {PLANT_LOCATION.label}

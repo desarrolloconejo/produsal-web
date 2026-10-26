@@ -315,7 +315,7 @@
     "subtitle": "From western Venezuela to industries across the country.",
     "locationHighlight": "PRODUSAL - Zulia",
     "plantName": "Los Olivitos Saltworks Industrial Complex",
-    "locationDetails": "Miranda, Eastern Coast of Lake Maracaibo, Zulia.",
+    "locationDetails": "Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State.",
     "stats": [
       {
         "label": "Capacity",
@@ -330,6 +330,8 @@
   "contact": {
     "badge": "Commercial and industrial inquiries",
     "title": "Find out how we can help you",
+    "homeTitle": "Get in touch with our team",
+    "homeDescription": "We handle wholesale purchase requests, industrial-scale shipments, and technical inquiries for industry.",
     "description": "We handle wholesale purchase requests, industrial shipments, and inquiries from the petrochemical, chemical, and water treatment industries, and the animal feed sector.",
     "email": "infoprodusal@grupomimesa.com",
     "privacyAcceptLabel": "I have read and agree to the",
@@ -367,7 +369,7 @@
       "title": "1. Data controller identification",
       "company": "Productora de Sal, C.A. (PRODUSAL)",
       "rif": "Tax ID (RIF): J-07042868-6",
-      "address": "Los Olivitos Saltworks Industrial Complex, Miranda, Eastern Coast of Lake Maracaibo, Zulia, Venezuela.",
+      "address": "Los Olivitos Saltworks Industrial Complex, Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State, Venezuela.",
       "email": "infoprodusal@grupomimesa.com"
     },
     "sections": [
@@ -420,16 +422,14 @@
     "quickLinksTitle": "Quick navigation",
     "contactTitle": "Contact information",
     "plantLabel": "Plant and saltworks",
-    "plantAddress": "Los Olivitos Industrial Complex, Miranda, Zulia, Venezuela",
+    "plantAddress": "Los Olivitos Industrial Complex, Miranda Municipality, Zulia State, Venezuela",
     "email": "infoprodusal@grupomimesa.com",
     "scrollToTop": "Back to top",
     "copyright": "© 2026 Produsal C.A. RIF J-07042868-6. All rights reserved.",
     "privacyPolicy": "Privacy policy",
     "developerCredit": "Developed by",
     "social": {
-      "linkedin": "https://linkedin.com",
-      "instagram": "https://instagram.com",
-      "facebook": "https://facebook.com"
+      "instagram": "https://www.instagram.com/produsal.vzla"
     }
   }
 }

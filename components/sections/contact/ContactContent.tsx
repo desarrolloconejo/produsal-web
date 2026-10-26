@@ -12,7 +12,7 @@ interface ContactContentProps {
 
 export function ContactContent({ currentLang, contactDict }: ContactContentProps) {
   const isEs = currentLang === "es";
-  const { badge, title, description, email } = contactDict;
+  const { badge, homeTitle, homeDescription, email } = contactDict;
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -24,11 +24,11 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
         </div>
 
         <h2 className="type-h2 text-[#183c6b]">
-          {title}
+          {homeTitle}
         </h2>
 
         <p className="type-body text-slate-600">
-          {description}
+          {homeDescription}
         </p>
 
         {/* Sin teléfonos: el canal de contacto es el correo */}
@@ -57,8 +57,8 @@ export function ContactContent({ currentLang, contactDict }: ContactContentProps
               </span>
               <span className="text-sm font-bold text-slate-800">
                 {isEs
-                  ? "Complejo Industrial Los Olivitos, Miranda, Zulia, Venezuela"
-                  : "Los Olivitos Industrial Complex, Miranda, Zulia, Venezuela"}
+                  ? "Complejo Industrial Los Olivitos, municipio Miranda, estado Zulia, Venezuela"
+                  : "Los Olivitos Industrial Complex, Miranda Municipality, Zulia State, Venezuela"}
               </span>
             </div>
           </div>

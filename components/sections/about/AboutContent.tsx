@@ -52,8 +52,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       icon: <HeartHandshake className="w-6 h-6 text-[#e5c798]" />,
       title: isEs ? "Programa RSE: Nutriendo la Prosperidad" : "CSR program: Nutriendo la Prosperidad",
       desc: isEs
-        ? "Programa de responsabilidad social desarrollado en alianza con el Dividendo Voluntario para la Comunidad (DVC), orientado a la nutrición de niños en edad preescolar de comunidades zulianas."
-        : "Social responsibility program developed in partnership with Dividendo Voluntario para la Comunidad (DVC), focused on the nutrition of preschool children in Zulia communities.",
+        ? "Programa de responsabilidad social desarrollado en alianza con el Dividendo Voluntario para la Comunidad (DVC), orientado a la nutrición de niños en edad preescolar de comunidades cercanas a nuestras instalaciones."
+        : "Social responsibility program developed in partnership with Dividendo Voluntario para la Comunidad (DVC), focused on the nutrition of preschool children in communities near our facilities.",
     },
   ];
 

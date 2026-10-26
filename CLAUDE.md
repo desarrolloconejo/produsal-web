@@ -192,7 +192,8 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 - Sin telefonos en la web: el canal de contacto es el correo
   infoprodusal@grupomimesa.com.
 - RIF: J-07042868-6. La planta es "Salina Los Olivitos" (singular),
-  en Miranda, Zulia (asi, sin "municipio" ni "estado", en toda la web).
+  en el municipio Miranda, estado Zulia (en las direcciones de ubicacion,
+  contacto, footer y privacidad se escribe con "municipio" y "estado").
   Se puede llamar "Complejo Industrial Los
   Olivitos" o "Complejo Salinero Los Olivitos"; los dos nombres son validos.
 - No usar "cotizar/cotizacion" en la web (ni "quote" en ingles). El
