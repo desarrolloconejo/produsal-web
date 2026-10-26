@@ -88,7 +88,7 @@ export function ContactBody({ currentLang, dict }: ContactBodyProps) {
 
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {isEs
-                    ? "Ubicado en el municipio Miranda, Costa Oriental del Lago de Maracaibo, estado Zulia."
+                    ? "Ubicado en el Municipio Miranda, Costa Oriental del Lago de Maracaibo, Edo. Zulia."
                     : "Located in Miranda Municipality, Eastern Coast of Lake Maracaibo, Zulia State."}
                 </p>
               </div>

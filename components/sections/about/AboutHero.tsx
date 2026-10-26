@@ -25,7 +25,7 @@ export function AboutHero({ currentLang }: AboutHeroProps) {
           <ScrollReveal animation="fade-right" className="lg:col-span-7 flex flex-col justify-center">
             <span className="type-eyebrow inline-flex items-center gap-2 text-[#02aeaa] mb-4 w-fit">
               <Award className="w-3.5 h-3.5" />
-              <span>{isEs ? "Complejo Industrial Los Olivitos • Estado Zulia" : "Los Olivitos Industrial Complex • Zulia State"}</span>
+              <span>{isEs ? "Complejo Industrial Los Olivitos • Edo. Zulia" : "Los Olivitos Industrial Complex • Zulia State"}</span>
             </span>
             <h1 className="type-h1 text-white mb-5">
               {isEs
