@@ -109,14 +109,6 @@
   background-position: center top;
 }
 
-/* Montañas de sal punteadas (header): franja horizontal continua anclada abajo */
-.texture-stipple {
-  background-image: url('/images/textures/salt-stipple-mountains-seamless.webp');
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  background-position: center bottom;
-}
-
 /* Funde la textura con la sección en los bordes superior e inferior */
 .texture-fade {
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);

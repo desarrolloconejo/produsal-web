@@ -51,9 +51,6 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
 
   return (
     <header className="w-full relative z-40">
-      {/* Silueta de pilas de sal punteadas a lo ancho del header */}
-      <div aria-hidden="true" className="absolute inset-0 texture-stipple opacity-[0.3] pointer-events-none select-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-6 relative z-10">
         {/* Logo Produsal (versión oscura para fondo blanco) */}
         <Link
