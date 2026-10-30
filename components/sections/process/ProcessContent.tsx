@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight, ArrowLeft, ArrowDown, CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
@@ -64,6 +65,20 @@ export function ProcessContent({ currentLang, dict }: ProcessContentProps) {
           <p className="type-body text-slate-600">
             {dict.description}
           </p>
+        </div>
+      </ScrollReveal>
+
+      {/* Foto de la salina entre la cabecera y el flujo */}
+      <ScrollReveal animation="fade-up" delay={100}>
+        <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden shadow-lg">
+          <Image
+            src="/images/galeria/salina-atardecer-reflejo.webp"
+            alt={currentLang === "es" ? "Pilas de sal reflejadas en la salina Los Olivitos al atardecer" : "Salt piles reflected in the Los Olivitos saltworks at sunset"}
+            fill
+            quality={90}
+            sizes="(max-width: 1280px) 100vw, 1216px"
+            className="object-cover"
+          />
         </div>
       </ScrollReveal>
 

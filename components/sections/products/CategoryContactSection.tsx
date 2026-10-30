@@ -84,7 +84,7 @@ export function CategoryContactSection({
                 messageLabel={isEs ? "Cuéntanos tu requerimiento *" : "Tell us your requirement *"}
                 defaultMessage={
                   isEs
-                    ? `Hola, me interesa ${lowerFirst(selectedProduct)}. Mi requerimiento es: `
+                    ? `Hola, me ${category.items.some((item) => item.name === selectedProduct) ? "interesa" : "interesan"} ${lowerFirst(selectedProduct)}. Mi requerimiento es: `
                     : `Hello, I am interested in ${lowerFirst(selectedProduct)}. My requirement is: `
                 }
                 submitLabel={isEs ? "Enviar requerimiento" : "Send requirement"}

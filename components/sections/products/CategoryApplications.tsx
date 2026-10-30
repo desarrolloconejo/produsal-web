@@ -1,6 +1,7 @@
-import { Cog, Droplets, Factory, FlaskConical, Mountain, PawPrint, type LucideIcon } from "lucide-react";
+import type { ComponentType } from "react";
+import { Cog, Droplet, Droplets, Factory, FlaskConical, Mountain, type LucideProps } from "lucide-react";
+import { CowIcon } from "./CowIcon";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 
 interface CategoryApplicationsProps {
   isEs: boolean;
@@ -11,12 +12,14 @@ interface CategoryApplicationsProps {
 
 // Ícono y color por sector según el texto de la aplicación (ES o EN).
 // "petroquímico" va antes que "químico" porque lo contiene.
-const SECTORS: { match: RegExp; Icon: LucideIcon; color: string }[] = [
+const SECTORS: { match: RegExp; Icon: ComponentType<LucideProps>; color: string }[] = [
   // Planta con chimeneas: una refinería, no una bomba de gasolina
   { match: /petroqu|petrochem/i, Icon: Factory, color: "#e5c798" },
+  // Una gota de crudo, distinta de las gotas del agua
+  { match: /petroler|oil/i, Icon: Droplet, color: "#02aeaa" },
   { match: /químic|chemical/i, Icon: FlaskConical, color: "#02aeaa" },
   { match: /agua|water/i, Icon: Droplets, color: "#85b2cf" },
-  { match: /animal/i, Icon: PawPrint, color: "#e5c798" },
+  { match: /animal/i, Icon: CowIcon, color: "#e5c798" },
   { match: /procesamiento de sal|salt processing/i, Icon: Mountain, color: "#85b2cf" },
 ];
 // Industria en general y cualquier sector nuevo
@@ -29,6 +32,7 @@ const LG_COLUMNS: Record<number, string> = {
   3: "lg:grid-cols-3",
   4: "lg:grid-cols-4",
   5: "lg:grid-cols-5",
+  6: "lg:grid-cols-3",
 };
 
 // Para usar el nombre dentro de una frase sin tocar la "A" de "tipo A"
@@ -41,7 +45,6 @@ export function CategoryApplications({ isEs, eyebrow, productName, applications 
   return (
     <ScrollReveal animation="fade-up">
       <div className="relative rounded-3xl bg-[#183c6b] text-white p-6 sm:p-10 lg:p-12 overflow-hidden shadow-xl">
-        <BrandTrianglesBackground layout="together" position="bottom-right" size="lg" opacityClass="opacity-15" />
         <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[radial-gradient(closest-side,rgba(2,174,170,0.15),transparent)] pointer-events-none" />
 
         <div className="relative z-10 flex flex-col gap-8 sm:gap-10">
@@ -58,7 +61,7 @@ export function CategoryApplications({ isEs, eyebrow, productName, applications 
           </div>
 
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 ${count >= 3 ? "md:grid-cols-3" : ""} ${LG_COLUMNS[Math.min(count, 5)]} gap-4 sm:gap-5`}
+            className={`grid grid-cols-1 sm:grid-cols-2 ${count >= 3 ? "md:grid-cols-3" : ""} ${LG_COLUMNS[Math.min(count, 6)]} gap-4 sm:gap-5`}
           >
             {applications.map((app, idx) => {
               const { Icon, color } = SECTORS.find((s) => s.match.test(app)) ?? DEFAULT_SECTOR;

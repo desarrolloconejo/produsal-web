@@ -66,23 +66,23 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       className: "row-span-2",
     },
     {
-      src: "/images/produsal-equipo-cristalizadores-aereo.webp",
-      alt: isEs ? "Vista aérea de las lagunas de cristalización" : "Aerial view of the crystallization ponds",
+      src: "/images/produsal-envasado-sacos-hd.webp",
+      alt: isEs ? "Operario con chaleco revisando sacos en la línea de envasado" : "Operator in a safety vest checking bags on the packaging line",
       className: "",
     },
     {
-      src: "/images/produsal-equipo-cargador.webp",
-      alt: isEs ? "Maquinaria trabajando sobre una pila de sal" : "Machinery working on a salt pile",
+      src: "/images/produsal-equipo-levantando-saco.webp",
+      alt: isEs ? "Personal levantando un saco de sal en la línea de envasado" : "Staff lifting a salt bag on the packaging line",
       className: "",
     },
     {
-      src: "/images/produsal-equipo-despacho-aereo.webp",
-      alt: isEs ? "Vista aérea de la carga de camiones en el patio" : "Aerial view of trucks loading at the yard",
+      src: "/images/galeria/pilas-hilera.webp",
+      alt: isEs ? "Hilera de pilas de sal en el patio de acopio" : "Row of salt piles at the stockyard",
       className: "",
     },
     {
-      src: "/images/produsal-equipo-patio-aereo.webp",
-      alt: isEs ? "Vista aérea de las pilas de sal y los canales" : "Aerial view of salt piles and channels",
+      src: "/images/produsal-equipo-paleta.webp",
+      alt: isEs ? "Operario colocando sacos sobre una paleta" : "Operator placing bags on a pallet",
       className: "",
     },
   ];
@@ -100,14 +100,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/90 via-[#183c6b]/30 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 text-white">
-            <span className="type-label text-[#e5c798] block mb-1">
-              {isEs ? "5.400 hectáreas propias" : "5,400 proprietary hectares"}
-            </span>
-            <p className="text-base sm:text-lg font-bold">
-              {isEs
-                ? "Complejo 'Green Field' Los Olivitos, Miranda, Zulia"
-                : "Los Olivitos 'Green Field' complex, Miranda, Zulia"}
-            </p>
+            <p className="text-base sm:text-lg font-bold">Los Olivitos, Miranda, Zulia</p>
           </div>
         </div>
 
@@ -246,7 +239,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       <ScrollReveal animation="fade-up" className="p-8 sm:p-12 rounded-3xl bg-[#183c6b] text-white border border-[#02aeaa]/30 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="max-w-2xl text-left">
           <h3 className="type-h3 mb-2">
-            {isEs ? "¿Necesitas sal industrial al mayor o la ficha técnica de un producto?" : "Need wholesale industrial salt or a product data sheet?"}
+            {isEs ? "¿Necesitas sal industrial al mayor?" : "Need wholesale industrial salt?"}
           </h3>
           <p className="text-sm text-white/90 leading-relaxed">
             {isEs
@@ -255,13 +248,22 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </p>
         </div>
 
-        <Link
-          href={`/${currentLang}/contacto`}
-          className="px-8 py-4 rounded-xl bg-white text-[#183c6b] hover:bg-slate-100 font-bold text-sm shadow-md transition-all shrink-0 inline-flex items-center gap-2 group"
-        >
-          <span>{isEs ? "Contáctanos" : "Contact us"}</span>
-          <ArrowRight className="w-4 h-4 text-[#02aeaa] group-hover:translate-x-1 transition-transform" />
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full sm:w-auto">
+          <Link
+            href={`/${currentLang}/contacto`}
+            className="px-8 py-4 rounded-xl bg-white text-[#183c6b] hover:bg-slate-100 font-bold text-sm shadow-md transition-all inline-flex items-center justify-center gap-2 group"
+          >
+            <span>{isEs ? "Contáctanos" : "Contact us"}</span>
+            <ArrowRight className="w-4 h-4 text-[#02aeaa] group-hover:translate-x-1 transition-transform" />
+          </Link>
+          <Link
+            href={`/${currentLang}/productos`}
+            className="px-8 py-4 rounded-xl border border-white/40 text-white hover:bg-white/10 font-bold text-sm transition-all inline-flex items-center justify-center gap-2 group"
+          >
+            <span>{isEs ? "Ver productos" : "View products"}</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </ScrollReveal>
     </div>
   );

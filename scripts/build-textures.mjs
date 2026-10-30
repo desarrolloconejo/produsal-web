@@ -134,23 +134,27 @@ console.log(
 // cada pila se dibuja también desplazada un ancho a cada lado.
 
 const STIPPLE_OUT = path.join(ROOT, "public/images/textures/salt-stipple-mountains-seamless.webp");
-const SW = 1600;
+const SW = 3600;
 const SH = 240;
 const srand = mulberry32(1999);
 
-// Cada pila: centro, altura y pendiente (~30-35°, ángulo de reposo de la sal)
+// Cada pila: centro, altura y pendiente (silueta plana en dos capas)
 const piles = [
-  { cx: 120, h: 150, slope: 0.74 },
-  { cx: 330, h: 205, slope: 0.72 },
-  { cx: 560, h: 120, slope: 0.78 },
-  { cx: 760, h: 215, slope: 0.7 },
-  { cx: 1000, h: 165, slope: 0.75 },
-  { cx: 1210, h: 110, slope: 0.8 },
-  { cx: 1400, h: 195, slope: 0.72 },
-].sort((p, q) => p.h - q.h); // las altas quedan detrás de las bajas
+  { cx: 540, h: 72, slope: 0.343, layer: "front" },
+  { cx: 1200, h: 90, slope: 0.353, layer: "front" },
+  { cx: 1890, h: 66, slope: 0.338, layer: "front" },
+  { cx: 2550, h: 84, slope: 0.350, layer: "front" },
+  { cx: 3150, h: 60, slope: 0.308, layer: "front" },
+  { cx: 270, h: 102, slope: 0.453, layer: "back" },
+  { cx: 870, h: 126, slope: 0.442, layer: "back" },
+  { cx: 1560, h: 96, slope: 0.400, layer: "back" },
+  { cx: 2220, h: 138, slope: 0.460, layer: "back" },
+  { cx: 2880, h: 108, slope: 0.424, layer: "back" },
+  { cx: 3330, h: 84, slope: 0.400, layer: "back" },
+];
 
 // Altura de una pila en x, con la cima redondeada
-const ROUND = 14;
+const ROUND = 6;
 function pileHeight(pile, x) {
   const dx = wrapDelta(x - pile.cx, SW);
   return pile.h - (Math.hypot(dx * pile.slope, ROUND) - ROUND);
@@ -169,17 +173,14 @@ function pileAt(x, y) {
 }
 
 const dots = [];
-const SAMPLES = 52000;
+const SAMPLES = 120000;
 for (let i = 0; i < SAMPLES; i++) {
   const x = srand() * SW;
   const y = srand() * SH;
   const hit = pileAt(x, y);
   if (!hit) continue;
-  // Cara izquierda iluminada (pocos puntos), cara derecha en sombra (más densa),
-  // borde del perfil marcado y la base algo más cargada
-  let density = hit.dx > 0 ? 0.42 : 0.07;
-  if (hit.depth < 5) density = 0.9;
-  density += (y / SH) * 0.12;
+  // Dos capas planas: las pilas de delante más densas que las de atrás
+  const density = hit.pile.layer === "front" ? 0.6 : 0.3;
   if (srand() < density) dots.push([x, y]);
 }
 

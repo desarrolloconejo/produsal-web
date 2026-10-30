@@ -7,4 +7,6 @@ export const PLANT_LOCATION = {
   mapsUrl: "https://www.google.com/maps?q=10.781482,-71.415893",
   /** Posición del pin sobre /images/mapa-venezuela-final.png, en % del ancho y alto de la imagen */
   mapPin: { left: "16.5%", top: "18.3%" },
+  /** Foto de la planta que se muestra al pasar el cursor por el pin */
+  photo: "/images/galeria/planta-patio-acopio.webp",
 };

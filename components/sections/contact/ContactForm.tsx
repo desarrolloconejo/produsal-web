@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, type ReactNode } from "react";
+import { useActionState, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { sendContactEmail, type ContactState } from "@/app/actions/send";
@@ -38,6 +38,22 @@ export function ContactForm({
 }: ContactFormProps) {
   const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
   const f = dict.form;
+  const [message, setMessage] = useState(defaultMessage ?? "");
+  const [prevDefault, setPrevDefault] = useState(defaultMessage ?? "");
+  const [prevState, setPrevState] = useState(state);
+
+  // Al cambiar el texto base (otra presentación) se reemplaza solo esa parte y se conserva lo que el usuario ya escribió
+  const nextDefault = defaultMessage ?? "";
+  if (nextDefault !== prevDefault) {
+    setPrevDefault(nextDefault);
+    if (message.startsWith(prevDefault)) setMessage(nextDefault + message.slice(prevDefault.length));
+  }
+
+  // Tras un envío correcto el mensaje vuelve al texto base
+  if (state !== prevState) {
+    setPrevState(state);
+    if (state.success) setMessage(nextDefault);
+  }
   const id = (field: string) => `${idPrefix}-${field}`;
 
   return (
@@ -130,7 +146,8 @@ export function ContactForm({
             rows={4}
             required
             maxLength={5000}
-            defaultValue={defaultMessage}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             placeholder={f.messagePlaceholder}
             className={`${inputClass} resize-none`}
           />

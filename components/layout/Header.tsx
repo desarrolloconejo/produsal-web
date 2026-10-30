@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, Mail, ChevronDown, ArrowRight } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
-import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 
 interface HeaderProps {
@@ -52,10 +51,8 @@ export function Header({ currentLang, dict, productsDict }: HeaderProps) {
 
   return (
     <header className="w-full relative z-40">
-      {/* Textura de montañas de sal punteadas a lo ancho del header */}
-      <div aria-hidden="true" className="absolute inset-0 texture-stipple opacity-[0.22] pointer-events-none select-none" />
-      {/* Triángulos 2D corporativos juntos a la derecha (así no tapan el logo en pantallas pequeñas) */}
-      <BrandTrianglesBackground layout="together" position="bottom-right" size="xs" opacityClass="opacity-25" className="max-md:opacity-35" />
+      {/* Silueta de pilas de sal punteadas a lo ancho del header */}
+      <div aria-hidden="true" className="absolute inset-0 texture-stipple opacity-[0.3] pointer-events-none select-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-6 relative z-10">
         {/* Logo Produsal (versión oscura para fondo blanco) */}

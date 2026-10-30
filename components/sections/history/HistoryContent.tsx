@@ -122,11 +122,12 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
           {/* Lado Izquierdo: Fotografía de Flamencos en la Reserva Natural Los Olivitos */}
           <div className="lg:col-span-5 relative w-full min-h-[300px] sm:min-h-[360px] lg:min-h-full">
             <Image
-              src="/images/produsal-flamencos-vuelo.webp"
+              src="/images/produsal-flamencos-bandada.webp"
               alt={dict.showcase.abraeTitle}
               fill
+              quality={90}
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 42vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 

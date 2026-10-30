@@ -2,7 +2,7 @@
   "lang": "en",
   "meta": {
     "title": "Produsal | Venezuela's leading industrial salt producer | Los Olivitos, Zulia",
-    "description": "Solar production and distribution of industrial salt with a capacity of 650,000 MT/year at Los Olivitos, Zulia. Wholesale supplier for the petrochemical, chemical, and water treatment industries, and raw material for the animal feed sector.",
+    "description": "Solar production and distribution of industrial salt with a capacity of 650,000 MT/year at Los Olivitos, Zulia. Wholesale supplier for the petrochemical, oil, chemical, and water treatment industries, and raw material for the animal feed sector.",
     "pages": {
       "about": {
         "title": "About us | Produsal: Venezuela's leading salt producer | Los Olivitos, Zulia",
@@ -47,7 +47,7 @@
     "badge": "Los Olivitos Industrial Complex • Zulia, Venezuela",
     "headlineHighlight": "The leading saltworks",
     "headlineRest": "with high-purity solar production in Venezuela",
-    "description": "We operate the country's most important salt complex across 5,400 proprietary hectares, contributing to national industrial salt production with a capacity of 650,000 MT/year. Salt for the petrochemical and industrial sectors, and raw material for the food sector.",
+    "description": "We operate the country's most important salt complex across 5,400 proprietary hectares, contributing to national industrial salt production with a capacity of 650,000 MT/year. Salt for the petrochemical, oil, and industrial sectors, and raw material for the food sector.",
     "ctaProducts": "View product catalog",
     "ctaAbout": "Discover our history"
   },
@@ -76,15 +76,15 @@
         "year": "Now",
         "tag": "National presence",
         "title": "Venezuela's leading saltworks",
-        "description": "With a capacity of 650,000 MT/year, it supplies the petrochemical and chemical industries and provides raw material for the animal feed sector, in harmony with its surroundings."
+        "description": "With a capacity of 650,000 MT/year, it supplies the petrochemical, oil, and chemical industries and provides raw material for the animal feed sector, in harmony with its surroundings."
       }
     ],
     "showcase": {
       "abraeTitle": "Pink flamingo sanctuary at Los Olivitos",
       "abraeDescription": "Our saltworks coexist with an Area Under Special Administration Regime (ABRAE), declared a wetland of international importance (Ramsar and WHSRN site). It hosts Venezuela's largest breeding colony of Caribbean flamingos.",
       "abraePoints": [
-        "Breeding sanctuary of the pink flamingo (Phoenicopterus ruber)",
-        "Ramsar wetland of international importance and WHSRN site",
+        "Breeding sanctuary of the flamingo (Phoenicopterus ruber) and other shorebirds",
+        "1st WHSRN site (Western Hemisphere Shorebird Reserve Network) in Venezuela",
         "Balance between salt production and coastal wildlife"
       ]
     }
@@ -138,7 +138,7 @@
   "products": {
     "badge": "Industrial and commercial catalog",
     "title": "High-purity salt products",
-    "subtitle": "Solar salt harvested at Los Olivitos for the petrochemical, chemical, and water treatment industries, and as raw material for the animal feed sector, among other uses.",
+    "subtitle": "Solar salt harvested at Los Olivitos for the petrochemical, oil, chemical, and water treatment industries, and as raw material for the animal feed sector, among other uses.",
     "ctaQuote": "Contact us",
     "ctaSpec": "Data sheet",
     "ctaDownload": "Download PDF",
@@ -164,6 +164,7 @@
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
         "applications": [
           "Petrochemical sector",
+          "Oil sector",
           "Chemical sector",
           "Water treatment",
           "General industry",
@@ -173,17 +174,20 @@
           {
             "name": "Premium coarse salt in bulk",
             "slug": "sal-bruta-premium-bulk",
-            "format": "Bulk"
+            "format": "Bulk",
+            "image": "/images/galeria/pilas-cielo-azul.webp"
           },
           {
             "name": "Premium coarse salt in big bag",
             "slug": "sal-bruta-premium-big-bag",
-            "format": "big bag"
+            "format": "big bag",
+            "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp"
           },
           {
             "name": "Premium coarse salt in bags",
             "slug": "sal-bruta-premium-bags",
-            "format": "Bags"
+            "format": "Bags",
+            "image": "/images/products/sal-bruta-premium-sacos.webp"
           }
         ]
       },
@@ -210,12 +214,14 @@
           {
             "name": "Type A coarse salt in bulk",
             "slug": "sal-bruta-tipo-a-bulk",
-            "format": "Bulk"
+            "format": "Bulk",
+            "image": "/images/galeria/pilas-cielo-azul.webp"
           },
           {
             "name": "Type A coarse salt in big bag",
             "slug": "sal-bruta-tipo-a-big-bag",
-            "format": "big bag"
+            "format": "big bag",
+            "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp"
           }
         ]
       },
@@ -241,12 +247,14 @@
           {
             "name": "Premium ground salt in big bag",
             "slug": "sal-molida-premium-big-bag",
-            "format": "big bag"
+            "format": "big bag",
+            "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp"
           },
           {
             "name": "Premium ground salt in bags",
             "slug": "sal-molida-premium-bags",
-            "format": "Bags"
+            "format": "Bags",
+            "image": "/images/products/sal-molida-premium-sacos.webp"
           }
         ]
       },
@@ -271,7 +279,8 @@
           {
             "name": "Type A ground salt in bags",
             "slug": "sal-molida-tipo-a-bags",
-            "format": "Bags"
+            "format": "Bags",
+            "image": "/images/products/sal-molida-tipo-a-saco-solo.webp"
           }
         ]
       }
@@ -332,7 +341,7 @@
     "title": "Find out how we can help you",
     "homeTitle": "Get in touch with our team",
     "homeDescription": "We handle wholesale purchase requests, industrial-scale shipments, and technical inquiries for industry.",
-    "description": "We handle wholesale purchase requests, industrial shipments, and inquiries from the petrochemical, chemical, and water treatment industries, and the animal feed sector.",
+    "description": "We handle wholesale purchase requests, industrial shipments, and technical inquiries.",
     "email": "infoprodusal@grupomimesa.com",
     "privacyAcceptLabel": "I have read and agree to the",
     "privacyLinkLabel": "privacy policy",
@@ -418,7 +427,7 @@
     "button": "Back to home"
   },
   "footer": {
-    "companyDescription": "Produsal C.A. is Venezuela's leading industrial salt producer. Founded in 1989 and in commercial operation since 1999 at Los Olivitos (Zulia), it supplies solar salt to the petrochemical, chemical, and industrial sectors.",
+    "companyDescription": "Produsal C.A. is Venezuela's leading industrial salt producer. Founded in 1989 and in commercial operation since 1999 at Los Olivitos (Zulia), it supplies solar salt to the petrochemical, oil, chemical, and industrial sectors.",
     "quickLinksTitle": "Quick navigation",
     "contactTitle": "Contact information",
     "plantLabel": "Plant and saltworks",

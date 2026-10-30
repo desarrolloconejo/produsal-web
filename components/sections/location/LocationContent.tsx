@@ -146,6 +146,7 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
             <div
               className="absolute z-20 -translate-x-1/2 -translate-y-1/2 group"
               style={PLANT_LOCATION.mapPin}
+              tabIndex={0}
               aria-label={currentLang === "es" ? `Ubicación de PRODUSAL en Los Olivitos, Zulia (${PLANT_LOCATION.label})` : `PRODUSAL location at Los Olivitos, Zulia (${PLANT_LOCATION.label})`}
             >
               {/* Ondas de Radar Pulsantes */}
@@ -161,6 +162,20 @@ export function LocationContent({ currentLang, dict }: LocationContentProps) {
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 whitespace-nowrap bg-[#183c6b]/95 text-white px-2.5 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-medium shadow-md flex items-center gap-1.5 border border-[#02aeaa]/40">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#02aeaa] animate-pulse" />
                 <span>{PLANT_LOCATION.label}</span>
+              </div>
+
+              {/* Foto de la planta: aparece con el cursor, o al tocar el pin en móvil */}
+              <div className="absolute left-1/2 -translate-x-[25%] top-full mt-10 w-56 sm:w-72 z-30 rounded-xl overflow-hidden bg-white border border-white shadow-xl pointer-events-none opacity-0 scale-95 origin-top transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100">
+                <div className="relative aspect-video">
+                  <Image
+                    src={PLANT_LOCATION.photo}
+                    alt={currentLang === "es" ? "Vista aérea de la planta de Produsal en Los Olivitos" : "Aerial view of the Produsal plant at Los Olivitos"}
+                    fill
+                    quality={90}
+                    sizes="288px"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
 

@@ -2,7 +2,7 @@
   "lang": "es",
   "meta": {
     "title": "Produsal | La principal productora de sal industrial de Venezuela | Los Olivitos, Zulia",
-    "description": "Producción solar y distribución de sal industrial con capacidad de 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento al mayor para la industria petroquímica, química, tratamiento de agua, y materia prima para el sector de consumo animal.",
+    "description": "Producción solar y distribución de sal industrial con capacidad de 650.000 TM/año en Los Olivitos, Zulia. Abastecimiento al mayor para la industria petroquímica, petrolera, química, tratamiento de agua, y materia prima para el sector de consumo animal.",
     "pages": {
       "about": {
         "title": "Nosotros | Produsal: la principal salina de Venezuela | Los Olivitos, Zulia",
@@ -10,7 +10,7 @@
       },
       "contact": {
         "title": "Contacto | Produsal C.A. - Los Olivitos, Zulia",
-        "description": "Escríbenos para atención comercial al mayor, despachos industriales de sal y fichas técnicas para la industria petroquímica, química, tratamiento de agua, y materia prima para el sector de consumo animal."
+        "description": "Escríbenos para atención comercial al mayor, despachos industriales de sal y fichas técnicas para la industria petroquímica, petrolera, química, tratamiento de agua, y materia prima para el sector de consumo animal."
       },
       "products": {
         "title": "Catálogo de productos | Produsal C.A.",
@@ -47,7 +47,7 @@
     "badge": "Complejo Industrial Los Olivitos • Zulia, Venezuela",
     "headlineHighlight": "La principal salina",
     "headlineRest": "de producción solar de alta pureza en Venezuela",
-    "description": "Operamos el complejo salinero más importante del país en 5.400 Ha propias, aportando a la producción nacional de sal industrial con capacidad de 650.000 TM/año. Sal para el sector petroquímico e industrial, y materia prima para el sector alimentario.",
+    "description": "Operamos el complejo salinero más importante del país en 5.400 Ha propias, aportando a la producción nacional de sal industrial con capacidad de 650.000 TM/año. Sal para el sector petroquímico, petrolero e industrial, y materia prima para el sector alimentario.",
     "ctaProducts": "Ver catálogo industrial",
     "ctaAbout": "Conoce nuestra historia"
   },
@@ -76,15 +76,15 @@
         "year": "Hoy",
         "tag": "Presencia nacional",
         "title": "La principal salina del país",
-        "description": "Con capacidad de 650.000 TM/año, abastece a la industria petroquímica y química, y es materia prima para el sector de consumo animal, en armonía con el entorno."
+        "description": "Con capacidad de 650.000 TM/año, abastece a la industria petroquímica, petrolera y química, y es materia prima para el sector de consumo animal, en armonía con el entorno."
       }
     ],
     "showcase": {
       "abraeTitle": "Santuario del flamenco rosado en Los Olivitos",
       "abraeDescription": "Nuestra salina convive con un Área Bajo Régimen de Administración Especial (ABRAE), declarada humedal de importancia internacional (sitio Ramsar y RHRAP). Alberga la mayor colonia reproductiva de flamencos del Caribe en Venezuela.",
       "abraePoints": [
-        "Santuario reproductivo del flamenco rosado (Phoenicopterus ruber)",
-        "Humedal Ramsar de importancia internacional y sitio RHRAP",
+        "Santuario reproductivo del flamenco (Phoenicopterus ruber) y otras aves playeras",
+        "1er Sitio RHRAP (Red Hemisférica de Reserva de Aves Playeras) en Venezuela",
         "Equilibrio entre la producción de sal y la fauna costera"
       ]
     }
@@ -138,7 +138,7 @@
   "products": {
     "badge": "Catálogo industrial y comercial",
     "title": "Productos de alta pureza",
-    "subtitle": "Sal solar cosechada en Los Olivitos para la industria petroquímica, química y de tratamiento de agua, y como materia prima para el sector de consumo animal, entre otros usos.",
+    "subtitle": "Sal solar cosechada en Los Olivitos para la industria petroquímica, petrolera, química y de tratamiento de agua, y como materia prima para el sector de consumo animal, entre otros usos.",
     "ctaQuote": "Contáctanos",
     "ctaSpec": "Ficha técnica",
     "ctaDownload": "Descargar PDF",
@@ -164,6 +164,7 @@
         "pdfEn": "/docs/fichas/sal-bruta-premium-en.pdf",
         "applications": [
           "Sector petroquímico",
+          "Sector petrolero",
           "Sector químico",
           "Tratamiento de aguas",
           "Industria en general",
@@ -173,17 +174,20 @@
           {
             "name": "Sal bruta premium a granel",
             "slug": "sal-bruta-premium-granel",
-            "format": "Granel"
+            "format": "Granel",
+            "image": "/images/galeria/pilas-cielo-azul.webp"
           },
           {
             "name": "Sal bruta premium en big bag",
             "slug": "sal-bruta-premium-big-bag",
-            "format": "big bag"
+            "format": "big bag",
+            "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp"
           },
           {
             "name": "Sal bruta premium en sacos",
             "slug": "sal-bruta-premium-sacos",
-            "format": "Sacos"
+            "format": "Sacos",
+            "image": "/images/products/sal-bruta-premium-sacos.webp"
           }
         ]
       },
@@ -210,12 +214,14 @@
           {
             "name": "Sal bruta tipo A a granel",
             "slug": "sal-bruta-tipo-a-granel",
-            "format": "Granel"
+            "format": "Granel",
+            "image": "/images/galeria/pilas-cielo-azul.webp"
           },
           {
             "name": "Sal bruta tipo A en big bag",
             "slug": "sal-bruta-tipo-a-big-bag",
-            "format": "big bag"
+            "format": "big bag",
+            "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp"
           }
         ]
       },
@@ -241,12 +247,14 @@
           {
             "name": "Sal molida premium en big bag",
             "slug": "sal-molida-premium-big-bag",
-            "format": "big bag"
+            "format": "big bag",
+            "image": "/images/products/sal-bruta-tipo-a-dsc00335.webp"
           },
           {
             "name": "Sal molida premium en sacos",
             "slug": "sal-molida-premium-sacos",
-            "format": "Sacos"
+            "format": "Sacos",
+            "image": "/images/products/sal-molida-premium-sacos.webp"
           }
         ]
       },
@@ -271,7 +279,8 @@
           {
             "name": "Sal molida tipo A en sacos",
             "slug": "sal-molida-tipo-a-sacos",
-            "format": "Sacos"
+            "format": "Sacos",
+            "image": "/images/products/sal-molida-tipo-a-saco-solo.webp"
           }
         ]
       }
@@ -318,7 +327,7 @@
     "locationDetails": "Municipio Miranda, Costa Oriental del Lago de Maracaibo, Edo. Zulia.",
     "stats": [
       {
-        "label": "Capacidades",
+        "label": "Capacidad",
         "detail": "La principal salina de Venezuela con capacidad de 650.000 TM"
       },
       {
@@ -332,7 +341,7 @@
     "title": "Descubre cómo podemos ayudarte",
     "homeTitle": "Contacta con nuestro equipo",
     "homeDescription": "Atendemos solicitudes de compra al mayor, despachos a escala industrial y consultas técnicas para la industria.",
-    "description": "Atendemos requerimientos de compra al mayor, despachos industriales y consultas de la industria petroquímica, química y de tratamiento de agua, y del sector de consumo animal.",
+    "description": "Atendemos requerimientos de compra al mayor, despachos industriales y consultas técnicas.",
     "email": "infoprodusal@grupomimesa.com",
     "privacyAcceptLabel": "He leído y acepto las",
     "privacyLinkLabel": "políticas de privacidad",
@@ -418,7 +427,7 @@
     "button": "Volver al inicio"
   },
   "footer": {
-    "companyDescription": "Produsal C.A. es la principal empresa productora de sal industrial de Venezuela. Fundada en 1989 y en operación comercial desde 1999 en Los Olivitos (Zulia), abastece de sal solar a los sectores petroquímico, químico e industrial.",
+    "companyDescription": "Produsal C.A. es la principal empresa productora de sal industrial de Venezuela. Fundada en 1989 y en operación comercial desde 1999 en Los Olivitos (Zulia), abastece de sal solar a los sectores petroquímico, petrolero, químico e industrial.",
     "quickLinksTitle": "Navegación rápida",
     "contactTitle": "Información de contacto",
     "plantLabel": "Planta y salina",

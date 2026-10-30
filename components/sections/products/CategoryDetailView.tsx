@@ -15,6 +15,7 @@ import { PdfPreviewModal, type PdfModalData } from "@/components/ui/PdfPreviewMo
 import { BrandTrianglesBackground } from "@/components/ui/BrandTrianglesBackground";
 import { CategoryContactSection } from "./CategoryContactSection";
 import { CategoryApplications } from "./CategoryApplications";
+import { ProductPackagingCarousel } from "./ProductPackagingCarousel";
 import { packagingKind, PACKAGING_STYLES } from "./packaging";
 import type { Locale, Dictionary } from "@/dictionaries/get-dictionary";
 import { SectionTexture, type TextureVariant } from "@/components/ui/SectionTexture";
@@ -50,6 +51,7 @@ export function CategoryDetailView({
     setIsModalOpen(true);
   };
 
+  const [activeItem, setActiveItem] = useState(0);
   const otherCategories = allCategories.filter((c) => c.id !== category.id);
   const isPremium = category.id.includes("premium");
   const currentPdfUrl = isEs ? category.pdfEs : category.pdfEn;
@@ -212,37 +214,55 @@ export function CategoryDetailView({
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {category.items.map((item) => {
-                const style = PACKAGING_STYLES[packagingKind(item)];
+            {/* Carrusel con una foto por presentación; la lista de al lado cambia la foto */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+              <div className="lg:col-span-5">
+                <ProductPackagingCarousel
+                  isEs={isEs}
+                  items={category.items}
+                  active={activeItem}
+                  onChange={setActiveItem}
+                />
+              </div>
 
-                return (
-                  <div
-                    key={item.slug}
-                    className="relative p-6 sm:p-7 rounded-3xl border bg-white border-slate-200/90 hover:border-[#02aeaa]/60 shadow-xs flex flex-col justify-between gap-5 transition-all"
-                  >
-                    <div className="flex flex-col gap-3">
-                      <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${style.className}`}>
-                        <style.Icon className={`w-6 h-6 ${style.iconColor}`} />
+              <div className="lg:col-span-7 flex flex-col gap-4">
+                {category.items.map((item, index) => {
+                  const style = PACKAGING_STYLES[packagingKind(item)];
+                  const isActive = index === activeItem;
+
+                  return (
+                    <button
+                      key={item.slug}
+                      type="button"
+                      onClick={() => setActiveItem(index)}
+                      aria-pressed={isActive}
+                      className={`p-5 sm:p-6 rounded-3xl border bg-white text-left shadow-xs flex flex-col gap-4 transition-all cursor-pointer ${
+                        isActive ? "border-[#02aeaa] ring-2 ring-[#02aeaa]/30" : "border-slate-200/90 hover:border-[#02aeaa]/60"
+                      }`}
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border shrink-0 ${style.className}`}>
+                          <style.Icon className={`w-6 h-6 ${style.iconColor}`} />
+                        </div>
+
+                        <div className="flex flex-col">
+                          <span className="type-caption text-slate-400">
+                            {item.format}
+                          </span>
+                          <h3 className="type-h4 text-[#183c6b] mt-1">
+                            {item.name}
+                          </h3>
+                        </div>
                       </div>
 
-                      <div className="flex flex-col">
-                        <span className="type-caption text-slate-400">
-                          {item.format}
-                        </span>
-                        <h3 className="type-h4 text-[#183c6b] mt-1">
-                          {item.name}
-                        </h3>
+                      <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold font-heading text-[#02aeaa]">
+                        <span>{isEs ? "Disponible bajo pedido" : "Available on order"}</span>
+                        <CheckCircle2 className="w-4 h-4 text-[#e5c798]" />
                       </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold font-heading text-[#02aeaa]">
-                      <span>{isEs ? "Disponible bajo pedido" : "Available on order"}</span>
-                      <CheckCircle2 className="w-4 h-4 text-[#e5c798]" />
-                    </div>
-                  </div>
-                );
-              })}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </ScrollReveal>
