@@ -213,6 +213,14 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 
 ### Secciones y Textos
 
+### Pendiente del cliente: imágenes de Nuestra gente
+
+- Se reemplazarán las cinco imágenes del collage de Nosotros. Ya se cambiaron
+  dos: personal en el muelle y atención de despachos.
+- Faltan tres imágenes que proporcionará el cliente para sustituir las manos
+  con sal, la hilera de montañas de sal y el operario colocando sacos sobre
+  una paleta. Mantener esas tres actuales hasta recibir las nuevas.
+
 #### 404
 
 La pagina que estas buscando no existe.

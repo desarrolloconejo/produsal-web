@@ -155,7 +155,11 @@ export function HistoryContent({ currentLang, dict }: HistoryContentProps) {
                 <div key={pIdx} className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[#e5c798] shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm text-white/90 font-medium leading-relaxed">
-                    {point}
+                    {point.split(/(flamenco|flamingo)/).map((part, index) =>
+                      part === "flamenco" || part === "flamingo" ? (
+                        <strong key={index} className="font-bold">{part}</strong>
+                      ) : part
+                    )}
                   </span>
                 </div>
               ))}

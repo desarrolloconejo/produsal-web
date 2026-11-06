@@ -8,6 +8,11 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   {
+    "src": "/images/galeria/jardin-los-yabos-entrada.webp",
+    "width": 1024,
+    "height": 768
+  },
+  {
     "src": "/images/galeria/pilas-hilera.webp",
     "width": 2400,
     "height": 1350
@@ -66,11 +71,6 @@ export const galleryImages: GalleryImage[] = [
     "src": "/images/galeria/DSC00068.webp",
     "width": 2000,
     "height": 1333
-  },
-  {
-    "src": "/images/galeria/pilas-cielo-dorado.webp",
-    "width": 2400,
-    "height": 1800
   },
   {
     "src": "/images/galeria/DSC00008.webp",

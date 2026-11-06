@@ -6,6 +6,7 @@ import { TopBarLang } from "@/components/layout/TopBarLang";
 import { Header } from "@/components/layout/Header";
 import { NavbarWrapper } from "@/components/layout/NavbarWrapper";
 import { Footer } from "@/components/layout/Footer";
+import { PhotoProtection } from "@/components/ui/PhotoProtection";
 
 export const metadata: Metadata = {
   title: {
@@ -48,6 +49,7 @@ export default async function LangLayout({
   return (
     <html lang={currentLang} className={fontVariables}>
       <body className="min-h-screen bg-[#183c6b] text-slate-800 antialiased selection:bg-[#02aeaa]/20 selection:text-[#183c6b] font-sans">
+        <PhotoProtection />
         <div className="flex flex-col min-h-screen bg-[#183c6b]">
           {/* Barra superior y Header blancos, siempre fijos (sticky) */}
           <NavbarWrapper>

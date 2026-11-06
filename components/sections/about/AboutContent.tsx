@@ -58,7 +58,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
   ];
 
   // Collage del equipo: manos y operación sin caras. Las fotos casi no se recortan:
-  // la de manos ocupa dos filas y las otras cuatro (3:2 y 16:9) van en recuadros apaisados
+  // La foto de manos ocupa dos filas; las verticales conservan el foco en la persona.
   const teamPhotos = [
     {
       src: "/images/produsal-sal-manos-pureza.webp",
@@ -66,13 +66,15 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       className: "row-span-2",
     },
     {
-      src: "/images/produsal-envasado-sacos-hd.webp",
-      alt: isEs ? "Operario con chaleco revisando sacos en la línea de envasado" : "Operator in a safety vest checking bags on the packaging line",
+      src: "/images/produsal-equipo-muelle-salina.webp",
+      alt: isEs ? "Personal en el muelle de la salina Los Olivitos" : "Staff on the pier at Los Olivitos saltworks",
+      objectPosition: "right 28%",
       className: "",
     },
     {
-      src: "/images/produsal-equipo-levantando-saco.webp",
-      alt: isEs ? "Personal levantando un saco de sal en la línea de envasado" : "Staff lifting a salt bag on the packaging line",
+      src: "/images/produsal-equipo-atencion-despacho.webp",
+      alt: isEs ? "Personal atendiendo la gestión de despachos" : "Staff managing dispatch operations",
+      objectPosition: "center 42%",
       className: "",
     },
     {
@@ -210,6 +212,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                 fill
                 sizes={photo.className ? "(max-width: 640px) 50vw, 30vw" : "(max-width: 640px) 50vw, 36vw"}
                 quality={90}
+                style={{ objectPosition: photo.objectPosition ?? "center" }}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
