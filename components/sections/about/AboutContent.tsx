@@ -57,12 +57,13 @@ export function AboutContent({ currentLang }: AboutContentProps) {
     },
   ];
 
-  // Collage del equipo: manos y operación sin caras. Las fotos casi no se recortan:
-  // La foto de manos ocupa dos filas; las verticales conservan el foco en la persona.
+  // Collage del equipo con las fotografías seleccionadas por el cliente.
+  // El trabajo de campo ocupa dos filas; el resto destaca distintas tareas.
   const teamPhotos = [
     {
-      src: "/images/produsal-sal-manos-pureza.webp",
-      alt: isEs ? "Manos sosteniendo sal de Los Olivitos" : "Hands holding salt from Los Olivitos",
+      src: "/images/produsal-equipo-trabajo-campo-hd.webp",
+      alt: isEs ? "Equipo de trabajo con cascos en las instalaciones de Los Olivitos" : "Team wearing hard hats at the Los Olivitos facilities",
+      objectPosition: "62% center",
       className: "row-span-2",
     },
     {
@@ -78,13 +79,13 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       className: "",
     },
     {
-      src: "/images/galeria/pilas-hilera.webp",
-      alt: isEs ? "Hilera de pilas de sal en el patio de acopio" : "Row of salt piles at the stockyard",
+      src: "/images/produsal-equipo-operador-montacargas.webp",
+      alt: isEs ? "Operario manejando los controles de un montacargas" : "Operator using forklift controls",
       className: "",
     },
     {
-      src: "/images/produsal-equipo-paleta.webp",
-      alt: isEs ? "Operario colocando sacos sobre una paleta" : "Operator placing bags on a pallet",
+      src: "/images/produsal-equipo-operador-cabina.webp",
+      alt: isEs ? "Operario en la cabina de un cargador" : "Operator in a loader cab",
       className: "",
     },
   ];
@@ -202,7 +203,7 @@ export function AboutContent({ currentLang }: AboutContentProps) {
           </p>
         </div>
 
-        {/* Collage del equipo: manos y trabajo, sin caras (el personal cambia con el tiempo) */}
+        {/* Collage de actividades del equipo */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 bg-[#183c6b] grid grid-cols-2 grid-rows-3 sm:grid-cols-[0.8fr_1fr_1fr] sm:grid-rows-2 gap-1.5 h-[560px] sm:h-[420px] lg:h-[500px]">
           {teamPhotos.map((photo) => (
             <div key={photo.src} className={`relative overflow-hidden group ${photo.className}`}>
@@ -210,7 +211,8 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                 src={photo.src}
                 alt={photo.alt}
                 fill
-                sizes={photo.className ? "(max-width: 640px) 50vw, 30vw" : "(max-width: 640px) 50vw, 36vw"}
+                // La foto horizontal que ocupa dos filas se amplía según su altura.
+                sizes={photo.className ? "(max-width: 639px) 100vw, 900px" : "(max-width: 640px) 50vw, 36vw"}
                 quality={90}
                 style={{ objectPosition: photo.objectPosition ?? "center" }}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"

@@ -215,11 +215,11 @@ Aplican a toda la web, en español e ingles, y a cualquier texto nuevo.
 
 ### Pendiente del cliente: imágenes de Nuestra gente
 
-- Se reemplazarán las cinco imágenes del collage de Nosotros. Ya se cambiaron
-  dos: personal en el muelle y atención de despachos.
-- Faltan tres imágenes que proporcionará el cliente para sustituir las manos
-  con sal, la hilera de montañas de sal y el operario colocando sacos sobre
-  una paleta. Mantener esas tres actuales hasta recibir las nuevas.
+- El collage muestra trabajo de campo (foto 19 del cliente), personal en el
+  muelle, atención de despachos y operarios en cabina de cargador y montacargas.
+  Las dos fotos de cabina se retocaron a partir de capturas del cliente.
+  Se retiraron las manos con sal, las montañas y el operario de amarillo con sacos.
+- No quedan imágenes pendientes de sustitución en este collage.
 
 #### 404
 
