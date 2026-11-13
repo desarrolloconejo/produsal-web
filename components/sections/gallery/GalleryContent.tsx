@@ -70,6 +70,7 @@ export function GalleryContent({ dict, images }: GalleryContentProps) {
                 alt={`${dict.imageAlt} ${index + 1}`}
                 fill
                 sizes={image.height > image.width ? PORTRAIT_HINT : SIZE_HINTS[size]}
+                style={{ objectPosition: image.objectPosition }}
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#183c6b]/45 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />

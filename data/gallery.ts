@@ -4,6 +4,7 @@ export interface GalleryImage {
   src: string;
   width: number;
   height: number;
+  objectPosition?: string;
 }
 
 export const galleryImages: GalleryImage[] = [
@@ -29,6 +30,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     "src": "/images/galeria/pilas-nubes.webp",
+    "objectPosition": "center bottom",
     "width": 2400,
     "height": 1800
   },

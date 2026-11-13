@@ -79,8 +79,10 @@ export function AboutContent({ currentLang }: AboutContentProps) {
       className: "",
     },
     {
-      src: "/images/produsal-equipo-operador-montacargas.webp",
+      src: "/images/produsal-equipo-montacargas-techo-reparado.webp",
       alt: isEs ? "Operario manejando los controles de un montacargas" : "Operator using forklift controls",
+      objectPosition: "center",
+      zoom: 1.6,
       className: "",
     },
     {
@@ -214,7 +216,11 @@ export function AboutContent({ currentLang }: AboutContentProps) {
                 // La foto horizontal que ocupa dos filas se amplía según su altura.
                 sizes={photo.className ? "(max-width: 639px) 100vw, 900px" : "(max-width: 640px) 50vw, 36vw"}
                 quality={90}
-                style={{ objectPosition: photo.objectPosition ?? "center" }}
+                style={{
+                  objectPosition: photo.objectPosition ?? "center",
+                  transform: photo.zoom ? `scale(${photo.zoom})` : undefined,
+                  transformOrigin: photo.zoom ? "35% 40%" : undefined,
+                }}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
