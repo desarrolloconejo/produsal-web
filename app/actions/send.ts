@@ -74,17 +74,23 @@ export async function sendContactEmail(
   const smtpHost = process.env.SMTP_HOST;
   const smtpPort = parseInt(process.env.SMTP_PORT || "587", 10);
   const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASS;
+  const smtpPass = process.env.SMTP_PASS?.replace(/\s/g, "");
   const contactTo = process.env.CONTACT_TO_EMAIL || "infoprodusal@grupomimesa.com";
   const contactFrom = process.env.CONTACT_FROM_EMAIL || `"Produsal Web" <${smtpUser || "no-reply@produsal.com"}>`;
 
-  // Modo desarrollo / simulación si no se han provisto credenciales reales
+  // Sin credenciales nunca se informa de un envío que no ocurrió.
   if (!smtpHost || !smtpUser || !smtpPass) {
     console.warn(
-      "Produsal Server Action: Credenciales SMTP no detectadas en .env. Simulación de envío exitoso."
+      "Produsal: envío no disponible; faltan credenciales SMTP."
     );
-    return { success: true, message: t.devSuccess };
+    return { success: false, message: t.error };
   }
+
+  const sentAt = new Intl.DateTimeFormat("es-VE", {
+    timeZone: "America/Caracas",
+    dateStyle: "long",
+    timeStyle: "short",
+  }).format(new Date()) + " (hora de Venezuela)";
 
   const safe = {
     name: escapeHtml(name),
@@ -99,38 +105,46 @@ export async function sendContactEmail(
       host: smtpHost,
       port: smtpPort,
       secure: process.env.SMTP_SECURE === "true",
+      requireTLS: process.env.SMTP_SECURE !== "true",
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 20000,
       auth: {
         user: smtpUser,
         pass: smtpPass,
       },
     });
 
-    await transporter.sendMail({
+    const notification = await transporter.sendMail({
       from: contactFrom,
       to: contactTo,
       replyTo: email,
-      subject: singleLine(
-        product
-          ? `Requerimiento [${product}]: ${name} (${company})`
-          : `Nuevo mensaje de contacto web: ${name} (${company})`
-      ),
-      text: `Nombre: ${name}\nEmpresa: ${company}\nEmail: ${email}\nProducto / Formato: ${product || "General"}\n\nMensaje:\n${message}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; color: #183c6b;">
-          <h2 style="color: #02aeaa;">Nuevo Requerimiento desde Sitio Web Produsal</h2>
-          <p><strong>Nombre:</strong> ${safe.name}</p>
-          <p><strong>Empresa:</strong> ${safe.company}</p>
-          <p><strong>Email:</strong> <a href="mailto:${safe.email}">${safe.email}</a></p>
-          ${safe.product ? `<p><strong>Producto / Presentación de Interés:</strong> <span style="color: #02aeaa; font-weight: bold;">${safe.product}</span></p>` : ""}
-          <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 4px solid #02aeaa; border-radius: 4px;">
-            <strong>Mensaje o Requerimiento:</strong>
-            <p style="white-space: pre-line;">${safe.message}</p>
-          </div>
-          <hr style="margin-top: 25px; border: none; border-top: 1px solid #e2e8f0;" />
-          <small style="color: #64748b;">Notificación automática de Produsal Web</small>
-        </div>
-      `,
+      subject: singleLine(`Solicitud web: ${name}`),
+      text: `Solicitud desde la web de Produsal\n\nAutor: ${name}\nCorreo: ${email}\nEmpresa: ${company}\nProducto / presentación: ${product || "General"}\nFecha: ${sentAt}\n\nMensaje:\n${message}`,
+      html: `<div style="font-family:Arial,sans-serif;color:#183c6b"><h2>Solicitud desde la web de Produsal</h2><p><strong>Autor:</strong> ${safe.name}</p><p><strong>Correo:</strong> ${safe.email}</p><p><strong>Empresa:</strong> ${safe.company}</p><p><strong>Producto / presentación:</strong> ${safe.product || "General"}</p><p><strong>Fecha:</strong> ${escapeHtml(sentAt)}</p><p><strong>Mensaje:</strong></p><p style="white-space:pre-line">${safe.message}</p></div>`,
     });
+
+    if (!notification.accepted.length) {
+      throw new Error("El servidor SMTP no aceptó el destinatario de la solicitud.");
+    }
+
+    // La solicitud ya fue enviada. Si falla solo la confirmación, no pedir
+    // reenviarla al usuario: eso duplicaría el requerimiento en Produsal.
+    try {
+      const confirmation = await transporter.sendMail({
+        from: contactFrom,
+        to: email,
+        replyTo: contactTo,
+        subject: t.confirmationSubject,
+        headers: { "Auto-Submitted": "auto-generated" },
+        text: `${t.confirmationGreeting} ${name},\n\n${t.confirmationBody}`,
+        html: `<div style="font-family:Arial,sans-serif;padding:24px;color:#183c6b"><h2 style="color:#02aeaa">${escapeHtml(t.confirmationTitle)}</h2><p>${escapeHtml(t.confirmationGreeting)} ${safe.name},</p><p>${escapeHtml(t.confirmationBody)}</p></div>`,
+      });
+      if (!confirmation.accepted.length) throw new Error("Confirmación no aceptada.");
+    } catch {
+      console.error("Produsal: solicitud enviada; no se pudo enviar la confirmación al visitante.");
+      return { success: true, message: t.confirmationPending };
+    }
 
     return { success: true, message: t.success };
   } catch (error) {

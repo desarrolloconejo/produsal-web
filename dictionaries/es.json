@@ -362,10 +362,14 @@
       "required": "Por favor completa todos los campos requeridos.",
       "invalidEmail": "Por favor ingresa un correo electrónico válido.",
       "tooLong": "Uno de los campos excede la longitud permitida.",
-      "success": "¡Gracias por contactarnos! Tu mensaje ha sido enviado a nuestro equipo.",
-      "devSuccess": "¡Mensaje recibido! En modo de desarrollo tu mensaje fue registrado.",
+      "success": "¡Gracias por contactarnos! Tu solicitud fue enviada a nuestro equipo. Te enviamos un correo de confirmación.",
       "error": "Ocurrió un error al enviar tu mensaje. Intenta más tarde o escríbenos a infoprodusal@grupomimesa.com.",
-      "companyFallback": "No especificada"
+      "companyFallback": "No especificada",
+      "confirmationPending": "Tu solicitud fue enviada a nuestro equipo, pero no pudimos enviar el correo de confirmación. No necesitas volver a enviarla.",
+      "confirmationSubject": "Recibimos tu solicitud | Produsal",
+      "confirmationTitle": "Recibimos tu solicitud",
+      "confirmationGreeting": "Hola",
+      "confirmationBody": "Tu solicitud fue enviada al equipo de Produsal. Gracias por contactarnos."
     }
   },
   "privacy": {

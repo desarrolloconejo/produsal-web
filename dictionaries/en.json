@@ -362,10 +362,14 @@
       "required": "Please fill in all required fields.",
       "invalidEmail": "Please enter a valid email address.",
       "tooLong": "One of the fields exceeds the allowed length.",
-      "success": "Thank you for contacting us! Your message has been sent to our team.",
-      "devSuccess": "Message received! In development mode your message was logged.",
+      "success": "Thank you for contacting us! Your request was sent to our team. We sent you a confirmation email.",
       "error": "An error occurred while sending your message. Please try again later or write to infoprodusal@grupomimesa.com.",
-      "companyFallback": "Not specified"
+      "companyFallback": "Not specified",
+      "confirmationPending": "Your request was sent to our team, but we could not send the confirmation email. You do not need to submit it again.",
+      "confirmationSubject": "We received your request | Produsal",
+      "confirmationTitle": "We received your request",
+      "confirmationGreeting": "Hello",
+      "confirmationBody": "Your request was sent to the Produsal team. Thank you for contacting us."
     }
   },
   "privacy": {
